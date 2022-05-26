@@ -20,9 +20,7 @@ export default function Home() {
         <div className={styles.header__content_text}>
           <h1>O&apos;zbek nutqini kompyuterga o&apos;rgatish tashabbusi</h1>
           <p>
-            Ovozli asistentlar moliya, transport, telekom, chakana savdo,
-            sog&apos;liqni saqlash, ta&apos;lim va boshqa ko&apos;p sohalarda
-            qo&apos;llanadi.
+
           </p>
 
           <div className={styles.header__content_block}>
