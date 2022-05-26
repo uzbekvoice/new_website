@@ -43,7 +43,7 @@ export default function Home() {
           controls
           muted
           loop
-          autoplay
+          autoPlay
         ></video>
       </div>
     </div>
