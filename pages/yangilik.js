@@ -4,7 +4,7 @@ export default function yangilik() {
   return (
     <div>
 
-        <h2>This Yangiliklar Page</h2>
+        <h2>BU Yangiliklar Sahifasi</h2>
     </div>
   )
 }
