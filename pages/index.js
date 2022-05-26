@@ -17,7 +17,7 @@ export default function Home() {
           <h1>O‘zbek nutqini kompyuterga o‘rgatish tashabbusi</h1>
           <p>
           Ovozli asistentlar moliya, transport, telekom, chakana savdo,
-            sog’liqni saqlash, ta’lim va boshqa ko‘p sohalarda qo‘llanadi
+            sog’liqni saqlash, ta’lim va boshqa ko‘p sohalarda qo‘llanadi.
           </p>
 
           <div className={styles.header__content_block}>
