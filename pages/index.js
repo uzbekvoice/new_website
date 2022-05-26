@@ -9,7 +9,7 @@ export default function Home() {
         <title>
           Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi
         </title>
-        <meta name="description" content="Uzbekvoice.ai" />
+        <meta name="description" content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className={styles.header__content}>
