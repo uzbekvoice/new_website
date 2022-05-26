@@ -16,8 +16,8 @@ export default function Home() {
         <div className={styles.header__content_text}>
           <h1>O‘zbek nutqini kompyuterga o‘rgatish tashabbusi</h1>
           <p>
-            Ovozni ilg‘ash tizimi moliya, transport, telekommunikatsiya, savdo,
-            ta’lim va boshqa ko‘plab sohalarda keng qo‘llanadi.
+            Ovozli asistentlar moliya, transport, telekom, chakana savdo,
+            sog’liqni saqlash, ta’lim va boshqa ko‘p sohalarda qo‘llanadi.
           </p>
 
           <div className={styles.header__content_block}>
