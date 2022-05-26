@@ -7,29 +7,35 @@ export default function Home() {
     <div>
       <Head>
         <title>
-          Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi
+          Uzbekvoice.ai - o&apos;zbek tilini kompyuterga o&apos;rgatish
+          tashabbusi
         </title>
-        <meta name="description" content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi" />
+        <meta
+          name="description"
+          content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
+        />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className={styles.header__content}>
         <div className={styles.header__content_text}>
-          <h1>O‘zbek nutqini kompyuterga o‘rgatish tashabbusi</h1>
+          <h1>O&apos;zbek nutqini kompyuterga o&apos;rgatish tashabbusi</h1>
           <p>
 
           </p>
 
           <div className={styles.header__content_block}>
-            <a
-              className="header__content-text-btn"
-              href="http://commonvoice.mozilla.org/uz/"
-            >
+            <a href="http://commonvoice.mozilla.org/uz/">
               Loyihada ishtirok etish
             </a>
 
-
             <div className={styles.header__content_info}>
-              <img src="./telegramm-blue.png" />
+              <Image
+                src="/telegramm-blue.png"
+                width={23}
+                height={18}
+                alt="telegramicon"
+                quality={100}
+              />
               <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
                 Telegram jamoa
               </a>
