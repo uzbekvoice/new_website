@@ -34,7 +34,7 @@ export default function Home() {
                 width={23}
                 height={18}
                 alt="telegramicon"
-                quality={100}
+                quality={75}
               />
               <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
                 Telegram jamoa
