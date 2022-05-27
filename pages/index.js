@@ -45,7 +45,7 @@ export default function Home() {
           </div>
         </div>
         <video
-          poster="./video-poster.jpg"
+          poster="./videoposter.jpg"
           src="./video.mp4"
           controls
           muted
