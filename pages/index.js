@@ -14,8 +14,8 @@ export default function Home() {
           content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
         />
         <link rel="icon" href="/favicon.png" />
-      </Head>
-       <Hero/>
+         </Head>
+        <Hero/>
       <Slider />
     </div>
   );
