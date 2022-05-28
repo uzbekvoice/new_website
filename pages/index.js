@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Slider from "../component/Carousel";
 import Hero from "../component/Hero";
+import Stat from "../component/Stat";
 export default function Home() {
   return (
     <div>
@@ -17,6 +18,7 @@ export default function Home() {
       </Head>
       <Hero />
       <Slider />
+      <Stat />
     </div>
   );
 }
