@@ -1,8 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Slider from '../component/Carousel'
-
+import Slider from "../component/Carousel";
+import Hero from "../component/Hero";
 export default function Home() {
   return (
     <div>
@@ -16,6 +14,11 @@ export default function Home() {
           content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
         />
         <link rel="icon" href="/favicon.png" />
+
+         </Head>
+        <Hero/>
+      <Slider />
+
       </Head>
       <div className={styles.header__content}>
         <div className={styles.header__content_text}>
@@ -56,6 +59,7 @@ export default function Home() {
         
       </div>
       <Slider/>
+
     </div>
   );
 }
