@@ -49,7 +49,7 @@
 .card {
   background-color: white;
   position: relative;
-  
+
   width: 404px;
   height: 162px;
   border-radius: 20px;
@@ -136,13 +136,15 @@
   line-height: 20px;
 }
 
-.container::after {
+.card::before {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
   content: "";
   position: absolute;
-  width: 100%;
-  height: 1px;
-  top: 115%;
-  background-color: #12273c;
+  margin-left: 94px;
+  top: 123%;
+  background-color: #717d8a;
 }
 
 .card a {
@@ -153,4 +155,18 @@
   margin-top: 23px;
   color: #8d53fd;
   align-items: center;
+}
+
+.content hr {
+  margin-left: 0;
+  width: 58%;
+  margin-top: 41px;
+}
+
+.line {
+  width: 42%;
+
+  border-top: 1px dashed #12273c;
+  float: right;
+  margin-top: -10px;
 }

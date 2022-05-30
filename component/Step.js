@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "../styles/Step.module.css";
-import {FiChevronRight} from 'react-icons/fi';
+import { FiChevronRight } from "react-icons/fi";
 export default function Step() {
   return (
     <div className={styles.content}>
@@ -13,7 +13,9 @@ export default function Step() {
           <div className={styles.middle}>
             <span>300+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
           </div>
-          <a href="#">Batafsil <FiChevronRight size={23}/> </a>
+          <a href="#">
+            Batafsil <FiChevronRight size={23} />{" "}
+          </a>
         </div>
         <div className={styles.card}>
           <div className={styles.text}>
@@ -24,9 +26,10 @@ export default function Step() {
           </div>
           <div className={styles.middle}>
             <span>1k+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-            
           </div>
-          <a href="#">Batafsil <FiChevronRight size={23}/></a>
+          <a href="#">
+            Batafsil <FiChevronRight size={23} />
+          </a>
         </div>
         <div className={styles.card}>
           <div className={styles.text}>
@@ -38,11 +41,14 @@ export default function Step() {
           <div className={styles.middle}>
             <span>300+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
           </div>
-          <a href="#">Batafsil <FiChevronRight size={23}/> </a>
+          <a href="#">
+            Batafsil <FiChevronRight size={23} />{" "}
+          </a>
         </div>
-
-        <div className={styles.line}> </div>
       </div>
+
+      <hr />
+      <div className={styles.line}></div>
     </div>
   );
 }
