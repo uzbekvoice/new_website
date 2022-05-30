@@ -1,0 +1,60 @@
+.content {
+  margin-top: 190px;
+  text-align: center;
+  
+}
+
+.content h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin: 0;
+}
+
+.container {
+    display: flex;
+    margin-top: 64px;
+  }
+  
+  .card {
+    background-color: white;
+    position: relative;
+   text-align: left;
+    width: 404px;
+    height: 240px;
+    border-radius: 32px;
+    border: 2px solid #d9d9d9;
+    padding: 24px;
+  }
+  .card:nth-child(2) {
+    margin: 0 30px 0px 30px;
+  }
+
+  .image{
+      display: flex;
+  }
+
+  .card h3{
+      font-size: 18px;
+      font-weight: 700;
+
+  }
+  .card p{
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23px;
+      letter-spacing: 0.0043em;
+  }
+
+  .link a{
+      margin-top: 64px;
+     display: inline-block;
+    background-color: #8d53fd;
+    color: white;
+    padding: 21px 24px;
+    font-size: 22px;
+    line-height: 22px;
+    border-radius: 12px;
+  }
