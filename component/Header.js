@@ -46,6 +46,11 @@ function Header() {
             Resuslar
           </a>
         </Link>
+        <Link href="/guide">
+          <a className={router.pathname == "/guide" ? "item active" : "item"}>
+            Qo'llanma
+          </a>
+        </Link>
         <Link href="/ishtirok">
           <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
             Ishtirok eting
