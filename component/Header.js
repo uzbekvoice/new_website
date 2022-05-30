@@ -33,6 +33,14 @@ function Header() {
           </a>
         </Link>
 
+        <Link href="/hamkorlar">
+          <a
+            className={router.pathname == "/hamkorlar" ? "item active" : "item"}
+          >
+            Hamkorlar
+          </a>
+        </Link>
+
         <Link href="/resus">
           <a className={router.pathname == "/resus" ? "item active" : "item"}>
             Resuslar
