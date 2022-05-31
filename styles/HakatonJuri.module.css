@@ -1,0 +1,57 @@
+.hakatonJuri {
+    /* padding-bottom: 115px; */
+}
+
+.hakatonJuri_title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+    margin-bottom: 14px;
+}
+
+.hakatonJuri_wrapper {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.hakatonJuri_card {
+    width: 23.5%;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.hakatonJuri_card img {
+    width: 100%;
+}
+
+.hakatonJuri_card p {
+    margin: 26px 0 10px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+}
+
+.hakatonJuri_card a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111.63%;
+    display: inline-flex;
+    align-items: center;
+    color: #8D53FD;
+}
+
+.hakatonJuri_card a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}

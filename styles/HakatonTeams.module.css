@@ -1,0 +1,81 @@
+.hakatonTeams {
+    padding: 160px 0 118px;
+    position: relative;
+}
+
+.hakatonTeams_title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+    margin-bottom: 27px;
+}
+
+.hakatonTeams_cardBadge {
+    position: absolute;
+    padding: 11px 22px;
+    left: 0%;
+    top: 32px;
+    background: linear-gradient(290.62deg, #33BFFA -8.32%, #B9E9FD 103.98%);
+    border-radius: 0px 11.52px 11.52px 0px;
+}
+
+.hakatonTeams_cardBadge span {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 120%;
+    color: #2A2A2A;
+}
+
+.hakatonTeams_wrapper {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hakatonTeams_card {
+    padding: 20px;
+    width: 32%;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #E5E5E5;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 10px;
+    margin-top: 28px;
+}
+
+.hakatonTeams_cardHeader img {
+    width: 100%;
+}
+
+.hakatonTeams_cardBody {
+    margin-top: 15px;
+}
+
+.hakatonTeams_cardBody h4 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    color: #2A2A2A;
+    margin-bottom: 32px;
+}
+
+.hakatonTeams_cardBody a {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111.63%;
+    color: #8D53FD;
+}
+
+.hakatonTeams_cardBody a img {
+    margin-left: 8px;
+}

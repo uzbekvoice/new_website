@@ -1,0 +1,54 @@
+.hakatonHero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 90px 100px;
+    background-color: transparent;
+}
+
+.hakatonHeroBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hakatonHero_Left {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hakatonHero_Right div {
+    margin-left: 100px;
+}
+
+.hakatonHero_Right h4 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 69px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}
