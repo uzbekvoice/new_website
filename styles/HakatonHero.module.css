@@ -1,10 +1,17 @@
+.hakatonHeroWrappper {
+    background-image: url('/hakaton-hero-bg.png');
+    background-position: center;
+    background-size: cover;
+}
+
 .hakatonHero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    padding: 90px 100px;
+    padding: 80px 100px 90px;
+    position: relative;
     background-color: transparent;
 }
 

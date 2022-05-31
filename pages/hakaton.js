@@ -7,10 +7,12 @@ import HakatonTeams from '../component/HakatonTeams'
 export default function hakaton() {
   return (
     <div>
-        <HakatonHero />
+      <HakatonHero />
+      <div className='container__fluid'>
         <HakatonTeams />
         <HakatonFoto />
         <HakatonJuri />
+      </div>
     </div>
   )
 }
