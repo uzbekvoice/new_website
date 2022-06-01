@@ -1,6 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
-
+import styles from '../styles/Layout.module.css'
 import { useRouter } from "next/router";
 
 function Layout({ children }) {
@@ -8,7 +8,7 @@ function Layout({ children }) {
   if (router.pathname != "/hakaton")
     return (
       <>
-        <div className="container__fluid">
+        <div className={styles.containerfluid}>
           <Header />
           {children}
         </div>
