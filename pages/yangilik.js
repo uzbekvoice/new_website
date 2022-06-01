@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
+import YangilikSection from '../component/Yangiliklar/YangilikSection';
 
 export default function yangilik() {
   return (
     <div>
-
-        <h2>BU Yangiliklar Sahifasi</h2>
+        <YangilikSection/>
     </div>
   )
 }
