@@ -1,0 +1,199 @@
+.main {
+    text-align: center;
+    font-size: 40px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 24px;
+    padding-top: 10px;
+    text-align: start;
+    padding-left: 20px;
+}
+
+.desc {
+    color: gray;
+    font-weight: 400;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-top: 20px;
+    width: 380px;
+}
+
+
+
+.box img {
+    width: 100%;
+    height: 240px;
+    border-radius: 24px;
+}
+
+.flexClass {
+    padding-left: 0px;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flexClass .ppp {
+    color: gray;
+    padding-left: 90px;
+}
+
+.flexClass a {
+    color: #8D53FD;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.parent {
+    z-index: 22;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.box {
+    width: calc(100/30%);
+    height: 500px;
+
+    margin: 20px 0 20px;
+    
+    background: white;
+    border-radius: 24px;
+    line-height: 180%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 22;
+
+}
+
+.empty {
+    width: 300px;
+    height: 300px;
+    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 26.8%;
+    right: 21.8%;
+    top: 70%;
+    bottom: 45.6%;
+    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    filter: blur(150px);
+    z-index: -3;
+}
+
+.empty2 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 15.4%;
+    right: 2.4%;
+    top: 140.6%;
+    bottom: 1%;
+    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    filter: blur(150px);
+    z-index: -3;
+}
+
+.empty3 {
+    width: 300px;
+    height: 300px;
+    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    border-radius: 50%;
+    position: absolute;
+    left: 55.4%;
+    right: 2.4%;
+    top: 190.6%;
+    bottom: 1%;
+    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    filter: blur(150px);
+    z-index: -3;
+}
+
+@media (max-width:1500px) {
+    .box {
+        width: 40%;
+        height: 500px;
+    }
+    .desc {
+        color: gray;
+        font-weight: 400;
+        font-size: 18px;
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 400px;
+    }
+}
+@media (max-width:1216px) {
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+        padding-top: 10px;
+        text-align: start;
+        padding-left: 20px;
+    }
+    .desc {
+        color: gray;
+        font-weight: 400;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 330px;
+    }
+    .flexClass {
+        padding-left: 0px;
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .flexClass a  {
+        font-size: 15px;
+    }
+    .flexClass .ppp {
+        font-size: 12px;
+    }
+}
+@media (max-width:1000px) {
+    .box {
+        width: 40%;
+        padding-bottom: 20px;
+    }
+    .desc {
+        color: gray;
+        font-weight: 400;
+        font-size: 16px;
+        padding-left: 20px;
+        padding-top: 20px;
+        width: 280px;
+    }
+    .flexClass {
+        padding-left: 0px;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-around;
+    }
+    .flexClass a  {
+        font-size: 12px;
+    }
+    .flexClass .ppp {
+        font-size: 12px;
+    }
+}
+@media (max-width:960px) {
+    .box {
+        width: 40%;
+        padding-bottom: 20px;
+    }
+    .flexClass {
+        padding-left: 10px;
+        padding-top: 40px;
+        display: flex;
+        justify-content: space-around;
+    }
+}
