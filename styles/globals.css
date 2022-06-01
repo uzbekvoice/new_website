@@ -24,6 +24,19 @@ a {
 }
 
 
+  
+.container__fluid {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 86px;
+}
+
+@media (max-width: 767px){
+  .container__fluid {
+    padding: 0 10px;
+  }
+}
 
 .container {
   max-width: 1200px;
