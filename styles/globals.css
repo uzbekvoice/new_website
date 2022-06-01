@@ -13,6 +13,8 @@ a {
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .item.active{
@@ -24,7 +26,6 @@ a {
   width: 100%;
   margin: 0 auto;
   padding: 0 86px;
-
 }
 
 .container {

@@ -1,0 +1,45 @@
+.hakatonFoto {
+    padding-bottom: 115px;
+}
+
+.hakatonFoto_title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+    margin-bottom: 14px;
+}
+
+.hakatonFoto_wrapper {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.hakatonFoto_card {
+    width: 23.5%;
+    margin-top: 34px;
+}
+
+.hakatonFoto_card img {
+    width: 100%;
+}
+
+.hakatonFoto button {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140.5%;
+    color: #8D53FD;
+    display: block;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}

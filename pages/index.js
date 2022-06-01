@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Slider from "../component/Carousel";
+import Contribution from "../component/Contribution";
 import Hero from "../component/Hero";
+import Stat from "../component/Stat";
+import Step from "../component/Step";
+import TopUser from "../component/TopUser";
 export default function Home() {
   return (
     <div>
@@ -17,6 +21,10 @@ export default function Home() {
       </Head>
       <Hero />
       <Slider />
+      <Stat />
+      <Step />
+      <Contribution />
+      <TopUser />
     </div>
   );
 }

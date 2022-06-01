@@ -1,9 +1,9 @@
 import { useState } from 'react'
-import styles from "../styles/Header.module.css";
+import styles from "../styles/HeaderHakaton.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function Header() {
+function HeaderHakaton() {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
 
@@ -12,7 +12,7 @@ function Header() {
       className={styles.header__main}>
       <Link href="/">
         <a>
-          <img className={styles.header_logo} src="./logo.png" alt="logo" />
+          <img className={styles.header_logo} src="./hakaton-header-logo.png" alt="logo" />
         </a>
       </Link>
 
@@ -87,4 +87,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderHakaton;

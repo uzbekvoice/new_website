@@ -1,19 +1,29 @@
 import Header from "./Header";
 import Footer from "./Footer";
-import styles from "../styles/Home.module.css";
+
+import { useRouter } from "next/router";
 
 function Layout({ children }) {
-  return (
-    <>
-      <div className="container__fluid">
-        <Header />
-        {children}
+  const router = useRouter();
+  if (router.pathname != "/hakaton")
+    return (
+      <>
+        <div className="container__fluid">
+          <Header />
+          {children}
+        </div>
+        <Footer />
+      </>
+    );
+  else {
+    return (
+      <>
+        <div>{children}</div>
 
-      
-      </div>
-      <Footer />
-    </>
-  );
+        <Footer />
+      </>
+    );
+  }
 }
 
 export default Layout;

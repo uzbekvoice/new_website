@@ -1,0 +1,75 @@
+.statistic {
+    position: relative
+}
+.content {
+    margin-top: 206px;
+    text-align: center
+}
+.content h3 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 53px;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+    margin: 0;
+}
+
+.content p {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #12273C;
+    margin-top: 16px;
+    margin-bottom: 16px
+}
+
+.statistic__content-text-p2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    text-align: left
+}
+
+.status {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.status span{
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 68px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#33BFFA), to(#625bca));
+    background: -o-linear-gradient(#33BFFA, #625bca);
+    background: linear-gradient(#33BFFA, #625bca);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.status p{
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0em;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
+    margin-top: 31px;
+    
+}
+
+.img_top{
+margin-top: 48px;
+}
+
+.img_bottom{
+    margin-top: 18px;
+}
+
+.img_hour{
+    margin-top: 80px;
+}
