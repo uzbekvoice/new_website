@@ -115,7 +115,7 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 600px) {
     .header__main .header_logo {
         width: 165px;
     }
