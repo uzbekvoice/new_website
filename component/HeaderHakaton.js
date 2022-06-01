@@ -8,8 +8,8 @@ function HeaderHakaton() {
   const [menuToggle, setMenuToggle] = useState(false);
 
   return (
-    <div 
-     className={styles.header__main}>
+    <div
+      className={styles.header__main}>
       <Link href="/">
         <a>
           <img className={styles.header_logo} src="./hakaton-header-logo.png" alt="logo" />

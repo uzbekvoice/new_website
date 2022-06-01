@@ -94,6 +94,7 @@
         -o-transition: all 0.8s ease 0s;
         transition: all 0.8s ease 0s
     }
+
     .header__menu a {
         color: #171717;
     }

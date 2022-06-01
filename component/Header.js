@@ -8,8 +8,8 @@ function Header() {
   const [menuToggle, setMenuToggle] = useState(false);
 
   return (
-    <div 
-     className={styles.header__main}>
+    <div
+      className={styles.header__main}>
       <Link href="/">
         <a>
           <img className={styles.header_logo} src="./logo.png" alt="logo" />
