@@ -1,20 +1,46 @@
+import { useState } from 'react'
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
 
 function Header() {
   const router = useRouter();
+  const [menuToggle, setMenuToggle] = useState(false);
 
   return (
-    <div className={styles.header__main}>
+    <div 
+     className={styles.header__main}>
       <Link href="/">
         <a>
-          <img src="./logo.png" alt="logo" />
+          <img className={styles.header_logo} src="./logo.png" alt="logo" />
         </a>
       </Link>
 
-      <div className={styles.header__menu}>
+      <div className={styles.header__main_wrapper}>
+        <div className={styles.header_main_ishtirok}>
+          <Link href="/ishtirok">
+            <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
+              Ishtirok eting
+            </a>
+          </Link>
+        </div>
+
+        <div onClick={() => setMenuToggle(true)} className={styles.header_burger_menu}>
+          <img src='/burger-menu.svg' alt='burger' />
+        </div>
+      </div>
+
+      <div
+        onClick={e => {
+          e.stopPropagation();
+        }}
+        style={{ transform: menuToggle && 'translateX(0)' }}
+        className={styles.header__menu}
+      >
+        <div onClick={() => setMenuToggle(false)} className={styles.header__menu_close}>
+          <img src='/menu-times.png' alt='close icon' />
+        </div>
+
         <Link href="/bosqich">
           <a className={router.pathname == "/bosqich" ? "item active" : "item"}>
             Bosqichlar

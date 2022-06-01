@@ -1,0 +1,110 @@
+.hakatonHeroWrappper {
+    background-image: url('/hakaton-hero-bg.png');
+    /* background-position: center; */
+    background-size: cover;
+}
+
+.hakatonHero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    padding: 80px 100px 90px;
+    position: relative;
+    background-color: transparent;
+    position: relative;
+}
+
+.hakatonHero::after {
+    content: "";
+    filter: blur(80px);
+    background: -webkit-gradient(linear,
+            left top,
+            left bottom,
+            from(rgba(0, 133, 255, 0.58)),
+            to(rgba(173, 0, 255, 0.11)));
+    background: -o-linear-gradient(top,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    background: linear-gradient(180deg,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    -webkit-filter: blur(80px);
+    position: absolute;
+    bottom: -48%;
+    left: -14px;
+    width: 237px;
+    height: 233px;
+    border-radius: 50%;
+    /* z-index: -5; */
+}
+
+.hakatonHero::before {
+    content: "";
+    filter: blur(46px);
+    background: -webkit-gradient(linear,
+            left top,
+            left bottom,
+            from(rgba(0, 133, 255, 0.58)),
+            to(rgba(173, 0, 255, 0.11)));
+    background: -o-linear-gradient(top,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    background: linear-gradient(180deg,
+            rgba(0, 133, 255, 0.58) 0%,
+            rgba(173, 0, 255, 0.11) 100%);
+    -webkit-filter: blur(46px);
+    position: absolute;
+    bottom: 4%;
+    right: 2px;
+    width: 140px;
+    height: 120px;
+    border-radius: 50%;
+    /* z-index: -5; */
+}
+
+.hakatonHeroBg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hakatonHero_Left {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hakatonHero_Right div {
+    margin-left: 100px;
+}
+
+.hakatonHero_Right h4 {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 69px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}
+
+.hakatonHero_Right p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    letter-spacing: -0.66px;
+    color: #FFFFFF;
+}

@@ -1,21 +1,21 @@
-import styles from "../styles/Header.module.css";
+import styles from "../styles/HeaderHakaton.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 
-function Header() {
+function HeaderHakaton() {
   const router = useRouter();
 
   return (
-    <div className={styles.header__main}>
+    <div className={styles.headerHakaton__main}>
       <Link href="/">
         <a>
-          <img src="./logo.png" alt="logo" />
+          <img src="./hakaton-header-logo.png" alt="logo" />
         </a>
        
       </Link>
 
-      <div className={styles.header__menu}>
+      <div className={styles.headerHakaton__menu}>
         <Link href="/bosqich">
           <a className={router.pathname == "/bosqich" ? "item active" : "item"}>
             Bosqichlar
@@ -62,4 +62,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default HeaderHakaton;

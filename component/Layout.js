@@ -18,9 +18,8 @@ function Layout({ children }) {
   else {
     return (
       <>
-        <div className="container__fluid">
-          {children}
-          </div>
+        <div>{children}</div>
+
         <Footer />
       </>
     );
