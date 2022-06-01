@@ -16,6 +16,7 @@ export default function Home() {
         <meta
           name="description"
           content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
+           
         />
         <link rel="icon" href="/favicon.png" />
       </Head>
