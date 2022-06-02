@@ -7,9 +7,9 @@ const YangilikSection = () => {
       <section className={s.YangilikSection}>
         <div className={s.container}>
             <h1 className={s.main}>Yangiliklar</h1>
-            <div className={s.empty}></div>
-            <div className={s.empty2}></div>
-            <div className={s.empty3}></div>
+            <div className={s.gradientCircle}></div>
+            <div className={s.gradientCircle2}></div>
+            <div className={s.gradientCircle3}></div>
           <div className={s.parent}>
             {data.map(function (el) {
               return (
