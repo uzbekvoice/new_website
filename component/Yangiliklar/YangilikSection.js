@@ -4,7 +4,6 @@ import s from "../../styles/Yangiliklar.module.css";
 
 const YangilikSection = () => {
   return (
-    <div>
       <section className={s.YangilikSection}>
         <div className={s.container}>
             <h1 className={s.main}>Yangiliklar</h1>
@@ -28,7 +27,6 @@ const YangilikSection = () => {
           </div>
         </div>
       </section>
-    </div>
   );
 };
 

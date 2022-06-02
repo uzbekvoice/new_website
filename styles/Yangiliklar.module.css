@@ -62,7 +62,7 @@
     height: 500px;
 
     margin: 20px 0 20px;
-    
+
     background: white;
     border-radius: 24px;
     line-height: 180%;
@@ -71,7 +71,7 @@
 
 }
 
-.empty {
+/* .empty {
     width: 300px;
     height: 300px;
     border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
@@ -89,7 +89,8 @@
 .empty2 {
     width: 300px;
     height: 300px;
-    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
+    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%,
+     rgba(82, 0, 255, 0.33) 100%);
     border-radius: 50%;
     position: absolute;
     left: 15.4%;
@@ -114,13 +115,14 @@
     background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
     filter: blur(150px);
     z-index: -3;
-}
+} */
 
 @media (max-width:1500px) {
     .box {
         width: 40%;
         height: 500px;
     }
+
     .desc {
         color: gray;
         font-weight: 400;
@@ -130,6 +132,7 @@
         width: 400px;
     }
 }
+
 @media (max-width:1216px) {
     .title {
         font-weight: 700;
@@ -138,6 +141,7 @@
         text-align: start;
         padding-left: 20px;
     }
+
     .desc {
         color: gray;
         font-weight: 400;
@@ -146,24 +150,29 @@
         padding-top: 20px;
         width: 330px;
     }
+
     .flexClass {
         padding-left: 0px;
         padding-top: 50px;
         display: flex;
         justify-content: space-around;
     }
-    .flexClass a  {
+
+    .flexClass a {
         font-size: 15px;
     }
+
     .flexClass .ppp {
         font-size: 12px;
     }
 }
+
 @media (max-width:1000px) {
     .box {
         width: 40%;
         padding-bottom: 20px;
     }
+
     .desc {
         color: gray;
         font-weight: 400;
@@ -172,24 +181,29 @@
         padding-top: 20px;
         width: 280px;
     }
+
     .flexClass {
         padding-left: 0px;
         padding-top: 40px;
         display: flex;
         justify-content: space-around;
     }
-    .flexClass a  {
+
+    .flexClass a {
         font-size: 12px;
     }
+
     .flexClass .ppp {
         font-size: 12px;
     }
 }
+
 @media (max-width:960px) {
     .box {
         width: 40%;
         padding-bottom: 20px;
     }
+
     .flexClass {
         padding-left: 10px;
         padding-top: 40px;
