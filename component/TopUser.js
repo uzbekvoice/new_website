@@ -11,9 +11,8 @@ export default function TopUser() {
         To'liq ma'lumot
       </p>
       <div className={styles.grid}>
-
-          <h4>Top voice acting users</h4>
-          <h4>Top listeners</h4>
+        <h4>Top voice acting users</h4>
+        <h4>Top listeners</h4>
         <div className={styles.card}>
           <div className={styles.item}>
             <div className={styles.block}>
@@ -24,7 +23,7 @@ export default function TopUser() {
           </div>
         </div>
         <div className={styles.card}>
-        <div className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
               <h4>Wade Warren</h4>
@@ -33,7 +32,7 @@ export default function TopUser() {
           </div>
         </div>
         <div className={styles.card}>
-        <div className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
               <h4>Wade Warren</h4>
@@ -42,7 +41,7 @@ export default function TopUser() {
           </div>
         </div>
         <div className={styles.card}>
-        <div className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
               <h4>Wade Warren</h4>
@@ -51,7 +50,7 @@ export default function TopUser() {
           </div>
         </div>
         <div className={styles.card}>
-        <div className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
               <h4>Wade Warren</h4>
@@ -60,7 +59,7 @@ export default function TopUser() {
           </div>
         </div>
         <div className={styles.card}>
-        <div className={styles.item}>
+          <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
               <h4>Wade Warren</h4>
@@ -69,7 +68,7 @@ export default function TopUser() {
           </div>
         </div>
         <a href="#">Barchasini ko'rish</a>
-          <a href="#">Barchasini ko'rish</a>
+        <a href="#">Barchasini ko'rish</a>
       </div>
     </div>
   );
