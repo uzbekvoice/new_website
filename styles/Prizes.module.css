@@ -1,0 +1,8 @@
+.prizesPictures {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 34px;
+  /* border: 1px solid; */
+}
