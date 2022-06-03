@@ -44,16 +44,48 @@
   gap: 20px;
 }
 
-/* .goalIcon {
-  width: 294px !important;
-} */
+.goalIcon {
+  margin: 0 auto;
+}
 
 .card1,
 .card2 {
-  border: 1px solid;
+  /* border: 1px solid; */
   width: 294px;
-  /* display: grid; */
   height: 267px;
+  text-align: center;
+}
+
+.card1 > h2,
+.card2 > h2 {
+  margin-top: 6px;
+  line-height: 32px;
+}
+
+.card1 > p,
+.card2 > p {
+  margin-top: 8px;
+  line-height: 28px;
+  color: rgba(113, 125, 138, 1);
+}
+.card1 > p > span,
+.card2 > p > span {
+  color: #44484c;
+}
+
+.card2::before {
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 1) 0%,
+    rgba(82, 0, 255, 1) 100%
+  );
+  filter: blur(219px);
+  height: 238.2720184326172px;
+  width: 247.03199768066406px;
+  position: absolute;
+  top: 100%;
+  right: 10%;
 }
 
 .block {
@@ -70,6 +102,20 @@
 .rules {
   margin-top: 200px;
   text-align: center;
+}
+
+.rules::before {
+  content: "";
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 0.8) 0%,
+    rgba(82, 0, 255, 0.8) 100%
+  );
+  filter: blur(219px);
+  height: 238.2720184326172px;
+  width: 247.03199768066406px;
+  position: absolute;
+  left: 21.8%;
 }
 
 .rulesCard {
