@@ -81,10 +81,7 @@ export default function bosqich() {
         <a href="#">Показать всех</a>
       </div>
 
-      <div className={styles.ceremony}>
-        <h2>Taqdirlash marosimi</h2>
-        <Prizes />
-      </div>
+      <Prizes />
     </div>
   );
 }
