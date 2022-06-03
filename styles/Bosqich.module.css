@@ -1,3 +1,18 @@
+@font-face {
+  font-family: "ObjektivMk1";
+  src: url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot");
+  src: url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.svg#ObjektivMk1W03-Regular")
+      format("svg");
+}
+
 .isContinue {
   display: flex;
   flex-direction: row;
@@ -11,9 +26,16 @@
   margin-top: 40px !important;
   margin: 0 auto;
   color: rgba(253, 83, 83, 1);
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.0043em;
 }
 
 .bosqichTitle {
+  font-family: "ObjektivMk1";
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -26,7 +48,7 @@
 
 .scheduleDate {
   margin-top: 12px;
-  font-family: "Objektiv Mk1";
+  font-family: "ObjektivMk1";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -60,6 +82,14 @@
 .card2 > h2 {
   margin-top: 6px;
   line-height: 32px;
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: -0.66px;
+  color: #12273c;
 }
 
 .card1 > p,
@@ -67,6 +97,13 @@
   margin-top: 8px;
   line-height: 28px;
   color: rgba(113, 125, 138, 1);
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: -0.5px;
 }
 .card1 > p > span,
 .card2 > p > span {
@@ -104,6 +141,33 @@
   text-align: center;
 }
 
+.rules h2 {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 110%;
+}
+
+.rules .rulesCard h2 {
+  margin-bottom: 24px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 28px !important;
+  line-height: 110%;
+  color: #12273c;
+}
+
+.rules .rulesCard p {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: 0.0043em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .rules::before {
   content: "";
   background: linear-gradient(
@@ -138,6 +202,37 @@
   /* border: 1px solid; */
   text-align: center;
   padding: 0 106px;
+}
+
+.winners > h2 {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: 0.0022em;
+}
+
+.winners .leaderBoard h2 {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  align-items: center;
+  color: #374151;
+}
+
+.winners > a {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.0043em;
+  color: #8d53fd;
 }
 
 .leaderBoard {
