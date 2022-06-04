@@ -1,23 +1,24 @@
-import { useState } from 'react'
-
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function Header() {
-  const router = useRouter();
-  const [menuToggle, setMenuToggle] = useState(false);
+function Header({menuToggle, setMenuToggle}) {
+  const router = useRouter();  
 
   return (
     <div
-      className={styles.header__main}>
+      className={styles.header__main}
+      >
       <Link href="/">
         <a>
           <img className={styles.header_logo} src="./logo.png" alt="logo" />
         </a>
       </Link>
 
-      <div className={styles.header__main_wrapper}>
+      <div 
+      className={styles.header__main_wrapper}
+      onClick={e=>e.stopPropagation()}
+      >
         <div className={styles.header_main_ishtirok}>
           <Link href="/ishtirok">
             <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
@@ -35,7 +36,9 @@ function Header() {
         onClick={e => {
           e.stopPropagation();
         }}
-        style={{ transform: menuToggle && 'translateX(0)' }}
+        style={{ transform: menuToggle && 'translateX(0)',
+        position: menuToggle && 'fixed'
+      }}
         className={styles.header__menu}
       >
         <div onClick={() => setMenuToggle(false)} className={styles.header__menu_close}>
@@ -43,17 +46,17 @@ function Header() {
         </div>
 
         <Link href="/bosqich">
-          <a className={router.pathname == "/bosqich" ? "item active" : "item"}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/bosqich" ? "item active" : "item"}>
             Bosqichlar
           </a>
         </Link>
         <Link href="/hakaton">
-          <a className={router.pathname == "/hakaton" ? "item active" : "item"}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/hakaton" ? "item active" : "item"}>
             Hakaton
           </a>
         </Link>
         <Link href="/yangilik">
-          <a
+          <a onClick={() => setMenuToggle(false)}
             className={router.pathname == "/yangilik" ? "item active" : "item"}
           >
             Yangiliklar
@@ -61,7 +64,7 @@ function Header() {
         </Link>
 
         <Link href="/hamkorlar">
-          <a
+          <a onClick={() => setMenuToggle(false)}
             className={router.pathname == "/hamkorlar" ? "item active" : "item"}
           >
             Hamkorlar
@@ -69,17 +72,17 @@ function Header() {
         </Link>
 
         <Link href="/resus">
-          <a className={router.pathname == "/resus" ? "item active" : "item"}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/resus" ? "item active" : "item"}>
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a className={router.pathname == "/guide" ? "item active" : "item"}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/guide" ? "item active" : "item"}>
             Qo'llanma
           </a>
         </Link>
         <Link href="/ishtirok">
-          <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
             Ishtirok eting
           </a>
         </Link>
