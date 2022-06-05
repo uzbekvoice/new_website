@@ -43,3 +43,44 @@
     outline: none;
     cursor: pointer;
 }
+
+@media (max-width: 1110px) {
+    .hakatonFoto_card {
+        width: 32%;        
+    }      
+}
+
+@media (max-width: 767px) {
+    .hakatonFoto_card {
+        width: 48%;        
+    }      
+
+    .hakatonFoto_title {
+        font-size: 40px;
+    }
+
+    .hakatonFoto {
+        padding-bottom: 80px;
+    }
+}
+
+@media (max-width: 500px) {
+    .hakatonFoto {
+        padding-bottom: 50px;
+    }
+    
+    .hakatonFoto_card {
+        width: 100%;        
+    }     
+    
+    .hakatonFoto_wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 460px) {
+
+    .hakatonFoto_title {
+        font-size: 28px;
+    }
+}

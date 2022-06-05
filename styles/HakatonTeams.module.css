@@ -41,6 +41,7 @@
 .hakatonTeams_card {
     padding: 20px;
     width: 32%;
+    /* min-width: 300px; */
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #E5E5E5;
     backdrop-filter: blur(8px);
@@ -78,4 +79,42 @@
 
 .hakatonTeams_cardBody a img {
     margin-left: 8px;
+}
+
+@media (max-width: 1110px) {
+    .hakatonTeams_card {
+        width: 48%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .hakatonTeams {
+        padding-top: 100px;
+        padding-bottom: 80px;
+    }
+
+    .hakatonTeams_title {
+        font-size: 40px;
+    }
+
+    .hakatonTeams_cardBadge {
+        padding: 6px 16px;        
+    }
+
+    .hakatonTeams_cardBadge span {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hakatonTeams_card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 460px) {
+    .hakatonTeams_title {
+        font-size: 28px;
+    }
 }

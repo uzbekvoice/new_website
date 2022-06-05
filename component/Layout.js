@@ -19,7 +19,7 @@ function Layout({ children }) {
     return (
       <div onClick={navbarOutsiteClickClose}>
         <div className={styles.containerfluid}>
-          <Header top={top} setMenuToggle={setMenuToggle} menuToggle={menuToggle} />
+          <Header setMenuToggle={setMenuToggle} menuToggle={menuToggle} />
           {children}
         </div>
         <Footer />
