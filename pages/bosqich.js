@@ -3,12 +3,13 @@ import React from "react";
 import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
 import Prizes from "../component/Prizes";
+import TopUser from "../component/Winners";
 
 export default function bosqich() {
   return (
     <div className={styles.bosqichPage}>
       <div className={styles.isContinue}>yakunlangan</div>
-      <h1 className={styles.bosqichTitle}>1-Bosqich konkurs tanlov</h1>
+      <h1>1-Bosqich konkurs tanlov</h1>
       <p className={styles.scheduleDate}>2021-yil oktabr-dekabr</p>
 
       <div className={styles.goal}>
@@ -67,20 +68,7 @@ export default function bosqich() {
         </div>
       </div>
 
-      <div className={styles.winners}>
-        <h2>G&apos;oliblar ro&apos;yxati</h2>
-        <div className={styles.leaderBoard}>
-          <div className={styles.topVoiceActing}>
-            <h2>Top voice acting users</h2>
-            <Winners />
-          </div>
-          <div className={styles.topListeners}>
-            <h2>Top voice acting users</h2>
-            <Winners />
-          </div>
-        </div>
-        <a href="#">Показать всех</a>
-      </div>
+    <Winners/>
 
       <Prizes />
     </div>

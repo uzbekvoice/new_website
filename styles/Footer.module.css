@@ -118,7 +118,11 @@
 .footer .menu_footer-info-first {
     margin-left: 8px
 }
-
+.powered h3{
+  
+    padding: 32px  0px 4px!important;
+ 
+}
 .footer h3 {
     text-align: center;
     padding-bottom: 32px;
