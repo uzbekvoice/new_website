@@ -1,0 +1,16 @@
+.question {
+  margin-top: 132px;
+  text-align: center;
+  position: relative;
+  padding: 0 108px;
+}
+
+.question h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin: 32px 0px;
+}
+

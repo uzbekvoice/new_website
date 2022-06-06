@@ -51,3 +51,68 @@ a {
   border-radius: 12px;
 }
 
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #fff;
+  
+  cursor: pointer;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 5px;
+  border-radius: 16px ;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover,
+.active {
+  background-color: transparent;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  color: #12273c;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  /* border:  1px solid rgba(0, 0, 0, 0.08); */
+ 
+ 
+ 
+  
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 18px;
+}
+
