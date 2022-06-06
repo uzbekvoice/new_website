@@ -1,0 +1,26 @@
+.initpartners {
+  margin-top: 100px;
+  text-align: center;
+  position: relative;
+}
+
+.initpartners h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin: 0;
+}
+
+.initpartners p {
+  
+  width: 727px;
+  margin: 26px auto;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.item{
+    width: 200px;
+}
