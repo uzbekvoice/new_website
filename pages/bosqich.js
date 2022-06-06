@@ -16,7 +16,7 @@ export default function bosqich() {
         <div className={styles.card1}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon1.png" width={100} height={100} />
+              <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
             </div>
           </div>
           <h2>Ko'zlangan maqsad</h2>
@@ -27,12 +27,12 @@ export default function bosqich() {
         <div className={styles.card2}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon2.svg" width={100} height={100} />
+              <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2'/>
             </div>
           </div>
           <h2>Ko'zlangan maqsad</h2>
           <p>
-            <span>300+</span> soat Ovozli malumotlar to’plash
+            <span>300+</span> soat Ovozli malumotlar to'plash
           </p>
         </div>
       </div>

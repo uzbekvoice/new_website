@@ -8,25 +8,25 @@ export default function Prizes() {
       <h2>Taqdirlash marosimi</h2>
       <div className={styles.prizesPictures}>
         <div>
-          <Image src="/unsplash_9mHJM_1GU1E.png" width={280} height={178} />
+          <Image src="/unsplash_9mHJM_1GU1E.png" width={280} height={178} alt='prizes1' />
         </div>
         <div>
-          <Image src="/unsplash_62vi3TG5EDg.png" width={280} height={178} />
+          <Image src="/unsplash_62vi3TG5EDg.png" width={280} height={178} alt='prizes2'/>
         </div>
         <div>
-          <Image src="/unsplash_gStQEmZy-F8.png" width={280} height={178} />
+          <Image src="/unsplash_gStQEmZy-F8.png" width={280} height={178} alt='prizes3'/>
         </div>
         <div>
-          <Image src="/unsplash_OHPdgstNFGs.png" width={280} height={178} />
+          <Image src="/unsplash_OHPdgstNFGs.png" width={280} height={178} alt='prizes4'/>
         </div>
         <div>
-          <Image src="/unsplash_ruJm3dBXCqw.png" width={280} height={178} />
+          <Image src="/unsplash_ruJm3dBXCqw.png" width={280} height={178} alt='prizes5' />
         </div>
         <div>
-          <Image src="/unsplash_UYgrVfIhBec.png" width={280} height={178} />
+          <Image src="/unsplash_UYgrVfIhBec.png" width={280} height={178} alt='prizes6'/>
         </div>
         <div>
-          <Image src="/unsplash_wHddViTmSvA.png" width={280} height={178} />
+          <Image src="/unsplash_wHddViTmSvA.png" width={280} height={178} alt='prizes7'/>
         </div>
       </div>
     </div>
