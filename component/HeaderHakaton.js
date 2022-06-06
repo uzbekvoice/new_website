@@ -1,11 +1,10 @@
-import { useState } from 'react'
 import styles from "../styles/HeaderHakaton.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-function HeaderHakaton() {
+function HeaderHakaton({ menuHakatonToggle, setHakatonToggle }) {
+
   const router = useRouter();
-  const [menuToggle, setMenuToggle] = useState(false);
 
   return (
     <div
@@ -16,7 +15,10 @@ function HeaderHakaton() {
         </a>
       </Link>
 
-      <div className={styles.header__main_wrapper}>
+      <div
+        className={styles.header__main_wrapper}
+        onClick={e => e.stopPropagation()}
+      >
         <div className={styles.header_main_ishtirok}>
           <Link href="/ishtirok">
             <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
@@ -25,7 +27,7 @@ function HeaderHakaton() {
           </Link>
         </div>
 
-        <div onClick={() => setMenuToggle(true)} className={styles.header_burger_menu}>
+        <div onClick={() => setHakatonToggle(true)} className={styles.header_burger_menu}>
           <img src='/burger-menu.svg' alt='burger' />
         </div>
       </div>
@@ -34,10 +36,13 @@ function HeaderHakaton() {
         onClick={e => {
           e.stopPropagation();
         }}
-        style={{ transform: menuToggle && 'translateX(0)' }}
+        style={{
+          transform: menuHakatonToggle && 'translateX(0)',
+          position: menuHakatonToggle && 'fixed'
+        }}
         className={styles.header__menu}
       >
-        <div onClick={() => setMenuToggle(false)} className={styles.header__menu_close}>
+        <div onClick={() => setHakatonToggle(false)} className={styles.header__menu_close}>
           <img src='/menu-times.png' alt='close icon' />
         </div>
 

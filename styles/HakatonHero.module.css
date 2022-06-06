@@ -14,6 +14,7 @@
     position: relative;
     background-color: transparent;
     position: relative;
+    flex-wrap: wrap;
 }
 
 .hakatonHero::after {
@@ -91,6 +92,11 @@
     margin-left: 100px;
 }
 
+.hakatonHero_Right div:first-child {
+    margin-left: 0px;
+}
+
+
 .hakatonHero_Right h4 {
     font-weight: 700;
     font-size: 48px;
@@ -107,4 +113,49 @@
     text-align: center;
     letter-spacing: -0.66px;
     color: #FFFFFF;
+}
+
+@media (max-width: 969px) {
+    .hakatonHero {
+        justify-content: center;
+    }
+
+    .hakatonHero_Right {
+        margin-top: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .hakatonHero_Left {
+        font-size: 40px;
+        line-height: 110%;
+    }
+
+    .hakatonHero_Right h4 {
+        font-size: 40px;        
+    }
+    .hakatonHero_Right p {
+        font-size: 16px;        
+    }
+}
+
+@media (max-width: 460px) {
+
+    .hakatonHero_Right div {
+        margin-left: 60px;
+    }
+
+    .hakatonHero_Left {
+        font-size: 24px;
+        line-height: 110%;
+    }
+
+    .hakatonHero_Right h4 {
+        font-size: 24px;
+        line-height: 35px;
+    }
+    .hakatonHero_Right p {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
