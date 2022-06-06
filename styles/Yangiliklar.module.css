@@ -1,339 +1,116 @@
 .main {
     text-align: center;
     font-size: 40px;
-    padding-top: 70px;
-    padding-bottom: 70px;
+    margin: 70px 0;
 }
 
 .title {
     font-weight: 700;
     font-size: 24px;
-    padding-top: 10px;
     text-align: start;
-    padding-left: 20px;
 }
 
 .desc {
     color: gray;
     font-weight: 400;
     font-size: 18px;
-    padding-left: 20px;
-    padding-top: 20px;
-    width: 380px;
+    margin-top: 12px;
 }
 
-.box img {
+.boxHeader img {
     width: 100%;
-    height: 240px;
     border-radius: 24px;
 }
 
+.boxBody {
+    padding: 24px 16px 38px;
+}
+
 .flexClass {
-    padding-left: 0px;
-    padding-top: 50px;
+    margin-top: 45px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .flexClass .ppp {
     color: gray;
-    padding-left: 90px;
 }
 
 .flexClass a {
     color: #8D53FD;
     font-weight: 500;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.flexClass a img {
+    margin-left: 8px;
 }
 
 .parent {
     z-index: 22;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px;
 }
 
 .box {
-    width: calc(100/30%);
-    height: 500px;
-
+    width: 32%;
     margin: 20px 0 20px;
-
     background: white;
     border-radius: 24px;
     line-height: 180%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 22;
-
 }
 
-/* .gradientCircle {
-    width: 300px!important;
-    height: 300px!important;
-    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
-    border-radius: 50%!important;
-    position: absolute!important;
-    left: 26.8%!important;
-    right: 21.8%!important;
-    top: 70%!important;
-    bottom: 45.6%!important;
-    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
-    filter: blur(150px)!important;
-    z-index: -3!important;
-}
 
-.gradientCircle2 {
-    width: 300px!important;
-    height: 300px!important;
-    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%,
-     rgba(82, 0, 255, 0.33) 100%);
-    border-radius: 50%!important;
-    position: absolute !important;
-    left: 15.4%!important;
-    right: 2.4%!important;
-    top: 140.6%!important;
-    bottom: 1%!important;
-    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
-    filter: blur(150px)!important;
-    z-index: -3!important;
-}
-
-.gradientCircle3 {
-    width: 300px!important;
-    height: 300px!important;
-    border: 1px solid linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
-    border-radius: 50%!important;
-    position: absolute!important;
-    left: 55.4%!important;
-    right: 2.4%!important;
-    top: 190.6%!important;
-    bottom: 1%!important;
-    background: linear-gradient(360deg, rgba(0, 194, 255, 0.44) 0%, rgba(82, 0, 255, 0.33) 100%);
-    filter: blur(150px)!important;
-    z-index: -3!important;
-} */
-
-@media (max-width:1500px) {
-    .box {
-        width: 40%;
-        height: 500px;
-    }
-
-    .desc {
-        color: gray;
-        font-weight: 400;
-        font-size: 18px;
-        padding-left: 20px;
-        padding-top: 20px;
-        width: 400px;
-    }
-}
-
-@media (max-width:1216px) {
+@media (max-width: 992px) {
     .title {
-        font-weight: 700;
         font-size: 20px;
-        padding-top: 10px;
-        text-align: start;
-        padding-left: 20px;
-    }
+    }   
 
     .desc {
-        color: gray;
-        font-weight: 400;
         font-size: 16px;
-        padding-left: 20px;
-        padding-top: 20px;
-        width: 330px;
     }
 
-    .flexClass {
-        padding-left: 0px;
-        padding-top: 50px;
-        display: flex;
-        justify-content: space-around;
+    .ppp {
+        font-size: 14px;
     }
 
-    .flexClass a {
-        font-size: 15px;
-    }
-
-    .flexClass .ppp {
-        font-size: 12px;
+    .boxBody {
+        padding-bottom: 30px;
     }
 }
 
-@media (max-width:1000px) {
+@media (max-width: 880px) {
     .box {
-        width: 40%;
-        padding-bottom: 20px;
-    }
-
-    .desc {
-        color: gray;
-        font-weight: 400;
-        font-size: 16px;
-        padding-left: 20px;
-        padding-top: 20px;
-        width: 280px;
+        width: 48%;
     }
 
     .flexClass {
-        padding-left: 0px;
-        padding-top: 40px;
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .flexClass a {
-        font-size: 12px;
-    }
-
-    .flexClass .ppp {
-        font-size: 12px;
+        margin-top: 30px;
     }
 }
 
-@media (max-width:960px) {
+@media (max-width: 576px) {
     .box {
-        width: 40%;
-        padding-bottom: 20px;
-    }
-
-    .flexClass {
-        padding-left: 10px;
-        padding-top: 40px;
-        display: flex;
-        justify-content: space-around;
-    }
-}
-@media (max-width:900px) {
-    .desc{
-        color: gray;
-        font-weight: 400;
-        font-size: 16px;
-        padding-left: 20px;
-        padding-top: 20px;
-        width: 250px;
-    }
-    .flexClass {
-        padding-left: 0px !important;
-        padding-top: 40px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .flexClass .ppp {
-        font-size: 12px;
-        padding-right: 0px;
-    }
-}
-@media (max-width:835px) {
-    .box {
-        width: 80%;
-        padding-bottom: 20px;
-    }
-    .title{
-        font-weight: 700;
-        font-size: 25px;
-        padding-top: 10px;
-        text-align: start;
-        padding-left: 20px;
-    }
-    .desc{
-        color: gray;
-        font-weight: 400;
-        font-size: 20px;
-        padding: 20px;
         width: 100%;
     }
-    .flexClass {
-        padding-left: 20px !important;
-        padding-top:40px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .flexClass .ppp {
-        font-size: 18px;
-        padding-right: 20px;
-    }
-    .flexClass a{
-        font-size: 18px;
-    }
-}
-@media (max-width:516px) {
-    .title{
-        font-weight: 700;
-        font-size: 20px;
-        padding-top: 10px;
-        text-align: start;
-        padding-left: 20px;
-    }
-    .desc{
-        color: gray;
-        font-weight: 400;
-        font-size: 18px;
-        padding: 20px;
-        width: 100%;
-    }
-    .flexClass {
-        padding-top:40px;
-        padding-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .flexClass .ppp {
-        font-size: 15px;
-    }
-    .flexClass a{
-        font-size: 15px;
-    }
-}
-@media (max-width:471px) {
-    .title{
-        font-weight: 700;
-        font-size: 20px;
-        padding-top: 10px;
-        text-align: start;
-        padding-left: 10px;
-    }
-    .desc{
-        color: gray;
-        font-weight: 400;
-        font-size: 15px;
-        padding: 10px;
-        width: 100%;
-    }
-    .flexClass {
-        padding-top:50px;
-        padding-bottom: 20px;
-        display: flex;
-        justify-content: space-around;
-    }
-    .flexClass .ppp {
-        font-size: 15px;
-        padding-left: 50px;
-    }
-    .flexClass a{
-        font-size: 15px;
-    } 
-}
-@media (max-width:380px) {
 
-    .flexClass {
-        padding-top: 10px;
-        padding-bottom:0px !important;
-        display: flex;
-        justify-content: space-around;
+    .main {
+        font-size: 35px;
     }
-    .flexClass .ppp {
-        font-size: 15px;
-        padding-left: 50px;
-        padding-top: 13px;
-    }
-    .flexClass a{
-        font-size: 17px;
-        font-weight: 600;
-    } 
 }
+
+@media (max-width: 430px) {
+
+    .main {
+        font-size: 28px;
+        margin-bottom: 35px;
+        margin-top: 50px;
+    }
+}
+
