@@ -21,7 +21,7 @@ export default function bosqich() {
           </div>
           <h2>Ko'zlangan maqsad</h2>
           <p>
-            <span>300+</span> soat Ovozli malumotlar to’plash
+            <span>300+</span> soat Ovozli malumotlar to'plash
           </p>
         </div>
         <div className={styles.card2}>
