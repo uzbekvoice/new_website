@@ -4,6 +4,7 @@ import Contribution from "../component/Contribution";
 import Hero from "../component/Hero";
 import InitiativePartners from "../component/InitiativePartners";
 import Ourpartners from "../component/Ourpartners";
+import OurTeam from "../component/OurTeam";
 import Stat from "../component/Stat";
 import Step from "../component/Step";
 import TopUser from "../component/TopUser";
@@ -30,6 +31,7 @@ export default function Home() {
       <TopUser />
       <Ourpartners />
       <InitiativePartners />
+      <OurTeam />
     </div>
   );
 }

@@ -1,0 +1,27 @@
+.ourteam {
+    margin-top: 76px;
+    text-align: center;
+    position: relative;
+  }
+  
+  .ourteam h3 {
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 53px;
+    letter-spacing: 0.0022em;
+    color: #12273c;
+    margin: 0;
+  }
+  
+  .ourteam h4 {
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0.0022em;
+    color: #12273c;
+    margin-top: 22px;
+  }
+
+  .sliders {
+      margin-top: 50px;
+  }
