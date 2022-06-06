@@ -32,7 +32,7 @@ export default function Slider() {
     },
     
     1400:{
-        items:4,
+        items:3,
         margin:10,
     }
 }
