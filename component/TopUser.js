@@ -4,11 +4,11 @@ import Image from "next/image";
 export default function TopUser() {
   return (
     <div className={styles.content}>
-      <h3>Yetakchi a'zolar</h3>
+      <h3>Yetakchi a&apos;zolar</h3>
       <p>
-        10 Dekabar 2021 yilda end 3ta faol a'zolarimiz sovga va sovrinlar
+        10 Dekabar 2021 yilda end 3ta faol a&apos;zolarimiz sovga va sovrinlar
         beriladi. Noutbook, plansjet va smartwatch. Qatnashing va yutib oling.
-        To'liq ma'lumot
+        To'liq ma&apos;lumot
       </p>
       <div className={styles.grid}>
         <h4>Top voice acting users</h4>

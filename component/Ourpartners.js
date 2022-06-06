@@ -7,8 +7,8 @@ export default function Ourpartners() {
       <div className={styles.detail}>
         <h2>Biz bilan hamkorlik</h2>
         <p>
-          O'zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik
-          qilmoqchi bo'lganlar bilan ishlash har doim ochiqmiz
+          O&apos;zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik
+          qilmoqchi bo&apos;lganlar bilan ishlash har doim ochiqmiz
         </p>
         <a href='#'>Hamkorlik qilish</a>
       </div>
