@@ -1,0 +1,24 @@
+.prizesPictures {
+  margin-top: 48px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 28px;
+  row-gap: 34px;
+  /* border: 1px solid; */
+}
+
+.ceremony {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.ceremony > h2 {
+  font-family: "ObjektivMk1";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 110%;
+  text-align: center;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+}
