@@ -17,7 +17,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 export default function Slider() {
   const Responsive ={
     0:{
-      items:1.2,
+      items:1,
       margin:5,
     },
 
