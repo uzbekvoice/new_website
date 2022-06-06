@@ -3,7 +3,7 @@ import React from "react";
 import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
 import Prizes from "../component/Prizes";
-import TopUser from "../component/Winners";
+
 
 export default function bosqich() {
   return (
@@ -23,7 +23,7 @@ export default function bosqich() {
           </div>
           <h2>Ko&apos;zlangan maqsad</h2>
           <p>
-            <span>300+</span> soat Ovozli malumotlar to'plash
+            <span>300+</span> soat Ovozli malumotlar to&apos;plash
           </p>
         </div>
         <div className={styles.card2}>
