@@ -81,7 +81,7 @@ function Header({menuToggle, setMenuToggle}) {
             Qo'llanma
           </a>
         </Link>
-        <Link href="/ishtirok">
+        <Link href="https://t.me/UzbekVoiceBot">
           <a onClick={() => setMenuToggle(false)} className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
             Ishtirok eting
           </a>
