@@ -171,4 +171,62 @@
   margin-top: -2px;
 }
 
+@media (max-width: 700px) {
+  .content {
+    position: relative;
+    margin-top: 91px;
+    text-align: center;
+  }
+  .content h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 30px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  
+  .card {
+    background-color: white;
+    position: relative;
+  
+    width: 100%;
+    height: 162px;
+    border-radius: 20px;
+    border: 1px solid #d9d9d9;
+  }
+  
+  .card:nth-child(2) {
+    margin: 12px 0px 12px 0px;
+  }
+  
+  .card::after {
+   display: none;
+  }
+  
+  .card h4 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
+    color: #12273c;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+  .content hr {
+   display: none;
+  }
+  
+  .line {
+   display: none;
+  }
+  .card::before {
+ display: none;
+  }
+
+}
+
 
