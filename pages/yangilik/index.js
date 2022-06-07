@@ -1,5 +1,5 @@
 import React from 'react';
-import YangilikSection from '../component/Yangiliklar/YangilikSection';
+import YangilikSection from '../../component/Yangiliklar/YangilikSection';
 
 export default function yangilik() {
   return (

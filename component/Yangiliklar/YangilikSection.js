@@ -1,5 +1,6 @@
 import React from "react";
 import data from "./YangiliklarData";
+import Link from "next/link";
 import s from "../../styles/Yangiliklar.module.css";
 
 const YangilikSection = () => {
@@ -21,10 +22,12 @@ const YangilikSection = () => {
                   <h3 className={s.title}>{el.title}</h3>
                   <h5 className={s.desc}>{el.desc}</h5>
                   <div className={s.flexClass}>
-                    <a href="#">
-                      Узнать больше
-                      <img src='/chevron-right.svg' />
-                    </a>
+                    <Link href={`/yangilik/${el.id}`}>
+                      <a>
+                        Узнать больше
+                        <img src='/chevron-right.svg' />
+                      </a>
+                    </Link>
                     <p className={s.ppp}>{el.date}</p>
                   </div>
                 </div>
