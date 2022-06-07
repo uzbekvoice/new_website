@@ -51,7 +51,7 @@
   position: relative;
 
   width: 404px;
-  height: 162px;
+  height: 100%;
   border-radius: 20px;
   border: 1px solid #d9d9d9;
 }
@@ -136,6 +136,17 @@
   line-height: 20px;
 }
 
+.data p{
+  margin: 0;
+  text-align: left;
+  padding-left: 22px;
+  padding-bottom: 28px;
+  color: #12273c;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
 .card::before {
   width: 11px;
   height: 11px;
@@ -147,12 +158,17 @@
   background-color: #717d8a;
 }
 
+
+
+
+
 .card a {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   margin-left: 22px;
   margin-top: 23px;
+  margin-bottom:25px ;
   color: #8d53fd;
   align-items: center;
 }
@@ -169,6 +185,12 @@
   border-top: 1px dashed #12273c;
   float: right;
   margin-top: -2px;
+}
+
+@media (min-width:1100px){
+  .data{
+    display: none;
+  }
 }
 
 @media (max-width: 700px) {
@@ -193,7 +215,7 @@
     position: relative;
   
     width: 100%;
-    height: 162px;
+    
     border-radius: 20px;
     border: 1px solid #d9d9d9;
   }
@@ -226,6 +248,19 @@
   .card::before {
  display: none;
   }
+
+  .card h4 {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 800;
+    color: #12273c;
+    padding-top: 22px;
+    padding-left: 22px;
+    padding-bottom: 0px;
+    margin: 0;
+  }
+
+
 
 }
 

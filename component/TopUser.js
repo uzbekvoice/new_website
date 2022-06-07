@@ -11,13 +11,14 @@ export default function TopUser() {
         To'liq ma&apos;lumot
       </p>
       <div className={styles.grid}>
-        <h4>Top voice acting users</h4>
+
+        <div className={styles.listner}>
         <h4>Top listeners</h4>
         <div className={styles.card}>
           <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
+              <h5>Wade Warren</h5>
             </div>
             <span>20 000</span>
           </div>
@@ -26,7 +27,7 @@ export default function TopUser() {
           <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
+              <h5>Wade Warren</h5>
             </div>
             <span>20 000</span>
           </div>
@@ -35,40 +36,48 @@ export default function TopUser() {
           <div className={styles.item}>
             <div className={styles.block}>
               <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
-            </div>
-            <span>20 000</span>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.item}>
-            <div className={styles.block}>
-              <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
-            </div>
-            <span>20 000</span>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.item}>
-            <div className={styles.block}>
-              <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
-            </div>
-            <span>20 000</span>
-          </div>
-        </div>
-        <div className={styles.card}>
-          <div className={styles.item}>
-            <div className={styles.block}>
-              <Image src="/leader.png" width={72} height={72} alt="Leader" />
-              <h4>Wade Warren</h4>
+              <h5>Abdulaziz M</h5>
             </div>
             <span>20 000</span>
           </div>
         </div>
         <a href="#">Barchasini ko'rish</a>
+        </div>
+
+        <div className={styles.voice}>
+        <h4>Top voice acting users</h4>
+        <div className={styles.card}>
+          <div className={styles.item}>
+            <div className={styles.block}>
+              <Image src="/leader.png" width={72} height={72} alt="Leader" />
+              <h5>Abufayz M</h5>
+            </div>
+            <span>25 000</span>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.item}>
+            <div className={styles.block}>
+              <Image src="/leader.png" width={72} height={72} alt="Leader" />
+              <h5>Wade Warren</h5>
+            </div>
+            <span>20 000</span>
+          </div>
+        </div>
+        <div className={styles.card}>
+          <div className={styles.item}>
+            <div className={styles.block}>
+              <Image src="/leader.png" width={72} height={72} alt="Leader" />
+              <h5>Wade Warren</h5>
+            </div>
+            <span>20 000</span>
+          </div>
+        </div>
         <a href="#">Barchasini ko'rish</a>
+        </div>
+ 
+        
+        
       </div>
     </div>
   );
