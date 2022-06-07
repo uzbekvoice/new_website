@@ -20,5 +20,30 @@
   font-size: 20px;
   font-weight: 400;
 }
+@media (max-width:796px){
+  .partners {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-top: 70px;
+    }
+    
+    .initpartners {
+      width: 100%;
+      text-align: center;
+    }
+    
+    .initpartners h2 {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 30px;
+    }
+    .initpartners p {
+      width: 100%;
+      font-size: 16px;
+      line-height: 22px;
+    }
+  
+}
 
 
