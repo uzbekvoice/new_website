@@ -27,7 +27,7 @@ export default function Slider() {
     },
 
     1200:{
-        items:3.5,
+        items:3,
         margin:20,
     },
     
