@@ -53,7 +53,7 @@ a {
 }
 
 .btn {
-  background-color: #8D53FD;
+  background-color: #8D53FD !important;
   padding: 13px 24px;
   color: white !important;
   border-radius: 12px;
