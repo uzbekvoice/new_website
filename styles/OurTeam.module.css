@@ -25,3 +25,25 @@
   .sliders {
       margin-top: 50px;
   }
+  @media (max-width: 767px) {
+    .question {
+      margin-top: 80px;
+      margin-bottom: 200px;
+      text-align: center;
+      position: relative;
+      padding: 0 ;
+    }
+    .ourteam h3 {
+      font-size: 28px;
+      font-weight: 800;
+      line-height: 30px;
+      letter-spacing: 0.0022em;
+     
+    }
+
+    .ourteam h4{
+      font-size: 14px;
+      margin-top: 12px;
+    }
+  
+  }

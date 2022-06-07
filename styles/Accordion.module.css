@@ -14,3 +14,22 @@
   margin: 32px 0px;
 }
 
+@media (max-width: 767px) {
+  .question {
+    margin-top: 80px;
+    margin-bottom: 200px;
+    text-align: center;
+    position: relative;
+    padding: 0 ;
+  }
+  .question h3 {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 30px;
+    letter-spacing: 0.0022em;
+    color: #12273c;
+    margin: 32px 0px;
+  }
+
+}
+
