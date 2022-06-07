@@ -3,7 +3,7 @@ import YangilikSection from '../../component/Yangiliklar/YangilikSection';
 
 export default function yangilik() {
   return (
-    <div>
+    <div>     
         <YangilikSection/>
     </div>
   )
