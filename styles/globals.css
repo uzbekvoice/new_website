@@ -32,6 +32,12 @@ a {
   padding: 0 86px;
 }
 
+@media (max-width: 1200px) {
+  .container__fluid {
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 767px) {
   .container__fluid {
     padding: 0 15px;
