@@ -1,11 +1,35 @@
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-weight: 800
+}
+/* 
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-weight: 800
+} */
+
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-weight: 900
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Objektiv";
 }
 
 a {
