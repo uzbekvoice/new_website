@@ -52,19 +52,19 @@ export default function InitiativePartners() {
       <div className={styles.sliders}>
         <OwlCarousel className={styles.slider} loop margin={10} dots={false} responsive={Responsive} autoplay autoplayTimeout={3000}>
           <div className={styles.item} >
-            <Image src="/partners1.png" width={296} height={296} alt="partners1" />
+            <img src="/partners1.png"  alt="partners1" />
           
           </div>
           <div className={styles.item}>
-            <Image src="/partners2.png" width={296} height={296} alt="partners2" />
+            <img src="/partners2.png" alt="partners2" />
 
           </div>
           <div className={styles.item}>
-            <Image src="/partners3.png" width={296} height={296} alt="partners3" />
+            <img src="/partners3.png"  alt="partners3" />
          
           </div>
           <div className={styles.item}>
-            <Image src="/partners5.png" width={296} height={296} alt="partners4" />
+            <img src="/partners5.png"  alt="partners4" />
         
           </div>
        
