@@ -27,7 +27,7 @@ export default function Contribution() {
     },
 
     1200:{
-        items:2,
+        items:3,
         margin:20,
         
     },
