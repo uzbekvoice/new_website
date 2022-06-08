@@ -42,7 +42,7 @@ export default function Contribution() {
     <div className={styles.content}>
       <h3>Qanday hissa qo'shsa bo'ladi ?</h3>
       <div className={styles.container}>
-      <OwlCarousel  responsive={Responsive} loop margin={20} autoplay autoplayTimeout={3000}>
+      <OwlCarousel  responsive={Responsive} loop margin={20} dots={false} autoplay autoplayTimeout={3000}>
           <div className={styles.item}>
           <div className={styles.card}>
           <div className={styles.image}>

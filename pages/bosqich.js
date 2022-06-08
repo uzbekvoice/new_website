@@ -8,7 +8,7 @@ import Prizes from "../component/Prizes";
 export default function bosqich() {
   return (
 
-  
+
     <div className={styles.bosqichPage}>
       <div className={styles.isContinue}>yakunlangan</div>
       <h1>1-Bosqich konkurs tanlov</h1>
@@ -29,7 +29,7 @@ export default function bosqich() {
         <div className={styles.card2}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2'/>
+              <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
             </div>
           </div>
           <h2>Ko&apos;zlangan maqsad</h2>
@@ -70,7 +70,7 @@ export default function bosqich() {
         </div>
       </div>
 
-    <Winners/>
+      <Winners />
 
       <Prizes />
     </div>

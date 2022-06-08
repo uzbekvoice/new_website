@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../styles/HakatonFoto.module.css'
-
+import Image from 'next/image';
 const data = [
     {
         id: 1,
@@ -29,10 +29,6 @@ const data = [
     {
         id: 7,
         image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 8,
-        image: '',
     }
 ]
 
@@ -45,7 +41,7 @@ export default function HakatonFoto() {
                 {
                     data.map(({ id, image }) => (
                         <div key={id} className={styles.hakatonFoto_card}>
-                            <img src={image} alt={image} />
+                            <Image src={image} width={296} height={178} alt={image} />
                         </div>
                     ))
                 }

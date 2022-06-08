@@ -50,7 +50,7 @@ export default function InitiativePartners() {
         kraudsorsing korporativ, institutsional va ilmiy hamkorlik
       </p>
       <div className={styles.sliders}>
-        <OwlCarousel className={styles.slider} loop margin={10} responsive={Responsive} autoplay autoplayTimeout={3000}>
+        <OwlCarousel className={styles.slider} loop margin={10} dots={false} responsive={Responsive} autoplay autoplayTimeout={3000}>
           <div className={styles.item} >
             <Image src="/partners1.png" width={296} height={296} alt="partners1" />
           
