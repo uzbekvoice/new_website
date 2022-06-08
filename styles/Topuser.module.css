@@ -52,7 +52,7 @@
 }
 
 .grid{
-
+  
     display: flex;
     justify-content: space-evenly;
     text-align: left;
@@ -151,6 +151,7 @@
   font-weight: 400; 
 }
 .card{
+ 
   width: 100%;
   padding: 10px;
 }
@@ -158,5 +159,7 @@
   margin-top: 32px;
    font-size: 16px;
 }
+
+
 
 }

@@ -2,6 +2,7 @@ import React from "react";
 import data2 from "./YangiliklarData";
 import Link from "next/link";
 import s from "../../styles/Yangiliklar.module.css";
+import Image from "next/image";
 
 const YangilikSection = ({ data }) => {
   console.log(data, 'dd');
@@ -11,11 +12,11 @@ const YangilikSection = ({ data }) => {
       <div className={s.container}>
         <h1 className={s.main}>Yangiliklar</h1>
         <div className={s.parent}>
-          {data2.map(function (el) {
+          {data.map(function (el) {
             return (
               <div className={s.box} key={el.id}>
                 <div className={s.boxHeader}>
-                  <img src={el.news_image} alt={el.news_image} key={el.id} />
+                  <img src={`https://new.uzbekvoice.ai/assets/${el.news_image}`}  alt={el.news_image} key={el.id} />
                 </div>
                 <div className={s.boxBody}>
                   <h3 className={s.title}>{el.news_title}</h3>
