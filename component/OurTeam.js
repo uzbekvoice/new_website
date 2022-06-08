@@ -46,7 +46,7 @@ export default function OurTeam() {
     <div className={styles.ourteam}>
       <h3>Uzbekvoice Jamoasi</h3>
       <div className={styles.sliders}>
-        <OwlCarousel className={styles.slider} loop margin={10} responsive={Responsive} autoplay autoplayTimeout={3000}>
+        <OwlCarousel className={styles.slider} loop margin={10} dots={false} responsive={Responsive} autoplay autoplayTimeout={3000}>
           <div className={styles.item}>
             <Image src="/team1.png" width={296} height={296} alt="partners1" />
             <h4>Courtney Henry</h4>
