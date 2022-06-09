@@ -17,8 +17,7 @@ export default function OurTeam() {
               <Image
                 src="/team1.png"
                 width={150}
-                height={150}
-              
+                height={150}              
                 alt="partners1"
               />
             </div>
