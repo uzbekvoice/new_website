@@ -299,7 +299,7 @@
   }
 
 }
-@media (max-width: 700px) {
+@media (max-width: 767px) {
   .header__content {
     position: relative;
   display: flex;

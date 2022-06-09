@@ -42,14 +42,13 @@
 }
 
 .container {
+  position: relative;
   display: flex;
   margin-top: 60px;
 }
 
 .card {
   background-color: white;
-  position: relative;
-
   width: 404px;
   height: 100%;
   border-radius: 20px;
@@ -136,7 +135,7 @@
   line-height: 20px;
 }
 
-.data p{
+.data p {
   margin: 0;
   text-align: left;
   padding-left: 22px;
@@ -158,17 +157,13 @@
   background-color: #717d8a;
 }
 
-
-
-
-
 .card a {
   display: flex;
   font-size: 14px;
   font-weight: 500;
   margin-left: 22px;
   margin-top: 23px;
-  margin-bottom:25px ;
+  margin-bottom: 25px;
   color: #8d53fd;
   align-items: center;
 }
@@ -186,14 +181,58 @@
   float: right;
   margin-top: -2px;
 }
+@media (max-width: 1366px) {
+  .card:nth-child(2) {
+    margin: 0 20px 0px 20px;
+  }
+  .card h4 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 800;
+    color: #12273c;
+    padding-top: 18px;
+    padding-left: 18px;
+    padding-bottom: 12px;
+    margin: 0;
+  }
+  .text h5 {
+    margin: 18px 18px 0px 0px;
+  }
 
-@media (min-width:1100px){
-  .data{
+  .card a {
+    margin-left: 18px;
+  }
+
+  
+}
+
+@media (max-width: 1066px) {
+  /* .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    justify-content: center;
+    
+  }
+  .card:nth-child(2) {
+    margin: 12px auto 12px auto;
+  }
+  .content hr {
+    display: none;
+   }
+   
+   .line {
+    display: none;
+   } */
+}
+
+@media (min-width: 1024px) {
+  .data {
     display: none;
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 991px) {
   .content {
     position: relative;
     margin-top: 91px;
@@ -205,31 +244,31 @@
     line-height: 30px;
   }
   .container {
+    position: relative;
     display: flex;
+
     flex-direction: column;
     margin-top: 15px;
-  }
-  
-  .card {
-    background-color: white;
-    position: relative;
-    width: 100%;
-    border-radius: 20px;
-    border: 1px solid #d9d9d9;
+    align-items: center;
   }
 
-  .data p{
+  .card {
+    margin: 25px auto;
+    width: 510px;
+  }
+
+  .data p {
     padding-left: 16px;
   }
-  
+
   .card:nth-child(2) {
-    margin: 12px 0px 12px 0px;
+    margin: 0;
   }
-  
+
   .card::after {
-   display: none;
+    display: none;
   }
-  
+
   .card h4 {
     text-align: left;
     font-size: 18px;
@@ -242,28 +281,44 @@
   }
   .text h5 {
     margin: 16px 16px 0px 0px;
- 
   }
 
-  .card a{
+  .card a {
     margin-left: 16px;
   }
-  
+
   .content hr {
-   display: none;
+    display: none;
   }
-  
+
   .line {
-   display: none;
+    display: none;
   }
   .card::before {
- display: none;
+    display: none;
   }
-
-
-
-
-
 }
 
 
+@media (max-width: 550px) {
+ 
+
+  .card {
+    margin: 25px auto;
+    width: 100%;
+  }
+  .card h4 {
+    text-align: left;
+    font-size: 16px;
+    font-weight: 800;
+    color: #12273c;
+    padding-top: 16px;
+    padding-left: 16px;
+    padding-bottom: 0px;
+    margin: 0;
+  }
+  .text h5 {
+    font-size: 11px;
+    margin: 16px 16px 0px 0px;
+  }
+}
