@@ -64,6 +64,10 @@ export default function InitiativePartners() {
          
           </div>
           <div className={styles.item}>
+            <img src="/partners4.png"  alt="partners4" />
+        
+          </div>
+          <div className={styles.item}>
             <img src="/partners5.png"  alt="partners4" />
         
           </div>

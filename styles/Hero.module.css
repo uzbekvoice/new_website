@@ -109,7 +109,7 @@
   border-radius: 0px !important;
 }
 
-.header__content-btn:hover {
+.header__content_info a:hover {
   color: #055d83;
 }
 

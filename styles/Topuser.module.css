@@ -68,10 +68,17 @@
     background-color: white;
     backdrop-filter: blur(80px);
     margin:16px 0px;
+    transition: 0.5s;
     
 }
 
+.card:hover{
+  background: #374151;
+  color: white;
+}
+
 .item{
+ 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -112,6 +119,18 @@
     margin-top: 16px;
 }
 
+@media (max-width: 1024px){
+  .grid{
+    display: flex;
+    flex-direction: column;
+   
+    align-items: center;
+   }
+   .voice{
+    margin-top: 64px;
+  }
+}
+
 @media (max-width: 767px) {
   .content {
     position: relative;
@@ -136,6 +155,7 @@
   .grid{
  display: flex;
  flex-direction: column;
+ align-items:stretch;
 }
 
 .voice{

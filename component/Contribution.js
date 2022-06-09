@@ -21,14 +21,21 @@ export default function Contribution() {
       margin:5,
     },
 
-    580:{
+    780:{
         items:2,
         margin:10,
     },
 
+    1024:{
+      items:3,
+      margin:10,
+      autoplay: false,
+  },
+
     1200:{
         items:3,
         margin:20,
+        autoplay: false,
         
     },
     

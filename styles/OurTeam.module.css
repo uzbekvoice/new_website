@@ -1,49 +1,67 @@
 .ourteam {
-    margin-top: 76px;
+  margin-top: 76px;
+  text-align: center;
+}
+
+.ourteam h3 {
+  font-size: 48px;
+  font-weight: 900;
+  line-height: 53px;
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin: 0;
+}
+
+.ourteam h4 {
+  font-size: 15px;
+  font-weight: 800;
+
+  letter-spacing: 0.0022em;
+  color: #12273c;
+  margin-top: 12px;
+}
+
+.flex {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.item {
+  margin-right: 15px;
+}
+
+.item a{
+  cursor: pointer;
+  color: #8d53fd;
+  margin-top: 15px;
+  display: inline-block;
+  margin-right: 7px;
+}
+
+.avatarimg {
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .question {
+    margin-top: 80px;
+    margin-bottom: 200px;
     text-align: center;
     position: relative;
+    padding: 0;
   }
-  
   .ourteam h3 {
-    font-size: 48px;
-    font-weight: 900;
-    line-height: 53px;
-    letter-spacing: 0.0022em;
-    color: #12273c;
-    margin: 0;
-  }
-  
-  .ourteam h4 {
-    font-size: 20px;
+    font-size: 28px;
     font-weight: 800;
-    line-height: 22px;
+    line-height: 30px;
     letter-spacing: 0.0022em;
-    color: #12273c;
-    margin-top: 22px;
   }
 
-  .sliders {
-      margin-top: 50px;
+  .ourteam h4 {
+    font-size: 14px;
+    margin-top: 12px;
   }
-  @media (max-width: 767px) {
-    .question {
-      margin-top: 80px;
-      margin-bottom: 200px;
-      text-align: center;
-      position: relative;
-      padding: 0 ;
-    }
-    .ourteam h3 {
-      font-size: 28px;
-      font-weight: 800;
-      line-height: 30px;
-      letter-spacing: 0.0022em;
-     
-    }
-
-    .ourteam h4{
-      font-size: 14px;
-      margin-top: 12px;
-    }
-  
-  }
+}

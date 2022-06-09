@@ -13,7 +13,7 @@ export default function Hero() {
       </p>
 
       <div className={styles.header__content_block}>
-        <a href="http://commonvoice.mozilla.org/uz/">
+        <a href="https://t.me/UzbekVoiceBot">
           Loyihada ishtirok etish
         </a>
 

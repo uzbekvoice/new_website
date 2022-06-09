@@ -13,6 +13,15 @@
   margin: 0;
 }
 
+.item{
+  filter: grayscale();
+  transition: all 0.5s;
+}
+
+.item:hover{
+  filter: none;
+}
+
 .initpartners p {
   
   width: 727px;

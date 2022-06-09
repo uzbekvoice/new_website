@@ -12,7 +12,7 @@ export default function TopUser() {
       </p>
       <div className={styles.grid}>
         <div className={styles.listner}>
-          <h4>Top listeners</h4>
+          <h4>Eng faol tinglovchi</h4>
           <div className={styles.card}>
             <div className={styles.item}>
               <div className={styles.block}>
@@ -45,7 +45,7 @@ export default function TopUser() {
         </div>
 
         <div className={styles.voice}>
-          <h4>Top voice acting users</h4>
+          <h4>Eng faol so'zlovchi</h4>
           <div className={styles.card}>
             <div className={styles.item}>
               <div className={styles.block}>
