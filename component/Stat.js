@@ -11,7 +11,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
-import faker from 'faker';
+
 
 ChartJS.register(
   CategoryScale,
@@ -101,19 +101,19 @@ export default function Stat() {
         <div className={styles.img_top}>
          
 
-          <Image src='/stat-top.png' width={308} height={17} quality={100} alt="stat" />
+          {/* <Image src='/stat-top.png' width={308} height={17} quality={100} alt="stat" /> */}
         </div>
         <div className={styles.img_bottom}>
         <Bar data={data} height={100} options={options} />
 
 
-          <Image
+          {/* <Image
             src="/stat-bottom.png"
             width={1268}
             height={251}
             quality={100}
             alt="stat"
-          />
+          /> */}
         </div>
         <div className={styles.img_hour}>
           <Image
