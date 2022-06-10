@@ -20,7 +20,7 @@ function HeaderHakaton({ menuHakatonToggle, setHakatonToggle }) {
         onClick={e => e.stopPropagation()}
       >
         <div className={styles.header_main_ishtirok}>
-          <Link href="/ishtirok">
+          <Link href="https://t.me/UzbekVoiceBot">
             <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
               Ishtirok eting
             </a>
@@ -82,7 +82,7 @@ function HeaderHakaton({ menuHakatonToggle, setHakatonToggle }) {
             Qo'llanma
           </a>
         </Link>
-        <Link href="/ishtirok">
+        <Link href="https://t.me/UzbekVoiceBot">
           <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
             Ishtirok eting
           </a>

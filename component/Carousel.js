@@ -15,6 +15,27 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 export default function Slider() {
+  const Responsive ={
+    0:{
+      items:1,
+      margin:5,
+    },
+
+    580:{
+        items:2,
+        margin:10,
+    },
+
+    1200:{
+        items:3,
+        margin:20,
+    },
+    
+    1400:{
+        items:3,
+        margin:10,
+    }
+}
   return (
     <div className={styles.our_goal}>
       <h3>O'zi maqsad nima?</h3>
@@ -24,7 +45,7 @@ export default function Slider() {
         ma'lumotlar bazasi yetishmasligi katta muammo.
       </p>
       <div className={styles.sliders}>
-        <OwlCarousel className={styles.slider} loop margin={10} autoplay autoplayTimeout={2100}>
+        <OwlCarousel className={styles.slider} dots={false} responsive={Responsive} loop margin={10} autoplay autoplayTimeout={3000}>
           <div className={styles.item}>
             <Image src="/goals-1.png" width={205} height={205} alt="goal-1" />
             <div className={styles.text}>

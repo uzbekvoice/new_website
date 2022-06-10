@@ -1,33 +1,45 @@
 import React from "react";
-import data from "./YangiliklarData";
+import data2 from "./YangiliklarData";
+import Link from "next/link";
 import s from "../../styles/Yangiliklar.module.css";
+import Image from "next/image";
 
-const YangilikSection = () => {
+const YangilikSection = ({ data }) => {
+  console.log(data, 'dd');
+
   return (
-      <section className={s.YangilikSection}>
-        <div className={s.container}>
-            <h1 className={s.main}>Yangiliklar</h1>
-            <div className={s.gradientCircle}></div>
-            <div className={s.gradientCircle2}></div>
-            <div className={s.gradientCircle3}></div>
-          <div className={s.parent}>
-            {data.map(function (el) {
-              return (
-                <div className={s.box} key={el.id}>
-                  <img src={el.image} alt="image" key={el.id}/>
-                  <h3 className={s.title}>{el.title}</h3>
-                  <h5 className={s.desc}>{el.desc}</h5>
+    <section className={s.YangilikSection}>
+      <div className={s.container}>
+        <h1 className={s.main}>Yangiliklar</h1>
+        <div className={s.parent}>
+          {data.map(function (el) {
+            return (
+              <div className={s.box} key={el.id}>
+                <div className={s.boxHeader}>
+                  <img src={`https://new.uzbekvoice.ai/assets/${el.news_image}`}  alt={el.news_image} key={el.id} />
+                </div>
+                <div className={s.boxBody}>
+                  <h3 className={s.title}>{el.news_title}</h3>
+                  <h5 dangerouslySetInnerHTML={{ __html: el.news_content }} className={s.desc}></h5>
                   <div className={s.flexClass}>
-                      <a href="#">{el.btn}</a>
-                      <p className={s.ppp}>{el.date}</p>
+                    <Link href={`/yangilik/${el.id}`}>
+                      <a>
+                        Узнать больше
+                        <img src='/chevron-right.svg' />
+                      </a>
+                    </Link>
+                    <p className={s.ppp}>{el.date_created.slice(0, 10)}</p>
                   </div>
                 </div>
-              );
-            })}
-          </div>
+              </div>
+            );
+          })}
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
 export default YangilikSection;
+
+

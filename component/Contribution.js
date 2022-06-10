@@ -1,13 +1,57 @@
-import React from "react";
 import styles from "../styles/Contribution.module.css";
 import Image from "next/image";
+import React from "react";
+var $ = require("jquery");
+if (typeof window !== "undefined") {
+  // Client-side-only code
+  window.$ = window.jQuery = require("jquery");
+}
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
+import dynamic from "next/dynamic";
 
+
+const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
+  ssr: false,
+});
 export default function Contribution() {
+  const Responsive ={
+    0:{
+      items:1,
+      margin:5,
+    },
+
+    780:{
+        items:2,
+        margin:10,
+    },
+
+    1024:{
+      items:3,
+      margin:10,
+      autoplay: false,
+  },
+
+    1200:{
+        items:3,
+        margin:20,
+        autoplay: false,
+        
+    },
+    
+    1400:{
+        items:3,
+        margin:10,
+        autoplay: false,
+    }
+}
   return (
     <div className={styles.content}>
       <h3>Qanday hissa qo'shsa bo'ladi ?</h3>
       <div className={styles.container}>
-        <div className={styles.card}>
+      <OwlCarousel  responsive={Responsive} loop margin={20} dots={false} autoplay autoplayTimeout={3000}>
+          <div className={styles.item}>
+          <div className={styles.card}>
           <div className={styles.image}>
             <Image
               src="/works-img1.png"
@@ -22,8 +66,9 @@ export default function Contribution() {
             saytida o'qiymiz. Ishoning, bu eng qiziqarli ishlardan biri
           </p>
         </div>
-
-        <div className={styles.card}>
+          </div>
+          <div className={styles.item}>
+          <div className={styles.card}>
           <div className={styles.image}>
             <Image
               src="/works-img2.png"
@@ -38,8 +83,9 @@ export default function Contribution() {
             uni rad eting. Bu juda oson.
           </p>
         </div>
-
-        <div className={styles.card}>
+          </div>
+          <div className={styles.item}>
+          <div className={styles.card}>
           <div className={styles.image}>
             <Image
               src="/works-img3.png"
@@ -54,8 +100,10 @@ export default function Contribution() {
             jumla ma'lumotlar bazasiga qo'shiladi.
           </p>
         </div>
-
+          </div>
         
+        </OwlCarousel>
+
       </div>
 
       <div className={styles.link}>

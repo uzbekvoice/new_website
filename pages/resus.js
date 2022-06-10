@@ -1,9 +1,10 @@
 import React from 'react'
+import ResursMain from '../component/ResursMain'
 
 export default function resus() {
   return (
-    <div>
-        <h2>Bu resus sahifasi</h2>
-    </div>
+    <>
+        <ResursMain />
+    </>
   )
 }

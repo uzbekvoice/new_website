@@ -4,34 +4,37 @@ import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
 import Prizes from "../component/Prizes";
 
+
 export default function bosqich() {
   return (
+
+
     <div className={styles.bosqichPage}>
       <div className={styles.isContinue}>yakunlangan</div>
-      <h1 className={styles.bosqichTitle}>1-Bosqich konkurs tanlov</h1>
+      <h1>1-Bosqich konkurs tanlov</h1>
       <p className={styles.scheduleDate}>2021-yil oktabr-dekabr</p>
 
       <div className={styles.goal}>
         <div className={styles.card1}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon1.png" width={100} height={100} />
+              <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
             </div>
           </div>
-          <h2>Ko'zlangan maqsad</h2>
+          <h2>Ko&apos;zlangan maqsad</h2>
           <p>
-            <span>300+</span> soat Ovozli malumotlar to’plash
+            <span>300+</span> soat Ovozli malumotlar to&apos;plash
           </p>
         </div>
         <div className={styles.card2}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon2.svg" width={100} height={100} />
+              <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
             </div>
           </div>
-          <h2>Ko'zlangan maqsad</h2>
+          <h2>Ko&apos;zlangan maqsad</h2>
           <p>
-            <span>300+</span> soat Ovozli malumotlar to’plash
+            <span>300+</span> soat Ovozli malumotlar to&apos;plash
           </p>
         </div>
       </div>
@@ -67,20 +70,7 @@ export default function bosqich() {
         </div>
       </div>
 
-      <div className={styles.winners}>
-        <h2>G&apos;oliblar ro&apos;yxati</h2>
-        <div className={styles.leaderBoard}>
-          <div className={styles.topVoiceActing}>
-            <h2>Top voice acting users</h2>
-            <Winners />
-          </div>
-          <div className={styles.topListeners}>
-            <h2>Top voice acting users</h2>
-            <Winners />
-          </div>
-        </div>
-        <a href="#">Показать всех</a>
-      </div>
+      <Winners />
 
       <Prizes />
     </div>

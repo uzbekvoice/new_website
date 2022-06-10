@@ -1,11 +1,35 @@
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-weight: 800
+}
+/* 
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-weight: 800
+} */
+
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-weight: 900
+}
+
+
 html,
 body {
   padding: 0;
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Objektiv";
 }
 
 a {
@@ -19,12 +43,12 @@ a {
   padding: 0;
 }
 
-.item.active{
+.item.active {
   color: #8D53FD;
 }
 
 
-  
+
 .container__fluid {
   max-width: 1440px;
   width: 100%;
@@ -32,11 +56,19 @@ a {
   padding: 0 86px;
 }
 
-@media (max-width: 767px){
+@media (max-width: 1200px) {
   .container__fluid {
-    padding: 0 15px;
+    padding: 0 30px;
   }
 }
+
+@media (max-width: 767px) {
+  .container__fluid {
+    padding: 0 24px;
+  }
+}
+
+
 
 .container {
   max-width: 1200px;
@@ -45,9 +77,91 @@ a {
 }
 
 .btn {
-  background-color: #8D53FD;
+  background-color: #8D53FD !important;
   padding: 13px 24px;
-  color: white!important;
+  color: white !important;
   border-radius: 12px;
+}
+
+.accordion__section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #fff;
+
+  cursor: pointer;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  margin: 5px;
+  border-radius: 16px;
+  outline: none;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.accordion:hover,
+.active {
+  background-color: transparent;
+}
+
+/* Style the accordion content title */
+.accordion__title {
+  color: #12273c;
+  font-weight: 500;
+  font-size: 22px;
+}
+
+/* Style the accordion chevron icon */
+.accordion__icon {
+  margin-left: auto;
+  transition: transform 0.6s ease;
+}
+
+/* Style to rotate icon when state is active */
+.rotate {
+  transform: rotate(90deg);
+}
+
+/* Style the accordion content panel. Note: hidden by default */
+.accordion__content {
+
+  background-color: white;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+  /* border:  1px solid rgba(0, 0, 0, 0.08); */
+}
+
+/* Style the accordion content text */
+.accordion__text {
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 18px;
+}
+
+
+/* dots style owl carousel */
+
+.owl-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.owl-carousel button.owl-dot {
+  width: 8px;
+  height: 8px;
+  background: #E7E7E7 !important;
+  margin: 0 3px;
+  border-radius: 50%;
+}
+
+.owl-carousel button.owl-dot.active {
+  background: #8D53FD !important;
 }
 

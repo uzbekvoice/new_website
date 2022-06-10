@@ -1,17 +1,4 @@
-@font-face {
-  font-family: "ObjektivMk1";
-  src: url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot");
-  src: url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.eot?#iefix")
-      format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff2")
-      format("woff2"),
-    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.woff")
-      format("woff"),
-    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.ttf")
-      format("truetype"),
-    url("//db.onlinewebfonts.com/t/a963e28ae438cde20bf6d6072753618c.svg#ObjektivMk1W03-Regular")
-      format("svg");
-}
+
 
 .isContinue {
   display: flex;
@@ -26,7 +13,7 @@
   margin-top: 40px !important;
   margin: 0 auto;
   color: rgba(253, 83, 83, 1);
-  font-family: "ObjektivMk1";
+
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -34,9 +21,9 @@
   letter-spacing: 0.0043em;
 }
 
-.bosqichTitle {
-  font-family: "ObjektivMk1";
-  font-style: normal;
+
+
+.bosqichPage h1{
   font-weight: 800;
   font-size: 48px;
   line-height: 110%;
@@ -48,7 +35,7 @@
 
 .scheduleDate {
   margin-top: 12px;
-  font-family: "ObjektivMk1";
+ 
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -72,6 +59,7 @@
 
 .card1,
 .card2 {
+  position: relative;
   /* border: 1px solid; */
   width: 294px;
   height: 267px;
@@ -82,7 +70,7 @@
 .card2 > h2 {
   margin-top: 6px;
   line-height: 32px;
-  font-family: "ObjektivMk1";
+ 
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -97,7 +85,7 @@
   margin-top: 8px;
   line-height: 28px;
   color: rgba(113, 125, 138, 1);
-  font-family: "ObjektivMk1";
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -142,7 +130,7 @@
 }
 
 .rules h2 {
-  font-family: "ObjektivMk1";
+
   font-style: normal;
   font-weight: 800;
   font-size: 48px;
@@ -159,7 +147,7 @@
 }
 
 .rules .rulesCard p {
-  font-family: "ObjektivMk1";
+
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -197,58 +185,3 @@
   margin-bottom: 16px;
 }
 
-.winners {
-  margin-top: 165px;
-  /* border: 1px solid; */
-  text-align: center;
-  padding: 0 106px;
-}
-
-.winners > h2 {
-  font-family: "ObjektivMk1";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 110%;
-  text-align: center;
-  letter-spacing: 0.0022em;
-}
-
-.winners .leaderBoard h2 {
-  font-family: "ObjektivMk1";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  display: flex;
-  align-items: center;
-  color: #374151;
-}
-
-.winners > a {
-  font-family: "ObjektivMk1";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 22px;
-  line-height: 22px;
-  letter-spacing: 0.0043em;
-  color: #8d53fd;
-}
-
-.leaderBoard {
-  margin-top: 32px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 28px;
-  text-align: start;
-  margin-bottom: 32px;
-}
-
-.topVoiceActing,
-.topListeners {
-  display: grid;
-  grid-template-rows: 1fr;
-  row-gap: 12px;
-}
-
-/* GENERAL CLASSES */
