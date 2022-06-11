@@ -3,6 +3,7 @@ import React from "react";
 import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
 import Prizes from "../component/Prizes";
+import BosqichPrizes from "../component/BosqichPrizes";
 
 
 export async function getStaticProps() {
@@ -23,7 +24,7 @@ export async function getStaticProps() {
 }
 
 
-export default function bosqich({users, userslist}) {
+export default function bosqich({ users, userslist }) {
   return (
 
 
@@ -57,9 +58,7 @@ export default function bosqich({users, userslist}) {
         </div>
       </div>
 
-      <div className={styles.prizes}>
-        <h2 className={styles.textCenter}>Sovg&apos;alar</h2>
-      </div>
+      <BosqichPrizes />
 
       <div className={styles.rules}>
         <h2>Konkurs qoidalari</h2>
