@@ -9,8 +9,6 @@ export default function TopUser({ users, userslist }) {
   const [showModal, setShowModal] = React.useState(false);
   const [showModal2, setShowModal2] = React.useState(false);
 
-  console.log(users, 'us');
-
   return (
     <div className={styles.content}>
       <h3>Yetakchi a&apos;zolar</h3>
