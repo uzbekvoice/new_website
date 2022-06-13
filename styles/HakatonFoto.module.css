@@ -19,12 +19,62 @@
     margin-bottom: 48px;
 }
 
-.hakatonFoto_card {
-    margin-top: 34px;
+.modalImg {
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s;
+
 }
 
-.hakatonFoto_card span {
+.modalImg .modalWrap {
+    width: 40%;
+    height: 60%;
+    position: relative;
+}
+
+.modalImg .modalWrap div {
+    width: 100%;
+    height: 100%;
+}
+
+.modalImg .modalWrap div span {
     width: 100% !important;
+    height: 100% !important;
+}
+
+.iconTimes {
+    position: absolute;
+    right: -30px;
+    top: -30px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background-color: transparent !important;
+}
+
+.hakatonFoto_card {
+    margin-top: 34px;
+    cursor: pointer;
+}
+
+.hakatonFoto_card div {
+    width: 100%;
+    height: 100%;
+}
+
+.hakatonFoto_card div span {
+    width: 100% !important;
+    height: 100% !important;
 }
 
 .hakatonFoto button {
@@ -43,13 +93,25 @@
 @media (max-width: 1110px) {
     .hakatonFoto_wrapper {
         grid-template-columns: repeat(3, 1fr);
-    }      
+    }
+}
+
+@media (max-width: 992px) {
+    .modalImg .modalWrap {
+        width: 50%;
+        height: 55%;
+    }
 }
 
 @media (max-width: 767px) {
     .hakatonFoto_wrapper {
         grid-template-columns: repeat(2, 1fr);
-    }  
+    }
+
+    .modalImg .modalWrap {
+        width: 60%;
+        height: 55%;
+    }
 
     .hakatonFoto_title {
         font-size: 40px;
@@ -60,14 +122,31 @@
     }
 }
 
+@media (max-width: 576px) {
+    .modalImg .modalWrap {
+        height: 50%;
+    }
+}
+
 @media (max-width: 500px) {
+
+    .iconTimes {
+        right: -7px;
+        top: -35px;
+      }
+
+    .modalImg .modalWrap {
+        width: 90%;
+        height: 50%;
+    }
+
     .hakatonFoto {
         padding-bottom: 50px;
     }
 
     .hakatonFoto_wrapper {
         grid-template-columns: repeat(1, 1fr);
-    } 
+    }
 
     .hakatonFoto_card {
         height: 220px;
@@ -75,12 +154,12 @@
 
     .hakatonFoto_card span {
         height: 100% !important;
-    }    
-    
+    }
+
     .hakatonFoto_wrapper {
         margin-bottom: 30px;
     }
-    
+
 }
 
 @media (max-width: 460px) {

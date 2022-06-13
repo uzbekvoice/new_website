@@ -3,9 +3,28 @@ import React from "react";
 import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
 import Prizes from "../component/Prizes";
+import BosqichPrizes from "../component/BosqichPrizes";
 
 
-export default function bosqich() {
+export async function getStaticProps() {
+  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
+  const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
+
+
+  const data = await res.json();
+  const users = await res2.json();
+
+  return {
+    props: {
+      users: data,
+      userslist: users,
+    },
+
+  };
+}
+
+
+export default function bosqich({ users, userslist }) {
   return (
 
 
@@ -39,9 +58,7 @@ export default function bosqich() {
         </div>
       </div>
 
-      <div className={styles.prizes}>
-        <h2 className={styles.textCenter}>Sovg&apos;alar</h2>
-      </div>
+      <BosqichPrizes />
 
       <div className={styles.rules}>
         <h2>Konkurs qoidalari</h2>
@@ -70,7 +87,7 @@ export default function bosqich() {
         </div>
       </div>
 
-      <Winners />
+      <Winners users={users} userslist={userslist} />
 
       <Prizes />
     </div>

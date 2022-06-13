@@ -47,7 +47,7 @@ export default function Slider() {
       <div className={styles.sliders}>
         <OwlCarousel className={styles.slider} dots={false} responsive={Responsive} loop margin={10} autoplay autoplayTimeout={3000}>
           <div className={styles.item}>
-            <Image src="/goals-1.png" width={205} height={205} alt="goal-1" />
+            <Image src="/goals-1.png" width={205} height={205} alt="goal-1" priority={true} />
             <div className={styles.text}>
               <h4>Ochiq manba</h4>
               <h5>
@@ -57,7 +57,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-2.png" width={205} height={205} alt="goal-2" />
+            <Image src="/goals-2.png" width={205} height={205} alt="goal-2"   priority={true}/>
 
             <div className={styles.text}>
               <h4>Tadqiqot</h4>
@@ -68,7 +68,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-3.png" width={205} height={205} alt="goal-3" />
+            <Image src="/goals-3.png" width={205} height={205} alt="goal-3"  priority={true}/>
             <div className={styles.text}>
               <h4>Ijodkorlik</h4>
               <h5>
@@ -78,7 +78,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-4.png" width={205} height={205} alt="goal-4" />
+            <Image src="/goals-4.png" width={205} height={205} alt="goal-4"  priority={true}/>
             <div className={styles.text}>
               <h4>Jamoatchilik</h4>
               <h5>

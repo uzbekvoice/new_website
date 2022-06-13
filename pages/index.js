@@ -9,7 +9,27 @@ import Question from "../component/Question/Question";
 import Stat from "../component/Stat";
 import Step from "../component/Step";
 import TopUser from "../component/TopUser";
-export default function Home() {
+
+export async function getStaticProps() {
+  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard" );
+  const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
+
+  
+  const data = await res.json();
+  const users = await res2.json();
+
+  return {
+    props: {
+      users: data,
+      userslist: users,
+    },
+  
+  };
+}
+
+
+
+export default function Home({users, userslist}) {
   return (
     <div>
       <Head>
@@ -29,11 +49,14 @@ export default function Home() {
       <Stat />
       <Step />
       <Contribution />
-      <TopUser />
+      <TopUser users={users} userslist={userslist}/>
+     
       <Ourpartners />
       <InitiativePartners />
       <OurTeam />
       <Question />
+
+    
     </div>
   );
 }

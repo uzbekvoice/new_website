@@ -2,7 +2,6 @@
   margin-top: 208px;
   text-align: center;
   position: relative;
-  
 }
 
 .content h3 {
@@ -15,34 +14,34 @@
 }
 
 .content::before {
-    content: "";
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(rgba(255, 0, 128, 0.58)),
-      to(rgba(173, 0, 255, 0.11))
-    );
-    background: -o-linear-gradient(
-      top,
-      rgba(183, 0, 255, 0.58) 0%,
-      rgba(173, 0, 255, 0.11) 100%
-    );
-    background: linear-gradient(
-      180deg,
-      rgba(210, 35, 233, 0.58) 0%,
-      rgba(173, 0, 255, 0.11) 100%
-    );
-    -webkit-filter: blur(100px);
-    filter: blur(100px);
-    position: absolute;
-    left: 40%;
-    top: 50%;
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    z-index: -5;
-  }
+  content: "";
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 0, 128, 0.58)),
+    to(rgba(173, 0, 255, 0.11))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(183, 0, 255, 0.58) 0%,
+    rgba(173, 0, 255, 0.11) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(210, 35, 233, 0.58) 0%,
+    rgba(173, 0, 255, 0.11) 100%
+  );
+  -webkit-filter: blur(100px);
+  filter: blur(100px);
+  position: absolute;
+  left: 40%;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  z-index: -5;
+}
 
 .content p {
   width: 610px;
@@ -51,83 +50,190 @@
   font-weight: 400;
 }
 
-.grid{
-  
-    display: flex;
-    justify-content: space-evenly;
-    text-align: left;
-    margin-top: 48px;
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: left;
+  margin-top: 48px;
 }
 
-.card{
-    width: 512px;
- 
-    border: 2px solid #0000001A;
-    border-radius: 24px;
-    padding: 16px;
-    background-color: white;
-    backdrop-filter: blur(80px);
-    margin:16px 0px;
-    transition: 0.5s;
-    
+.card {
+  width: 512px;
+
+  border: 2px solid #0000001a;
+  border-radius: 24px;
+  padding: 16px;
+  background-color: white;
+  backdrop-filter: blur(80px);
+  margin: 16px 0px;
+  transition: 0.5s;
 }
 
-.card:hover{
+.card:hover {
   background: #374151;
   color: white;
 }
 
-.item{
- 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.block{
-    display: flex;
-    align-items: center;
+.block {
+  display: flex;
+  align-items: center;
 }
 
-.item h5{
-    padding-left: 24px;
-    font-size: 18px;
-    font-weight: 400;
+.item h5 {
+  padding-left: 24px;
+  font-size: 18px;
+  font-weight: 400;
 }
 
-
-
-.item span{
-    font-size: 18px;
-    font-weight: 400; 
+.item span {
+  font-size: 18px;
+  font-weight: 400;
 }
 
-.grid h4{
-    color: #374151;
-    font-size: 24px;
-    font-weight: 700;
+.grid h4 {
+  font-size: 24px;
+  font-weight: 700;
 }
 
-
-.grid a{
-   display: block;
-    text-align: center;
-    color: #8d53fd;
-    font-size: 22px;
-    font-weight: 400;
-    margin-top: 16px;
+.grid button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #8d53fd;
+  font-size: 22px;
+  font-weight: 400;
+  margin: 16px auto;
 }
 
-@media (max-width: 1024px){
-  .grid{
+.modal_bg {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.5s;
+}
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+.modal_content {
+  width: 964px;
+  height: 810px;
+  border-radius: 12px;
+  padding: 34px 64px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(40px);
+  overflow-y: scroll;
+}
+
+.modal_content::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.modal_close{
+  text-align: right;
+}
+
+.modal_close button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+ margin: 0;
+}
+
+.title h3 {
+  font-size: 48px;
+  font-weight: 800;
+  color: #12273c;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.card_user {
+  width: 100%;
+
+  border: 2px solid #0000001a;
+  border-radius: 24px;
+  padding: 16px;
+  background-color: white;
+  backdrop-filter: blur(80px);
+  margin-bottom: 12px;
+  transition: 0.5s;
+}
+
+.card_user:hover {
+  background: #374151;
+  color: white;
+}
+
+.item_user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.block_user {
+  display: flex;
+  align-items: center;
+}
+
+.item_user h5 {
+  padding-left: 16px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item_user h4 {
+  padding-left: 20px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.item_user span {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.detailall {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .grid {
     display: flex;
     flex-direction: column;
-   
+
     align-items: center;
-   }
-   .voice{
+  }
+  .voice {
     margin-top: 64px;
+  }
+}
+
+@media (max-width: 960px) {
+  .modal_content {
+    width: 95%;
+    padding: 30px;
   }
 }
 
@@ -138,7 +244,7 @@
     text-align: center;
   }
   .content::before {
-   display: none;
+    display: none;
   }
   .content h3 {
     font-size: 28px;
@@ -152,34 +258,65 @@
     font-weight: 400;
   }
 
-  .grid{
- display: flex;
- flex-direction: column;
- align-items:stretch;
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .voice {
+    margin-top: 64px;
+  }
+  .item h5 {
+    padding-left: 24px;
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .item span {
+    font-size: 12px;
+    font-weight: 400;
+  }
+  .card {
+    width: 100%;
+    padding: 10px;
+  }
+  .grid a {
+    margin-top: 32px;
+    font-size: 16px;
+  }
 }
 
-.voice{
-  margin-top: 64px;
-}
-.item h5{
-  padding-left: 24px;
-  font-size: 12px;
-  font-weight: 400;
-}
-.item span{
-  font-size: 12px;
-  font-weight: 400; 
-}
-.card{
- 
-  width: 100%;
-  padding: 10px;
-}
-.grid a{
-  margin-top: 32px;
-   font-size: 16px;
-}
+@media (max-width: 500px) {
+  .modal_content {
+    width: 94%;
+    padding: 10px;
+  }
+  .modal_close button {
+  
+  }
 
+  .item_user h5 {
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .item_user h4 {
+    padding-left: 0px;
+    font-size: 15px;
+    font-weight: 400;
+  }
+  
+  .item_user span {
+    font-size: 15px;
+    font-weight: 400;
+  }
 
-
+  .title h3 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 0px;
+    color: #12273c;
+    text-align: center;
+  }
 }
