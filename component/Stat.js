@@ -33,26 +33,27 @@ export default function Stat() {
         label: "Tekshirilgan",
         data: [0.3, 0.1, 0.2, 0.5, 0.6,0.3, 0.1, 0.4, 0.4, 0.6,0.2, 0.6,],
         backgroundColor: "#fd5353",
-        barThickness: 15,
+        
       },
       {
         label: "Eshitilgan",
         data: [0.1, 0.4, 0.2, 0.3, 0.4, 0.4, 0.3, 0.3, 0.6, 0.6,0.3, 0.4,],
         backgroundColor: "#33bffa",
-        barThickness: 15,
+      
       },
 
       {
         label: "Ovoz",
         data: [0.3, 0.1, 0.07, 0.1, 0.5, 0.5, 0.5, 0.2, 0.1, 0.6,0.1, 0.5,],
         backgroundColor: "#8d53fd",
-        barThickness: 15,
+       
        
       },
     ],
   };
 
   const options = {
+    responsive:true,
     plugins: {
       legend: {
         position: "top",
@@ -74,9 +75,7 @@ export default function Stat() {
       },
     },
     scales: {
-      xAxis: {
-        display: false,
-      },
+    
       yAxis: {
         max: 1,
       },
@@ -107,13 +106,13 @@ export default function Stat() {
         <Bar data={data} height={100} options={options} />
 
 
-          {/* <Image
+          <Image
             src="/stat-bottom.png"
             width={1268}
             height={251}
             quality={100}
             alt="stat"
-          /> */}
+          />
         </div>
         <div className={styles.img_hour}>
           <Image
