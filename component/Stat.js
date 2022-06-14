@@ -105,14 +105,14 @@ export default function Stat() {
         <div className={styles.img_bottom}>
         <Bar data={data} height={100} options={options} />
 
-
+{/* 
           <Image
             src="/stat-bottom.png"
             width={1268}
             height={251}
             quality={100}
             alt="stat"
-          />
+          /> */}
         </div>
         <div className={styles.img_hour}>
           <Image
