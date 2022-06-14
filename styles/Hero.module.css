@@ -149,7 +149,7 @@
   margin-top: 16px
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1366px) {
   .header__content h1 {
     font-size: 38px;
     line-height: 43px;
