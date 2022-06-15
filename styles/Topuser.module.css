@@ -280,6 +280,12 @@
     width: 100%;
     padding: 10px;
   }
+
+  .card img{
+    width: 45.16px!important;
+    height: 45px!important;
+  }
+
   .grid a {
     margin-top: 32px;
     font-size: 16px;
@@ -291,9 +297,7 @@
     width: 94%;
     padding: 10px;
   }
-  .modal_close button {
-  
-  }
+
 
   .item_user h5 {
     padding-left: 10px;

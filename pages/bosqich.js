@@ -64,21 +64,21 @@ export default function bosqich({ users, userslist }) {
         <h2>Konkurs qoidalari</h2>
         <div className={styles.rulesCard}>
           <div className={styles.rule1}>
-            <h2>Rule 1</h2>
+            <h2>RULE 1</h2>
             <p>
               Any questions about this Privacy Policy should be addressed to
               team@siteleaf.com
             </p>
           </div>
           <div className={styles.rule1}>
-            <h2>Rule 1</h2>
+            <h2>RULE 1</h2>
             <p>
               Any questions about this Privacy Policy should be addressed to
               team@siteleaf.com
             </p>
           </div>
           <div className={styles.rule1}>
-            <h2>Rule 1</h2>
+            <h2>RULE 1</h2>
             <p>
               Any questions about this Privacy Policy should be addressed to
               team@siteleaf.com

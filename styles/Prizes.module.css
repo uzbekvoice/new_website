@@ -124,6 +124,12 @@
     top: -35px;
   }
 
+  .ceremony {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+
   .modalImg .modalWrap {
       width: 90%;
       height: 50%;

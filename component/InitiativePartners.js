@@ -18,7 +18,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 export default function InitiativePartners() {
     const Responsive ={
         0:{
-          items:1.2,
+          items:2,
           margin:5,
         },
 

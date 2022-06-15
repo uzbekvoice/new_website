@@ -149,7 +149,7 @@
   margin-top: 16px
 }
 
-@media (max-width: 1350px) {
+@media (max-width: 1366px) {
   .header__content h1 {
     font-size: 38px;
     line-height: 43px;
@@ -228,9 +228,9 @@
 
 @media (max-width: 1024px) {
   .header__content h1 {
-    font-size: 30px;
-    line-height: 28px;
-    font-weight: 700;
+    font-size: 33px;
+    line-height: 40px;
+    font-weight: 800;
   }
   
   .header__content p {
@@ -265,9 +265,9 @@
 }
 @media (max-width: 900px) {
   .header__content h1 {
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: 700;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 800;
   }
   
   .header__content p {
@@ -321,7 +321,7 @@
   }
   .header__content h1 {
     font-size: 28px;
-    line-height: 30px;
+    line-height: 40px;
     font-weight: 800;
     margin-top: 92px;
   }
@@ -329,7 +329,7 @@
   .header__content p {
     font-size: 16px;
     font-weight: 400;
-    line-height: 22px;
+    line-height: 27px;
     margin-top: 12px;
     margin-bottom: 32px;
   }
