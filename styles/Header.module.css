@@ -32,6 +32,68 @@
     line-height: 24px;
 }
 
+.item {
+    position: relative;
+    cursor: pointer;
+    margin-left: 24px;
+    color: #171717;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.header__menu .item ul {
+    display: none;
+    width: max-content;
+    list-style: none;
+    position: absolute;
+    left: -10px;
+    z-index: 99;
+    top: 35px;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.header__menu .item ul::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-top: 1px solid #d9d9d9;
+    border-right: 0px solid #d9d9d9;
+    border-bottom: 0px solid #d9d9d9;
+    border-left: 1px solid #d9d9d9;
+    background-color: #fff;
+    top: -7px;
+    left: 45%;
+    transform: rotate(45deg);
+}
+
+.header__menu .item .left {
+    left: -16px;
+}
+
+.header__menu .item .otherLeft {
+    left: -22px;
+}
+
+.item svg {
+    display: none;
+}
+
+.header__menu .item ul li {
+    width: 100%;
+}
+
+.header__menu .item ul li a {
+    margin: 0;
+    display: inline-block;
+    padding: 3px 10px;
+    text-align: center;
+    font-size: 15px;
+}
+
 .header__main img {
     width: 220px;
 }
@@ -60,7 +122,7 @@
     display: none;
 }
 
-@media (max-width: 1110px) {
+@media (max-width: 992px) {
 
     .header_main_ishtirok {
         display: block;
@@ -92,7 +154,7 @@
         transform: translateX(100%);
         -webkit-transition: all 0.6s ease 0s;
         -o-transition: all 0.6s ease 0s;
-        transition: all 0.6s ease 0s
+        transition: all 0.6s ease 0s;        
     }
 
     .header__menu a:last-child {
@@ -107,10 +169,42 @@
         display: inline-block;
         padding: 10px 0;
         margin-left: 0;
+        width: 100%;
+        /* text-align: center; */
+        padding-left: 150px;
+    }
+
+    .item {
+        margin-left: 0;
+        padding: 10px 0;
+        width: 100%;
+        /* text-align: center; */
+        padding-left: 150px;
+    }
+
+    .item svg {
+        display: inline;
+        margin-left: 20px;
+    }
+
+    .header__menu .item ul {
+        width: 100%;
+        margin-top: 5px;
+        position: static;
+        border: none; 
+    }
+
+    .header__menu .item ul::after {
+        display: none;
+    }
+
+    .rotateChevron {
+        transform: rotate(0);
     }
 
     .header__menu a:last-child {
         padding: 13px 24px;
+        width: fit-content;
         margin-top: 20px;
     }
 }
@@ -126,6 +220,20 @@
     .header__menu {
         width: 300px;
     }
+
+    .header__menu a {
+        padding-left: 100px;
+    }
+
+    .item {
+        padding-left: 100px;
+    }
+
+    .header__menu_close img {
+        width: 16px;
+        height: 16px;
+    }
+    
 
     .header_main_ishtirok {
         display: none;
