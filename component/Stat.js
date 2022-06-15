@@ -94,8 +94,15 @@ export default function Stat() {
         <h3>Statistika</h3>
         <p>O'z maqsadimizga yetish uchun muvaffaqiyat ko'rsatkichlari</p>
         <div className={styles.status}>
-          <span>~270 000 </span> <p> dan ortiq jumla</p> <span> ~300</span>{" "}
+          <div className={styles.block}>
+          <span>~270 000 </span> <p> dan ortiq jumla</p>
+          </div>
+
+          <div className={styles.block}>
+          <span> ~300</span>{" "}
           <p> soatdan ko'p ovoz</p>
+          </div>
+       
         </div>
         <div className={styles.img_top}>
          
