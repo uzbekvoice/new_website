@@ -14,7 +14,7 @@
 
 .ourteam h4 {
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 00;
 
   letter-spacing: 0.0022em;
   color: #12273c;
@@ -42,7 +42,10 @@
   margin-top: 15px;
   display: inline-block;
   margin-right: 7px;
+  transition: all 0.5s;
 }
+
+
 
 .avatarimg {
   border-radius: 50%;

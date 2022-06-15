@@ -36,12 +36,17 @@
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        margin-top: 70px;
+        margin-top: -40px;
       }
       
       .detail {
         width: 100%;
         text-align: center;
+      }
+
+      .imgunit{
+        width: 420px;
+        height: 385px;
       }
       
       .detail h2 {

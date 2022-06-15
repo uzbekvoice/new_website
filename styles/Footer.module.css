@@ -169,4 +169,17 @@
         flex: none;
         margin-right: 40px;
     }
+
+
+    
+    .footer__body {
+        padding-top: 25px;
+        padding-bottom: 60px;
+        -webkit-column-gap: 80px;
+        -moz-column-gap: 80px;
+        column-gap: 80px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+    }
 }

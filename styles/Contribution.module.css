@@ -80,6 +80,25 @@
       font-weight: 800;
       line-height: 30px;
     }
+
+    .card{
+      height: auto;
+      padding: 16px;
+    }
+
+    .card h3{
+      margin-top: 24px;
+      margin-bottom: 12px;
+     font-size: 16px;
+     font-weight: 700;
+     line-height: 19px;
+    }
+
+    .card p{
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+    }
  
   
   }
