@@ -10,19 +10,31 @@ function Layout({ children }) {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
   const [menuHakatonToggle, setHakatonToggle] = useState(false);
+  const [stepDropDown, setStepDropDown] = useState(false);
+  const [hakDropDown, sethakDropDown] = useState(false);
+  const [otherDropDown, setOtherDropDown] = useState(false);
 
-  const navbarOutsiteClickClose = () => {
+  const outsiteClickClose = () => {
     setMenuToggle(false);
     setHakatonToggle(false)
+    sethakDropDown(false)
+    setStepDropDown(false)
+    setOtherDropDown(false)
   }
 
   if (router.pathname != "/hakaton" && router.pathname != '/resus')
     return (
-      <div onClick={navbarOutsiteClickClose}>
+      <div onClick={outsiteClickClose}>
         <div className={styles.containerfluid}>
           <Header
             setMenuToggle={setMenuToggle}
             menuToggle={menuToggle}
+            stepDropDown={stepDropDown}
+            setStepDropDown={setStepDropDown}
+            hakDropDown={hakDropDown}
+            sethakDropDown={sethakDropDown}
+            otherDropDown={otherDropDown}
+            setOtherDropDown={setOtherDropDown}
           />
           {children}
         </div>
@@ -31,10 +43,16 @@ function Layout({ children }) {
     );
   else if (router.pathname == "/hakaton") {
     return (
-      <div onClick={navbarOutsiteClickClose}>
+      <div onClick={outsiteClickClose}>
         <HakatonHero
           setHakatonToggle={setHakatonToggle}
           menuHakatonToggle={menuHakatonToggle}
+          stepDropDown={stepDropDown}
+          setStepDropDown={setStepDropDown}
+          hakDropDown={hakDropDown}
+          sethakDropDown={sethakDropDown}
+          otherDropDown={otherDropDown}
+          setOtherDropDown={setOtherDropDown}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
@@ -42,9 +60,17 @@ function Layout({ children }) {
     );
   } else {
     return (
-      <div onClick={navbarOutsiteClickClose}>
-        <ResursHero setMenuToggle={setMenuToggle} 
-          menuToggle={menuToggle}  />
+      <div onClick={outsiteClickClose}>
+        <ResursHero
+          setMenuToggle={setMenuToggle}
+          menuToggle={menuToggle}
+          stepDropDown={stepDropDown}
+          setStepDropDown={setStepDropDown}
+          hakDropDown={hakDropDown}
+          sethakDropDown={sethakDropDown}
+          otherDropDown={otherDropDown}
+          setOtherDropDown={setOtherDropDown}
+        />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
       </div>
