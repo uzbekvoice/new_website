@@ -73,10 +73,15 @@ a {
 }
 
 .btn {
-  background-color: #8D53FD !important;
+  background: linear-gradient(9deg, #8D53FD -1.4%, #B38CFF 95.18%), linear-gradient(0deg, #8D53FD, #8D53FD);
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
   padding: 13px 24px;
   color: white !important;
   border-radius: 12px;
+}
+
+.btn:hover{
+  background: blueviolet;
 }
 
 .accordion__section {
