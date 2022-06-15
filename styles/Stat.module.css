@@ -74,7 +74,11 @@ margin-top: 48px;
     margin-top: 80px;
 }
 
-@media (max-width:767px){
+.block{
+    display: flex;
+}
+
+@media (max-width:800px){
     .content {
         margin-top: 120px;
         
@@ -91,14 +95,27 @@ margin-top: 48px;
         line-height: 22px;
         width: 100%;
         margin: 0 auto;
-        margin-top: 16px;
+        margin-top: 6px;
         padding:5px
     }
     .status span{
         font-size: 30px;
         font-weight: 900;
-        line-height: 20px;
+        line-height: 40px;
       
+    }
+
+    .block{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .status{
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-evenly;
+
     }
     
 }
