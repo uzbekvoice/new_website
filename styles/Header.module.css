@@ -228,6 +228,11 @@
     .item {
         padding-left: 100px;
     }
+
+    .header__menu_close img {
+        width: 16px;
+        height: 16px;
+    }
     
 
     .header_main_ishtirok {
