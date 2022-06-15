@@ -36,6 +36,13 @@ function HeaderHakaton({
     setOtherDropDown(!otherDropDown);
   }
 
+  const goPage = ()=> {
+    setStepDropDown(false);
+    setOtherDropDown(false)
+    sethakDropDown(false);
+    setMenuToggle(false)
+  }
+
   return (
     <div
       className={styles.header__main}>
@@ -130,12 +137,12 @@ function HeaderHakaton({
         </div>        
 
         <Link href="/resus">
-          <a className={router.pathname == "/resus" ? "item active" : "item"}>
+          <a onClick={goPage} className={router.pathname == "/resus" ? "item active" : "item"}>
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a className={router.pathname == "/guide" ? "item active" : "item"}>
+          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : "item"}>
             Qo'llanma
           </a>
         </Link>

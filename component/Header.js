@@ -33,6 +33,13 @@ function Header({
     sethakDropDown(false);
     setOtherDropDown(!otherDropDown);
   }
+  
+  const goPage = ()=> {
+    setStepDropDown(false);
+    setOtherDropDown(false)
+    sethakDropDown(false);
+    setMenuToggle(false)
+  }
 
   return (
     <div
@@ -129,12 +136,12 @@ function Header({
         </div>        
 
         <Link href="/resus">
-          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/resus" ? "item active" : "item"}>
+          <a onClick={goPage} className={router.pathname == "/resus" ? "item active" : "item"}>
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/guide" ? "item active" : "item"}>
+          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : "item"}>
             Qo'llanma
           </a>
         </Link>
