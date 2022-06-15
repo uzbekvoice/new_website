@@ -22,13 +22,18 @@
 .detail a {
   margin-top: 45px;
   display: inline-block;
-  background-color: #8d53fd;
+  background: linear-gradient(9deg, #8D53FD -1.4%, #B38CFF 95.18%), linear-gradient(0deg, #8D53FD, #8D53FD);
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
   color: white;
   padding: 21px 24px;
   font-size: 22px;
   line-height: 22px;
   border-radius: 12px;
   font-weight: 400;
+}
+
+.detail a:hover{
+  background: blueviolet;
 }
 
 @media (max-width:767px){
