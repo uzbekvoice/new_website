@@ -7,17 +7,12 @@ import Chevron from "./Question/Chevron";
 function HeaderHakaton({
   menuHakatonToggle,
   setHakatonToggle,
-  stepDropDown,
-  setStepDropDown,
-  hakDropDown,
-  sethakDropDown,
-  otherDropDown,
-  setOtherDropDown
 }) {
 
   const router = useRouter();
-
-  const [activeStepAndHak, setActiveStepAndHak] = useState(0);
+  const [stepDropDown, setStepDropDown] = useState(false);
+  const [hakDropDown, sethakDropDown] = useState(false);
+  const [otherDropDown, setOtherDropDown] = useState(false);
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -37,9 +32,6 @@ function HeaderHakaton({
   }
 
   const goPage = ()=> {
-    setStepDropDown(false);
-    setOtherDropDown(false)
-    sethakDropDown(false);
     setMenuToggle(false)
   }
 
@@ -83,54 +75,39 @@ function HeaderHakaton({
           <img src='/menu-times.png' alt='close icon' />
         </div>
 
-        <div onClick={() => openDropdown()} className={styles.item}>
+        <div onClick={() => openDropdown()} className={styles.item + ' ' + styles.noHover}>
           Bosqichlar
           <Chevron className={stepDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul style={{ display: stepDropDown && 'block' }}>
+          <ul className={ stepDropDown? styles.activeDrop: styles.left }>
             <li>
               <Link href='/bosqich'>
-                <a
-                  onClick={() => setActiveStepAndHak(1)}
-                  style={{ color: activeStepAndHak === 1 && '#9B67FE' }}
-                >bosqich 1</a>
+                <a>bosqich 1</a>
               </Link>
             </li>
             <li>
               <Link href='/bosqich'>
-                <a
-                  onClick={() => setActiveStepAndHak(2)}
-                  style={{ color: activeStepAndHak === 2 && '#9B67FE' }}
-                >bosqich 2</a>
+                <a>bosqich 2</a>
               </Link>
             </li>
             <li>
               <Link href='/bosqich'>
-                <a
-                  onClick={() => setActiveStepAndHak(3)}
-                  style={{ color: activeStepAndHak === 3 && '#9B67FE' }}
-                >bosqich 3</a>
+                <a>bosqich 3</a>
               </Link>
             </li>
           </ul>
         </div>
-        <div onClick={() => openHakDropdown()} className={styles.item}>
+        <div onClick={() => openHakDropdown()} className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={styles.left} style={{ display: hakDropDown && 'block' }}>
+          <ul className={ hakDropDown? styles.activeDrop : styles.left}>
             <li>
               <Link href='/hakaton'>
-                <a
-                  onClick={() => setActiveStepAndHak(4)}
-                  style={{ color: activeStepAndHak === 4 && '#9B67FE' }}
-                >hakaton 1</a>
+                <a>hakaton 1</a>
               </Link>
             </li>
             <li>
               <Link href='/hakaton'>
-                <a
-                  onClick={() => setActiveStepAndHak(5)}
-                  style={{ color: activeStepAndHak === 5 && '#9B67FE' }}
-                >hakaton 2</a>
+                <a>hakaton 2</a>
               </Link>
             </li>
           </ul>
@@ -146,10 +123,10 @@ function HeaderHakaton({
             Qo'llanma
           </a>
         </Link>
-        <div onClick={() => openOtherDropdown()} className={styles.item}>
+        <div onClick={() => openOtherDropdown()} className={styles.item + ' ' + styles.noHover}>
           Boshqa
           <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={styles.otherLeft} style={{ display: otherDropDown && 'block' }}>
+          <ul className={ !otherDropDown? styles.otherLeft: styles.activeDrop}>
             <li>
               <Link href="/yangilik">
                 <a onClick={() => setMenuToggle(false)}

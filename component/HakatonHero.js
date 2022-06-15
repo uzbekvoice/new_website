@@ -5,12 +5,6 @@ import styles from '../styles/HakatonHero.module.css'
 export default function HakatonHero({
     menuHakatonToggle,
     setHakatonToggle,
-    stepDropDown,
-    setStepDropDown,
-    hakDropDown,
-    sethakDropDown,
-    otherDropDown,
-    setOtherDropDown
 }) {
     return (
         <div className={styles.hakatonHeroWrappper}>
@@ -18,12 +12,6 @@ export default function HakatonHero({
                 <HeaderHakaton
                     setHakatonToggle={setHakatonToggle}
                     menuHakatonToggle={menuHakatonToggle}
-                    stepDropDown={stepDropDown}
-                    setStepDropDown={setStepDropDown}
-                    hakDropDown={hakDropDown}
-                    sethakDropDown={sethakDropDown}
-                    otherDropDown={otherDropDown}
-                    setOtherDropDown={setOtherDropDown}
                 />
                 <div className={styles.hakatonHero}>
                     <h3 className={styles.hakatonHero_Left}>

@@ -10,16 +10,10 @@ function Layout({ children }) {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
   const [menuHakatonToggle, setHakatonToggle] = useState(false);
-  const [stepDropDown, setStepDropDown] = useState(false);
-  const [hakDropDown, sethakDropDown] = useState(false);
-  const [otherDropDown, setOtherDropDown] = useState(false);
 
   const outsiteClickClose = () => {
     setMenuToggle(false);
     setHakatonToggle(false)
-    sethakDropDown(false)
-    setStepDropDown(false)
-    setOtherDropDown(false)
   }
 
   if (router.pathname != "/hakaton" && router.pathname != '/resus')
@@ -29,12 +23,6 @@ function Layout({ children }) {
           <Header
             setMenuToggle={setMenuToggle}
             menuToggle={menuToggle}
-            stepDropDown={stepDropDown}
-            setStepDropDown={setStepDropDown}
-            hakDropDown={hakDropDown}
-            sethakDropDown={sethakDropDown}
-            otherDropDown={otherDropDown}
-            setOtherDropDown={setOtherDropDown}
           />
           {children}
         </div>
@@ -47,12 +35,6 @@ function Layout({ children }) {
         <HakatonHero
           setHakatonToggle={setHakatonToggle}
           menuHakatonToggle={menuHakatonToggle}
-          stepDropDown={stepDropDown}
-          setStepDropDown={setStepDropDown}
-          hakDropDown={hakDropDown}
-          sethakDropDown={sethakDropDown}
-          otherDropDown={otherDropDown}
-          setOtherDropDown={setOtherDropDown}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
@@ -64,12 +46,6 @@ function Layout({ children }) {
         <ResursHero
           setMenuToggle={setMenuToggle}
           menuToggle={menuToggle}
-          stepDropDown={stepDropDown}
-          setStepDropDown={setStepDropDown}
-          hakDropDown={hakDropDown}
-          sethakDropDown={sethakDropDown}
-          otherDropDown={otherDropDown}
-          setOtherDropDown={setOtherDropDown}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
