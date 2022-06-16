@@ -12,6 +12,8 @@ function Header({
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
+  const [lan, setLan] = useState('uz');
+  const [openLang, setOpenLang] = useState(false);
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -29,8 +31,8 @@ function Header({
     sethakDropDown(false);
     setOtherDropDown(!otherDropDown);
   }
-  
-  const goPage = ()=> {
+
+  const goPage = () => {
     setMenuToggle(false)
   }
 
@@ -78,7 +80,7 @@ function Header({
         <div onClick={() => openDropdown()} className={styles.item + ' ' + styles.noHover}>
           Bosqichlar
           <Chevron className={stepDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ stepDropDown? styles.activeDrop +' ' + styles.left: styles.left }>
+          <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
                 <a>1-bosqich</a>
@@ -99,7 +101,7 @@ function Header({
         <div onClick={() => openHakDropdown()} className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ hakDropDown? styles.activeDrop + " " +styles.left : styles.left}>
+          <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
             <li>
               <Link href='/hakaton'>
                 <a>1-hakaton</a>
@@ -111,7 +113,7 @@ function Header({
               </Link>
             </li>
           </ul>
-        </div>        
+        </div>
 
         <Link href="/resus">
           <a onClick={goPage} className={router.pathname == "/resus" ? "item active" : "item"}>
@@ -126,7 +128,7 @@ function Header({
         <div onClick={() => openOtherDropdown()} className={styles.item + ' ' + styles.noHover}>
           Boshqa
           <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ !otherDropDown? styles.otherLeft: styles.activeDrop + ' '+styles.otherLeft}>
+          <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>
             <li>
               <Link href="/yangilik">
                 <a onClick={() => setMenuToggle(false)}
@@ -147,6 +149,35 @@ function Header({
             </li>
           </ul>
         </div>
+        <div onClick={() => setOpenLang(!openLang)} className={styles.item + " " + styles.lan}>
+          <span>
+            {lan}
+            {
+              lan === 'uz' ?
+                <img src='/uz.png' alt="'uz" /> :
+                lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
+                  <img src='/eng.png' alt="'eng" />
+            }
+
+            <Chevron className={openLang ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          </span>
+          <ul style={{display: openLang && 'block'}}
+          className={styles.language}
+          >
+            <li>
+              <a onClick={() => setLan('uz')}>uz</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('ru')}>ru</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('eng')}>eng</a>
+            </li>
+          </ul>
+        </div>
+
+
+
         <Link href="https://t.me/UzbekVoiceBot">
           <a onClick={() => setMenuToggle(false)} className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
             Ishtirok eting
