@@ -78,7 +78,7 @@ function Header({
         <div onClick={() => openDropdown()} className={styles.item + ' ' + styles.noHover}>
           Bosqichlar
           <Chevron className={stepDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ stepDropDown? styles.activeDrop: styles.left }>
+          <ul className={ stepDropDown? styles.activeDrop +' ' + styles.left: styles.left }>
             <li>
               <Link href='/bosqich'>
                 <a>1-bosqich</a>
@@ -99,7 +99,7 @@ function Header({
         <div onClick={() => openHakDropdown()} className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ hakDropDown? styles.activeDrop : styles.left}>
+          <ul className={ hakDropDown? styles.activeDrop + " " +styles.left : styles.left}>
             <li>
               <Link href='/hakaton'>
                 <a>1-hakaton</a>
@@ -126,7 +126,7 @@ function Header({
         <div onClick={() => openOtherDropdown()} className={styles.item + ' ' + styles.noHover}>
           Boshqa
           <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
-          <ul className={ !otherDropDown? styles.otherLeft: styles.activeDrop}>
+          <ul className={ !otherDropDown? styles.otherLeft: styles.activeDrop + ' '+styles.otherLeft}>
             <li>
               <Link href="/yangilik">
                 <a onClick={() => setMenuToggle(false)}
