@@ -14,7 +14,6 @@ export async function getStaticProps() {
 
   const res = await fetch('https://new.uzbekvoice.ai/items/news/')
   const data = await res.json()
-  // console.log(posts);
 
   return {
     props: {

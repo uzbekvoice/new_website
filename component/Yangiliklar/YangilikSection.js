@@ -5,7 +5,7 @@ import s from "../../styles/Yangiliklar.module.css";
 import Image from "next/image";
 
 const YangilikSection = ({ data }) => {
-  console.log(data, 'dd');
+  // console.log(data, 'dd');
 
   return (
     <section className={s.YangilikSection}>
@@ -20,7 +20,7 @@ const YangilikSection = ({ data }) => {
                 </div>
                 <div className={s.boxBody}>
                   <h3 className={s.title}>{el.news_title}</h3>
-                  <h5 dangerouslySetInnerHTML={{ __html: el.news_content }} className={s.desc}></h5>
+                  <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ') }} className={s.desc}></h5>
                   <div className={s.flexClass}>
                     <Link href={`/yangilik/${el.id}`}>
                       <a>
