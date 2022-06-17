@@ -6,6 +6,7 @@
     margin-bottom: 40px;
     letter-spacing: 0.0022em;
     color: #12273C;
+    font-family: 'Inter', sans-serif;
 }
 
 .parent {
@@ -39,6 +40,7 @@
     font-weight: 700;
     font-size: 24px;
     text-align: start;
+    font-family: 'Inter', sans-serif;
 }
 
 .desc {
@@ -64,6 +66,7 @@
     font-weight: 500;
     font-size: 18px;
     display: flex;
+    font-family: 'Inter', sans-serif;
     align-items: center;
 }
 

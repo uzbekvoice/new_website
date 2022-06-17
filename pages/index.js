@@ -32,31 +32,16 @@ export async function getStaticProps() {
 export default function Home({users, userslist}) {
   return (
     <div>
-      <Head>
-        <title>
-          Uzbekvoice.ai - o&apos;zbek tilini kompyuterga o&apos;rgatish
-          tashabbusi
-        </title>
-        <meta
-          name="description"
-          content="Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
-           
-        />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
       <Hero />
       <Slider />
       <Stat />
       <Step />
       <Contribution />
       <TopUser users={users} userslist={userslist}/>
-     
       <Ourpartners />
       <InitiativePartners />
       <OurTeam />
       <Question />
-
-    
     </div>
   );
 }

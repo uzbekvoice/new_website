@@ -76,6 +76,7 @@
     color: #262626;
     margin-bottom: 7px;
     margin-top: 12px;
+    font-family: 'Inter', sans-serif;
 }
 
 .partners_right label:first-child {
@@ -107,13 +108,13 @@
     line-height: 21px;
     color: #262626;
     opacity: 0.2;
+    font-family: 'Inter', sans-serif;
 }
 
 .partners_right textarea {
     padding-top: 13px;
     padding-bottom: 13px;
     resize: none;
-    font-size: 18px;
 }
 
 .partners_right button {

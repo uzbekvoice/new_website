@@ -46,7 +46,6 @@
 }
 
 .item{
-  
   padding: 20px;
   backdrop-filter: blur(80px);
   border-radius: 20px;
@@ -56,7 +55,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(10px);
- 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -71,7 +69,6 @@
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   margin-left: 5%;
-  
 }
 
 .text{
@@ -127,4 +124,14 @@
   }
 }
 
+@media (max-width: 430px) {
+
+  .item {
+    height: 300px;
+  }
+  .item span {
+    width: 160px !important;
+    height: 160px !important;
+  }
+}
 

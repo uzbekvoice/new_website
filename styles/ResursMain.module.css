@@ -55,6 +55,7 @@
     line-height: 120%;
     margin-bottom: 12px;
     color: #2A2A2A;
+    font-family: 'Inter', sans-serif;
 }
 
 .resursCardBody p {
@@ -62,11 +63,13 @@
     font-size: 16px;
     line-height: 160%;
     color: #696969;
+    font-family: 'Inter', sans-serif;
     padding-bottom: 34px;
 }
 
 .resursCardBody a {
     font-weight: 500;
+    font-family: 'Inter', sans-serif;
     font-size: 18px;
     line-height: 111.63%;
     display: flex;

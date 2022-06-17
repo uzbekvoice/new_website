@@ -42,6 +42,7 @@
     font-size: 18px;
     display: flex;
     align-items: center;
+    font-family: 'Inter', sans-serif;
 }
 
 .flexClass a img {

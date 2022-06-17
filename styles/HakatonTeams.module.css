@@ -67,7 +67,7 @@
 }
 
 .hakatonTeams_cardBody a {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -75,6 +75,7 @@
     font-size: 18px;
     line-height: 111.63%;
     color: #8D53FD;
+    font-family: 'Inter', sans-serif;
 }
 
 .hakatonTeams_cardBody a img {

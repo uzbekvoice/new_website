@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
+
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
   font-weight: 400
+}
+
+@font-face {
+  font-family: "Objektiv";
+  src: url(../public/Objektiv/ObjektivMk1-Medium.ttf);
+  font-weight: 500
 }
 
 @font-face {

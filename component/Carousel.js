@@ -15,27 +15,27 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 });
 
 export default function Slider() {
-  const Responsive ={
-    0:{
-      items:1,
-      margin:5,
+  const Responsive = {
+    0: {
+      items: 1,
+      margin: 5,
     },
 
-    580:{
-        items:2,
-        margin:10,
+    580: {
+      items: 2,
+      margin: 10,
     },
 
-    1200:{
-        items:3,
-        margin:20,
+    1200: {
+      items: 3,
+      margin: 20,
     },
-    
-    1400:{
-        items:3,
-        margin:10,
+
+    1400: {
+      items: 3,
+      margin: 10,
     }
-}
+  }
   return (
     <div className={styles.our_goal}>
       <h3>O'zi maqsad nima?</h3>
@@ -45,7 +45,7 @@ export default function Slider() {
         ma'lumotlar bazasi yetishmasligi katta muammo.
       </p>
       <div className={styles.sliders}>
-        <OwlCarousel className={styles.slider} dots={false} responsive={Responsive} loop margin={10} autoplay autoplayTimeout={3000}>
+        <OwlCarousel className={styles.slider} dots={false} responsive={Responsive} loop margin={10} autoplay autoplayTimeout={300000}>
           <div className={styles.item}>
             <Image src="/goals-1.png" width={205} height={205} alt="goal-1" priority={true} />
             <div className={styles.text}>
@@ -57,7 +57,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-2.png" width={205} height={205} alt="goal-2"   priority={true}/>
+            <Image src="/goals-2.png" width={205} height={205} alt="goal-2" priority={true} />
 
             <div className={styles.text}>
               <h4>Tadqiqot</h4>
@@ -68,7 +68,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-3.png" width={205} height={205} alt="goal-3"  priority={true}/>
+            <Image src="/goals-3.png" width={205} height={205} alt="goal-3" priority={true} />
             <div className={styles.text}>
               <h4>Ijodkorlik</h4>
               <h5>
@@ -78,7 +78,7 @@ export default function Slider() {
             </div>
           </div>
           <div className={styles.item}>
-            <Image src="/goals-4.png" width={205} height={205} alt="goal-4"  priority={true}/>
+            <Image src="/goals-4.png" width={205} height={205} alt="goal-4" priority={true} />
             <div className={styles.text}>
               <h4>Jamoatchilik</h4>
               <h5>
