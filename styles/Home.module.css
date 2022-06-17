@@ -127,4 +127,23 @@
   }
 }
 
+@media (max-width: 500px) {
+.item{
+  height: auto;
+}
+  .item img{
+    width: 164px!important;
+    height: 164px!important;
+}
+
+.item h4{
+  font-size: 15px;
+  line-height: 17px;
+}
+
+.item h5{
+  font-size: 12px;
+ line-height: 18px;
+}
+}
 
