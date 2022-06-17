@@ -5,6 +5,8 @@ import styles from '../styles/HakatonHero.module.css'
 export default function HakatonHero({
     menuHakatonToggle,
     setHakatonToggle,
+    openLang,
+    setOpenLang
 }) {
     return (
         <div className={styles.hakatonHeroWrappper}>
@@ -12,6 +14,8 @@ export default function HakatonHero({
                 <HeaderHakaton
                     setHakatonToggle={setHakatonToggle}
                     menuHakatonToggle={menuHakatonToggle}
+                    openLang={openLang}
+                    setOpenLang={setOpenLang}
                 />
                 <div className={styles.hakatonHero}>
                     <h3 className={styles.hakatonHero_Left}>

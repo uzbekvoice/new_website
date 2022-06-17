@@ -7,13 +7,14 @@ import Chevron from "./Question/Chevron";
 function Header({
   menuToggle,
   setMenuToggle,
+  openLang,
+  setOpenLang
 }) {
   const router = useRouter();
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
   const [lan, setLan] = useState('uz');
-  const [openLang, setOpenLang] = useState(false);
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -50,6 +51,31 @@ function Header({
         className={styles.header__main_wrapper}
         onClick={e => e.stopPropagation()}
       >
+
+        <div onClick={() => setOpenLang(!openLang)} className={styles.mobileLan}>
+          <span>
+            {
+              lan === 'uz' ?
+                <img src='/uz.png' alt="'uz" /> :
+                lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
+                  <img src='/eng.png' alt="'eng" />
+            }
+            {lan}
+          </span>
+          <ul style={{ display: openLang && 'block' }}
+            className={styles.language}
+          >
+            <li>
+              <a onClick={() => setLan('uz')}>uz</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('ru')}>ru</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('eng')}>eng</a>
+            </li>
+          </ul>
+        </div>
         <div className={styles.header_main_ishtirok}>
           <Link href="https://t.me/UzbekVoiceBot">
             <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
@@ -77,9 +103,16 @@ function Header({
           <img src='/menu-times.png' alt='close icon' />
         </div>
 
-        <div onClick={() => openDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openDropdown()}
+          onMouseOver={() => setStepDropDown(true)}
+          onMouseOut={() => setStepDropDown(false)}
+          className={styles.item + ' ' + styles.noHover}
+        >
           Bosqichlar
-          <Chevron className={stepDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron
+            className={stepDropDown ? 'rotate' : styles.rotateChevron
+            }
+            width={7} height={11} fill={"#1717179d"} />
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
@@ -98,7 +131,10 @@ function Header({
             </li>
           </ul>
         </div>
-        <div onClick={() => openHakDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openHakDropdown()}
+          onMouseOver={() => sethakDropDown(true)}
+          onMouseOut={() => sethakDropDown(false)}
+          className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
           <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
@@ -125,7 +161,10 @@ function Header({
             Qo'llanma
           </a>
         </Link>
-        <div onClick={() => openOtherDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openOtherDropdown()}
+          onMouseOver={() => setOtherDropDown(true)}
+          onMouseOut={() => setOtherDropDown(false)}
+          className={styles.item + ' ' + styles.noHover}>
           Boshqa
           <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
           <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>
@@ -151,18 +190,17 @@ function Header({
         </div>
         <div onClick={() => setOpenLang(!openLang)} className={styles.item + " " + styles.lan}>
           <span>
-            {lan}
             {
               lan === 'uz' ?
                 <img src='/uz.png' alt="'uz" /> :
                 lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
                   <img src='/eng.png' alt="'eng" />
             }
-
+            {lan}
             <Chevron className={openLang ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
           </span>
-          <ul style={{display: openLang && 'block'}}
-          className={styles.language}
+          <ul style={{ display: openLang && 'block' }}
+            className={styles.language}
           >
             <li>
               <a onClick={() => setLan('uz')}>uz</a>

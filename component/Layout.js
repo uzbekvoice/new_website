@@ -10,10 +10,12 @@ function Layout({ children }) {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
   const [menuHakatonToggle, setHakatonToggle] = useState(false);
+  const [openLang, setOpenLang] = useState(false);
 
   const outsiteClickClose = () => {
     setMenuToggle(false);
     setHakatonToggle(false)
+    setOpenLang(false)
   }
 
   if (router.pathname != "/hakaton" && router.pathname != '/resus')
@@ -23,6 +25,8 @@ function Layout({ children }) {
           <Header
             setMenuToggle={setMenuToggle}
             menuToggle={menuToggle}
+            openLang={openLang}
+            setOpenLang={setOpenLang}
           />
           {children}
         </div>
@@ -35,6 +39,8 @@ function Layout({ children }) {
         <HakatonHero
           setHakatonToggle={setHakatonToggle}
           menuHakatonToggle={menuHakatonToggle}
+          openLang={openLang}
+          setOpenLang={setOpenLang}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
@@ -46,6 +52,8 @@ function Layout({ children }) {
         <ResursHero
           setMenuToggle={setMenuToggle}
           menuToggle={menuToggle}
+          openLang={openLang}
+          setOpenLang={setOpenLang}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />

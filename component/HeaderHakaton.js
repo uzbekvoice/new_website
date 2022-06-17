@@ -7,6 +7,8 @@ import Chevron from "./Question/Chevron";
 function HeaderHakaton({
   menuHakatonToggle,
   setHakatonToggle,
+  openLang,
+  setOpenLang
 }) {
 
   const router = useRouter();
@@ -14,7 +16,6 @@ function HeaderHakaton({
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
   const [lan, setLan] = useState('uz');
-  const [openLang, setOpenLang] = useState(false);
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -50,6 +51,30 @@ function HeaderHakaton({
         className={styles.header__main_wrapper}
         onClick={e => e.stopPropagation()}
       >
+        <div onClick={() => setOpenLang(!openLang)} className={styles.mobileLan}>
+          <span>
+            {
+              lan === 'uz' ?
+                <img src='/uz.png' alt="'uz" /> :
+                lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
+                  <img src='/eng.png' alt="'eng" />
+            }
+            {lan}
+          </span>
+          <ul style={{ display: openLang && 'block' }}
+            className={styles.language}
+          >
+            <li>
+              <a onClick={() => setLan('uz')}>uz</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('ru')}>ru</a>
+            </li>
+            <li>
+              <a onClick={() => setLan('eng')}>eng</a>
+            </li>
+          </ul>
+        </div>
         <div className={styles.header_main_ishtirok}>
           <Link href="https://t.me/UzbekVoiceBot">
             <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
@@ -73,13 +98,18 @@ function HeaderHakaton({
         }}
         className={styles.header__menu}
       >
-        <div onClick={() => setHakatonToggle(false)} className={styles.header__menu_close}>
+        <div onClick={() => setHakatonToggle(false)}
+          className={styles.header__menu_close}>
           <img src='/menu-times.png' alt='close icon' />
         </div>
 
-        <div onClick={() => openDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openDropdown()}
+          onMouseOver={() => setStepDropDown(true)}
+          onMouseOut={() => setStepDropDown(false)}
+          className={styles.item + ' ' + styles.noHover}>
           Bosqichlar
-          <Chevron className={stepDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={stepDropDown ? 'rotate' + " " + styles.dNone : styles.rotateChevron + ' ' + styles.dNone} width={7} height={11} fill={"#fff"} />
+          <Chevron className={stepDropDown ? 'rotate ' + styles.dBlock : styles.rotateChevron + ' ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
@@ -98,9 +128,13 @@ function HeaderHakaton({
             </li>
           </ul>
         </div>
-        <div onClick={() => openHakDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openHakDropdown()}
+        onMouseOver={() => sethakDropDown(true)}
+        onMouseOut={() => sethakDropDown(false)}
+        className={styles.item + ' ' + styles.noHover}>
           Hakaton
-          <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={hakDropDown ? 'rotate' + " " + styles.dNone : styles.rotateChevron + ' ' + styles.dNone} width={7} height={11} fill={"#fff"} />
+          <Chevron className={hakDropDown ? 'rotate ' + styles.dBlock : styles.rotateChevron + ' ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />
           <ul className={hakDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/hakaton'>
@@ -125,9 +159,13 @@ function HeaderHakaton({
             Qo'llanma
           </a>
         </Link>
-        <div onClick={() => openOtherDropdown()} className={styles.item + ' ' + styles.noHover}>
+        <div onClick={() => openOtherDropdown()} 
+        onMouseOver={() => setOtherDropDown(true)}
+        onMouseOut={() => setOtherDropDown(false)}
+        className={styles.item + ' ' + styles.noHover}>
           Boshqa
-          <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={otherDropDown ? 'rotate' + " " + styles.dNone : styles.rotateChevron + ' ' + styles.dNone} width={7} height={11} fill={"#fff"} />
+          <Chevron className={otherDropDown ? 'rotate ' + styles.dBlock : styles.rotateChevron + ' ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />
           <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>
             <li>
               <Link href="/yangilik">
@@ -159,8 +197,6 @@ function HeaderHakaton({
                 lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
                   <img src='/eng.png' alt="'eng" />
             }
-
-            <Chevron className={openLang ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
           </span>
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}

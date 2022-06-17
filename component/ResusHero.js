@@ -5,6 +5,8 @@ import styles from '../styles/ResusHero.module.css'
 const ResusHero = ({
     setMenuToggle,
     menuToggle,
+    openLang,
+    setOpenLang
 }) => {
     return (
         <div className={styles.resursHero}>
@@ -12,6 +14,8 @@ const ResusHero = ({
                 <Header
                     setMenuToggle={setMenuToggle}
                     menuToggle={menuToggle}
+                    openLang={openLang}
+                    setOpenLang={setOpenLang}
                 />
 
                 <h4>Resurslar</h4>

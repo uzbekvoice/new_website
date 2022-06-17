@@ -12,11 +12,11 @@ const dataParts = [
     },
     {
         id: 3,
-        name: 'Culture'
+        name: 'Programming'
     },
     {
         id: 4,
-        name: 'Programming'
+        name: 'Culture'
     },
     {
         id: 5,
