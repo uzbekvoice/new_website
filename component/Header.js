@@ -51,7 +51,6 @@ function Header({
         className={styles.header__main_wrapper}
         onClick={e => e.stopPropagation()}
       >
-
         <div onClick={() => setOpenLang(!openLang)} className={styles.mobileLan}>
           <span>
             {
@@ -106,13 +105,11 @@ function Header({
         <div onClick={() => openDropdown()}
           onMouseOver={() => setStepDropDown(true)}
           onMouseOut={() => setStepDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}
+          className={styles.item}
         >
           Bosqichlar
           <Chevron
-            className={stepDropDown ? 'rotate' : styles.rotateChevron
-            }
-            width={7} height={11} fill={"#1717179d"} />
+            className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
@@ -134,9 +131,9 @@ function Header({
         <div onClick={() => openHakDropdown()}
           onMouseOver={() => sethakDropDown(true)}
           onMouseOut={() => sethakDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}>
+          className={styles.item}>
           Hakaton
-          <Chevron className={hakDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
             <li>
               <Link href='/hakaton'>
@@ -164,9 +161,9 @@ function Header({
         <div onClick={() => openOtherDropdown()}
           onMouseOver={() => setOtherDropDown(true)}
           onMouseOut={() => setOtherDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}>
+          className={styles.item}>
           Boshqa
-          <Chevron className={otherDropDown ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>
             <li>
               <Link href="/yangilik">
@@ -197,7 +194,6 @@ function Header({
                   <img src='/eng.png' alt="'eng" />
             }
             {lan}
-            <Chevron className={openLang ? 'rotate' : styles.rotateChevron} width={7} height={11} fill={"#1717179d"} />
           </span>
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}
@@ -213,8 +209,6 @@ function Header({
             </li>
           </ul>
         </div>
-
-
 
         <Link href="https://t.me/UzbekVoiceBot">
           <a onClick={() => setMenuToggle(false)} className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>

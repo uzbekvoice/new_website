@@ -266,14 +266,6 @@
         display: block;
     }
 
-    .header__menu:not(.noHover):hover .left {
-        display: none;
-    }
-
-    .header__menu:not(.noHover):hover .otherLeft {
-        display: none;
-    }
-
     .header__menu .item.lan {
         display: none;
     }
