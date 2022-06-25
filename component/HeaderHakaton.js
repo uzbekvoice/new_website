@@ -106,7 +106,7 @@ function HeaderHakaton({
         <div onClick={() => openDropdown()}
           onMouseOver={() => setStepDropDown(true)}
           onMouseOut={() => setStepDropDown(false)}
-          className={styles.item}>
+          className={styles.item + ' ' + styles.noHover}>
           Bosqichlar
           <Chevron className={'rotate ' + styles.dNone} width={7} height={11} fill={"#fff"} />
           <Chevron className={'rotate ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />
@@ -131,7 +131,7 @@ function HeaderHakaton({
         <div onClick={() => openHakDropdown()}
           onMouseOver={() => sethakDropDown(true)}
           onMouseOut={() => sethakDropDown(false)}
-          className={styles.item}>
+          className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={'rotate ' + styles.dNone} width={7} height={11} fill={"#fff"} />
           <Chevron className={'rotate ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />
@@ -162,7 +162,7 @@ function HeaderHakaton({
         <div onClick={() => openOtherDropdown()}
           onMouseOver={() => setOtherDropDown(true)}
           onMouseOut={() => setOtherDropDown(false)}
-          className={styles.item}>
+          className={styles.item + ' ' + styles.noHover}>
           Boshqa
           <Chevron className={'rotate ' + styles.dNone} width={7} height={11} fill={"#fff"} />
           <Chevron className={'rotate ' + styles.dBlock} width={7} height={11} fill={"#1717179d"} />

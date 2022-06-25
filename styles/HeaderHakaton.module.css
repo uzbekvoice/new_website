@@ -80,14 +80,12 @@
 }
 
 .header__menu .item .left,
-.header__menu .item .activeLeft
- {
+.header__menu .item .activeLeft {
     left: -16px;
 }
 
 .header__menu .item .otherLeft,
-.header__menu .item .activeOtherLeft
- {
+.header__menu .item .activeOtherLeft {
     left: -22px;
 }
 
@@ -111,6 +109,7 @@
     display: flex;
     align-items: center;
 }
+
 .lan ul li a img {
     width: 20px;
     height: 20px;
@@ -135,7 +134,7 @@
 
 .item svg {
     margin-left: 10px;
-    transition: all 0.2s linear;   
+    transition: all 0.2s linear;
 }
 
 .dBlock {
@@ -173,7 +172,7 @@
     border: 1px solid #d9d9d9;
     border-radius: 10px;
     background-color: #fff;
-    padding: 3px 0;  
+    padding: 3px 0;
 }
 
 .header__main_wrapper {
@@ -181,7 +180,7 @@
     align-items: center;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    position: relative;      
+    position: relative;
 }
 
 .header__main_wrapper .mobileLan ul::after {
@@ -207,8 +206,8 @@
 }
 
 .mobileLan ul a {
-    padding: 3px 12px;  
-    display: inline-block;  
+    padding: 3px 12px;
+    display: inline-block;
 }
 
 .mobileLan span img {
@@ -319,7 +318,7 @@
         padding-left: 150px;
         color: #171717;
     }
-    
+
     .item {
         color: #171717;
         margin-left: 0;
@@ -334,7 +333,15 @@
         color: #171717;
     }
 
-    .header__menu .item .activeDrop{
+    .header__menu:not(.noHover):hover .left {
+        display: none;
+    }
+
+    .header__menu:not(.noHover):hover .otherLeft {
+        display: none;
+    }
+
+    .header__menu .item .activeDrop {
         display: block;
     }
 
@@ -351,7 +358,7 @@
 
     .header__menu .item ul::after {
         display: none;
-    }    
+    }
 
     .header__menu a:last-child {
         padding: 13px 24px;

@@ -105,11 +105,10 @@ function Header({
         <div onClick={() => openDropdown()}
           onMouseOver={() => setStepDropDown(true)}
           onMouseOut={() => setStepDropDown(false)}
-          className={styles.item}
+          className={styles.item + ' ' + styles.noHover}
         >
           Bosqichlar
-          <Chevron
-            className={'rotate'} width={7} height={11} fill={"#1717179d"} />
+          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
@@ -131,7 +130,7 @@ function Header({
         <div onClick={() => openHakDropdown()}
           onMouseOver={() => sethakDropDown(true)}
           onMouseOut={() => sethakDropDown(false)}
-          className={styles.item}>
+          className={styles.item + ' ' + styles.noHover}>
           Hakaton
           <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
@@ -161,7 +160,8 @@ function Header({
         <div onClick={() => openOtherDropdown()}
           onMouseOver={() => setOtherDropDown(true)}
           onMouseOut={() => setOtherDropDown(false)}
-          className={styles.item}>
+          className={styles.item + ' ' + styles.noHover}
+          >
           Boshqa
           <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
           <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>

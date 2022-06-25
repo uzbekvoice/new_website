@@ -286,6 +286,14 @@
         transform: rotate(90deg);
     }
 
+    .header__menu:not(.noHover):hover .left {
+        display: none;
+    }
+
+    .header__menu:not(.noHover):hover .otherLeft {
+        display: none;
+    }
+
     .header__menu .item ul::after {
         display: none;
     }
