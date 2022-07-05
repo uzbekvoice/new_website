@@ -125,6 +125,18 @@ a {
   font-size: 22px;
 }
 
+@media (max-width: 767px) {
+.accordion__title{
+  font-size: 15px;
+}
+.accordion__text {
+  text-align: left;
+ font-size: 12px;
+  
+}
+
+}
+
 /* Style the accordion chevron icon */
 .accordion__icon {
   margin-left: auto;
