@@ -1,26 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap');
-
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Regular.ttf);
   font-weight: 400
 }
 
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Medium.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Medium.ttf);
   font-weight: 500
 }
 
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Bold.ttf);
   font-weight: 700
 }
 
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-ExtraBold.ttf);
   font-weight: 800
 }
 
@@ -31,7 +29,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  font-family: "Objektiv";
+  font-family: "Inter", sans-serif;
 }
 
 
