@@ -1,7 +1,8 @@
 import React from 'react'
+import { useRouter } from "next/router";
 import styles from '../styles/QollanmaMain.module.css'
 
-const data = [
+const datamock = [
     {
         id: 1,
         title: 'General Information#',
@@ -54,7 +55,12 @@ const data = [
     },
 ]
 
-const QollanmaMain = () => {
+const QollanmaMain = ({ data }) => {
+    console.log(data, 'guide');
+
+    const { locale } = useRouter()
+    console.log(locale);
+
     return (
         <div className={styles.qollanmaMain}>
             <h3>Qo`llanma\Instruksia</h3>
@@ -66,14 +72,15 @@ const QollanmaMain = () => {
 
             <div>
                 {
-                    data.map(({ id, title, date, descr, video, poster }) => (
+                    data
+                    .filter(p => p.languages_code === locale)
+                    .map(({ id, guideline_title, guideline_content }) => (
                         <div key={id} className={styles.qollanmaCard}>
                             {
-                                video && poster &&
                                 <div className={styles.qollanmaCardMobileHeader}>
                                     <video
-                                        poster={poster}
-                                        src={video}
+                                        poster='/video-poster.jpg'
+                                        src='/video.mp4'
                                         controls
                                         muted
                                         loop
@@ -83,16 +90,15 @@ const QollanmaMain = () => {
                             }
 
                             <div className={styles.qollanmaCardBody}>
-                                <span>{date}</span>
-                                <h4>{title}</h4>
-                                <p>{descr}</p>
+                                <span>Sep 30, 2021</span>
+                                <h4>{guideline_title}</h4>
+                                <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 20).join(' ') }}></p>
                             </div>
                             {
-                                video && poster &&
                                 <div className={styles.qollanmaCardHeader}>
                                     <video
-                                        poster={poster}
-                                        src={video}
+                                        poster='/video-poster.jpg'
+                                        src='/video.mp4'
                                         controls
                                         muted
                                         loop

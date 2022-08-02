@@ -11,6 +11,7 @@ function Header({
   setOpenLang
 }) {
   const router = useRouter();
+  const { asPath } = useRouter()
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
@@ -65,13 +66,19 @@ function Header({
             className={styles.language}
           >
             <li>
-              <a onClick={() => setLan('uz')}>uz</a>
+              <Link href={asPath} locale='uz-UZ'>
+                <a onClick={() => setLan('uz')}>uz</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setLan('ru')}>ru</a>
+              <Link locale='ru-RU' href={asPath} >
+                <a onClick={() => setLan('ru')}>ru</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setLan('eng')}>eng</a>
+              <Link href={asPath} locale='en-US'>
+                <a onClick={() => setLan('eng')}>eng</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -198,14 +205,20 @@ function Header({
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}
           >
-            <li>
-              <a onClick={() => setLan('uz')}>uz</a>
+             <li>
+              <Link href={asPath} locale='uz-UZ'>
+                <a onClick={() => setLan('uz')}>uz</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setLan('ru')}>ru</a>
+              <Link locale='ru-RU' href={asPath} >
+                <a onClick={() => setLan('ru')}>ru</a>
+              </Link>
             </li>
             <li>
-              <a onClick={() => setLan('eng')}>eng</a>
+              <Link href={asPath} locale='en-US'>
+                <a onClick={() => setLan('eng')}>eng</a>
+              </Link>
             </li>
           </ul>
         </div>

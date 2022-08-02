@@ -1,23 +1,10 @@
-/** @type {import('next').NextConfig} */
-const webpack = require("webpack");
-const nextConfig = {
-
-  reactStrictMode: true,
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        $: "jquery",
-        jQuery: "jquery",
-        "window.jQuery": "jquery",
-      })
-    );
-    return config;
+module.exports = {
+  i18n: {
+    // providing the locales supported by your application
+    locales: ["uz-UZ", "en-US", "ru-RU"],
+    //  default locale used when the non-locale paths are visited
+    defaultLocale: "uz-UZ",
   },
-
-};
-
-
-
-module.exports = nextConfig;
+}
 
 
