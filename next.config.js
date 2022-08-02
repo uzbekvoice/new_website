@@ -9,7 +9,8 @@ module.exports = {
       {
         domain: 'uzbekvoiceapp.vercel.app',
         defaultLocale: 'uz-UZ',
-        http: true,
+        https: true,
+        localeDetection: false
       },
    
     ],
