@@ -14,7 +14,7 @@ const YangilikSection = ({ data }) => {
         <h1 className={s.main}>Yangiliklar</h1>
         <div className={s.parent}>
           {data
-            .filter(p => p.locale_id === locale)
+            .filter(p => p.languages_code === locale)
             .map((el) => {
               return (
                 <div className={s.box} key={el.id}>
@@ -23,7 +23,7 @@ const YangilikSection = ({ data }) => {
                   </div>
                   <div className={s.boxBody}>
                     <h3 className={s.title}>{el.news_title}</h3>
-                    <h5 dangerouslySetInnerHTML={{ __html: el.news_text.split(" ", 20).join(' ') }} className={s.desc}></h5>
+                    <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ') }} className={s.desc}></h5>
                     <div className={s.flexClass}>
                       <Link href={`/yangilik/${el.id}`}>
                         <a>
