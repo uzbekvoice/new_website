@@ -9,12 +9,16 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 import styles from "../styles/Home.module.css";
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
 
-export default function Slider() {
+export default function Slider(props) {
+  const { locale } = useRouter();
+
+  const { HomeContent } = props;
   const Responsive = {
     0: {
       items: 1,
@@ -34,60 +38,98 @@ export default function Slider() {
     1400: {
       items: 3,
       margin: 10,
-    }
-  }
+    },
+  };
   return (
     <div className={styles.our_goal}>
-      <h3>O'zi maqsad nima?</h3>
+      {HomeContent.maqsad
+        .filter((p) => p.languages_code === locale)
+        .map((HomeContent, i) => {
+          const {
+            title,
+            description,
+            card_title,
+            card_title2,
+            card_title3,
+            card_title4,
+            card_desc,
+            card_desc2,
+            card_desc3,
+            card_desc4,
+          } = HomeContent;
+          return (
+            <div key={i}>
+              <h3>{title}</h3>
+              <p>{description}</p>
 
-      <p>
-        Dasturchilarga, tadqiqotchilarga, startaplarga ochiq va bepul nutq
-        ma'lumotlar bazasi yetishmasligi katta muammo.
-      </p>
-      <div className={styles.sliders}>
-        <OwlCarousel className={styles.slider} dots={false} responsive={Responsive} loop margin={10} autoplay autoplayTimeout={300000}>
-          <div className={styles.item}>
-            <Image src="/goals-1.png" width={205} height={205} alt="goal-1" priority={true} />
-            <div className={styles.text}>
-              <h4>Ochiq manba</h4>
-              <h5>
-                {" "}
-                Nutq va ovoz ma'lumot bazasini ochiq yig'ish (open-source)
-              </h5>
-            </div>
-          </div>
-          <div className={styles.item}>
-            <Image src="/goals-2.png" width={205} height={205} alt="goal-2" priority={true} />
+              <div className={styles.sliders}>
+                <OwlCarousel
+                  className={styles.slider}
+                  dots={false}
+                  responsive={Responsive}
+                  loop
+                  margin={10}
+                  autoplay
+                  autoplayTimeout={300000}
+                >
+                  <div className={styles.item}>
+                    <Image
+                      src="/goals-1.png"
+                      width={205}
+                      height={205}
+                      alt="goal-1"
+                      priority={true}
+                    />
+                    <div className={styles.text}>
+                      <h4>{card_title}</h4>
+                      <h5>{card_desc}</h5>
+                    </div>
+                  </div>
+                  <div className={styles.item}>
+                    <Image
+                      src="/goals-2.png"
+                      width={205}
+                      height={205}
+                      alt="goal-2"
+                      priority={true}
+                    />
 
-            <div className={styles.text}>
-              <h4>Tadqiqot</h4>
-              <h5>
-                Suniy intelekt sohasida Ilmiy hamkorlik va tadqiqot imkonini
-                yaratish
-              </h5>
+                    <div className={styles.text}>
+                      <h4>{card_title2}</h4>
+                      <h5>{card_desc2}</h5>
+                    </div>
+                  </div>
+                  <div className={styles.item}>
+                    <Image
+                      src="/goals-3.png"
+                      width={205}
+                      height={205}
+                      alt="goal-3"
+                      priority={true}
+                    />
+                    <div className={styles.text}>
+                      <h4>{card_title3}</h4>
+                      <h5>{card_desc3}</h5>
+                    </div>
+                  </div>
+                  <div className={styles.item}>
+                    <Image
+                      src="/goals-4.png"
+                      width={205}
+                      height={205}
+                      alt="goal-4"
+                      priority={true}
+                    />
+                    <div className={styles.text}>
+                      <h4>{card_title4}</h4>
+                      <h5>{card_desc4}</h5>
+                    </div>
+                  </div>
+                </OwlCarousel>
+              </div>
             </div>
-          </div>
-          <div className={styles.item}>
-            <Image src="/goals-3.png" width={205} height={205} alt="goal-3" priority={true} />
-            <div className={styles.text}>
-              <h4>Ijodkorlik</h4>
-              <h5>
-                Suniy intelekt sohadagi dasturchilarga ijodkorlik uchun yo'lini
-                ochish
-              </h5>
-            </div>
-          </div>
-          <div className={styles.item}>
-            <Image src="/goals-4.png" width={205} height={205} alt="goal-4" priority={true} />
-            <div className={styles.text}>
-              <h4>Jamoatchilik</h4>
-              <h5>
-                Hatti-haraktimizni jamoatchilik ishtroki bilan amalga oshirish{" "}
-              </h5>
-            </div>
-          </div>
-        </OwlCarousel>
-      </div>
+          );
+        })}
     </div>
   );
 }

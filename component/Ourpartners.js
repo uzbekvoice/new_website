@@ -1,16 +1,25 @@
 import React from "react";
 import styles from "../styles/Ourpartners.module.css";
 import Image from "next/image";
-export default function Ourpartners() {
+import { useRouter } from "next/router";
+export default function Ourpartners(props) {
+  const { locale } = useRouter();
+  const { HomeContent } = props;
   return (
     <div className={styles.partners}>
       <div className={styles.detail}>
-        <h2>Biz bilan hamkorlik</h2>
-        <p>
-          O&apos;zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik
-          qilmoqchi bo&apos;lganlar bilan ishlash har doim ochiqmiz
-        </p>
-        <a href='#'>Hamkorlik qilish</a>
+        {HomeContent.ourpartner
+          .filter((p) => p.languages_code === locale)
+          .map((HomeContent, i) => {
+            const { title, desc, button } = HomeContent;
+            return (
+              <div key={i}>
+                <h2>{title}</h2>
+                <p>{desc}</p>
+                <a href="#">{button}</a>
+              </div>
+            );
+          })}
       </div>
       <div className={styles.imgunit}>
         <Image src="/robot.png" width={432} height={476} alt="robot" />

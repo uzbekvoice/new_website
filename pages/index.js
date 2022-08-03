@@ -9,6 +9,8 @@ import Question from "../component/Question/Question";
 import Stat from "../component/Stat";
 import Step from "../component/Step";
 import TopUser from "../component/TopUser";
+import HomeContent from './homeapi/static.json'
+
 
 export async function getStaticProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard" );
@@ -30,15 +32,17 @@ export async function getStaticProps() {
 
 
 export default function Home({users, userslist}) {
+
   return (
     <div>
-      <Hero />
-      <Slider />
-      <Stat />
+       
+     <Hero HomeContent={HomeContent}/> 
+      <Slider HomeContent={HomeContent}/>
+      <Stat HomeContent={HomeContent}/>
       <Step />
-      <Contribution />
-      <TopUser users={users} userslist={userslist}/>
-      <Ourpartners />
+      <Contribution HomeContent={HomeContent}/>
+      <TopUser users={users} userslist={userslist} HomeContent={HomeContent}/>
+      <Ourpartners HomeContent={HomeContent} />
       <InitiativePartners />
       <OurTeam />
       <Question />

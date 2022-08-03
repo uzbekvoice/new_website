@@ -2,23 +2,27 @@ import React from "react";
 import styles from "../styles/Topuser.module.css";
 import Image from "next/image";
 import { FiXCircle } from "react-icons/fi";
+import { useRouter } from "next/router";
 
-export default function TopUser({ users, userslist }) {
+export default function TopUser({ users, userslist, HomeContent }) {
+  const {locale} = useRouter();
+  
   const [showModal, setShowModal] = React.useState(false);
   const [showModal2, setShowModal2] = React.useState(false);
 
   return (
     <div className={styles.content}>
-      <h3>Yetakchi a&apos;zolar</h3>
-      <p>
-        10 Dekabar 2021 yilda end 3ta faol a&apos;zolarimiz sovga va sovrinlar
-        beriladi. Noutbook, plansjet va smartwatch. Qatnashing va yutib oling.
-        To'liq ma&apos;lumot
-      </p>
-
-      <div className={styles.grid}>
+              {HomeContent.topuser
+          .filter((p) => p.languages_code === locale)
+          .map((HomeContent, i) => {
+            const { title, desc, top_listener, top_speaker, more } = HomeContent;
+            return (
+              <div key={i}>
+                <h3>{title}</h3>
+                <p>{desc}</p>
+               <div className={styles.grid}>
         <div className={styles.listner}>
-          <h4>Eng faol tinglovchi</h4>
+          <h4>{top_listener}</h4>
           {users.slice(0, 3).map((dates) => (
             <div key={dates.clientHash} className={styles.card}>
               <div className={styles.item}>
@@ -37,13 +41,13 @@ export default function TopUser({ users, userslist }) {
           ))}
           <div className={styles.detailall}>
             <button type="button" onClick={() => setShowModal(true)}>
-              Barchasini ko'rish
+              {more}
             </button>
           </div>
         </div>
 
         <div className={styles.voice}>
-          <h4>Eng faol so'zlovchi</h4>
+          <h4>{top_speaker}</h4>
           {userslist.slice(0, 3).map((dates) => (
             <div key={dates.clientHash} className={styles.card}>
               <div className={styles.item}>
@@ -62,7 +66,7 @@ export default function TopUser({ users, userslist }) {
           ))}
           <div className={styles.detailall}>
             <button type="button" onClick={() => setShowModal2(true)}>
-              Barchasini ko'rish
+              {more}
             </button>
           </div>
 
@@ -163,6 +167,12 @@ export default function TopUser({ users, userslist }) {
           {/* //More listening top user */}
         </div>
       </div>
+              </div>
+            );
+          })}
+  
+
+     
     </div>
   );
 }
