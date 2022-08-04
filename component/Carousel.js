@@ -41,7 +41,7 @@ export default function Slider(props) {
     },
   };
   return (
-    <div className={styles.our_goal}>
+    <div className={styles.our_goal + ' our_goal'}>
       {HomeContent.maqsad
         .filter((p) => p.languages_code === locale)
         .map((HomeContent, i) => {
@@ -65,12 +65,13 @@ export default function Slider(props) {
               <div className={styles.sliders}>
                 <OwlCarousel
                   className={styles.slider}
-                  dots={false}
+                  dots={false}                  
                   responsive={Responsive}
                   loop
+                  nav={true}
                   margin={10}
                   autoplay
-                  autoplayTimeout={300000}
+                  autoplayTimeout={1500}
                 >
                   <div className={styles.item}>
                     <Image
