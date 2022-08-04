@@ -43,7 +43,7 @@ export default function Home({users, userslist}) {
       <Contribution HomeContent={HomeContent}/>
       <TopUser users={users} userslist={userslist} HomeContent={HomeContent}/>
       <Ourpartners HomeContent={HomeContent} />
-      <InitiativePartners />
+      <InitiativePartners HomeContent={HomeContent}/>
       <OurTeam />
       <Question />
     </div>

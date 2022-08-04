@@ -166,9 +166,9 @@
     },
     {
       "languages_code": "en-US",
-      "title": "En Biz bilan hamkorlik",
-      "desc": "En O'zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik qilmoqchi bo'lganlar bilan ishlash har doim ochiqmiz",
-      "button": "read more"
+      "title": "Cooperation with us",
+      "desc": " We are always open to work with those who want to contribute or cooperate with the destiny of artificial intelligence in Uzbekistan",
+      "button": "Read more"
       
     },
     {
@@ -176,7 +176,23 @@
       "title": "RU Biz bilan hamkorlik",
       "desc": "RU O'zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik qilmoqchi bo'lganlar bilan ishlash har doim ochiqmiz",
       "button": "RU Barchasini ko'rish"
-      
+    }
+  ],
+  "partner":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Tashabbus hamkorlari",
+      "desc": "UzbekVoice.ai jamoasi va hamkorlari ochiq fikrlovchilarni birlashtiradi kraudsorsing korporativ, institutsional va ilmiy hamkorlik"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Initiative partners",
+      "desc": "UzbekVoice.ai team and partners unite open-minded crowdsourcing corporate, institutional and scientific cooperation"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Партнеры инициативы",
+      "desc": "Команда и партнеры UzbekistanVoice.ai объединяют открытое краудсорсинговое корпоративное, институциональное и научное сотрудничество"
     }
   ]
   } 
