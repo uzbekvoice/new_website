@@ -31,7 +31,7 @@ const YangilikSection = ({ data }) => {
                           <img src='/chevron-right.svg' />
                         </a>
                       </Link>
-                      {/* <p className={s.ppp}>{el.date_created.slice(0, 10)}</p> */}
+                      <p className={s.ppp}>{el.data_created.slice(0, 10)}</p>
                     </div>
                   </div>
                 </div>

@@ -10,7 +10,7 @@ export default function guide({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch('https://new.uzbekvoice.ai/items/guidelines_translations')
+  const res = await fetch('https://admin.uzbekvoice.ai/items/guidelines_translations')
   const data = await res.json()
 
   return {

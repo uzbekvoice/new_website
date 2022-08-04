@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from '../styles/QollanmaMain.module.css'
 
 const QollanmaMain = ({ data }) => {
-    // console.log(data, 'guide');
+    console.log(data, 'guide');
 
     const { locale } = useRouter()
 
@@ -19,41 +19,41 @@ const QollanmaMain = ({ data }) => {
             <div>
                 {
                     data
-                    .filter(p => p.languages_code === locale)
-                    .map(({ id, guideline_title, guideline_content }) => (
-                        <div key={id} className={styles.qollanmaCard}>
-                            {
-                                <div className={styles.qollanmaCardMobileHeader}>
-                                    <video
-                                        poster='/video-poster.jpg'
-                                        src='/video.mp4'
-                                        controls
-                                        muted
-                                        loop
-                                    // autoPlay
-                                    ></video>
-                                </div>
-                            }
+                        .filter(p => p.languages_code === locale)
+                        .map(({ id, guideline_title, guidline_video, gudline_created_date, guideline_content }) => (
+                            <div key={id} className={styles.qollanmaCard}>
+                                {
+                                    <div className={styles.qollanmaCardMobileHeader}>
+                                        <video
+                                            poster='/video-poster.jpg'
+                                            src={`https://new.uzbekvoice.ai/assets/${guidline_video}`}
+                                            controls
+                                            muted
+                                            loop
+                                            autoPlay
+                                        ></video>
+                                    </div>
+                                }
 
-                            <div className={styles.qollanmaCardBody}>
-                                <span>Sep 30, 2021</span>
-                                <h4>{guideline_title}</h4>
-                                <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 20).join(' ') }}></p>
-                            </div>
-                            {
-                                <div className={styles.qollanmaCardHeader}>
-                                    <video
-                                        poster='/video-poster.jpg'
-                                        src='/video.mp4'
-                                        controls
-                                        muted
-                                        loop
-                                    // autoPlay
-                                    ></video>
+                                <div className={styles.qollanmaCardBody}>
+                                    <span>{gudline_created_date.slice(0, 10)}</span>
+                                    <h4>{guideline_title}</h4>
+                                    <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 20).join(' ') }}></p>
                                 </div>
-                            }
-                        </div>
-                    ))
+                                {
+                                    <div className={styles.qollanmaCardHeader}>
+                                        <video
+                                            poster='/video-poster.jpg'
+                                            src={`https://new.uzbekvoice.ai/assets/${guidline_video}`}
+                                            controls
+                                            muted
+                                            loop
+                                            autoPlay
+                                        ></video>
+                                    </div>
+                                }
+                            </div>
+                        ))
                 }
             </div>
         </div>

@@ -11,7 +11,7 @@ function Header({
   setOpenLang
 }) {
   const router = useRouter();
-  const { asPath } = useRouter()
+  const { asPath, locale } = router;
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
@@ -62,12 +62,12 @@ function Header({
             className={router.pathname === '/hakaton' && styles.hakatonPageStyleLan}
           >
             {
-              lan === 'uz' ?
+              locale.slice(0, 2) === 'uz' ?
                 <img src='/uz.png' alt="'uz" /> :
-                lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
+                locale.slice(0, 2) === 'ru' ? <img src='/ru.png' alt="ru" /> :
                   <img src='/eng.png' alt="'eng" />
             }
-            {lan}
+            {locale.slice(0, 2)}
           </span>
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}
@@ -173,14 +173,14 @@ function Header({
         </div>
 
         <Link href="/resus">
-          <a onClick={goPage} 
-          className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton'? styles.hakatonPageStyle + " item" : 'item'}
+          <a onClick={goPage}
+            className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}
           >
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton'? styles.hakatonPageStyle + " item" : 'item'}>
+          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}>
             Qo'llanma
           </a>
         </Link>
@@ -222,12 +222,12 @@ function Header({
             className={router.pathname === '/hakaton' && styles.hakatonPageStyle}
           >
             {
-              lan === 'uz' ?
+              locale.slice(0, 2) === 'uz' ?
                 <img src='/uz.png' alt="'uz" /> :
-                lan === 'ru' ? <img src='/ru.png' alt="ru" /> :
+                locale.slice(0, 2) === 'ru' ? <img src='/ru.png' alt="ru" /> :
                   <img src='/eng.png' alt="'eng" />
             }
-            {lan}
+            {locale.slice(0, 2)}
           </span>
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}
