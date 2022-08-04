@@ -96,6 +96,7 @@
 
 .header__menu .item.lan .language {
     left: -10px;
+    text-align: center;
 }
 
 .header__menu:not(.lan.item):hover .language {
@@ -111,6 +112,21 @@
     align-items: center;
     font-size: 17px;
 }
+/******** new styles */
+
+.hakatonPageStyle {
+    color: #fff !important;
+}
+
+.hakatonPageStyleLan {
+    color: #fff !important;
+}
+
+.chevronHakaton {
+    fill: #fff;
+}
+
+/**************/
 
 .lan span img {
     width: 20px;
@@ -123,10 +139,6 @@
     transition: all 0.2s linear;
 }
 
-/* .item:hover svg {
-    transform: rotate(90deg);
-} */
-
 .rotateChevron {
     transform: rotate(0);
 }
@@ -137,7 +149,6 @@
     padding: 6px 10px;
     text-align: center;
     font-size: 15px;
-    /* width: 100%; */
 }
 
 .header__menu .item ul li a:hover {
@@ -160,6 +171,7 @@
     border-radius: 10px;
     background-color: #fff;
     padding: 3px;
+    text-align: center;
 }
 
 .header__main_wrapper {
@@ -193,7 +205,7 @@
 
 .mobileLan ul li a {
     display: inline-block;
-    padding: 1px 12px;
+    padding: 3px 12px;
     width: 100%;
 }
 
@@ -332,6 +344,14 @@
 
     .header_burger_menu {
         display: block;
+    }
+
+    .hakatonPageStyle {
+        color: #171717 !important;
+    }
+
+    .chevronHakaton {
+        fill: #1717179d;
     }
 }
 

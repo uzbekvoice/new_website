@@ -44,7 +44,12 @@ function Header({
     >
       <Link href="/">
         <a>
-          <img className={styles.header_logo} src="./logo.png" alt="logo" />
+          {
+            router.pathname === '/hakaton' ?
+              <img className={styles.header_logo} src="./hakaton-header-logo.png" alt="logo" />
+              :
+              <img className={styles.header_logo} src="./logo.png" alt="logo" />
+          }
         </a>
       </Link>
 
@@ -53,7 +58,9 @@ function Header({
         onClick={e => e.stopPropagation()}
       >
         <div onClick={() => setOpenLang(!openLang)} className={styles.mobileLan}>
-          <span>
+          <span
+            className={router.pathname === '/hakaton' && styles.hakatonPageStyleLan}
+          >
             {
               lan === 'uz' ?
                 <img src='/uz.png' alt="'uz" /> :
@@ -112,10 +119,15 @@ function Header({
         <div onClick={() => openDropdown()}
           onMouseOver={() => setStepDropDown(true)}
           onMouseOut={() => setStepDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}
+          className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
         >
           Bosqichlar
-          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
+          {
+            router.pathname === '/hakaton' ?
+              <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
+              :
+              <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
+          }
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
@@ -137,9 +149,15 @@ function Header({
         <div onClick={() => openHakDropdown()}
           onMouseOver={() => sethakDropDown(true)}
           onMouseOut={() => sethakDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}>
+          className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
+        >
           Hakaton
-          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
+          {
+            router.pathname === '/hakaton' ?
+              <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
+              :
+              <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
+          }
           <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
             <li>
               <Link href='/hakaton'>
@@ -155,22 +173,29 @@ function Header({
         </div>
 
         <Link href="/resus">
-          <a onClick={goPage} className={router.pathname == "/resus" ? "item active" : "item"}>
+          <a onClick={goPage} 
+          className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton'? styles.hakatonPageStyle + " item" : 'item'}
+          >
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : "item"}>
+          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton'? styles.hakatonPageStyle + " item" : 'item'}>
             Qo'llanma
           </a>
         </Link>
         <div onClick={() => openOtherDropdown()}
           onMouseOver={() => setOtherDropDown(true)}
           onMouseOut={() => setOtherDropDown(false)}
-          className={styles.item + ' ' + styles.noHover}
-          >
+          className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
+        >
           Boshqa
-          <Chevron className={'rotate'} width={7} height={11} fill={"#1717179d"} />
+          {
+            router.pathname === '/hakaton' ?
+              <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
+              :
+              <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
+          }
           <ul className={!otherDropDown ? styles.otherLeft : styles.activeDrop + ' ' + styles.activeOtherLeft}>
             <li>
               <Link href="/yangilik">
@@ -193,7 +218,9 @@ function Header({
           </ul>
         </div>
         <div onClick={() => setOpenLang(!openLang)} className={styles.item + " " + styles.lan}>
-          <span>
+          <span
+            className={router.pathname === '/hakaton' && styles.hakatonPageStyle}
+          >
             {
               lan === 'uz' ?
                 <img src='/uz.png' alt="'uz" /> :
@@ -205,7 +232,7 @@ function Header({
           <ul style={{ display: openLang && 'block' }}
             className={styles.language}
           >
-             <li>
+            <li>
               <Link href={asPath} locale='uz-UZ'>
                 <a onClick={() => setLan('uz')}>uz</a>
               </Link>

@@ -9,12 +9,10 @@ import ResursHero from "./ResusHero";
 function Layout({ children }) {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
-  const [menuHakatonToggle, setHakatonToggle] = useState(false);
   const [openLang, setOpenLang] = useState(false);
 
   const outsiteClickClose = () => {
     setMenuToggle(false);
-    setHakatonToggle(false)
     setOpenLang(false)
   }
 
@@ -37,8 +35,8 @@ function Layout({ children }) {
     return (
       <div onClick={outsiteClickClose}>
         <HakatonHero
-          setHakatonToggle={setHakatonToggle}
-          menuHakatonToggle={menuHakatonToggle}
+          setMenuToggle={setMenuToggle}
+          menuToggle={menuToggle}
           openLang={openLang}
           setOpenLang={setOpenLang}
         />
