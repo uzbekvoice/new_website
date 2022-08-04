@@ -1,5 +1,5 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import styles from "../styles/Bosqich.module.css";
 import Winners from "../component/Winners";
@@ -27,12 +27,13 @@ export async function getStaticProps() {
 }
 
 
-export default function bosqich({ users, userslist, dataContest }) {
+export default function Bosqich({ users, userslist, dataContest }) {
 
-  const { locale } = useRouter()
+  const { locale } = useRouter();
+
   const data = dataContest.data.filter(p => p.languages_code === locale);
   const dataRules = data[0].contest_rules;
-  console.log(dataRules);
+  // console.log(dataRules);
 
   return (
     <div className={styles.bosqichPage}>
@@ -72,8 +73,8 @@ export default function bosqich({ users, userslist, dataContest }) {
         <div className={styles.rulesCard}>
           {
             dataRules.map(({ contest_rule }, index) =>
-              <div className={styles.rule1}>
-                <h2>RULE {index + 1}</h2>
+              <div key={index} className={styles.rule1}>
+                <h2 >RULE {index + 1}</h2>
                 <p>
                   {contest_rule}
                 </p>
