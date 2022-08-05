@@ -84,7 +84,7 @@ function Header({
             </li>
             <li>
               <Link href={asPath} locale='en-US'>
-                <a onClick={() => setLan('eng')}>eng</a>
+                <a onClick={() => setLan('eng')}>en</a>
               </Link>
             </li>
           </ul>
@@ -244,7 +244,7 @@ function Header({
             </li>
             <li>
               <Link href={asPath} locale='en-US'>
-                <a onClick={() => setLan('eng')}>eng</a>
+                <a onClick={() => setLan('eng')}>en</a>
               </Link>
             </li>
           </ul>
