@@ -15,21 +15,29 @@
     font-weight: 400;
     font-size: 18px;
     margin-top: 12px;
+    margin-bottom: 45px;
+}
+
+.boxHeader {
+    height: 250px;
 }
 
 .boxHeader img {
-    width: 200px;
+    width: 100%;
+    height: 100%;
     border-radius: 24px;
 }
 
-.boxBody {
+.boxBody {    
     padding: 24px 16px 38px;
 }
 
 .flexClass {
-    margin-top: 45px;
+    width: calc(100% - 32px);    
     display: flex;
     justify-content: space-between;
+    position: absolute;
+    bottom: 38px;
 }
 
 .flexClass .ppp {
@@ -62,6 +70,7 @@
     line-height: 180%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     z-index: 22;
+    position: relative;
 }
 
 
@@ -75,27 +84,48 @@
     }
 
     .ppp {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     .boxBody {
         padding-bottom: 30px;
     }
+
+    .flexClass a {
+        font-size: 15px;
+    }
+    
+    .flexClass a img{
+        width: 20px;
+        height: 20px;
+    }
 }
 
-@media (max-width: 880px) { 
-    
+@media (max-width: 950px) {
     .parent {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
     }
+}
+
+@media (max-width: 880px) {    
 
     .flexClass {
         margin-top: 30px;
     }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 650px) {
+    .title {
+        font-size: 18px;
+    }   
+
+    .desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 600px) {
     .parent {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -113,4 +143,3 @@
         margin-top: 50px;
     }
 }
-

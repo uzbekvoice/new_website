@@ -11,7 +11,6 @@ export default function yangilik({ data }) {
 }
 
 export async function getStaticProps() {
-
   const res = await fetch('https://admin.uzbekvoice.ai/items/news_translations')
   const data = await res.json()
 
