@@ -15,7 +15,6 @@ function Header({
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
-  const [lan, setLan] = useState('uz');
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -74,17 +73,17 @@ function Header({
           >
             <li>
               <Link href={asPath} locale='uz-UZ'>
-                <a onClick={() => setLan('uz')}>uz</a>
+                <a>uz</a>
               </Link>
             </li>
             <li>
               <Link locale='ru-RU' href={asPath} >
-                <a onClick={() => setLan('ru')}>ru</a>
+                <a>ru</a>
               </Link>
             </li>
             <li>
               <Link href={asPath} locale='en-US'>
-                <a onClick={() => setLan('eng')}>eng</a>
+                <a>en</a>
               </Link>
             </li>
           </ul>
@@ -234,17 +233,17 @@ function Header({
           >
             <li>
               <Link href={asPath} locale='uz-UZ'>
-                <a onClick={() => setLan('uz')}>uz</a>
+                <a>uz</a>
               </Link>
             </li>
             <li>
-              <Link locale='ru-RU' href={asPath} >
-                <a onClick={() => setLan('ru')}>ru</a>
+              <Link href={asPath} locale='ru-RU'>
+                <a>ru</a>
               </Link>
             </li>
             <li>
               <Link href={asPath} locale='en-US'>
-                <a onClick={() => setLan('eng')}>eng</a>
+                <a>en</a>
               </Link>
             </li>
           </ul>
