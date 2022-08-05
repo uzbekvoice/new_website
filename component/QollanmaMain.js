@@ -26,7 +26,7 @@ const QollanmaMain = ({ data }) => {
                                     <div className={styles.qollanmaCardMobileHeader}>
                                         <video
                                             poster='/video-poster.jpg'
-                                            src={`https://new.uzbekvoice.ai/assets/${guidline_video}`}
+                                            src={`https://admin.uzbekvoice.ai/assets/${guidline_video}`}
                                             controls
                                             muted
                                             loop
@@ -44,7 +44,7 @@ const QollanmaMain = ({ data }) => {
                                     <div className={styles.qollanmaCardHeader}>
                                         <video
                                             poster='/video-poster.jpg'
-                                            src={`https://new.uzbekvoice.ai/assets/${guidline_video}`}
+                                            src={`https://admin.uzbekvoice.ai/assets/${guidline_video}`}
                                             controls
                                             muted
                                             loop

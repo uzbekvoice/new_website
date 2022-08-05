@@ -70,13 +70,8 @@
     padding: 40px;
     border: 1px solid #E4E6EE;
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
     margin-top: 24px;
-}
-
-.qollanmaCardBody {
-    /* width: 50%; */
 }
 
 .qollanmaCardBody span {
@@ -114,13 +109,15 @@
 
 .qollanmaCardHeader {
     /* width: 45%; */
+    height: 255px;
     margin-left: 45px;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .qollanmaCardHeader video {
-    width: 416px;
-    height: 290px;
+    /* width: 416px; */
+    height: 100%;
     border-radius: 20px;
 }
 

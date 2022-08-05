@@ -1,63 +1,31 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import styles from '../styles/BosqichPrizes.module.css'
 
-const data = [
-    {
-        id: 1,
-        image: '/prizeLaptop.png',
-        title: 'Laptop',
-        descr: 'Macbook Air',
-    },
-    {
-        id: 2,
-        image: '/prizaPhone.png',
-        title: 'Mobile Phone',
-        descr: 'Samsung Galaxy S20',
-    },
-    {
-        id: 3,
-        image: '/prizeLaptop.png',
-        title: 'Laptop',
-        descr: 'Macbook Pro',
-    },
-    {
-        id: 4,
-        image: '/prizaPhone.png',
-        title: 'Mobile Phone',
-        descr: 'Samsung Galaxy S20 Ultra',
-    },
-    {
-        id: 5,
-        image: '/prizeLaptop.png',
-        title: 'Laptop',
-        descr: 'Macbook Air',
-    },
-    {
-        id: 6,
-        image: '/prizaPhone.png',
-        title: 'Mobile Phone',
-        descr: 'Samsung Galaxy S20',
-    }
-]
+export default function HakatonTeams({ resGifts }) {
 
-export default function HakatonTeams() {
+    const { locale } = useRouter();
+
+    const dataGifts = resGifts.data.filter(p => p.languages_code === locale);
+
+    console.log(dataGifts, 'gifts');
+
     return (
         <div className={styles.hakatonTeams}>
             <h3 className={styles.hakatonTeams_title}>Sovg’alar</h3>
 
             <div className={styles.hakatonTeams_wrapper}>
                 {
-                    data.map(({ id, title, descr, image }) => (
-                        <div key={id} className={styles.hakatonTeams_card}>
+                    dataGifts.map(({ contest_gifts_id, gift_name, gift_image, place }) => (
+                        <div key={contest_gifts_id} className={styles.hakatonTeams_card}>
                             <div className={styles.hakatonTeams_cardHeader}>
-                                <img src={image} alt='img' />
+                                <img src={`https://admin.uzbekvoice.ai/assets/${gift_image}`} alt='img' />
                             </div>
                             <div className={styles.hakatonTeams_cardBody}>
-                                <h4>{title}</h4>
-                                <p>{descr}</p>
+                                <h4>{gift_name}</h4>
                             </div>
                             <div className={styles.hakatonTeams_cardBadge}>
-                                <span>{id} orin</span>
+                                <span>{place}</span>
                             </div>
                         </div>
                     ))
