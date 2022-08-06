@@ -14,21 +14,23 @@ import HomeContent from './homeapi/static.json'
 export async function getStaticProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
   const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
-
+  const res3 = await fetch('https://admin.uzbekvoice.ai/items/partners')
 
   const data = await res.json();
   const users = await res2.json();
+  const partners = await res3.json();
 
   return {
     props: {
       users: data,
       userslist: users,
+      partners
     },
 
   };
 }
 
-export default function Home({ users, userslist }) {
+export default function Home({ users, userslist, partners }) {
 
   return (
     <div>
@@ -39,7 +41,7 @@ export default function Home({ users, userslist }) {
       <Contribution HomeContent={HomeContent} />
       <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
       <Ourpartners HomeContent={HomeContent} />
-      <InitiativePartners HomeContent={HomeContent} />
+      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
       <OurTeam />
       <Question />
     </div>

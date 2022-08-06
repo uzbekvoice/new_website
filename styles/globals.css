@@ -50,7 +50,6 @@ a {
 }
 
 
-
 .container__fluid {
   max-width: 1440px;
   width: 100%;
@@ -164,6 +163,12 @@ a {
   padding: 18px;
 }
 
+/***** partners slider *****/
+
+.sliders .owl-carousel .owl-stage {
+  display: flex !important;
+  align-items: center;
+}
 
 /* dots style owl carousel */
 
