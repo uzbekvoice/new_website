@@ -21,7 +21,6 @@ export default YangilikById
 //   const paths = posts.data.map((post) => ({
 //     params: { yangilikById: `${post.news_id}` },
 //   }))
-
 //   return { paths, fallback: true }
 // }
 
