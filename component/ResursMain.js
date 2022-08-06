@@ -1,131 +1,80 @@
 import React, { useState } from 'react'
+import { useRouter } from 'next/router'
+import Link from "next/link";
 import styles from '../styles/ResursMain.module.css'
 
-const dataParts = [
-    {
-        id: 1,
-        name: 'Games'
-    },
-    {
-        id: 2,
-        name: 'Self'
-    },
-    {
-        id: 3,
-        name: 'Programming'
-    },
-    {
-        id: 4,
-        name: 'Culture'
-    },
-    {
-        id: 5,
-        name: 'Health'
-    },
-    {
-        id: 6,
-        name: 'Machine Learning'
-    },
-    {
-        id: 7,
-        name: 'DS'
-    }
-]
-
-const dataPartInfo = [
-    {
-        id: 1,
-        title: 'Спиртовые краски',
-        descr: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.',
-        img: '/cat.png'
-    },
-    {
-        id: 2,
-        title: 'Спиртовые краски',
-        descr: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.',
-        img: '/cat.png'
-    },
-    {
-        id: 3,
-        title: 'Спиртовые краски',
-        descr: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.',
-        img: '/cat.png'
-    },
-    {
-        id: 4,
-        title: 'Спиртовые краски',
-        descr: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.',
-        img: '/cat.png'
-    },
-    {
-        id: 5,
-        title: 'Спиртовые краски',
-        descr: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.',
-        img: '/cat.png'
-    }
-]
-
-const ResursMain = () => {
+const ResursMain = ({ data }) => {
     const [active, setActive] = useState(1);
+    console.log(data, 'resurs');
+
+    const { locale } = useRouter();
 
     return (
         <div className={styles.resursMain}>
             <h4 className={styles.resursMainTitle}>Discover what matters to you</h4>
-            <div className={styles.parts}>
-                {
-                    dataParts.map(({ id, name }) => (
-                        <button
-                            type='button'
-                            key={id}
-                            onClick={() => setActive(id)}
-                            className={active == id && styles.activeBtn}
-                        >
-                            {name}
-                        </button>
-                    ))
-                }
-            </div>
 
-            <div className={styles.partInfo}>
-                {
-                    dataPartInfo.map(({ id, title, descr, img }) => (
-                        <div className={styles.resursCard} key={id}>
-                            <div className={styles.resursCardBody}>
-                                <h5>{title}</h5>
-                                <p>{descr}</p>
-                                <a href='#'>
-                                    Узнать больше
-                                    <img src='/chevron-right.svg' />
-                                </a>
-                            </div>
-                            <div className={styles.resursCardHeader}>
-                                <img src={img} alt='image' />
-                            </div>
-                        </div>
-                    ))
-                }
-            </div>
+            {
+                data.filter((p) => p.languages_code === locale)
+                    .map(({
+                        id, resource_author, resource_content, resource_image, resource_link, resource_tags, resource_title
+                    }) =>
+                        <div key={id}>
 
-            <div className={styles.partInfoMobile}>
-                {
-                    dataPartInfo.map(({ id, title, descr, img }) => (
-                        <div className={styles.resursMobileCard} key={id}>
-                            <div className={styles.resursMobileCardHeader}>
-                                <img src={img} alt='image' />
+                            <div className={styles.parts}>
+                                {
+                                    resource_tags.map((value, i) => (
+                                        <button
+                                            type='button'
+                                            key={id}
+                                            onClick={() => setActive(i)}
+                                            className={active == i && styles.activeBtn}
+                                        >
+                                            {value}
+                                        </button>
+                                    ))
+                                }
                             </div>
 
-                            <div className={styles.resursMobileCardBody}>
-                                <h5>{title}</h5>
-                                <p>{descr}</p>
-                                <a href='#'>
-                                    Узнать больше
-                                    <img src='/chevron-right.svg' />
-                                </a>
+                            <div className={styles.partInfo}>
+                                <div className={styles.resursCard} key={id}>
+                                    <div className={styles.resursCardBody}>
+                                        <h5>{resource_title}</h5>
+                                        <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
+                                        <Link href={resource_link}>
+                                            <a>
+                                                Узнать больше
+                                                <img src='/chevron-right.svg' />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                    <div className={styles.resursCardHeader}>
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${resource_image}`} alt='image' />
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    ))
-                }
-            </div>
+
+                            <div className={styles.partInfoMobile}>
+                                <div className={styles.resursMobileCard} key={id}>
+                                    <div className={styles.resursMobileCardHeader}>
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${resource_image}`} alt='image' />
+                                    </div>
+
+                                    <div className={styles.resursMobileCardBody}>
+                                        <h5>{resource_title}</h5>
+                                        <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
+                                        <Link href={resource_link}>
+                                            <a>
+                                                Узнать больше
+                                                <img src='/chevron-right.svg' />
+                                            </a>
+                                        </Link>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>)
+            }
         </div>
     )
 }
