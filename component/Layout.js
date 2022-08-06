@@ -9,17 +9,11 @@ import ResursHero from "./ResusHero";
 function Layout({ children }) {
   const router = useRouter();
   const [menuToggle, setMenuToggle] = useState(false);
-  const [menuHakatonToggle, setHakatonToggle] = useState(false);
-  const [stepDropDown, setStepDropDown] = useState(false);
-  const [hakDropDown, sethakDropDown] = useState(false);
-  const [otherDropDown, setOtherDropDown] = useState(false);
+  const [openLang, setOpenLang] = useState(false);
 
   const outsiteClickClose = () => {
     setMenuToggle(false);
-    setHakatonToggle(false)
-    sethakDropDown(false)
-    setStepDropDown(false)
-    setOtherDropDown(false)
+    setOpenLang(false)
   }
 
   if (router.pathname != "/hakaton" && router.pathname != '/resus')
@@ -29,12 +23,8 @@ function Layout({ children }) {
           <Header
             setMenuToggle={setMenuToggle}
             menuToggle={menuToggle}
-            stepDropDown={stepDropDown}
-            setStepDropDown={setStepDropDown}
-            hakDropDown={hakDropDown}
-            sethakDropDown={sethakDropDown}
-            otherDropDown={otherDropDown}
-            setOtherDropDown={setOtherDropDown}
+            openLang={openLang}
+            setOpenLang={setOpenLang}
           />
           {children}
         </div>
@@ -45,14 +35,10 @@ function Layout({ children }) {
     return (
       <div onClick={outsiteClickClose}>
         <HakatonHero
-          setHakatonToggle={setHakatonToggle}
-          menuHakatonToggle={menuHakatonToggle}
-          stepDropDown={stepDropDown}
-          setStepDropDown={setStepDropDown}
-          hakDropDown={hakDropDown}
-          sethakDropDown={sethakDropDown}
-          otherDropDown={otherDropDown}
-          setOtherDropDown={setOtherDropDown}
+          setMenuToggle={setMenuToggle}
+          menuToggle={menuToggle}
+          openLang={openLang}
+          setOpenLang={setOpenLang}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />
@@ -64,12 +50,8 @@ function Layout({ children }) {
         <ResursHero
           setMenuToggle={setMenuToggle}
           menuToggle={menuToggle}
-          stepDropDown={stepDropDown}
-          setStepDropDown={setStepDropDown}
-          hakDropDown={hakDropDown}
-          sethakDropDown={sethakDropDown}
-          otherDropDown={otherDropDown}
-          setOtherDropDown={setOtherDropDown}
+          openLang={openLang}
+          setOpenLang={setOpenLang}
         />
         <div className={styles.containerfluid}>{children}</div>
         <Footer />

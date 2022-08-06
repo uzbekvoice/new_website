@@ -2,13 +2,35 @@ import React from 'react'
 import YangilikByIdHero from '../../component/YangilikByIdHero'
 import YangilikByIdRelevantTheme from '../../component/YangilikByIdRelevantTheme'
 
-const yangilikById = () => {
+const YangilikById = ({ data }) => {
+
   return (
     <>
-        <YangilikByIdHero />
-        <YangilikByIdRelevantTheme />
+      <YangilikByIdHero data={data.data} />
+      <YangilikByIdRelevantTheme />
     </>
   )
 }
 
-export default yangilikById
+export default YangilikById
+
+export async function getStaticPaths() {
+  const res = await fetch('https://admin.uzbekvoice.ai/items/news_translations/')
+  const posts = await res.json()
+
+  const paths = posts.data.map((post) => ({
+    params: { yangilikById: toString(post.news_id) },
+  }))
+
+  return { paths, fallback: true }
+}
+
+export async function getStaticProps({ params }) {
+
+  const res = await fetch(`https://admin.uzbekvoice.ai/items/news_translations/?filter[news_id]=${params.yangilikById}`)
+  const data = await res.json()
+
+  return {
+    props: { data },
+  }
+}

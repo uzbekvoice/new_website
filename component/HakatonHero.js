@@ -1,29 +1,21 @@
 import React from 'react'
-import HeaderHakaton from '../component/HeaderHakaton'
 import styles from '../styles/HakatonHero.module.css'
+import Header from './Header'
 
 export default function HakatonHero({
-    menuHakatonToggle,
-    setHakatonToggle,
-    stepDropDown,
-    setStepDropDown,
-    hakDropDown,
-    sethakDropDown,
-    otherDropDown,
-    setOtherDropDown
+    menuToggle,
+    setMenuToggle,
+    openLang,
+    setOpenLang
 }) {
     return (
         <div className={styles.hakatonHeroWrappper}>
             <div className='container__fluid'>
-                <HeaderHakaton
-                    setHakatonToggle={setHakatonToggle}
-                    menuHakatonToggle={menuHakatonToggle}
-                    stepDropDown={stepDropDown}
-                    setStepDropDown={setStepDropDown}
-                    hakDropDown={hakDropDown}
-                    sethakDropDown={sethakDropDown}
-                    otherDropDown={otherDropDown}
-                    setOtherDropDown={setOtherDropDown}
+                <Header
+                    setMenuToggle={setMenuToggle}
+                    menuToggle={menuToggle}
+                    openLang={openLang}
+                    setOpenLang={setOpenLang}
                 />
                 <div className={styles.hakatonHero}>
                     <h3 className={styles.hakatonHero_Left}>

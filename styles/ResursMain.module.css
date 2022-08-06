@@ -22,7 +22,7 @@
 
 .parts button {
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 6px;
     margin-top: 16px;
     font-weight: 400;
     min-width: fit-content;
@@ -181,5 +181,11 @@
 
     .partInfoMobile {
         display: block;
+    }
+}
+
+@media (max-width: 410px) {
+    .parts {
+        justify-content: flex-start;
     }
 }

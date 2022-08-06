@@ -3,8 +3,6 @@ import styles from "../styles/Topuser.module.css";
 import Image from "next/image";
 import { FiXCircle } from "react-icons/fi";
 
-
-
 export default function Winners({ users, userslist }) {
   const [showModal, setShowModal] = React.useState(false);
   const [showModal2, setShowModal2] = React.useState(false);

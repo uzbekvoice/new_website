@@ -5,12 +5,8 @@ import styles from '../styles/ResusHero.module.css'
 const ResusHero = ({
     setMenuToggle,
     menuToggle,
-    stepDropDown,
-    setStepDropDown,
-    hakDropDown,
-    sethakDropDown,
-    otherDropDown,
-    setOtherDropDown
+    openLang,
+    setOpenLang
 }) => {
     return (
         <div className={styles.resursHero}>
@@ -18,12 +14,8 @@ const ResusHero = ({
                 <Header
                     setMenuToggle={setMenuToggle}
                     menuToggle={menuToggle}
-                    stepDropDown={stepDropDown}
-                    setStepDropDown={setStepDropDown}
-                    hakDropDown={hakDropDown}
-                    sethakDropDown={sethakDropDown}
-                    otherDropDown={otherDropDown}
-                    setOtherDropDown={setOtherDropDown}
+                    openLang={openLang}
+                    setOpenLang={setOpenLang}
                 />
 
                 <h4>Resurslar</h4>

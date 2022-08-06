@@ -1,44 +1,54 @@
-import React from 'react'
-import styles from '../styles/Hero.module.css'
+import React from "react";
+import styles from "../styles/Hero.module.css";
 import Image from "next/image";
-export default function Hero() {
+import { useRouter } from "next/router";
+import Home from "../pages";
+
+export default function Hero(props) {
+  const { locale } = useRouter();
+
+  const { HomeContent } = props;
+
   return (
     <div className={styles.header__content}>
-    <div className={styles.header__content_text}>
-      <h1>O&apos;zbek nutqini kompyuterga o&apos;rgatish tashabbusi</h1>
-      <p>
-        Ovozli asistentlar moliya, transport, telekom, chakana savdo,
-        sog&apos;liqni saqlash, ta&apos;lim va boshqa ko&apos;p sohalarda
-        qo&apos;llanadi.
-      </p>
+      <div className={styles.header__content_text}>
+        {HomeContent.content
+          .filter((p) => p.languages_code === locale)
+          .map((HomeContent, i) => {
+            const { title, description, button1, button2 } = HomeContent;
+            return (
+              <div key={i}>
+                <h1>{title}</h1>
+                <p>{description}</p>
+                <div className={styles.header__content_block}>
+                  <a href="https://t.me/UzbekVoiceBot">{button1}</a>
 
-      <div className={styles.header__content_block}>
-        <a href="https://t.me/UzbekVoiceBot">
-          Loyihada ishtirok etish
-        </a>
-
-        <div className={styles.header__content_info}>
-          <Image
-            src="/telegramm-blue.png"
-            width={23}
-            height={18}
-            alt="telegramicon"
-            quality={75}
-          />
-          <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
-            Telegram jamoa
-          </a>
-        </div>
+                  <div className={styles.header__content_info}>
+                    <Image
+                      src="/telegramm-blue.png"
+                      width={23}
+                      height={18}
+                      alt="telegramicon"
+                      quality={75}
+                    />
+                    <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
+                      {button2}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
       </div>
+      <video
+        poster="./video-poster.jpg"
+        src="./video.mp4"
+        controls
+        muted
+        loop
+        autoPlay
+        // autoPlay
+      ></video>
     </div>
-    <video
-      poster="./video-poster.jpg"
-      src="./video.mp4"
-      controls
-      muted
-      loop
-      // autoPlay
-    ></video>
-  </div>
-  )
+  );
 }

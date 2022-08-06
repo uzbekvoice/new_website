@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
+import styles  from '../../styles/Accordion.module.css'
 
 
 function Accordion(props) {
@@ -22,7 +23,11 @@ function Accordion(props) {
   return (
     <div className="accordion__section">
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
-        <p className="accordion__title">{props.title}</p>
+        <div className={styles.accordion_title}>
+        <p>{props.title}</p>
+        </div>
+       
+
         <Chevron className={`${setRotate}`} width={8} fill={"#8D53FD"} />
       </button>
       <div
@@ -31,7 +36,7 @@ function Accordion(props) {
         className="accordion__content"
       >
         <div
-          className="accordion__text"
+          className={styles.accordion_text}
           dangerouslySetInnerHTML={{ __html: props.content }}
         />
       </div>

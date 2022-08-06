@@ -1,18 +1,24 @@
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Regular.ttf);
   font-weight: 400
 }
 
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Medium.ttf);
+  font-weight: 500
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-Bold.ttf);
   font-weight: 700
 }
 
 @font-face {
-  font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-family: "Inter";
+  src: url(../public/Inter/Inter-ExtraBold.ttf);
   font-weight: 800
 }
 
@@ -23,7 +29,7 @@ body {
   margin: 0;
   overflow-x: hidden;
   position: relative;
-  font-family: "Objektiv";
+  font-family: "Inter", sans-serif;
 }
 
 
@@ -80,7 +86,7 @@ a {
   border-radius: 12px;
 }
 
-.btn:hover{
+.btn:hover {
   background: blueviolet;
 }
 
@@ -117,6 +123,19 @@ a {
   font-size: 22px;
 }
 
+@media (max-width: 767px) {
+  .accordion__title {
+    font-size: 15px;
+  }
+
+  .accordion__text {
+    text-align: left;
+    font-size: 12px;
+
+  }
+
+}
+
 /* Style the accordion chevron icon */
 .accordion__icon {
   margin-left: auto;
@@ -127,6 +146,7 @@ a {
 .rotate {
   transform: rotate(90deg);
 }
+
 
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
@@ -165,3 +185,52 @@ a {
   background: #8D53FD !important;
 }
 
+
+/* nav style owl carousel */
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev,
+.owl-carousel.owl-loaded .owl-nav button.owl-next {
+  border-radius: 50%;
+  background-color: #fff;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  backdrop-filter: blur(60px);
+  position: absolute;
+  top: 45%;
+  color: #fff !important; 
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev {  
+  left: -7%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-prev::after {  
+  position: absolute;
+  content: url('../public/arrow-left.svg');
+  left: 0;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-next {  
+  right: -7%;
+}
+
+.owl-carousel.owl-loaded .owl-nav button.owl-next ::after {  
+  position: absolute;
+  content: url('../public/arrow-right.svg');
+  left: 0;
+  top: 4px;
+  width: 100%;
+  height: 100%;
+}
+
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-prev {  
+  left: -4%;
+}
+
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {  
+  right: -4%;
+}

@@ -85,6 +85,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 20px;
 }
 
 .hakatonHero_Right div {
@@ -114,7 +115,7 @@
     color: #FFFFFF;
 }
 
-@media (max-width: 969px) {
+@media (max-width: 893px) {
     .hakatonHero {
         justify-content: center;
     }

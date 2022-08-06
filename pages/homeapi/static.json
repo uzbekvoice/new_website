@@ -1,0 +1,201 @@
+{
+    "content": [
+      {
+        "languages_code": "uz-UZ",
+        "title": "O'zbek nutqini kompyuterga o'rgatish tashabbusi",
+        "description": "Ovozli asistentlar moliya, transport, telekom, chakana savdo, sog'liqni saqlash, ta'lim va boshqa ko'p sohalarda qo'llanadi.",
+        "button1": "Loyihada ishtirok etish",
+        "button2": "Telegram jamoa"
+        
+      },
+      {
+        "languages_code": "en-US",
+        "title": "An initiative to teach Uzbek speech to the computer",
+        "description": "Voice assistants are used in finance, transportation, telecom, retail, healthcare, education and many other industries.",
+        "button1": "Join in the project",
+        "button2": "Telegram community"
+      },
+      {
+        "languages_code": "ru-RU",
+        "title": "Инициатива по обучению узбекской речи на компьютере",
+        "description": "Голосовые помощники используются в финансах, транспорте, телекоммуникациях, розничной торговле, здравоохранении, образовании и многих других отраслях.",
+        "button1": "Участие в проекте",
+        "button2": "Telegram-сообщество"
+      }
+    ],
+
+    "maqsad":[
+      {
+        "languages_code": "uz-UZ",
+        "title": "O'zi maqsad nima?",
+        "description": "Dasturchilarga, tadqiqotchilarga, startaplarga ochiq va bepul nutq ma'lumotlar bazasi yetishmasligi katta muammo.",
+        "card_title": "Ochiq manba",
+         "card_title2": "Tadqiqot",
+         "card_title3": "Ijodkorlik",
+         "card_title4": "Jamoatchilik",
+        "card_desc": "Nutq va ovoz ma'lumot bazasini ochiq yig'ish (open-source)",
+        "card_desc2": "Suniy intelekt sohasida Ilmiy hamkorlik va tadqiqot imkonini yaratish",
+        "card_desc3": " Suniy intelekt sohadagi dasturchilarga ijodkorlik uchun yo'lini ochish",
+        "card_desc4": " Hatti-haraktimizni jamoatchilik ishtroki bilan amalgaoshirish"
+    },
+
+    {
+      "languages_code": "en-US",
+      "title": "What is the goal itself?",
+      "description": "The lack of open and free speech databases is a big problem for developers, researchers, startups.",
+      "card_title": "Open Source",
+         "card_title2": "English text",
+         "card_title3": "English text",
+         "card_title4": "English text",
+        "card_desc": "English text desc",
+        "card_desc2": "English text desc",
+        "card_desc3": " English text desc",
+        "card_desc4": " English text desc"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Rus text",
+      "description": "Text rus",
+      "card_title": "Title rus",
+         "card_title2": "Title rus",
+         "card_title3": "Title rus",
+         "card_title4": "Title rus",
+        "card_desc": "Russian text desc",
+        "card_desc2": "Russian text desc",
+        "card_desc3": " Russian text desc",
+        "card_desc4": " Russian text desc"
+    }
+  ], 
+  "statistic":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Statistika",
+      "description": "O'z maqsadimizga yetish uchun muvaffaqiyat ko'rsatkichlari.",
+      "parag1": "dan ortiq jumla",
+      "parag2": "soatdan ko'p ovoz"
+    },
+
+    {
+      "languages_code": "en-US",
+      "title": "English title",
+      "description": "English desc.",
+      "parag1": "dan ortiq jumla",
+      "parag2": "soatdan ko'p ovoz"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Russian title",
+      "description": "Russian desc.",
+      "parag1": "dan ortiq jumla",
+      "parag2": "soatdan ko'p ovoz"
+    }
+
+  ],
+
+  "contribution":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Qanday hissa qo'shsa bo'ladi ?",
+      "card_title": "Ovozingiz bilan jumla o'qing",
+      "card_title2": "O'qilgan jumlani tinglab tasdiqlang",
+      "card_title3": "Matnlarni tekshirish",
+      "card_desc": "Ko'rsatilgan matnni o'zbek tilida tovush bilan Mozilla Common Voice saytida o'qiymiz. Ishoning, bu eng qiziqarli ishlardan biri",
+      "card_desc2": "O'qilgan jumla va matnilarni to'g'riligini tekshirib tasdiqlang yoki uni rad eting. Bu juda oson.",
+      "card_desc3": "Yig'ib kiritgan matnlarni tekshirib tasdiqlang. Shundan so'ng bu jumla ma'lumotlar bazasiga qo'shiladi.",
+      "button": "Loyihada ishtirok etish"
+    }, 
+    {
+      "languages_code": "en-US",
+      "title": "En",
+      "card_title": "En Ovozingiz bilan jumla o'qing",
+      "card_title2": "En O'qilgan jumlani tinglab tasdiqlang",
+      "card_title3": "En Matnlarni tekshirish",
+      "card_desc": "En Ko'rsatilgan matnni o'zbek tilida tovush bilan Mozilla Common Voice saytida o'qiymiz. Ishoning, bu eng qiziqarli ishlardan biri",
+      "card_desc2": "En O'qilgan jumla va matnilarni to'g'riligini tekshirib tasdiqlang yoki uni rad eting. Bu juda oson.",
+      "card_desc3": "En Yig'ib kiritgan matnlarni tekshirib tasdiqlang. Shundan so'ng bu jumla ma'lumotlar bazasiga qo'shiladi.",
+      "button": "Join"
+    }, 
+    {
+      "languages_code": "ru-RU",
+      "title": "Ru",
+      "card_title": "Ru Ovozingiz bilan jumla o'qing",
+      "card_title2": "Ru O'qilgan jumlani tinglab tasdiqlang",
+      "card_title3": "Ru Matnlarni tekshirish",
+      "card_desc": "Ru Ko'rsatilgan matnni o'zbek tilida tovush bilan Mozilla Common Voice saytida o'qiymiz. Ishoning, bu eng qiziqarli ishlardan biri",
+      "card_desc2": "Ru O'qilgan jumla va matnilarni to'g'riligini tekshirib tasdiqlang yoki uni rad eting. Bu juda oson.",
+      "card_desc3": "Ru Yig'ib kiritgan matnlarni tekshirib tasdiqlang. Shundan so'ng bu jumla ma'lumotlar bazasiga qo'shiladi.",
+      "button": "Ru button"
+    } 
+  ], 
+  "topuser":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Yetakchi a'zolar",
+      "desc": "10 Dekabar 2021 yilda end 3ta faol a'zolarimiz sovga va sovrinlar beriladi. Noutbook, plansjet va smartwatch. Qatnashing va yutib oling. To'liq ma'lumot",
+      "top_listener": "Eng faol tinglovchi",
+      "top_speaker": "Eng faol so'zlovchi",
+      "more": "Barchasini ko'rish"
+      
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Top user",
+      "desc": "English desc",
+      "top_listener": "top listener",
+      "top_speaker": "top speaker",
+      "more": "read more"
+      
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "ru Yetakchi a'zolar",
+      "desc": "ru 10 Dekabar 2021 yilda end 3ta faol a'zolarimiz sovga va sovrinlar beriladi. Noutbook, plansjet va smartwatch. Qatnashing va yutib oling. To'liq ma'lumot",
+      "top_listener": "ru Eng faol tinglovchi",
+      "top_speaker": "ru Eng faol so'zlovchi",
+      "more": "ruBarchasini ko'rish"
+      
+    }
+  ],
+  "ourpartner":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Biz bilan hamkorlik",
+      "desc": "O'zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik qilmoqchi bo'lganlar bilan ishlash har doim ochiqmiz",
+      "button": "Barchasini ko'rish"
+      
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Cooperation with us",
+      "desc": " We are always open to work with those who want to contribute or cooperate with the destiny of artificial intelligence in Uzbekistan",
+      "button": "Read more"
+      
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "RU Biz bilan hamkorlik",
+      "desc": "RU O'zbekistonda suniy intelekt sohasini taqdiriga hissa yoki hamkorlik qilmoqchi bo'lganlar bilan ishlash har doim ochiqmiz",
+      "button": "RU Barchasini ko'rish"
+    }
+  ],
+  "partner":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Tashabbus hamkorlari",
+      "desc": "UzbekVoice.ai jamoasi va hamkorlari ochiq fikrlovchilarni birlashtiradi kraudsorsing korporativ, institutsional va ilmiy hamkorlik"
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Initiative partners",
+      "desc": "UzbekVoice.ai team and partners unite open-minded crowdsourcing corporate, institutional and scientific cooperation"
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Партнеры инициативы",
+      "desc": "Команда и партнеры UzbekistanVoice.ai объединяют открытое краудсорсинговое корпоративное, институциональное и научное сотрудничество"
+    }
+  ]
+  } 
+
+
+
