@@ -24,7 +24,7 @@
       "hakaton": "Хакатон",
       "hakatonlar": ["1-хакатон", "2-хакатон"],
       "resurs": "Ресурсы",
-      "qollanma": "Qo'llanma ru",
+      "qollanma": "Руководство",
       "boshqa": "Другой",
       "boshqalar": [
         { "path": "/yangilik", "value": "Новости" },
