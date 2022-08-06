@@ -22,7 +22,7 @@ export async function getStaticPaths() {
     params: { yangilikById: toString(post.news_id) },
   }))
 
-  return { paths, fallback: true }
+  return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
