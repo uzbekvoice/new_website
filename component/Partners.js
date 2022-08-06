@@ -15,8 +15,8 @@ export default function Partners() {
             }) =>
                 <div className={styles.partners} key={id}>
                     <div className={styles.partners_left}>
-                        <h3 className={styles.partners_title}>{title}</h3>
-                        <p className={styles.partners_descr}>{descr}</p>
+                        <h3 >{title}</h3>
+                        <p >{descr}</p>
                     </div>
                     <form className={styles.partners_right}>
                         <label>{label_name}</label>
