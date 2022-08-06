@@ -1,4 +1,3 @@
-import Head from "next/head";
 import Slider from "../component/Carousel";
 import Contribution from "../component/Contribution";
 import Hero from "../component/Hero";
@@ -13,10 +12,10 @@ import HomeContent from './homeapi/static.json'
 
 
 export async function getStaticProps() {
-  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard" );
+  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
   const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
 
-  
+
   const data = await res.json();
   const users = await res2.json();
 
@@ -25,25 +24,22 @@ export async function getStaticProps() {
       users: data,
       userslist: users,
     },
-  
+
   };
 }
 
-
-
-export default function Home({users, userslist}) {
+export default function Home({ users, userslist }) {
 
   return (
     <div>
-       
-     <Hero HomeContent={HomeContent}/> 
-      <Slider HomeContent={HomeContent}/>
-      <Stat HomeContent={HomeContent}/>
+      <Hero HomeContent={HomeContent} />
+      <Slider HomeContent={HomeContent} />
+      <Stat HomeContent={HomeContent} />
       <Step />
-      <Contribution HomeContent={HomeContent}/>
-      <TopUser users={users} userslist={userslist} HomeContent={HomeContent}/>
+      <Contribution HomeContent={HomeContent} />
+      <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
       <Ourpartners HomeContent={HomeContent} />
-      <InitiativePartners HomeContent={HomeContent}/>
+      <InitiativePartners HomeContent={HomeContent} />
       <OurTeam />
       <Question />
     </div>
