@@ -33,10 +33,6 @@ function Header({
     setOtherDropDown(!otherDropDown);
   }
 
-  const goPage = () => {
-    setMenuToggle(false)
-  }
-
   return (
     <div
       className={styles.header__main}
@@ -130,17 +126,17 @@ function Header({
           <ul className={stepDropDown ? styles.activeDrop + ' ' + styles.activeLeft : styles.left}>
             <li>
               <Link href='/bosqich'>
-                <a>1-bosqich</a>
+                <a onClick={() => setMenuToggle(false)}>1-bosqich</a>
               </Link>
             </li>
             <li>
               <Link href='/bosqich'>
-                <a>2-bosqich</a>
+                <a onClick={() => setMenuToggle(false)}>2-bosqich</a>
               </Link>
             </li>
             <li>
               <Link href='/bosqich'>
-                <a>3-bosqich</a>
+                <a onClick={() => setMenuToggle(false)}>3-bosqich</a>
               </Link>
             </li>
           </ul>
@@ -160,26 +156,28 @@ function Header({
           <ul className={hakDropDown ? styles.activeDrop + " " + styles.activeLeft : styles.left}>
             <li>
               <Link href='/hakaton'>
-                <a>1-hakaton</a>
+                <a onClick={() => setMenuToggle(false)}
+                >1-hakaton</a>
               </Link>
             </li>
             <li>
               <Link href='/hakaton'>
-                <a>2-hakaton</a>
+                <a onClick={() => setMenuToggle(false)}
+                >2-hakaton</a>
               </Link>
             </li>
           </ul>
         </div>
 
         <Link href="/resus">
-          <a onClick={goPage}
+          <a onClick={() => setMenuToggle(false)}
             className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}
           >
             Resuslar
           </a>
         </Link>
         <Link href="/guide">
-          <a onClick={goPage} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}>
+          <a onClick={() => setMenuToggle(false)} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}>
             Qo'llanma
           </a>
         </Link>

@@ -6,7 +6,7 @@ const YangilikById = ({ data }) => {
 
   return (
     <>
-      <YangilikByIdHero data={data.data} />
+      <YangilikByIdHero data={data} />
       <YangilikByIdRelevantTheme />
     </>
   )
@@ -14,19 +14,18 @@ const YangilikById = ({ data }) => {
 
 export default YangilikById
 
-export async function getStaticPaths() {
-  const res = await fetch('https://admin.uzbekvoice.ai/items/news_translations/')
-  const posts = await res.json()
+// export async function getStaticPaths() {
+//   const res = await fetch('https://admin.uzbekvoice.ai/items/news_translations/')
+//   const posts = await res.json()
 
-  const paths = posts.data.map((post) => ({
-    params: { yangilikById: toString(post.news_id) },
-  }))
+//   const paths = posts.data.map((post) => ({
+//     params: { yangilikById: `${post.news_id}` },
+//   }))
 
-  return { paths, fallback: true }
-}
+//   return { paths, fallback: true }
+// }
 
-export async function getStaticProps({ params }) {
-
+export async function getServerSideProps({ params }) {
   const res = await fetch(`https://admin.uzbekvoice.ai/items/news_translations/?filter[news_id]=${params.yangilikById}`)
   const data = await res.json()
 

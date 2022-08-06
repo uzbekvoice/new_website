@@ -8,7 +8,7 @@ export default function HakatonTeams({ resGifts }) {
 
     const dataGifts = resGifts.data.filter(p => p.languages_code === locale);
 
-    console.log(dataGifts, 'gifts');
+    // console.log(dataGifts, 'gifts');
 
     return (
         <div className={styles.hakatonTeams}>

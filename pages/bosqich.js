@@ -37,7 +37,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
   const data = dataContest.data.filter(p => p.languages_id === locale);
   const dataRules = data[0].contest_rules;
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className={styles.bosqichPage}>

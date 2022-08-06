@@ -4,7 +4,7 @@ import styles from '../styles/YangiliByIdHero.module.css'
 
 const YangilikByIdHero = ({ data }) => {
   const { locale } = useRouter()
-  const dataFilter = data.filter(p => p.languages_code === locale)[0]
+  const dataFilter = data.data.filter(p => p.languages_code === locale)[0]
   // console.log(dataFilter);
   return (
     <div className={styles.yangilikByIdHero}>
