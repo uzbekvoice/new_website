@@ -19,12 +19,12 @@ export default function Footer() {
           <div className="container__fluid">
             <div className={styles.footer__body}>
               <div className={styles.footer__main}>
-                <img className={styles.footer__logo} src="./logo.png" alt='logofooter' />
+                <img className={styles.footer__logo} src="/logo.png" alt='logofooter' />
                 <div className={styles.powered}>
                   <h3>{powered_by}</h3>
                 </div>
 
-                <img className={styles.footer__logo2} src="./footer__logo-img.png" />
+                <img className={styles.footer__logo2} src="/footer__logo-img.png" />
               </div>
               <div className={styles.footer__menu}>
                 <div className={styles.menu_footer}>
@@ -51,7 +51,7 @@ export default function Footer() {
                     <li>
                       <Link href="https://github.com/uzbekvoice">
                         <a target={'_blank'}>
-                          <img src="./github.png" />
+                          <img src="/github.png" />
                           <span>{github}</span>
                         </a>
                       </Link>
@@ -59,7 +59,7 @@ export default function Footer() {
                     <li>
                       <Link href="https://t.me/joinchat/P84ptL81sN8yNWRi">
                         <a target={'_blank'}>
-                          <img src="./telegramm.png" />
+                          <img src="/telegramm.png" />
                           <span>{telegram}</span>
                         </a>
                       </Link>
@@ -69,7 +69,7 @@ export default function Footer() {
                         <a target={'_blank'}>
                           <img
                             className="menu-footer-block-img"
-                            src="./mozila.png"
+                            src="/mozila.png"
                           />
                           <span>{mozillo}</span>
                         </a>

@@ -45,9 +45,9 @@ function Header({
             <a>
               {
                 router.pathname === '/hakaton' ?
-                  <img className={styles.header_logo} src="./hakaton-header-logo.png" alt="logo" />
+                  <img className={styles.header_logo} src="/hakaton-header-logo.png" alt="logo" />
                   :
-                  <img className={styles.header_logo} src="./logo.png" alt="logo" />
+                  <img className={styles.header_logo} src="/logo.png" alt="logo" />
               }
             </a>
           </Link>
