@@ -4,7 +4,7 @@ import s from "../../styles/Yangiliklar.module.css";
 import { useRouter } from "next/router";
 
 const YangilikSection = ({ data }) => {
-  // console.log(data, 'data');
+  console.log(data, 'data');
 
   const { locale } = useRouter()
 
