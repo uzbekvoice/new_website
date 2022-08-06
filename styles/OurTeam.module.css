@@ -41,18 +41,25 @@
   color: #8d53fd;
   margin-top: 15px;
   display: inline-block;
-  margin-right: 7px;
   transition: all 0.5s;
 }
-
-
 
 .avatarimg {
   border-radius: 50%;
 }
 
-.avatarimg span {
+.avatarimg img {
   border-radius: 50%;
+}
+
+.avatarimg div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FaLinkedin {
+  margin-right: 7px;
 }
 
 @media (max-width: 767px) {
