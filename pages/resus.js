@@ -1,10 +1,12 @@
 import React from 'react'
 import ResursMain from '../component/ResursMain'
+import ResusHero from '../component/ResusHero'
 
-export default function resus({data}) {
+export default function resus({ data }) {
   return (
     <>
-        <ResursMain data={data.data} />
+      <ResusHero />
+      <ResursMain data={data.data} />
     </>
   )
 }

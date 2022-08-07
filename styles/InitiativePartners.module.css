@@ -13,6 +13,10 @@
   margin: 0;
 }
 
+.partnersForHak {
+  margin-top: 350px !important;
+}
+
 .item {
   display: inline-flex;
   justify-content: center;
@@ -49,7 +53,19 @@
   font-weight: 400;
 }
 
+@media (max-width: 893px) {
+  .partnersForHak {
+    margin-top: 400px !important;
+  }
+  
+}
+
 @media (max-width:767px) {
+
+  .partnersForHak {
+    margin-top: 400px !important;
+  }
+  
   .partners {
     display: flex;
     flex-direction: column-reverse;
@@ -74,4 +90,11 @@
     line-height: 22px;
   }
 
+}
+
+@media (max-width:465px) {
+
+  .partnersForHak {
+    margin-top: 300px !important;
+  }
 }

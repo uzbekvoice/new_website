@@ -1,3 +1,8 @@
+.parentNav {
+    position: relative;
+    z-index: 9;
+}
+
 .header__main {
     height: 80px;
     display: -webkit-box;
@@ -12,7 +17,6 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     background-color: transparent;
-
 }
 
 .header__main img {
