@@ -44,7 +44,7 @@ function Header({
           <Link href="/">
             <a>
               {
-                router.pathname === '/hakaton' ?
+                router.pathname === '/hakaton/[id]' ?
                   <img className={styles.header_logo} src="/hakaton-header-logo.png" alt="logo" />
                   :
                   <img className={styles.header_logo} src="/logo.png" alt="logo" />
@@ -58,7 +58,7 @@ function Header({
           >
             <div onClick={() => setOpenLang(!openLang)} className={styles.mobileLan}>
               <span
-                className={router.pathname === '/hakaton' && styles.hakatonPageStyleLan}
+                className={router.pathname === '/hakaton/[id]' && styles.hakatonPageStyleLan}
               >
                 {
                   locale.slice(0, 2) === 'uz' ?
@@ -118,11 +118,11 @@ function Header({
             <div onClick={() => openDropdown()}
               onMouseOver={() => setStepDropDown(true)}
               onMouseOut={() => setStepDropDown(false)}
-              className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
+              className={router.pathname === '/hakaton/[id]' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
             >
               {bosqich}
               {
-                router.pathname === '/hakaton' ?
+                router.pathname === '/hakaton/[id]' ?
                   <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
                   :
                   <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
@@ -131,7 +131,7 @@ function Header({
                 {
                   bosqichlar.map((value, i) =>
                     <li key={i}>
-                      <Link href='/bosqich'>
+                      <Link href={`/bosqich/${i+1}`}>
                         <a onClick={() => setMenuToggle(false)}>{value}</a>
                       </Link>
                     </li>
@@ -142,11 +142,11 @@ function Header({
             <div onClick={() => openHakDropdown()}
               onMouseOver={() => sethakDropDown(true)}
               onMouseOut={() => sethakDropDown(false)}
-              className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
+              className={router.pathname === '/hakaton/[id]' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
             >
               {hakaton}
               {
-                router.pathname === '/hakaton' ?
+                router.pathname === '/hakaton/[id]' ?
                   <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
                   :
                   <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
@@ -155,7 +155,7 @@ function Header({
                 {
                   hakatonlar.map((value, i) =>
                     <li key={i}>
-                      <Link href='/hakaton'>
+                      <Link href={`/hakaton/${i+1}`}>
                         <a onClick={() => setMenuToggle(false)}>{value}</a>
                       </Link>
                     </li>
@@ -166,24 +166,24 @@ function Header({
 
             <Link href="/resus">
               <a onClick={() => setMenuToggle(false)}
-                className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}
+                className={router.pathname == "/resus" ? "item active" : router.pathname === '/hakaton/[id]' ? styles.hakatonPageStyle + " item" : 'item'}
               >
                 {resurs}
               </a>
             </Link>
             <Link href="/guide">
-              <a onClick={() => setMenuToggle(false)} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton' ? styles.hakatonPageStyle + " item" : 'item'}>
+              <a onClick={() => setMenuToggle(false)} className={router.pathname == "/guide" ? "item active" : router.pathname === '/hakaton/[id]' ? styles.hakatonPageStyle + " item" : 'item'}>
                 {qollanma}
               </a>
             </Link>
             <div onClick={() => openOtherDropdown()}
               onMouseOver={() => setOtherDropDown(true)}
               onMouseOut={() => setOtherDropDown(false)}
-              className={router.pathname === '/hakaton' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
+              className={router.pathname === '/hakaton/[id]' ? styles.hakatonPageStyle + ' ' + styles.item + ' ' + styles.noHover : styles.item + ' ' + styles.noHover}
             >
               {boshqa}
               {
-                router.pathname === '/hakaton' ?
+                router.pathname === '/hakaton/[id]' ?
                   <Chevron className={'rotate ' + styles.chevronHakaton} width={7} height={11} />
                   :
                   <Chevron className={'rotate'} width={7} height={11} fill={'#1717179d'} />
@@ -202,7 +202,7 @@ function Header({
             </div>
             <div onClick={() => setOpenLang(!openLang)} className={styles.item + " " + styles.lan}>
               <span
-                className={router.pathname === '/hakaton' && styles.hakatonPageStyle}
+                className={router.pathname === '/hakaton/[id]' && styles.hakatonPageStyle}
               >
                 {
                   locale.slice(0, 2) === 'uz' ?
