@@ -1,6 +1,10 @@
 .resursHero {
     background: linear-gradient(180deg, rgb(0 137 255 / 10%) 0%, rgb(173 0 255 / 7%) 100%);
-    padding-bottom: 110px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 }
 
 .resursHero h4 {
@@ -11,6 +15,7 @@
     color: #12273C;
     text-align: center;
     margin-top: 58px;
+    padding: 90px 0;
 }
 
 @media (max-width: 767px) {
@@ -20,10 +25,6 @@
 }
 
 @media (max-width: 430px) {
-    .resursHero {
-        padding-bottom: 80px;
-    }
-
     .resursHero h4 {
         font-size: 28px;
         margin-top: 40px;

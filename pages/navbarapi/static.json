@@ -1,0 +1,52 @@
+{
+  "menu": [
+    {
+      "id": 1,
+      "languages_code": "uz-UZ",
+      "bosqich": "Bosqichlar",
+      "bosqichlar": ["1-bosqich", "2-bosqich", "3-bosqich"],
+      "hakaton": "Hakaton",
+      "hakatonlar": ["1-hakaton", "2-hakaton"],
+      "resurs": "Resurslar",
+      "qollanma": "Qo'llanma",
+      "boshqa": "Boshqa",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "Yangiliklar" },
+        { "path": "/hamkorlar", "value": "Hamkorlar" }
+      ],
+      "button": "Ishtirok eting"
+    },
+    {
+      "id": 2,
+      "languages_code": "ru-RU",
+      "bosqich": "Этапы",
+      "bosqichlar": ["Этап 1", "Этап 2", "Этап 3"],
+      "hakaton": "Хакатон",
+      "hakatonlar": ["1-хакатон", "2-хакатон"],
+      "resurs": "Ресурсы",
+      "qollanma": "Руководство",
+      "boshqa": "Другой",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "Новости" },
+        { "path": "/hamkorlar", "value": "Партнеры" }
+      ],
+      "button": "Присоединиться"
+    },
+    {
+      "id": 3,
+      "languages_code": "en-US",
+      "bosqich": "Steps",
+      "bosqichlar": ["stage 1", "stage 2", "stage 3"],
+      "hakaton": "Hackathon",
+      "hakatonlar": ["1st hackathon", "2nd hackathon"],
+      "resurs": "Resources",
+      "qollanma": "Guide",
+      "boshqa": "Other",
+      "boshqalar": [
+        { "path": "/yangilik", "value": "News" },
+        { "path": "/hamkorlar", "value": "Partners" }
+      ],
+      "button": "Join"
+    }
+  ]
+}

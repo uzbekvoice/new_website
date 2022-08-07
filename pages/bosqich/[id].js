@@ -1,13 +1,13 @@
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
-import styles from "../styles/Bosqich.module.css";
-import Winners from "../component/Winners";
-import Prizes from "../component/Prizes";
-import BosqichPrizes from "../component/BosqichPrizes";
+import styles from "../../styles/Bosqich.module.css";
+import Winners from "../../component/Winners";
+import Prizes from "../../component/Prizes";
+import BosqichPrizes from "../../component/BosqichPrizes";
 
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
   const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
   const res3 = await fetch("https://admin.uzbekvoice.ai/items/contest_stages_translations");
@@ -29,14 +29,13 @@ export async function getStaticProps() {
   };
 }
 
-
 export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
-  const { locale } = useRouter();
+  const { locale, query } = useRouter();
 
   const data = dataContest.data.filter(p => p.languages_id === locale);
+//   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id) );
   const dataRules = data[0].contest_rules;
-
   console.log(data);
 
   return (

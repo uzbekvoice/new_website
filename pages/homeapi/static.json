@@ -194,7 +194,46 @@
       "title": "Партнеры инициативы",
       "desc": "Команда и партнеры UzbekistanVoice.ai объединяют открытое краудсорсинговое корпоративное, институциональное и научное сотрудничество"
     }
+  ],
+  "team":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Uzbekvoice Jamoasi",
+      "desc": ""
+  
+    },
+    {
+      "languages_code": "en-US",
+      "title": "Uzbekvoice Team",
+      "desc": ""
+    
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Uzbekvoice Команды",
+      "desc": ""
+  
+    }
+  ],
+
+  "faq":[
+    {
+      "languages_code": "uz-UZ",
+      "title": "Savollar va Javoblar"
+    
+    },
+    {
+      "languages_code": "en-US",
+      "title": "FAQ"
+    
+    },
+    {
+      "languages_code": "ru-RU",
+      "title": "Вопросы и ответы"
+  
+    }
   ]
+
   } 
 
 

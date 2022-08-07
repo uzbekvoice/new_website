@@ -1,42 +1,36 @@
+import { useRouter } from 'next/router'
 import React from 'react'
 import styles from '../styles/HakatonHero.module.css'
-import Header from './Header'
 
-export default function HakatonHero({
-    menuToggle,
-    setMenuToggle,
-    openLang,
-    setOpenLang
-}) {
+export default function HakatonHero({ hakatonHeroData }) {
+    console.log(hakatonHeroData);
+    const { locale } = useRouter();
     return (
-        <div className={styles.hakatonHeroWrappper}>
-            <div className='container__fluid'>
-                <Header
-                    setMenuToggle={setMenuToggle}
-                    menuToggle={menuToggle}
-                    openLang={openLang}
-                    setOpenLang={setOpenLang}
-                />
-                <div className={styles.hakatonHero}>
-                    <h3 className={styles.hakatonHero_Left}>
-                        Hakaton
-                    </h3>
-                    <div className={styles.hakatonHero_Right}>
-                        <div>
-                            <h4>350</h4>
-                            <p>Qatnashchilar</p>
-                        </div>
-                        <div>
-                            <h4>6</h4>
-                            <p>Jamoa</p>
-                        </div>
-                        <div>
-                            <h4>6</h4>
-                            <p>Loyiha</p>
+        hakatonHeroData
+            .filter(p => p.languages_code === locale)
+            .map(({ id, hackathon_projects_count, hackathon_teams_count, hackathon_title, hackathons_content, hackathons_participants_count, hackaton_dates }) =>
+                <div className={styles.hakatonHeroWrappper} key={id}>
+                    <div className='container__fluid'>
+                        <div className={styles.hakatonHero}>
+                            <h3 className={styles.hakatonHero_Left}>
+                                {hackathon_title}
+                            </h3>
+                            <div className={styles.hakatonHero_Right}>
+                                <div>
+                                    <h4>{hackathons_participants_count}</h4>
+                                    <p>Qatnashchilar</p>
+                                </div>
+                                <div>
+                                    <h4>{hackathon_teams_count}</h4>
+                                    <p>Jamoa</p>
+                                </div>
+                                <div>
+                                    <h4>{hackathon_projects_count}</h4>
+                                    <p>Loyiha</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    )
+            ))
 }

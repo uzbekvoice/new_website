@@ -15,25 +15,20 @@
 .ourteam h4 {
   font-size: 15px;
   font-weight: 00;
-
   letter-spacing: 0.0022em;
   color: #12273c;
   margin-top: 12px;
 }
 
-.flex {
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-}
-
-.firstblock,
-.secondblock {
-  display: flex;
+.firstblock {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  column-gap: 28px;
 }
 
 .item {
-  margin-right: 15px;
+  margin-top: 20px;
 }
 
 .item a {
@@ -41,27 +36,34 @@
   color: #8d53fd;
   margin-top: 15px;
   display: inline-block;
-  margin-right: 7px;
   transition: all 0.5s;
 }
 
-
-
-.avatarimg {
+.avatarimg img {
   border-radius: 50%;
+  width: 100%;
 }
 
-.avatarimg span {
-  border-radius: 50%;
+.avatarimg div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.FaLinkedin {
+  margin-right: 7px;
+}
+
+@media (max-width: 992px) {
+  .firstblock {
+    grid-template-columns: repeat(5, 1fr);
+  }
 }
 
 @media (max-width: 767px) {
-  .question {
-    margin-top: 80px;
-    margin-bottom: 200px;
-    text-align: center;
-    position: relative;
-    padding: 0;
+
+  .firstblock {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   .ourteam h3 {
@@ -75,14 +77,16 @@
     font-size: 14px;
     margin-top: 12px;
   }
+}
 
-  .flex {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@media (max-width: 576px) {
+  .firstblock {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .secondblock {
-    margin-top: 50px;
+@media (max-width: 420px) {
+  .firstblock {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

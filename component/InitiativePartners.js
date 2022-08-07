@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/InitiativePartners.module.css";
-import Image from "next/image";
 var $ = require("jquery");
 if (typeof window !== "undefined") {
   // Client-side-only code
@@ -10,13 +9,16 @@ import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
   ssr: false,
 });
 export default function InitiativePartners(props) {
-  const { locale } = useRouter();
-  const { HomeContent } = props;
+  const { locale, pathname } = useRouter();
+
+  const { HomeContent, partners } = props;
+
   const Responsive = {
     0: {
       items: 2,
@@ -51,13 +53,13 @@ export default function InitiativePartners(props) {
           const { title, desc } = HomeContent;
           return (
             <div key={i}>
-              <h3>{title}</h3>
+              <h3 className={pathname==='/hakaton/[id]' && styles.partnersForHak}>{title}</h3>
               <p>{desc}</p>
             </div>
           );
         })}
 
-      <div className={styles.sliders}>
+      <div className={styles.sliders + ' sliders'}>
         <OwlCarousel
           className={styles.slider}
           loop
@@ -66,23 +68,18 @@ export default function InitiativePartners(props) {
           nav={true}
           responsive={Responsive}
           autoplay
-          autoplayTimeout={1500}
+          autoplayTimeout={1500000}
         >
-          <div className={styles.item}>
-            <img src="/partners1.png" alt="partners1" />
-          </div>
-          <div className={styles.item}>
-            <img src="/partners2.png" alt="partners2" />
-          </div>
-          <div className={styles.item}>
-            <img src="/partners3.png" alt="partners3" />
-          </div>
-          <div className={styles.item}>
-            <img src="/partners4.png" alt="partners4" />
-          </div>
-          <div className={styles.item}>
-            <img src="/partners5.png" alt="partners4" />
-          </div>
+          {
+            partners.map(({id, partner_link, partner_image, partner_title }) =>
+              <Link href={partner_link} key={id}>
+                <a className={styles.item}>
+                  <img src={`https://admin.uzbekvoice.ai/assets/${partner_image}`} />
+                  <span>{partner_title}</span>
+                </a>
+              </Link>
+            )
+          }
         </OwlCarousel>
       </div>
     </div>

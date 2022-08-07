@@ -38,7 +38,7 @@
     margin-right: 28px;
 }
 
-.partners_title {
+.partners_left h3 {
     font-weight: 800;
     font-size: 48px;
     line-height: 110%;
@@ -47,7 +47,7 @@
     margin-bottom: 32px;
 }
 
-.partners_descr {
+.partners_left p {
     font-weight: 400;
     font-size: 16px;
     line-height: 23px;

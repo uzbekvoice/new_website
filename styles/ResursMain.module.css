@@ -10,6 +10,7 @@
     line-height: 120%;
     color: #2A2A2A;
     text-align: center;
+    margin-top: 220px;
 }
 
 .parts {
@@ -62,7 +63,6 @@
     font-size: 16px;
     line-height: 160%;
     color: #696969;
-    padding-bottom: 34px;
 }
 
 .resursCardBody a {
@@ -77,7 +77,7 @@
 .resursCardBody a img {
     margin-left: 8px;
     width: 24px;
-    height: 24px;
+    height: 24px;    
 }
 
 .resursCardHeader {
@@ -86,6 +86,7 @@
 
 .resursCardHeader img {
     width: 270px;
+    border-radius: 10px;
 }
 
 
@@ -162,10 +163,6 @@
         border-radius: 16px;
         font-size: 14px;
     }
-
-    .resursCardHeader img {
-        width: 100%;
-    }
 }
 
 @media (max-width: 576px) {
@@ -173,6 +170,7 @@
     .resursMainTitle {
         font-size: 20px;
         margin-bottom: 10px;
+        margin-top: 190px;
     }
 
     .partInfo {
