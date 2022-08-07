@@ -198,17 +198,20 @@
   "team":[
     {
       "languages_code": "uz-UZ",
-      "title": "Uzbekvoice Jamoasi"
+      "title": "Uzbekvoice Jamoasi",
+      "desc": ""
   
     },
     {
       "languages_code": "en-US",
-      "title": "Uzbekvoice Team"
+      "title": "Uzbekvoice Team",
+      "desc": ""
     
     },
     {
       "languages_code": "ru-RU",
-      "title": "Uzbekvoice Команды"
+      "title": "Uzbekvoice Команды",
+      "desc": ""
   
     }
   ],
