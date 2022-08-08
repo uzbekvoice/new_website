@@ -7,6 +7,7 @@ import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 
 export default function hakaton({ partners, hakatonHeroData }) {
+  console.log(hakatonHeroData);
   return (
     <>
       <HakatonHero hakatonHeroData={hakatonHeroData.data} />

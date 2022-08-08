@@ -33,14 +33,22 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   const { locale, query } = useRouter();
 
-  const data = dataContest.data.filter(p => p.languages_id === locale);
-//   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id) );
+  const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
   const dataRules = data[0].contest_rules;
+  const prize = [];
+
+  for (const key in data[0]) {
+    if (key.slice(-6) === "_image") {
+      prize.push(data[0][key])
+    }
+  }
+
   console.log(data);
+  console.log(prize);
 
   return (
     <div className={styles.bosqichPage}>
-      <div className={styles.isContinue}>yakunlangan</div>
+      <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
       <h1>{data[0].contest_title} konkurs tanlov</h1>
       <p className={styles.scheduleDate}>{data[0].contest_period}</p>
       <div className={styles.goal}>
@@ -88,7 +96,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
       <Winners users={users} userslist={userslist} />
 
-      <Prizes />
+      <Prizes prize={prize} />
     </div>
   );
 }

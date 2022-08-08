@@ -5,18 +5,17 @@
   align-items: center;
   padding: 4px 12px;
   gap: 8px;
-  background: rgba(253, 83, 83, 0.15);
   border-radius: 32px;
   width: 115px;
   margin-top: 40px !important;
   margin: 0 auto;
-  color: rgba(253, 83, 83, 1);
-
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.0043em;
+  color: #6f6f6f;
+  background-color: #6f6f6f26;
 }
 
 .bosqichPage h1 {
@@ -61,8 +60,8 @@
   text-align: center;
 }
 
-.card1 > h2,
-.card2 > h2 {
+.card1>h2,
+.card2>h2 {
   margin-top: 6px;
   line-height: 32px;
 
@@ -75,8 +74,8 @@
   color: #12273c;
 }
 
-.card1 > p,
-.card2 > p {
+.card1>p,
+.card2>p {
   margin-top: 8px;
   line-height: 28px;
   color: rgba(113, 125, 138, 1);
@@ -88,18 +87,17 @@
   text-align: center;
   letter-spacing: -0.5px;
 }
-.card1 > p > span,
-.card2 > p > span {
+
+.card1>p>span,
+.card2>p>span {
   color: #44484c;
 }
 
 .card2::before {
   content: "";
-  background: linear-gradient(
-    180deg,
-    rgba(0, 194, 255, 1) 0%,
-    rgba(82, 0, 255, 1) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 194, 255, 1) 0%,
+      rgba(82, 0, 255, 1) 100%);
   filter: blur(219px);
   height: 238.2720184326172px;
   width: 247.03199768066406px;
@@ -125,11 +123,11 @@
   line-height: 110%;
 }
 
- .rulesCard h2 {
+.rulesCard h2 {
   margin-bottom: 24px;
   font-style: normal;
   font-weight: 800;
-  font-size: 28px ;
+  font-size: 28px;
   line-height: 110%;
   color: #12273c;
 }
@@ -145,11 +143,9 @@
 
 .rules::before {
   content: "";
-  background: linear-gradient(
-    180deg,
-    rgba(0, 194, 255, 0.8) 0%,
-    rgba(82, 0, 255, 0.8) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 194, 255, 0.8) 0%,
+      rgba(82, 0, 255, 0.8) 100%);
   filter: blur(219px);
   height: 238.2720184326172px;
   width: 247.03199768066406px;
@@ -160,7 +156,7 @@
 .rulesCard {
   margin-top: 24px;
   text-align: start;
- 
+
 }
 
 .rule1 {
@@ -177,6 +173,7 @@
     padding: 0;
   }
 }
+
 @media (max-width: 500px) {
   .goal {
     display: flex;
@@ -198,20 +195,20 @@
     margin-top: 0px;
   }
 
-  .rule1{
+  .rule1 {
     padding: 24px 16px;
   }
 
-  .rules h2{
+  .rules h2 {
     font-size: 28px;
     font-weight: 800;
   }
 
-  .rulesCard h2{
+  .rulesCard h2 {
     font-size: 20px;
   }
 
-  .rulesCard p{
+  .rulesCard p {
     font-size: 16px;
   }
 }

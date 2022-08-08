@@ -3,11 +3,11 @@ import React from 'react'
 import styles from '../styles/HakatonHero.module.css'
 
 export default function HakatonHero({ hakatonHeroData }) {
-    console.log(hakatonHeroData);
-    const { locale } = useRouter();
+    const { locale, query } = useRouter();
+
     return (
         hakatonHeroData
-            .filter(p => p.languages_code === locale)
+            .filter(p => p.languages_code === locale && p.hackathons_id === parseInt(query.id))
             .map(({ id, hackathon_projects_count, hackathon_teams_count, hackathon_title, hackathons_content, hackathons_participants_count, hackaton_dates }) =>
                 <div className={styles.hakatonHeroWrappper} key={id}>
                     <div className='container__fluid'>

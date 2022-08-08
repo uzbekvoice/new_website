@@ -89,6 +89,18 @@ a {
   background: blueviolet;
 }
 
+
+.bosqich.faol {
+  color: #26db59;
+  background-color: #26db5926;
+}
+
+.bosqich.yakunlangan {
+  background: rgba(253, 83, 83, 0.15);
+  color: rgba(253, 83, 83, 1);
+}
+
+
 .accordion__section {
   display: flex;
   flex-direction: column;
@@ -97,7 +109,6 @@ a {
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #fff;
-
   cursor: pointer;
   padding: 18px;
   display: flex;

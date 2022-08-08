@@ -8,7 +8,7 @@ export default function Step() {
       <div className={styles.container}>
         <div className={styles.card}>
           <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4> <h5>yakunlangan</h5>
+            <h4>1- Bosqich tanlovi</h4> <h5>yakunlangan</h5>
           </div>
           <div className={styles.data}>
             <p>2021 yil oktyabr - dekabr</p>
