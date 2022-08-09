@@ -17,6 +17,7 @@ export async function getStaticProps() {
   const res3 = await fetch('https://admin.uzbekvoice.ai/items/partners');
   const res4 = await fetch('https://admin.uzbekvoice.ai/items/team_members');
   const res5 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
+  const res6 = await fetch('https://admin.uzbekvoice.ai/items/contest_stages_translations');
 
 
   const data = await res.json();
@@ -24,6 +25,7 @@ export async function getStaticProps() {
   const partners = await res3.json();
   const teamMembers = await res4.json();
   const faq = await res5.json();
+  const steps = await res6.json();
 
   return {
     props: {
@@ -31,20 +33,21 @@ export async function getStaticProps() {
       userslist: users,
       partners,
       teamMembers,
-      faq
+      faq,
+      steps
     },
 
   };
 }
 
-export default function Home({ users, userslist, partners, teamMembers, faq }) {
+export default function Home({ users, userslist, partners, teamMembers, faq, steps }) {
 
   return (
     <div>
       <Hero HomeContent={HomeContent} />
       <Slider HomeContent={HomeContent} />
       <Stat HomeContent={HomeContent} />
-      <Step />
+      <Step steps={steps.data} HomeContent={HomeContent} />
       <Contribution HomeContent={HomeContent} />
       <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
       <Ourpartners HomeContent={HomeContent} />

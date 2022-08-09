@@ -90,12 +90,16 @@ a {
 }
 
 
-.bosqich.faol {
+.bosqich.faol,
+.bosqich.active,
+.bosqich.активный {
   color: #26db59;
   background-color: #26db5926;
 }
 
-.bosqich.yakunlangan {
+.bosqich.yakunlangan,
+.bosqich.законченный,
+.bosqich.finished {
   background: rgba(253, 83, 83, 0.15);
   color: rgba(253, 83, 83, 1);
 }

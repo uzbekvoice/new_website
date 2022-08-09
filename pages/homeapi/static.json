@@ -92,6 +92,25 @@
 
 ],
 
+"steps" : [
+  {
+    "languages_code": "uz-UZ",
+    "title": "Bosqichlar",
+    "button": "Batafsil"
+  },
+
+  {
+    "languages_code": "en-US",
+    "title": "Stages",
+    "button": "Read more"
+  },
+  {
+    "languages_code": "ru-RU",
+    "title": "Этапы",
+    "button": "Подробнее"
+  }
+],
+
 "contribution":[
   {
     "languages_code": "uz-UZ",

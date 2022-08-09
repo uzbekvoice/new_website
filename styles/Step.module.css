@@ -98,19 +98,8 @@
   line-height: 17px;
   padding: 4px 12px;
   border-radius: 32px;
-  background-color: #fd535326;
-  color: #fd5353;
 }
 
-.text2 h5 {
-  color: #26db59;
-  background-color: #26db5926;
-}
-
-.text3 h5 {
-  color: #6f6f6f;
-  background-color: #6f6f6f26;
-}
 .middle {
   display: flex;
   align-items: center;
