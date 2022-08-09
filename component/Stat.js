@@ -147,7 +147,7 @@ export default function Stat(props) {
           })}
 
         <div className={styles.img_bottom}>
-          <ResponsiveContainer width={1268} height={251}>
+          <ResponsiveContainer width="100%" height={251}>
             <BarChart
               width={500}
               height={300}
@@ -188,10 +188,10 @@ export default function Stat(props) {
             quality={100}
             alt="stat"
           /> */}
-
-          <AreaChart
-            width={750}
-            height={350}
+<ResponsiveContainer   width="100%"
+            height={350}>
+<AreaChart
+          
             data={dates}
             margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
           >
@@ -224,6 +224,8 @@ export default function Stat(props) {
               fill="url(#colorPv)"
             />
           </AreaChart>
+</ResponsiveContainer>
+         
         </div>
       </div>
     </div>
