@@ -47,7 +47,7 @@
     height: 100%;
 }
 
-.modalImg .modalWrap div span {
+.modalImg .modalWrap img {
     width: 100% !important;
     height: 100% !important;
 }
@@ -72,7 +72,7 @@
     height: 100%;
 }
 
-.hakatonFoto_card div span {
+.hakatonFoto_card div img {
     width: 100% !important;
     height: 100% !important;
 }

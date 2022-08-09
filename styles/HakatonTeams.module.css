@@ -30,18 +30,13 @@
 }
 
 .hakatonTeams_wrapper {
-    display: flex;
-    align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 28px;
 }
 
 .hakatonTeams_card {
     padding: 20px;
-    width: 32%;
-    /* min-width: 300px; */
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid #E5E5E5;
     backdrop-filter: blur(8px);
@@ -50,8 +45,13 @@
     margin-top: 28px;
 }
 
+.hakatonTeams_cardHeader {
+    
+}
+
 .hakatonTeams_cardHeader img {
     width: 100%;
+    height: 100%;
 }
 
 .hakatonTeams_cardBody {
@@ -63,10 +63,11 @@
     font-size: 24px;
     line-height: 120%;
     color: #2A2A2A;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 }
 
 .hakatonTeams_cardBody a {
+    margin-top: 20px;
     display: inline-flex;
     align-items: center;
     -webkit-box-align: center;
@@ -83,11 +84,22 @@
 }
 
 @media (max-width: 1110px) {
-    .hakatonTeams_card {
-        width: 48%;
+    .hakatonTeams_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 28px;
     }
+    
 }
 
+@media (max-width: 830px) {
+
+    .hakatonTeams_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 28px;
+    }
+}
 @media (max-width: 767px) {
 
     .hakatonTeams {
@@ -109,8 +121,10 @@
 }
 
 @media (max-width: 576px) {
-    .hakatonTeams_card {
-        width: 100%;
+    .hakatonTeams_wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 28px;
     }
 }
 

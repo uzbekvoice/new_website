@@ -6,14 +6,14 @@ import HakatonTeams from "../../component/HakatonTeams";
 import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 
-export default function hakaton({ partners, hakatonHeroData }) {
-  console.log(hakatonHeroData);
+export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam }) {
+  console.log(hakatonTeam.data);
   return (
     <>
-      <HakatonHero hakatonHeroData={hakatonHeroData.data} />
+      <HakatonHero data={hakatonHero.data} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-      <HakatonTeams />
-      <HakatonFoto />
+      <HakatonTeams data={hakatonTeam.data} />
+      <HakatonFoto data={hakatonFoto.data} />
       <HakatonJuri />
     </>
   );
@@ -23,14 +23,20 @@ export async function getServerSideProps() {
 
   const res = await fetch('https://admin.uzbekvoice.ai/items/partners')
   const res2 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations')
+  const res3 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
+  const res4 = await fetch('https://admin.uzbekvoice.ai/items/hackathon_teams_translations')
 
   const partners = await res.json();
-  const hakatonHeroData = await res2.json();
+  const hakatonHero = await res2.json();
+  const hakatonFoto = await res3.json();
+  const hakatonTeam = await res4.json();
 
   return {
     props: {
       partners,
-      hakatonHeroData
+      hakatonHero,
+      hakatonFoto,
+      hakatonTeam
     },
 
   };

@@ -1,41 +1,12 @@
 import React from 'react'
 import styles from '../styles/HakatonFoto.module.css'
-import Image from 'next/image';
 import { FiX } from "react-icons/fi";
-const data = [
-    {
-        id: 1,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 2,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 3,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 4,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 5,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 6,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 7,
-        image: '/hakatonFotoImg.png',
-    }
-]
+import { useRouter } from 'next/router';
 
-export default function HakatonFoto() {
+export default function HakatonFoto({data}) {
 
     const [modalActive, setModalActive] = React.useState(0);
+    const { locale, query } = useRouter();
 
     const closeModal = () => {
         setModalActive(0);
@@ -56,7 +27,9 @@ export default function HakatonFoto() {
 
             <div className={styles.hakatonFoto_wrapper}>
                 {
-                    data.map(({ id, image }) => (
+                    data
+                    .filter(p => p.hackathons_translations_id === parseInt(query.id))
+                    .map(({id, directus_files_id}) => (
                         <div
                             key={id}
                             onClick={closeModal}
@@ -69,7 +42,7 @@ export default function HakatonFoto() {
                                 <div
                                     onClick={(e) => openModal(e, id)}
                                 >
-                                    <Image src={image} width={296} height={178} alt={image} />
+                                    <img src={`https://admin.uzbekvoice.ai/assets/${directus_files_id}`}  alt={directus_files_id} />
                                 </div>
                             </div>
                         </div>
