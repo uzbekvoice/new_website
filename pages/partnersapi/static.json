@@ -4,37 +4,38 @@
       "id": 1,
       "languages_code": "uz-UZ",
       "title": "Hamkor sifatida qo'shiling",
-      "descr": "Biz elektron pochta orqali biz bilan bog'langanlarning elektron pochta manzillarini, iste'molchilar qaysi sahifalarga kirishi yoki tashrif buyurishi haqidagi umumiy ma'lumotlarni hamda iste'molchi ixtiyoriy ravishda taqdim etgan ma'lumotlarni (masalan, so'rov ma'lumotlari va/yoki sayt ro'yxatga olishlari) yig'amiz. Biz to'plagan ma'lumotlar veb-sahifalarimiz mazmunini va xizmatimiz sifatini yaxshilash uchun ishlatiladi va tijorat maqsadlarida boshqa tashkilotlar bilan baham ko'rilmaydi yoki sotilmaydi, faqat siz so'ragan mahsulotlar yoki xizmatlarni taqdim etishdan tashqari, bizda ruxsati yoki quyidagi hollarda:",
-      "label_name": "Ism",
-      "label_phone": "Telefon raqami",
+      "descr": "UzbekVoice tashabbusi bilan hamkorlik qilishni istasangiz, iltimos shu yerda ma'lumotlaringizni qoldiring. Homiylar, OAV, bloggerlar, dasturchilar va loyihani rivojlantirishga hissa qo'sha oladidan barchani hamkorlikka taklif qilamiz.",
+      "label_name": "Ismingiz",
+      "label_phone": "Telefon raqamingiz",
       "label_comment": "Izoh",
       "placeholder_name": "Ismingizni kiriting",
-      "placeholder_comment": "Shart emas*",
-      "button": "Ariza yuboring"
+      "placeholder_comment": "Izoh qoldiring (ixtiyoriy)",
+      "button": "Ariza yuborish"
     },
+    
     {
       "id": 2,
       "languages_code": "ru-RU",
-      "title":"Присоединяйтесь как партнеры",
-      "descr": "Мы собираем адреса электронной почты тех, кто общается с нами по электронной почте, собираем информацию о том, какие страницы посещают или посещают потребители, а также информацию, добровольно предоставленную потребителем (например, информацию об опросах и/или регистрации на сайте). Информация, которую мы собираем, используется для улучшения содержания наших веб-страниц и качества наших услуг, а также не передается и не продается другим организациям в коммерческих целях, за исключением предоставления запрошенных вами продуктов или услуг, когда у нас есть ваши разрешения или при следующих обстоятельствах:",
+      "title":"Стать спонсором",
+      "descr": "Если вы хотите сотрудничать с инициативой UzbekVoice, пожалуйста, оставьте свою информацию здесь. К сотрудничеству приглашаем спонсоров, СМИ, блогеров, разработчиков и всех, кто может внести свой вклад в развитие проекта.",
       "label_name": "Имя",
-      "label_phone": "Телфон номер",
+      "label_phone": "Номер телефона",
       "label_comment": "Комментарий",
       "placeholder_name": "Введите свое имя",
-      "placeholder_comment": "Необязательно*",
+      "placeholder_comment": "Оставьте свои комментарии (необязательно)",
       "button": "Отправить заявку"
     },
     {
       "id": 3,
       "languages_code": "en-US",
-      "title": "Join as partners",
-      "descr": "We collect the e-mail addresses of those who communicate with us via e-mail, aggregate information on what pages consumers access or visit, and information volunteered by the consumer (such as survey information and/or site registrations). The information we collect is used to improve the content of our Web pages and the quality of our service, and is not shared with or sold to other organizations for commercial purposes, except to provide products or services you’ve requested, when we have your permission, or under the following circumstances:",
+      "title": "Become a partner",
+      "descr": "If you want to cooperate with the UzbekVoice initiative, please leave your information here. We invite sponsors, mass media, bloggers, programmers and everyone who can contribute to the development of the project.",
       "label_name": "Name",
       "label_phone": "Phone number",
       "label_comment": "Comment",
       "placeholder_name": "Enter your name",
-      "placeholder_comment": "Not necessary*",
-      "button": "Submit an application"
+      "placeholder_comment": "Leave your comments (optional)",
+      "button": "Apply now"
     }
   ]
 }
