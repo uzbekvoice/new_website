@@ -30,7 +30,7 @@ const QollanmaMain = ({ data }) => {
                                             controls
                                             muted
                                             loop
-                                            autoPlay
+                                            // autoPlay
                                         ></video>
                                     </div>
                                 }
@@ -48,7 +48,7 @@ const QollanmaMain = ({ data }) => {
                                             controls
                                             muted
                                             loop
-                                            autoPlay
+                                            // autoPlay
                                         ></video>
                                     </div>
                                 }

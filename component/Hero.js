@@ -46,7 +46,7 @@ export default function Hero(props) {
         controls
         muted
         loop
-        autoPlay
+    
         // autoPlay
       ></video>
     </div>
