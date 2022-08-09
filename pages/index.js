@@ -5,9 +5,14 @@ import InitiativePartners from "../component/InitiativePartners";
 import Ourpartners from "../component/Ourpartners";
 import OurTeam from "../component/OurTeam";
 import Question from "../component/Question/Question";
-import Stat from "../component/Stat";
 import Step from "../component/Step";
 import TopUser from "../component/TopUser";
+import dynamic from "next/dynamic";
+const Stat = dynamic(
+  () => import ('../component/Stat'),
+  { ssr: false }
+)
+
 import HomeContent from './homeapi/static.json'
 
 

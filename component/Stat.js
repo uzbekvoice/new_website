@@ -2,99 +2,125 @@ import React from "react";
 import styles from "../styles/Stat.module.css";
 import Image from "next/image";
 import {
-  Chart as ChartJS,
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
+  BarChart,
+  Bar,
+  Cell,
+  XAxis,
+  YAxis,
+  CartesianGrid,
   Tooltip,
   Legend,
-} from "chart.js";
-import { Bar } from "react-chartjs-2";
+  ResponsiveContainer,
+  AreaChart,
+  Area,
+} from "recharts";
 import { useRouter } from "next/router";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
 
 export default function Stat(props) {
   const { locale } = useRouter();
   const { HomeContent } = props;
-  const data = {
-    labels: [
-      "Yanvar",
-      "Fevral",
-      "Mart",
-      "Aprel",
-      "May",
-      "Iyun",
-      "Iyul",
-      "Avgust",
-      "Sentabr",
-      "Oktabr",
-      "Noyabr",
-      "Dekabr",
-    ],
 
-    datasets: [
-      {
-        // label: "Tekshirilgan",
-        data: [0.3, 0.1, 0.2, 0.5, 0.6, 0.3, 0.1, 0.4, 0.4, 0.6, 0.2, 0.6],
-        backgroundColor: "#fd5353",
-      },
-      {
-        // label: "Eshitilgan",
-        data: [0.1, 0.4, 0.2, 0.3, 0.4, 0.4, 0.3, 0.3, 0.6, 0.6, 0.3, 0.4],
-        backgroundColor: "#33bffa",
-      },
-
-      {
-        // label: "Ovoz",
-        data: [0.3, 0.1, 0.07, 0.1, 0.5, 0.5, 0.5, 0.2, 0.1, 0.6, 0.1, 0.5],
-        backgroundColor: "#8d53fd",
-      },
-    ],
-  };
-
-  const options = {
-    responsive: true,
-    plugins: {
-      legend: {
-        position: "top",
-        align: "start",
-        labels: {
-          boxWidth: 7,
-          usePointStyle: true,
-          pointStyle: "circle",
-        },
-
-        // title: {
-        //   text: "Statistika",
-        //   display: true,
-        //   color: "#000",
-        //   font: {
-        //     size: 18,
-        //   },
-        // },
-      },
+  const data = [
+    {
+      name: "Yanvar",
+      Ovozli: 4000,
+      Tinglangan: 2400,
+      amt: 2400,
     },
-    scales: {
-      yAxis: {
-        max: 1,
-      },
+    {
+      name: "Fevral",
+      Ovozli: 3000,
+      Tinglangan: 1398,
+      amt: 2210,
     },
-    elements: {
-      bar: {
-        barPercentage: 0.3,
-        categoryPercentage: 1,
-      },
+    {
+      name: "Mart",
+      Ovozli: 2000,
+      Tinglangan: 9800,
+      amt: 2290,
     },
-  };
+    {
+      name: "Aprel",
+      Ovozli: 2780,
+      Tinglangan: 3908,
+      amt: 2000,
+    },
+    {
+      name: "May",
+      Ovozli: 1890,
+      Tinglangan: 4800,
+      amt: 2181,
+    },
+    {
+      name: "Iyun",
+      Ovozli: 2390,
+      Tinglangan: 3800,
+      amt: 2500,
+    },
+    {
+      name: "Iyul",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Avgust",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Sentabr",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Oktabr",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Noyabr",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+    {
+      name: "Dekabr",
+      Ovozli: 3490,
+      Tinglangan: 4300,
+      amt: 2100,
+    },
+  ];
+  const dates = [
+    {
+      name: "1 m",
+      Ovozli: 100,
+      Tinglangan: 100,
+    },
+    {
+      name: "2 m",
+      Ovozli: 5000,
+      Tinglangan: 3000,
+    },
+    {
+      name: "3 m",
+      Ovozli: 4000,
+      Tinglangan: 3000,
+    },
+    {
+      name: "4 m",
+      Ovozli: 8780,
+      Tinglangan: 3908,
+    },
+    {
+      name: "5 m",
+      Ovozli: 9000,
+      Tinglangan: 4800,
+    },
+  ];
 
   return (
     <div className={styles.statistic}>
@@ -120,12 +146,31 @@ export default function Stat(props) {
             );
           })}
 
-        {/* <div className={styles.img_top}>
-          <Image src='/stat-top.png' width={308} height={17} quality={100} alt="stat" />
-        </div> */}
-
         <div className={styles.img_bottom}>
-          <Bar data={data} height={100} options={options} />
+          <ResponsiveContainer width={1268} height={251}>
+            <BarChart
+              width={500}
+              height={300}
+              data={data}
+              margin={{
+                top: 20,
+                right: 30,
+                left: 20,
+                bottom: 5,
+              }}
+            >
+              <CartesianGrid strokeDasharray="3 3" />
+              <XAxis dataKey="name" />
+              <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
+              <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
+
+              <Tooltip />
+              <Legend />
+              <Bar yAxisId="left" dataKey="Tinglangan" fill="#FD5353" />
+              <Bar yAxisId="right" dataKey="Ovozli" fill="#33BEF9" />
+              <Bar yAxisId="right" dataKey="amt" fill="#8D53FD" />
+            </BarChart>
+          </ResponsiveContainer>
           {/* 
           <Image
             src="/stat-bottom.png"
@@ -136,13 +181,49 @@ export default function Stat(props) {
           /> */}
         </div>
         <div className={styles.img_hour}>
-          <Image
+          {/* <Image
             src="/stat-hour.jpg"
             width={1052}
             height={389}
             quality={100}
             alt="stat"
-          />
+          /> */}
+
+          <AreaChart
+            width={750}
+            height={350}
+            data={dates}
+            margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
+          >
+            <defs>
+              <linearGradient id="colorUv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#FD5353" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#FD5353" stopOpacity={0} />
+              </linearGradient>
+              <linearGradient id="colorPv" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="5%" stopColor="#33BFFA" stopOpacity={0.8} />
+                <stop offset="95%" stopColor="#33BFFA" stopOpacity={0} />
+              </linearGradient>
+            </defs>
+            <XAxis dataKey="name" />
+            <YAxis />
+            <CartesianGrid strokeDasharray="3 3" />
+            <Tooltip />
+            <Area
+              type="monotone"
+              dataKey="Ovozli"
+              stroke="#FD5353"
+              fillOpacity={1}
+              fill="url(#colorUv)"
+            />
+            <Area
+              type="monotone"
+              dataKey="Tinglangan"
+              stroke="#33BFFA"
+              fillOpacity={1}
+              fill="url(#colorPv)"
+            />
+          </AreaChart>
         </div>
       </div>
     </div>
