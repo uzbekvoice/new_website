@@ -5,9 +5,6 @@ import styles from '../styles/HakatonTeams.module.css'
 export default function HakatonTeams({ data }) {
     const { locale, query } = useRouter();
 
-    console.log(
-        data.filter(p => p.languages_code === locale && p.hackathon_id === parseInt(query.id))
-    );
     return (
         <div className={styles.hakatonTeams}>
             <h3 className={styles.hakatonTeams_title}>Jamoalar</h3>
