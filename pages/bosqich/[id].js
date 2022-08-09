@@ -94,9 +94,9 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         </div>
       </div>
 
-      <Winners users={users} userslist={userslist} />
+      <Winners bosqich={true} users={users} userslist={userslist} />
 
-      <Prizes prize={prize} />
+      <Prizes prize={prize} galleryID="my-test-gallery"/>
     </div>
   );
 }

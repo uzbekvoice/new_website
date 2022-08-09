@@ -88,13 +88,13 @@ function Header({
                 </li>
               </ul>
             </div>
-            <div className={styles.header_main_ishtirok}>
+            {/* <div className={styles.header_main_ishtirok}>
               <Link href="https://t.me/UzbekVoiceBot">
                 <a className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
                   {button}
                 </a>
               </Link>
-            </div>
+            </div> */}
 
             <div onClick={() => setMenuToggle(true)} className={styles.header_burger_menu}>
               <img src='/burger-menu.svg' alt='burger' />
@@ -131,7 +131,7 @@ function Header({
                 {
                   bosqichlar.map((value, i) =>
                     <li key={i}>
-                      <Link href={`/bosqich/${i+1}`}>
+                      <Link href={`/bosqich/${i + 1}`}>
                         <a onClick={() => setMenuToggle(false)}>{value}</a>
                       </Link>
                     </li>
@@ -155,7 +155,7 @@ function Header({
                 {
                   hakatonlar.map((value, i) =>
                     <li key={i}>
-                      <Link href={`/hakaton/${i+1}`}>
+                      <Link href={`/hakaton/${i + 1}`}>
                         <a onClick={() => setMenuToggle(false)}>{value}</a>
                       </Link>
                     </li>
@@ -233,11 +233,11 @@ function Header({
               </ul>
             </div>
 
-            <Link href="https://t.me/UzbekVoiceBot">
+            {/* <Link href="https://t.me/UzbekVoiceBot">
               <a onClick={() => setMenuToggle(false)} className={router.pathname == "/ishtirok" ? "btn active" : "btn"}>
                 {button}
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       )

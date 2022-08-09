@@ -6,6 +6,10 @@
   row-gap: 34px;
 }
 
+.prizesPictures img {
+  width: 100%;
+}
+/* 
 .modalImg {
   position: fixed;
   z-index: 100;
@@ -46,10 +50,10 @@
   height: 30px;
   background-color: transparent !important;
   border: none;
-}
+} */
 
 .ceremony {
-  margin-top: 200px;
+  margin-top: 140px;
   text-align: center;
 }
 
@@ -61,7 +65,7 @@
   letter-spacing: 0.0022em;
   color: #12273c;
 }
-
+/* 
 .hakatonFoto_card {
   cursor: pointer;
 }
@@ -74,7 +78,7 @@
 .hakatonFoto_card div span {
   width: 100% !important;
   height: 100% !important;
-}
+} */
 
 
 @media (max-width: 1110px) {

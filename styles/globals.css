@@ -104,7 +104,6 @@ a {
   color: rgba(253, 83, 83, 1);
 }
 
-
 .accordion__section {
   display: flex;
   flex-direction: column;
@@ -206,6 +205,10 @@ a {
 }
 
 /********* swiper nav styles***************/
+
+.swiper-slide {
+  height: auto !important;
+}
 
 .swiper {
   position: static !important;

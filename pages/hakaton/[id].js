@@ -7,13 +7,13 @@ import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 
 export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
-  console.log(hakatonJury.data);
+  // console.log(hakatonJury.data);``
   return (
     <>
       <HakatonHero data={hakatonHero.data} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-      <HakatonTeams data={hakatonTeam.data} />
-      <HakatonFoto data={hakatonFoto.data} />
+      <HakatonTeams data={hakatonTeam.data} /> 
+      <HakatonFoto data={hakatonFoto.data} galleryID="my-test-gallery" />
       <HakatonJuri data={hakatonJury.data} />
     </>
   );

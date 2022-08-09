@@ -1,7 +1,6 @@
 .content {
-  margin-top: 190px;
+  margin-top: 160px;
   text-align: center;
-
 }
 
 .content h3 {
@@ -18,12 +17,14 @@
   cursor: pointer;
 }
 
+
+
 .card {
   background-color: white;
   position: relative;
   text-align: left;
   width: 100%;
-  height: 260px;
+  height: 100%;
   border-radius: 32px;
   border: 2px solid #d9d9d9;
   padding: 24px;
@@ -68,17 +69,26 @@
 
 @media (max-width: 1366px) {
   .card {
-    height: 280px;
+    padding: 16px;
   }
 }
 
-@media (max-width: 1200px) {
-  .card {
-    height: 280px;
+@media (max-width: 992px) {
+  .content {
+    margin-top: 100px;
   }
 }
 
 
+@media (max-width: 767px) {
+
+  .content {
+    margin-top: 60px;
+  }
+  .content h3 {
+    font-size: 28px;
+  } 
+}
 @media (max-width: 700px) {
   .content {
     position: relative;
@@ -90,11 +100,6 @@
     font-size: 28px;
     font-weight: 800;
     line-height: 30px;
-  }
-
-  .card {
-    /* height: auto; */
-    padding: 16px;
   }
 
   .card h3 {

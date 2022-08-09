@@ -60,7 +60,7 @@ export default function Contribution(props) {
                   scrollbar={{ draggable: true }}
                 >
                   <SwiperSlide>
-                    <div className={styles.item}>
+                    {/* <div className={styles.item}> */}
                       <div className={styles.card}>
                         <div className={styles.image}>
                           <Image
@@ -73,10 +73,10 @@ export default function Contribution(props) {
                         <h3>{card_title}</h3>
                         <p>{card_desc}</p>
                       </div>
-                    </div>
+                    {/* </div> */}
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className={styles.item}>
+                    {/* <div className={styles.item}> */}
                       <div className={styles.card}>
                         <div className={styles.image}>
                           <Image
@@ -89,10 +89,10 @@ export default function Contribution(props) {
                         <h3>{card_title2}</h3>
                         <p>{card_desc2}</p>
                       </div>
-                    </div>
+                    {/* </div> */}
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className={styles.item}>
+                    {/* <div className={styles.item}> */}
                       <div className={styles.card}>
                         <div className={styles.image}>
                           <Image
@@ -105,7 +105,7 @@ export default function Contribution(props) {
                         <h3>{card_title3}</h3>
                         <p>{card_desc3}</p>
                       </div>
-                    </div>
+                    {/* </div> */}
                   </SwiperSlide>
                 </Swiper>
               </div>

@@ -4,6 +4,7 @@ import styles from '../styles/HakatonTeams.module.css'
 
 export default function HakatonTeams({ data }) {
     const { locale, query } = useRouter();
+    console.log(data);
 
     return (
         <div className={styles.hakatonTeams}>
@@ -21,7 +22,7 @@ export default function HakatonTeams({ data }) {
                                 <div className={styles.hakatonTeams_cardBody}>
                                     <h4>{team_title}</h4>
                                     <span dangerouslySetInnerHTML={{ __html: team_project_content.split(" ", 10).join(' ')}}></span>
-                                    <a href={team_project_link}>
+                                    <a href={`/${team_project_link}`}>
                                         Узнать больше
                                         <img src='/chevron-right.svg' alt='icon arrow' />
                                     </a>

@@ -9,16 +9,24 @@
     text-align: center;
     letter-spacing: 0.0022em;
     color: #12273C;
-    margin-bottom: 14px;
+    margin-bottom: 24px;
 }
 
 .hakatonFoto_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 28px;
+    row-gap: 28px;
     margin-bottom: 48px;
 }
 
+.hakatonFoto_wrapper img {
+    width: 100%;
+}
+
+/* .pswp__img */
+
+/* 
 .modalImg {
     position: fixed;
     z-index: 100;
@@ -75,7 +83,7 @@
 .hakatonFoto_card div img {
     width: 100% !important;
     height: 100% !important;
-}
+} */
 
 .hakatonFoto button {
     font-weight: 400;
@@ -133,7 +141,7 @@
     .iconTimes {
         right: -7px;
         top: -35px;
-      }
+    }
 
     .modalImg .modalWrap {
         width: 90%;

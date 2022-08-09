@@ -3,12 +3,12 @@ import styles from "../styles/Topuser.module.css";
 import Image from "next/image";
 import { FiXCircle } from "react-icons/fi";
 
-export default function Winners({ users, userslist }) {
+export default function Winners({ users, userslist, bosqich }) {
   const [showModal, setShowModal] = React.useState(false);
   const [showModal2, setShowModal2] = React.useState(false);
 
   return (
-    <div className={styles.content}>
+    <div className={styles.content} style={{marginTop: bosqich && '130px'}}>
       <h3>G'oliblar ro'yxati</h3>
       <div className={styles.grid}>
         <div className={styles.listner}>

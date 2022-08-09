@@ -44,7 +44,6 @@
 .header__content h1 {
   font-size: 48px;
   line-height: 53px;
-
   font-weight: 900;
 }
 
@@ -151,8 +150,8 @@
 
 @media (max-width: 1366px) {
   .header__content h1 {
-    font-size: 38px;
-    line-height: 43px;
+    font-size: 48px;
+    line-height: 55px;
     font-weight: 900;
   }
 
@@ -339,6 +338,7 @@
     line-height: 40px;
     font-weight: 800;
     margin-top: 92px;
+    text-align: center;
   }
 
   .header__content p {
