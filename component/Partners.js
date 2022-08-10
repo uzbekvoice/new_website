@@ -16,10 +16,10 @@ export default function Partners() {
 
         if (name !== '' && number !== '') {
             setAlert('true');
-            setTimeout(() => setAlert('false'), 2000)
+            setTimeout(() => setAlert('false'), 5000)
         } else {
             setAlert('error')
-            setTimeout(() => setAlert('false'), 2000)
+            setTimeout(() => setAlert('false'), 5000)
         }
 
         setComment('');
@@ -68,12 +68,24 @@ export default function Partners() {
 
                         <button type='submit'>{button}</button>
                         <div style={{ display: alert === 'error' ? 'block' : 'none' }} className={styles.error}>
-                            Iltimos maydonlarni to'ldiring
+                            {
+                                locale === "uz-UZ" ?
+                                    <span>Iltimos maydonlarni to'ldiring</span>
+                                    : locale === "ru-RU" ?
+                                        <span>Пожалуйста, заполните поля</span>
+                                        : <span>Please fill in the fields</span>
+                            }
                         </div>
                     </form>
 
                     <div className={styles.thanks} style={{ display: alert === 'true' ? 'flex' : 'none' }}>
-                        rahmat
+                        {
+                            locale === "uz-UZ" ?
+                                <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chikamiz.</span>
+                                : locale === "ru-RU" ?
+                                    <span>Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени.</span>
+                                    : <span>Thank you for your message. We will contact you as soon as possible.</span>
+                        }
                     </div>
                 </div>
             )

@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from '../styles/QollanmaMain.module.css'
 
 const QollanmaMain = ({ data }) => {
-    // console.log(data, 'guide');
+    console.log(data, 'guide');
 
     const { locale } = useRouter()
 

@@ -4,7 +4,7 @@ import s from "../../styles/Yangiliklar.module.css";
 import { useRouter } from "next/router";
 
 const YangilikSection = ({ data }) => {
-  // console.log(data, 'data');
+  console.log(data, 'data');
 
   const { locale } = useRouter()
 
@@ -14,8 +14,7 @@ const YangilikSection = ({ data }) => {
         <h1 className={s.main}>Yangiliklar</h1>
         <div className={s.parent}>
           {data
-            .filter(p => p.languages_code === locale)
-            .slice(0, 3)
+            .filter(p => p.languages_code === locale && p.news_id)
             .map((el) => {
               return (
                 <div className={s.box} key={el.id}>
