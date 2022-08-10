@@ -23,17 +23,17 @@ export default function Prizes({ prize, galleryID, title }) {
 
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
-        gallery: '#' + galleryID,
-        children: 'a',
-        pswpModule: () => import('photoswipe'),
+      gallery: '#' + galleryID,
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
     });
     lightbox.init();
 
     return () => {
-        lightbox.destroy();
-        lightbox = null;
+      lightbox.destroy();
+      lightbox = null;
     };
-}, []);
+  }, []);
 
   return (
     <div className={styles.ceremony}>
@@ -43,14 +43,16 @@ export default function Prizes({ prize, galleryID, title }) {
         {
           prize.map((value, index) => (
             <a
-                href={`https://admin.uzbekvoice.ai/assets/${value}`}
-                key={galleryID + '-' + index}
-                target="_blank"
-                rel="noreferrer"
+              href={`https://admin.uzbekvoice.ai/assets/${value}`}
+              key={galleryID + '-' + index}
+              target="_blank"
+              rel="noreferrer"
+              data-pswp-width="1200"
+              data-pswp-height="800"
             >
-                <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
+              <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
             </a>
-        ))
+          ))
         }
       </div>
     </div>

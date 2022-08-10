@@ -13,7 +13,7 @@ export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
       <HakatonHero data={hakatonHero.data} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
       <HakatonTeams data={hakatonTeam.data} /> 
-      <HakatonFoto data={hakatonFoto.data} galleryID="my-test-gallery" />
+      <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
       <HakatonJuri data={hakatonJury.data} />
     </>
   );
