@@ -15,7 +15,7 @@ const Stat = dynamic(
 
 import HomeContent from './homeapi/static.json'
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
   const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
   const res3 = await fetch('https://admin.uzbekvoice.ai/items/partners');

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import s from "../../styles/Yangiliklar.module.css";
+import s from "../styles/Yangiliklar.module.css";
 import { useRouter } from "next/router";
 
 const YangilikSection = ({ data }) => {
