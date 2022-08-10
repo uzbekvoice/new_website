@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Stat.module.css";
-import Image from "next/image";
 import {
   BarChart,
   Bar,
@@ -146,7 +145,7 @@ export default function Stat(props) {
             );
           })}
 
-        <div className={styles.img_bottom}>
+        <div className={styles.img_bottom + ' stat_top_chart'}>
           <ResponsiveContainer width="100%" height={251}>
             <BarChart
               width={500}
@@ -180,7 +179,7 @@ export default function Stat(props) {
             alt="stat"
           /> */}
         </div>
-        <div className={styles.img_hour}>
+        <div className={styles.img_hour + ' stat_bottom_chart'}>
           {/* <Image
             src="/stat-hour.jpg"
             width={1052}

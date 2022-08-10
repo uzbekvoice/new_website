@@ -1,10 +1,12 @@
 .statistic {
     position: relative
 }
+
 .content {
     margin-top: 160px;
     text-align: center
 }
+
 .content h3 {
     font-size: 48px;
     font-weight: 900;
@@ -35,10 +37,10 @@
 .status {
     display: flex;
     justify-content: center;
-    
+
 }
 
-.status span{
+.status span {
     font-size: 48px;
     font-weight: 900;
     line-height: 68px;
@@ -49,7 +51,7 @@
     -webkit-text-fill-color: transparent
 }
 
-.status p{
+.status p {
     font-size: 20px;
     line-height: 28px;
     font-weight: 400;
@@ -59,36 +61,41 @@
     padding-right: 15px;
     margin: 0;
     margin-top: 31px;
-    
+
 }
 
-.img_top{
-margin-top: 48px;
+.img_top {
+    margin-top: 48px;
 }
 
-.img_bottom{
+.img_bottom {
     margin-top: 30px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
-.img_hour{
+.img_hour {
     margin-top: 80px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
-.block{
+.block {
     display: flex;
 }
 
-@media (max-width:800px){
+@media (max-width:800px) {
     .content {
         margin-top: 90px;
-        
+
     }
+
     .content h3 {
         font-size: 28px;
-       font-weight: 800;
+        font-weight: 800;
         line-height: 30px;
     }
-    
+
     .content p {
         font-size: 16px;
         font-weight: 400;
@@ -96,26 +103,27 @@ margin-top: 48px;
         width: 100%;
         margin: 0 auto;
         margin-top: 6px;
-        padding:5px
+        padding: 5px
     }
-    .status span{
+
+    .status span {
         font-size: 30px;
         font-weight: 900;
         line-height: 40px;
-      
+
     }
 
-    .block{
+    .block {
         display: flex;
         flex-direction: column;
-        
+
     }
 
-    .status{
+    .status {
         margin-top: 10px;
         display: flex;
         justify-content: space-evenly;
 
     }
-    
+
 }

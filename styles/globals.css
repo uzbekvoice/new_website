@@ -302,3 +302,15 @@ a {
 .initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -4%;
 }
+
+
+/************STAT styles*************/
+@media (max-width: 767px) {
+  .stat_top_chart .recharts-responsive-container {
+    width: 700px !important;
+  }
+  
+  .stat_bottom_chart .recharts-responsive-container {
+    width: 600px !important;
+  }
+}
