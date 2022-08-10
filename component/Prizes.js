@@ -4,7 +4,7 @@ import 'photoswipe/style.css';
 import styles from "../styles/Prizes.module.css";
 // import { FiX } from "react-icons/fi";
 
-export default function Prizes({ prize, galleryID }) {
+export default function Prizes({ prize, galleryID, title }) {
 
   // const [modalActive, setModalActive] = React.useState(0);
 
@@ -37,7 +37,7 @@ export default function Prizes({ prize, galleryID }) {
 
   return (
     <div className={styles.ceremony}>
-      <h2 className={styles.hakatonFoto_title}>Taqdirlash marosimi</h2>
+      <h2 className={styles.hakatonFoto_title}>{title}</h2>
       <div className={styles.prizesPictures + ' pswp-gallery'} id={galleryID}>
 
         {

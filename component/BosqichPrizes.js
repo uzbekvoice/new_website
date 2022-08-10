@@ -2,17 +2,15 @@ import { useRouter } from 'next/router';
 import React from 'react'
 import styles from '../styles/BosqichPrizes.module.css'
 
-export default function HakatonTeams({ resGifts }) {
+export default function HakatonTeams({ resGifts, title }) {
 
     const { locale } = useRouter();
 
     const dataGifts = resGifts.data.filter(p => p.languages_code === locale);
 
-    // console.log(dataGifts, 'gifts');
-
     return (
         <div className={styles.hakatonTeams}>
-            <h3 className={styles.hakatonTeams_title}>Sovg’alar</h3>
+            <h3 className={styles.hakatonTeams_title}>{title}</h3>
 
             <div className={styles.hakatonTeams_wrapper}>
                 {

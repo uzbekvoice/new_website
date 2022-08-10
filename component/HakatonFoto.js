@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import styles from '../styles/HakatonFoto.module.css'
@@ -9,6 +9,7 @@ export default function HakatonFoto({ data, galleryID }) {
 
     // const [modalActive, setModalActive] = React.useState(0);
     const { query } = useRouter();
+    const [more, setMore] = useState(4);
 
     // const closeModal = () => {
     //     setModalActive(0);
@@ -44,6 +45,7 @@ export default function HakatonFoto({ data, galleryID }) {
             <div className={styles.hakatonFoto_wrapper + ' pswp-gallery'} id={galleryID}>
                 {
                     data.filter(p => p.hackathons_translations_id === parseInt(query.id))
+                        .slice(0, more)
                         .map((value, index) => (
                             <a
                                 href={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
@@ -79,7 +81,7 @@ export default function HakatonFoto({ data, galleryID }) {
                 } */}
             </div>
 
-            <button type='button'>Yana yuklash</button>
+            <button onClick={() => setMore(more + 4)} type='button'>Yana yuklash</button>
         </div>
     )
 }

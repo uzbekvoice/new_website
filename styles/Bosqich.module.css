@@ -174,6 +174,12 @@
   }
 }
 
+@media (max-width: 992px) {
+  .rules {
+    margin-top: 100px;
+  }
+}
+
 @media (max-width: 500px) {
   .goal {
     display: flex;
@@ -189,10 +195,6 @@
     letter-spacing: 0.0022em;
     color: #12273c;
     margin-top: 20px;
-  }
-
-  .rules {
-    margin-top: 0px;
   }
 
   .rule1 {

@@ -43,13 +43,10 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
     }
   }
 
-  console.log(data);
-  console.log(prize);
-
   return (
     <div className={styles.bosqichPage}>
       <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
-      <h1>{data[0].contest_title} konkurs tanlov</h1>
+      <h1>{data[0].contest_title}</h1>
       <p className={styles.scheduleDate}>{data[0].contest_period}</p>
       <div className={styles.goal}>
         <div className={styles.card1}>
@@ -76,7 +73,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         </div>
       </div>
 
-      <BosqichPrizes resGifts={resGifts} />
+      <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
       <div className={styles.rules}>
         <h2>Konkurs qoidalari</h2>
@@ -84,7 +81,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
           {
             dataRules.map(({ contest_rule }, index) =>
               <div key={index} className={styles.rule1}>
-                <h2 >RULE {index + 1}</h2>
+                <h2>RULE {index + 1}</h2>
                 <p>
                   {contest_rule}
                 </p>
@@ -96,7 +93,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
       <Winners bosqich={true} users={users} userslist={userslist} />
 
-      <Prizes prize={prize} galleryID="my-test-gallery"/>
+      <Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
     </div>
   );
 }

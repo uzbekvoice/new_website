@@ -243,10 +243,15 @@
 }
 
 @media (max-width: 767px) {
+
+  .detailall  button {
+    font-size: 18px;
+  }
   .content {
     position: relative;
     margin-top: 48px;
     text-align: center;
+    margin-top: 80px !important;
   }
 
   .content::before {
@@ -278,18 +283,18 @@
 
   .item h5 {
     padding-left: 24px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   .item span {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 400;
   }
 
   .card {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
   }
 
   .card img {
@@ -313,7 +318,6 @@
   .voice {
     width: 100%;
   }
-
 
   .item_user h5 {
     padding-left: 10px;
