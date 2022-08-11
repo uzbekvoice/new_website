@@ -28,8 +28,13 @@ const ResursMain = ({ data }) => {
 
     return (
         <div className={styles.resursMain}>
-            <h4 className={styles.resursMainTitle}>Discover what matters to you</h4>
-
+            {
+                locale === "uz-UZ" ?
+                    <h4 className={styles.resursMainTitle}>Siz uchun nima muhimligini bilib oling</h4>
+                    : locale === "ru-RU" ?
+                        <h4 className={styles.resursMainTitle}>Узнайте, что важно для вас</h4>
+                        : <h4 className={styles.resursMainTitle}>Discover what matters to you</h4>
+            }
             <div className={styles.parts}>
                 {
                     tags2

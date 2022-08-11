@@ -6,11 +6,17 @@ import styles from '../styles/HakatonJuri.module.css'
 
 export default function HakatonJuri({ data }) {
 
-    const { query } = useRouter()
+    const { query, locale } = useRouter()
 
     return (
         <div className={styles.hakatonJuri}>
-            <h3 className={styles.hakatonJuri_title}>Juri</h3>
+            {
+                locale === "uz-UZ" ?
+                    <h3 className={styles.hakatonJuri_title}>Hakamlar</h3>
+                    : locale === "ru-RU" ?
+                        <h3 className={styles.hakatonJuri_title}>Жюри</h3>
+                        : <h3 className={styles.hakatonJuri_title}>Jury</h3>
+            }
 
             <div className={styles.hakatonJuri_wrapper}>
                 {

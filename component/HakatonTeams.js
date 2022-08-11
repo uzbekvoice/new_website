@@ -9,7 +9,13 @@ export default function HakatonTeams({ data }) {
 
     return (
         <div className={styles.hakatonTeams}>
-            <h3 className={styles.hakatonTeams_title}>Jamoalar</h3>
+            {
+                locale === "uz-UZ" ?
+                    <h3 className={styles.hakatonTeams_title}>Jamoalar</h3>
+                    : locale === "ru-RU" ?
+                        <h3 className={styles.hakatonTeams_title}>Команды</h3>
+                        : <h3 className={styles.hakatonTeams_title}>Teams</h3>
+            }
 
             <div className={styles.hakatonTeams_wrapper}>
                 {

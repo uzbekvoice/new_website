@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 export default function HakatonFoto({ data, galleryID }) {
 
     // const [modalActive, setModalActive] = React.useState(0);
-    const { query } = useRouter();
+    const { query, locale } = useRouter();
     const [more, setMore] = useState(4);
 
     // const closeModal = () => {
@@ -40,7 +40,13 @@ export default function HakatonFoto({ data, galleryID }) {
 
     return (
         <div className={styles.hakatonFoto}>
-            <h3 className={styles.hakatonFoto_title}>Foto</h3>
+            {
+                locale === "uz-UZ" ?
+                    <h3 className={styles.hakatonFoto_title}>Foto</h3>
+                    : locale === "ru-RU" ?
+                        <h3 className={styles.hakatonFoto_title}>Фото</h3>
+                        : <h3 className={styles.hakatonFoto_title}>Photo</h3>
+            }
 
             <div className={styles.hakatonFoto_wrapper + ' pswp-gallery'} id={galleryID}>
                 {
@@ -83,7 +89,15 @@ export default function HakatonFoto({ data, galleryID }) {
                 } */}
             </div>
 
-            <button onClick={() => setMore(more + 4)} type='button'>Yana yuklash</button>
+            <button onClick={() => setMore(more + 4)} type='button'>
+                {
+                    locale === "uz-UZ" ?
+                        'Yana yuklash'
+                        : locale === "ru-RU" ?
+                            'Загрузи больше'
+                            : 'Load more'
+              }
+            </button>
         </div>
     )
 }

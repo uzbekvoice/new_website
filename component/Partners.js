@@ -11,12 +11,32 @@ export default function Partners() {
     const [number, setNumber] = useState('');
     const [comment, setComment] = useState('');
 
+    const token = '5417592487:AAFC7LbiawSxx12K173AqgXPANHYpogymqw';
+    const chad_id = -714574158;
+
     const handleSubmit = (e) => {
         e.preventDefault()
 
         if (name !== '' && number !== '') {
             setAlert('true');
-            setTimeout(() => setAlert('false'), 5000)
+
+            fetch("https://api.telegram.org/bot" + token + "/sendMessage", {
+                async: true,
+                crossDomain: true,
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "cache-control": "no-cache"
+                },
+                body: JSON.stringify({
+                    chat_id: chad_id,
+                    text: "Ismi: " + name + "\nTelefon raqam: " + number + "\nIzoh: " + comment
+                })
+            }).then(function (response) {
+                console.log(response);
+            });
+
+            setTimeout(() => setAlert('false'), 8000)
         } else {
             setAlert('error')
             setTimeout(() => setAlert('false'), 5000)
@@ -81,7 +101,7 @@ export default function Partners() {
                     <div className={styles.thanks} style={{ display: alert === 'true' ? 'flex' : 'none' }}>
                         {
                             locale === "uz-UZ" ?
-                                <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chikamiz.</span>
+                                <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chiqamiz.</span>
                                 : locale === "ru-RU" ?
                                     <span>Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени.</span>
                                     : <span>Thank you for your message. We will contact you as soon as possible.</span>
