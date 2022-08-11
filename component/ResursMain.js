@@ -22,6 +22,11 @@ const ResursMain = ({ data }) => {
         }
     }
 
+
+    let tag3 = tags2.filter((c, index) => {
+        return tags2.indexOf(c) === index;
+    });
+
     const filterTag = (value) => {
         setTagFilter(value)
     }
@@ -37,7 +42,7 @@ const ResursMain = ({ data }) => {
             }
             <div className={styles.parts}>
                 {
-                    tags2
+                    tag3
                         .map((value, i) =>
                             <button
                                 type='button'
@@ -57,7 +62,7 @@ const ResursMain = ({ data }) => {
                         && p.resource_tags.includes(tagFilter)
                     )
                     .map(({
-                        id, resource_author, resource_content, resource_image, resource_link, resource_tags, resource_title
+                        id, resource_author, resource_content, resource_image, resource_link, resource_title
                     }) =>
                         <div key={id}>
                             <div className={styles.partInfo}>
