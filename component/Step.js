@@ -47,6 +47,9 @@ export default function Step({ steps, HomeContent }) {
                   }
                 </div>
                 <div className={styles.cardFooter}>
+                <div className={styles.data}>
+                    <p>{contest_period}</p>
+                  </div>
                   {
                     HomeContent.steps
                       .filter((p) => p.languages_code === locale)
@@ -57,11 +60,7 @@ export default function Step({ steps, HomeContent }) {
                           </a>
                         </Link>
                       )
-                  }
-
-                  <div className={styles.data}>
-                    <p>{contest_period}</p>
-                  </div>
+                  }                
                 </div>
               </div>
             )

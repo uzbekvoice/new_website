@@ -111,7 +111,7 @@
 
 .middle p {
   margin: 0;
-  width: 160px;
+  width: 80%;
   padding-left: 10px;
   color: #12273c;
   font-size: 14px;
@@ -170,8 +170,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-
 
 @media (max-width: 1366px) {
   .card h4 {
@@ -184,6 +184,11 @@
   .data {
     position: static;
     margin-left: 0;
+  }
+
+  .cardFooter p ,
+  .cardFooter a  {
+    margin-top: 10px;
   }
 }
 
