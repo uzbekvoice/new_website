@@ -26,14 +26,11 @@ export default function Step({ steps, HomeContent }) {
         {
           steps
             .filter(p => p.languages_id === locale)
-            .map(({ contest_stages_id, contest_status, contest_title, contest_expactations, contest_result }) =>
+            .map(({ contest_stages_id, contest_status, contest_title, contest_period, contest_expactations, contest_result }) =>
               <div className={styles.card} key={contest_stages_id}>
                 <div className={styles.text}>
                   <h4>{contest_title}</h4>
                   <h5 className={'bosqich ' + `${contest_status}`}>{contest_status}</h5>
-                </div>
-                <div className={styles.data}>
-                  <p>2021 yil oktyabr - dekabr</p>
                 </div>
                 <div className={styles.middle}>
                   {
@@ -49,57 +46,26 @@ export default function Step({ steps, HomeContent }) {
                       </>
                   }
                 </div>
-                {
-                  HomeContent.steps
-                    .filter((p) => p.languages_code === locale)
-                    .map((value) =>
-                      <Link href={`/bosqich/${contest_stages_id}`}>
-                        <a>
-                          {value.button} <FiChevronRight size={23} />{" "}
-                        </a>
-                      </Link>
-                    )
-                }
+                <div className={styles.cardFooter}>
+                  {
+                    HomeContent.steps
+                      .filter((p) => p.languages_code === locale)
+                      .map((value) =>
+                        <Link href={`/bosqich/${contest_stages_id}`}>
+                          <a>
+                            {value.button} <FiChevronRight size={23} />{" "}
+                          </a>
+                        </Link>
+                      )
+                  }
+
+                  <div className={styles.data}>
+                    <p>{contest_period}</p>
+                  </div>
+                </div>
               </div>
             )
         }
-
-
-        {/* <div className={styles.card}>
-          <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4>{" "}
-            <div className={styles.text2}>
-              <h5>davom etmoqda</h5>
-            </div>
-          </div>
-          <div className={styles.data}>
-            <p>2021 yil oktyabr - dekabr</p>
-          </div>
-          <div className={styles.middle}>
-            <span>1k+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-          </div>
-          <a href="#">
-            Batafsil <FiChevronRight size={23} />
-          </a>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4>{" "}
-            <div className={styles.text3}>
-              <h5>tez kunda</h5>
-            </div>
-          </div>
-          <div className={styles.data}>
-            <p>2021 yil oktyabr - dekabr</p>
-          </div>
-          <div className={styles.middle}>
-            <span>300+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-          </div>
-          <a href="#">
-            Batafsil <FiChevronRight size={23} />{" "}
-          </a>
-        </div> */}
       </div>
 
       <hr />

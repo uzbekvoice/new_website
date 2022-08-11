@@ -31,7 +31,13 @@ export default function HakatonTeams({ data }) {
                                     <span dangerouslySetInnerHTML={{ __html: team_project_content.split(" ", 10).join(' ') }}></span>
                                     <Link href={`/teams/${hackathon_teams_id}`}>
                                         <a>
-                                            Узнать больше
+                                            {
+                                                locale === "uz-UZ" ?
+                                                    <span>Batafsil</span>
+                                                    : locale === "ru-RU" ?
+                                                        <span>Подробнее</span>
+                                                        : <span>Read more</span>
+                                            }
                                             <img src='/chevron-right.svg' alt='icon arrow' />
                                         </a>
                                     </Link>

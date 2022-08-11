@@ -18,15 +18,33 @@ export default function HakatonHero({ data }) {
                             <div className={styles.hakatonHero_Right}>
                                 <div>
                                     <h4>{hackathons_participants_count}</h4>
-                                    <p>Qatnashchilar</p>
+                                    {
+                                        locale === "uz-UZ" ?
+                                            <p>Qatnashchilar</p>
+                                            : locale === "ru-RU" ?
+                                                <p>Участники</p>
+                                                : <p>Participants</p>
+                                    }
                                 </div>
                                 <div>
                                     <h4>{hackathon_teams_count}</h4>
-                                    <p>Jamoa</p>
+                                    {
+                                        locale === "uz-UZ" ?
+                                            <p>Jamoa</p>
+                                            : locale === "ru-RU" ?
+                                                <p>Команда</p>
+                                                : <p>Team</p>
+                                    }
                                 </div>
                                 <div>
                                     <h4>{hackathon_projects_count}</h4>
-                                    <p>Loyiha</p>
+                                    {
+                                        locale === "uz-UZ" ?
+                                            <p>Loyiha</p>
+                                            : locale === "ru-RU" ?
+                                                <p>Проект</p>
+                                                : <p>Project</p>
+                                    }
                                 </div>
                             </div>
                         </div>

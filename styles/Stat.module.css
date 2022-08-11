@@ -61,7 +61,6 @@
     padding-right: 15px;
     margin: 0;
     margin-top: 31px;
-
 }
 
 .img_top {
@@ -70,14 +69,10 @@
 
 .img_bottom {
     margin-top: 30px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 .img_hour {
     margin-top: 80px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
 
 .block {
@@ -87,7 +82,6 @@
 @media (max-width:800px) {
     .content {
         margin-top: 90px;
-
     }
 
     .content h3 {
@@ -126,4 +120,16 @@
 
     }
 
+}
+
+@media (max-width: 767px) {
+    .img_bottom {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
+
+    .img_hour {
+        overflow-x: scroll;
+        overflow-y: hidden;
+    }
 }

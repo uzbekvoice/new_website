@@ -55,7 +55,13 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
               <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
             </div>
           </div>
-          <h2>Ko&apos;zlangan maqsad</h2>
+          {
+            locale === "uz-UZ" ?
+              <h2>Ko&apos;zlangan maqsad</h2>
+              : locale === "ru-RU" ?
+                <h2>Поставленная цель</h2>
+                : <h2>The intended purpose</h2>
+          }
           <p>
             {data[0].contest_expactations}
           </p>
@@ -66,7 +72,13 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
               <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
             </div>
           </div>
-          <h2>Erishilgan natija</h2>
+          {
+            locale === "uz-UZ" ?
+              <h2>Erishilgan natija</h2>
+              : locale === "ru-RU" ?
+                <h2>Достигнутый результат</h2>
+                : <h2>The result achieved</h2>
+          }
           <p>
             {data[0].contest_result}
           </p>
@@ -76,12 +88,24 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
       <div className={styles.rules}>
-        <h2>Konkurs qoidalari</h2>
+        {
+          locale === "uz-UZ" ?
+            <h2>Konkurs qoidalari</h2>
+            : locale === "ru-RU" ?
+              <h2>Правила конкурса</h2>
+              : <h2>Contest rules</h2>
+        }
         <div className={styles.rulesCard}>
           {
             dataRules.map(({ contest_rule }, index) =>
               <div key={index} className={styles.rule1}>
-                <h2>RULE {index + 1}</h2>
+                {
+                  locale === "uz-UZ" ?
+                    <h2>{index + 1} - QOIDA</h2>
+                    : locale === "ru-RU" ?
+                      <h2>{index + 1} - ПРАВИЛО</h2>
+                      : <h2>{index + 1} - RULE</h2>
+                }
                 <p>
                   {contest_rule}
                 </p>

@@ -50,7 +50,7 @@
 .card {
   background-color: white;
   width: 404px;
- 
+  padding: 20px;
   border-radius: 20px;
   border: 1px solid #d9d9d9;
 }
@@ -80,10 +80,6 @@
   font-size: 20px;
   font-weight: 800;
   color: #12273c;
-  padding-top: 22px;
-  padding-left: 22px;
-  padding-bottom: 12px;
-  margin: 0;
 }
 
 .text {
@@ -93,7 +89,6 @@
 }
 
 .text h5 {
-  margin: 22px 22px 0px 0px;
   font-size: 12px;
   line-height: 17px;
   padding: 4px 12px;
@@ -104,7 +99,7 @@
   display: flex;
   align-items: center;
   text-align: left;
-  margin-left: 22px;
+  margin: 20px 0;
 }
 
 .middle span {
@@ -124,11 +119,15 @@
   line-height: 20px;
 }
 
+.data {
+  position: absolute;
+  top: 130%;
+  margin-left: 180px;
+}
+
 .data p {
   margin: 0;
   text-align: left;
-  padding-left: 22px;
-  padding-bottom: 20px;
   color: #12273c;
   font-size: 14px;
   font-weight: 400;
@@ -150,9 +149,6 @@
   display: flex;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 22px;
-  margin-top: 23px;
-  margin-bottom: 25px;
   color: #8d53fd;
   align-items: center;
 }
@@ -165,31 +161,29 @@
 
 .line {
   width: 42%;
-
   border-top: 1px dashed #12273c;
   float: right;
   margin-top: -2px;
 }
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 @media (max-width: 1366px) {
-  .card:nth-child(2) {
-    margin: 0 20px 0px 20px;
-  }
   .card h4 {
     text-align: left;
     font-size: 18px;
     font-weight: 800;
     color: #12273c;
-    padding-top: 18px;
-    padding-left: 18px;
-    padding-bottom: 12px;
-    margin: 0;
-  }
-  .text h5 {
-    margin: 18px 18px 0px 0px;
   }
 
-  .card a {
-    margin-left: 18px;
+  .data {
+    position: static;
+    margin-left: 0;
   }
 }
 
@@ -199,12 +193,6 @@
   }
   .text h5 {
     font-size: 11px;
-  }
-}
-
-@media (min-width: 991px) {
-  .data {
-    display: none;
   }
 }
 
@@ -222,7 +210,6 @@
   .container {
     position: relative;
     display: flex;
-
     flex-direction: column;
     margin-top: 15px;
     align-items: center;
@@ -231,10 +218,6 @@
   .card {
     margin: 25px auto;
     width: 510px;
-  }
-
-  .data p {
-    padding-left: 16px;
   }
 
   .card:nth-child(2) {
@@ -250,19 +233,7 @@
     font-size: 18px;
     font-weight: 800;
     color: #12273c;
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-bottom: 0px;
-    margin: 0;
   }
-  .text h5 {
-    margin: 16px 16px 0px 0px;
-  }
-
-  .card a {
-    margin-left: 16px;
-  }
-
   .content hr {
     display: none;
   }
@@ -285,6 +256,5 @@
   }
   .text h5 {
     font-size: 10px;
-    margin: 16px 16px 0px 0px;
   }
 }

@@ -29,7 +29,13 @@ export default function HakatonJuri({ data }) {
                                 <p>{jury_name}</p>
                                 <Link href={jury_link}>
                                     <a>
-                                        Связаться
+                                        {
+                                            locale === "uz-UZ" ?
+                                                <span>Bog'lanish</span>
+                                                : locale === "ru-RU" ?
+                                                    <span>Связаться</span>
+                                                    : <span>Contact</span>
+                                        }
                                         <img src='/chevron-right.svg' />
                                     </a>
                                 </Link>
