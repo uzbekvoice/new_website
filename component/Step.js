@@ -35,19 +35,13 @@ export default function Step({ steps, HomeContent }) {
                 <div className={styles.middle}>
                   {
                     !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
-                      <>
-                        <span>{contest_expactations.slice(0, 3)}+</span>
-                        <p>{contest_expactations.slice(4, contest_expactations.length)}</p>
-                      </>
+                      <p>{contest_expactations}</p>
                       :
-                      <>
-                        <span>{contest_result.slice(0, 3)}+</span>
-                        <p>{contest_result.slice(4, contest_result.length)}</p>
-                      </>
+                      <p>{contest_result}</p>
                   }
                 </div>
                 <div className={styles.cardFooter}>
-                <div className={styles.data}>
+                  <div className={styles.data}>
                     <p>{contest_period}</p>
                   </div>
                   {
@@ -60,7 +54,7 @@ export default function Step({ steps, HomeContent }) {
                           </a>
                         </Link>
                       )
-                  }                
+                  }
                 </div>
               </div>
             )

@@ -3,6 +3,7 @@
   margin-top: 105px;
   text-align: center;
 }
+
 .content h3 {
   font-size: 48px;
   font-weight: 900;
@@ -11,25 +12,20 @@
   color: #12273c;
   margin: 0;
 }
+
 .content::before {
   content: "";
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(255, 0, 128, 0.58)),
-    to(rgba(173, 0, 255, 0.11))
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(183, 0, 255, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(210, 35, 233, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(255, 0, 128, 0.58)),
+      to(rgba(173, 0, 255, 0.11)));
+  background: -o-linear-gradient(top,
+      rgba(183, 0, 255, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
+  background: linear-gradient(180deg,
+      rgba(210, 35, 233, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
   -webkit-filter: blur(100px);
   filter: blur(100px);
   position: absolute;
@@ -111,11 +107,9 @@
 
 .middle p {
   margin: 0;
-  width: 80%;
-  padding-left: 10px;
+  font-weight: 500;
   color: #12273c;
   font-size: 14px;
-  font-weight: 400;
   line-height: 20px;
 }
 
@@ -186,8 +180,8 @@
     margin-left: 0;
   }
 
-  .cardFooter p ,
-  .cardFooter a  {
+  .cardFooter p,
+  .cardFooter a {
     margin-top: 10px;
   }
 }
@@ -196,6 +190,7 @@
   .card h4 {
     font-size: 16px;
   }
+
   .text h5 {
     font-size: 11px;
   }
@@ -207,11 +202,13 @@
     margin-top: 91px;
     text-align: center;
   }
+
   .content h3 {
     font-size: 28px;
     font-weight: 800;
     line-height: 30px;
   }
+
   .container {
     position: relative;
     display: flex;
@@ -239,6 +236,7 @@
     font-weight: 800;
     color: #12273c;
   }
+
   .content hr {
     display: none;
   }
@@ -246,6 +244,7 @@
   .line {
     display: none;
   }
+
   .card::before {
     display: none;
   }
@@ -256,9 +255,11 @@
     margin: 25px auto;
     width: 100%;
   }
+
   .card h4 {
     font-size: 16px;
   }
+
   .text h5 {
     font-size: 10px;
   }
