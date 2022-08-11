@@ -1,8 +1,9 @@
 .content {
   position: relative;
-  margin-top: 91px;
+  margin-top: 105px;
   text-align: center;
 }
+
 .content h3 {
   font-size: 48px;
   font-weight: 900;
@@ -11,25 +12,20 @@
   color: #12273c;
   margin: 0;
 }
+
 .content::before {
   content: "";
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(255, 0, 128, 0.58)),
-    to(rgba(173, 0, 255, 0.11))
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(183, 0, 255, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(210, 35, 233, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(255, 0, 128, 0.58)),
+      to(rgba(173, 0, 255, 0.11)));
+  background: -o-linear-gradient(top,
+      rgba(183, 0, 255, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
+  background: linear-gradient(180deg,
+      rgba(210, 35, 233, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
   -webkit-filter: blur(100px);
   filter: blur(100px);
   position: absolute;
@@ -50,9 +46,10 @@
 .card {
   background-color: white;
   width: 404px;
-  height: 100%;
+  padding: 20px;
   border-radius: 20px;
   border: 1px solid #d9d9d9;
+
 }
 
 .card:nth-child(2) {
@@ -80,10 +77,6 @@
   font-size: 20px;
   font-weight: 800;
   color: #12273c;
-  padding-top: 22px;
-  padding-left: 22px;
-  padding-bottom: 12px;
-  margin: 0;
 }
 
 .text {
@@ -93,29 +86,17 @@
 }
 
 .text h5 {
-  margin: 22px 22px 0px 0px;
   font-size: 12px;
   line-height: 17px;
   padding: 4px 12px;
   border-radius: 32px;
-  background-color: #fd535326;
-  color: #fd5353;
 }
 
-.text2 h5 {
-  color: #26db59;
-  background-color: #26db5926;
-}
-
-.text3 h5 {
-  color: #6f6f6f;
-  background-color: #6f6f6f26;
-}
 .middle {
   display: flex;
   align-items: center;
   text-align: left;
-  margin-left: 22px;
+  margin: 20px 0;
 }
 
 .middle span {
@@ -126,20 +107,22 @@
 }
 
 .middle p {
-  margin: 0;
-  width: 160px;
-  padding-left: 10px;
+  margin: 10px;
+  font-weight: 500;
   color: #12273c;
   font-size: 14px;
-  font-weight: 400;
   line-height: 20px;
+}
+
+.data {
+  position: absolute;
+  top: 127%;
+  margin-left: 13%;
 }
 
 .data p {
   margin: 0;
   text-align: left;
-  padding-left: 22px;
-  padding-bottom: 20px;
   color: #12273c;
   font-size: 14px;
   font-weight: 400;
@@ -153,7 +136,7 @@
   content: "";
   position: absolute;
   margin-left: 94px;
-  top: 121%;
+  top: 118%;
   background-color: #717d8a;
 }
 
@@ -161,9 +144,6 @@
   display: flex;
   font-size: 14px;
   font-weight: 500;
-  margin-left: 22px;
-  margin-top: 23px;
-  margin-bottom: 25px;
   color: #8d53fd;
   align-items: center;
 }
@@ -176,31 +156,31 @@
 
 .line {
   width: 42%;
-
   border-top: 1px dashed #12273c;
   float: right;
   margin-top: -2px;
 }
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1366px) {
-  .card:nth-child(2) {
-    margin: 0 20px 0px 20px;
-  }
   .card h4 {
     text-align: left;
     font-size: 18px;
     font-weight: 800;
     color: #12273c;
-    padding-top: 18px;
-    padding-left: 18px;
-    padding-bottom: 12px;
-    margin: 0;
-  }
-  .text h5 {
-    margin: 18px 18px 0px 0px;
   }
 
-  .card a {
-    margin-left: 18px;
+ 
+
+  .cardFooter p,
+  .cardFooter a {
+    margin-top: 10px;
   }
 }
 
@@ -208,15 +188,11 @@
   .card h4 {
     font-size: 16px;
   }
+
   .text h5 {
     font-size: 11px;
   }
-}
-
-@media (min-width: 991px) {
-  .data {
-    display: none;
-  }
+ 
 }
 
 @media (max-width: 991px) {
@@ -225,15 +201,19 @@
     margin-top: 91px;
     text-align: center;
   }
+  .data {
+    position: static;
+    margin-left: 0;
+  } 
   .content h3 {
     font-size: 28px;
     font-weight: 800;
     line-height: 30px;
   }
+
   .container {
     position: relative;
     display: flex;
-
     flex-direction: column;
     margin-top: 15px;
     align-items: center;
@@ -242,10 +222,6 @@
   .card {
     margin: 25px auto;
     width: 510px;
-  }
-
-  .data p {
-    padding-left: 16px;
   }
 
   .card:nth-child(2) {
@@ -261,17 +237,6 @@
     font-size: 18px;
     font-weight: 800;
     color: #12273c;
-    padding-top: 16px;
-    padding-left: 16px;
-    padding-bottom: 0px;
-    margin: 0;
-  }
-  .text h5 {
-    margin: 16px 16px 0px 0px;
-  }
-
-  .card a {
-    margin-left: 16px;
   }
 
   .content hr {
@@ -281,6 +246,7 @@
   .line {
     display: none;
   }
+
   .card::before {
     display: none;
   }
@@ -291,11 +257,12 @@
     margin: 25px auto;
     width: 100%;
   }
+
   .card h4 {
     font-size: 16px;
   }
+
   .text h5 {
     font-size: 10px;
-    margin: 16px 16px 0px 0px;
   }
 }

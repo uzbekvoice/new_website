@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/YangilikByIdRelevantTheme.module.css'
 var $ = require("jquery");
 if (typeof window !== "undefined") {
@@ -8,36 +8,18 @@ if (typeof window !== "undefined") {
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import dynamic from "next/dynamic";
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
     ssr: false,
 });
 
-const data = [
-    {
-        id: 1,
-        image: "/cat.png",
-        title: "Спиртовые краски",
-        desc: "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.",
-        date: "22.04.2022"
-    },
-    {
-        id: 2,
-        image: "/cat.png",
-        title: "Спиртовые краски",
-        desc: "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.",
-        date: "22.04.2022"
-    },
-    {
-        id: 3,
-        image: "/cat.png",
-        title: "Спиртовые краски",
-        desc: "Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to the end.",
-        date: "22.04.2022"
-    },
-]
+const YangilikByIdRelevantTheme = ({ data }) => {
 
-const YangilikByIdRelevantTheme = () => {
+    const { locale, query } = useRouter()
+    const [more, setMore] = useState(3);
+
     const Responsive = {
         0: {
             items: 1,
@@ -65,66 +47,77 @@ const YangilikByIdRelevantTheme = () => {
         }
     }
 
+    console.log(query, 'the');
+
     return (
         <div className={styles.yangilikByIdRelevantTheme}>
             <h3 className={styles.relevantThemeTitle}>Мавзуга оид</h3>
 
             <div className={styles.parent}>
-                {data.map(function (el) {
-                    return (
-                        <div className={styles.box} key={el.id}>
-                            <div className={styles.boxHeader}>
-                                <img src={el.image} alt="image" key={el.id} />
-                            </div>
-                            <div className={styles.boxBody}>
-                                <h3 className={styles.title}>{el.title}</h3>
-                                <h5 className={styles.desc}>{el.desc}</h5>
-                                <div className={styles.flexClass}>
-                                    <a href="#">
-                                        Узнать больше
-                                        <img src='/chevron-right.svg' />
-                                    </a>
-                                    <p className={styles.ppp}>{el.date}</p>
-                                </div>
-                            </div>
-                        </div>
-                    );
-                })}
-            </div>
-
-            <button className={styles.moreBtn}>Yana yuklash</button>
-
-            <div className={styles.mobileSlider}>
-                <h4>Смотрите еще</h4>
-                <OwlCarousel 
-                className={styles.slider} 
-                loop 
-                margin={10} 
-                responsive={Responsive} 
-                autoplay 
-                autoplayTimeout={300000}
-                dots={true}
-                >
-                    {data.map(function (el) {
+                {data
+                    .filter(p => p.languages_code === locale && p.news_id !== parseInt(query.yangilikById) && p.news_id !== null)
+                    .slice(0, more)
+                    .map((el) => {
                         return (
                             <div className={styles.box} key={el.id}>
                                 <div className={styles.boxHeader}>
-                                    <img src={el.image} alt="image" key={el.id} />
+                                    <img src={`https://admin.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
                                 </div>
                                 <div className={styles.boxBody}>
-                                    <h3 className={styles.title}>{el.title}</h3>
-                                    <h5 className={styles.desc}>{el.desc}</h5>
+                                    <h3 className={styles.title}>{el.news_title}</h3>
+                                    <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ') }} className={styles.desc}></h5>
                                     <div className={styles.flexClass}>
-                                        <a href="#">
-                                            Узнать больше
-                                            <img src='/chevron-right.svg' />
-                                        </a>
-                                        <p className={styles.ppp}>{el.date}</p>
+                                        <Link href={`/yangilik/${el.news_id}`}>
+                                            <a>
+                                                Узнать больше
+                                                <img src='/chevron-right.svg' />
+                                            </a>
+                                        </Link>
+                                        <p className={styles.ppp}>{el.data_created.slice(0, 10)}</p>
                                     </div>
                                 </div>
                             </div>
                         );
                     })}
+            </div>
+
+            <button className={styles.moreBtn} onClick={()=>setMore(more + 3)}>Yana yuklash</button>
+
+            <div className={styles.mobileSlider}>
+                <h4>Смотрите еще</h4>
+                <OwlCarousel
+                    className={styles.slider}
+                    loop
+                    margin={10}
+                    responsive={Responsive}
+                    autoplay
+                    autoplayTimeout={300000}
+                    dots={true}
+                >
+                    {data
+                        .filter(p => p.languages_code === locale && p.news_id !== parseInt(query.yangilikById) && p.news_id !== null)
+                        .map((el) => {
+                            return (
+                                <div className={styles.box} key={el.id}>
+                                    <div className={styles.boxHeader}>
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
+                                    </div>
+                                    <div className={styles.boxBody}>
+                                        <h3 className={styles.title}>{el.news_title}</h3>
+                                        <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ') }} className={styles.desc}></h5>
+                                        <div className={styles.flexClass}>
+                                            <Link href={`/yangilik/${el.news_id}`}>
+                                                <a>
+                                                    Узнать больше
+                                                    <img src='/chevron-right.svg' />
+                                                </a>
+                                            </Link>
+                                            <p className={styles.ppp}>{el.data_created.slice(0, 10)}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        })}
                 </OwlCarousel>
             </div>
         </div>

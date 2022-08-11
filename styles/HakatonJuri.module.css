@@ -30,6 +30,7 @@
 
 .hakatonJuri_card img {
     width: 100%;
+    border-radius: 50%;
 }
 
 .hakatonJuri_card p {

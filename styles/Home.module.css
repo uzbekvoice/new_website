@@ -1,7 +1,7 @@
 
 .our_goal{
   position: relative;
-  margin-top: 205px
+  margin-top: 160px
 }
 
 .our_goal::before {
@@ -39,7 +39,6 @@
   width: 90%;
   margin: 0 auto;
 }
-
 
 .sliders{
     margin-top: 64px;
@@ -100,7 +99,7 @@
 @media (max-width: 767px) {
   .our_goal{
     position: relative;
-    margin-top: 100px
+    margin-top:70px
   }
   
   .our_goal h3{

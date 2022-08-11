@@ -1,51 +1,16 @@
 import styles from "../styles/Contribution.module.css";
 import Image from "next/image";
-import React from "react";
-var $ = require("jquery");
-if (typeof window !== "undefined") {
-  // Client-side-only code
-  window.$ = window.jQuery = require("jquery");
-}
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar, Pagination, A11y, Autoplay , Controller} from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
 export default function Contribution(props) {
   const { locale } = useRouter();
   const { HomeContent } = props;
-  const Responsive = {
-    0: {
-      items: 1,
-      margin: 5,
-    },
-
-    780: {
-      items: 2,
-      margin: 10,
-    },
-
-    1024: {
-      items: 3,
-      margin: 10,
-      autoplay: false,
-    },
-
-    1200: {
-      items: 3,
-      margin: 20,
-      autoplay: false,
-    },
-
-    1400: {
-      items: 3,
-      margin: 10,
-      autoplay: false,
-    },
-  };
+  
   return (
     <div className={styles.content}>
       {HomeContent.contribution
@@ -66,57 +31,83 @@ export default function Contribution(props) {
               <h3>{title}</h3>
 
               <div className={styles.container}>
-                <OwlCarousel
-                  responsive={Responsive}
-                  loop
-                  margin={20}
-                  dots={false}
-                  autoplay
-                  autoplayTimeout={3000}
+                <Swiper
+                  modules={[Navigation, Scrollbar, Autoplay, A11y, Pagination, Controller]}
+                  spaceBetween={10}
+                  slidesPerView={3}
+                  loop={true}
+                  // navigation
+                  autoplay={true}
+                  speed={300}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+                      spaceBetween: 5,
+                    },
+                    580: {
+                      slidesPerView: 2,
+                      spaceBetween: 10,
+                    },
+                    1200: {
+                      slidesPerView: 3,
+                      spaceBetween: 20,
+                    },
+                    1400: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                  }}
+                  scrollbar={{ draggable: true }}
                 >
-                  <div className={styles.item}>
-                    <div className={styles.card}>
-                      <div className={styles.image}>
-                        <Image
-                          src="/works-img1.png"
-                          width={65}
-                          height={65}
-                          alt="Microphone"
-                        />
+                  <SwiperSlide>
+                    {/* <div className={styles.item}> */}
+                      <div className={styles.card}>
+                        <div className={styles.image}>
+                          <Image
+                            src="/works-img1.png"
+                            width={65}
+                            height={65}
+                            alt="Microphone"
+                          />
+                        </div>
+                        <h3>{card_title}</h3>
+                        <p>{card_desc}</p>
                       </div>
-                      <h3>{card_title}</h3>
-                      <p>{card_desc}</p>
-                    </div>
-                  </div>
-                  <div className={styles.item}>
-                    <div className={styles.card}>
-                      <div className={styles.image}>
-                        <Image
-                          src="/works-img2.png"
-                          width={65}
-                          height={65}
-                          alt="Microphone"
-                        />
+                    {/* </div> */}
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    {/* <div className={styles.item}> */}
+                      <div className={styles.card}>
+                        <div className={styles.image}>
+                          <Image
+                            src="/works-img2.png"
+                            width={65}
+                            height={65}
+                            alt="Microphone"
+                          />
+                        </div>
+                        <h3>{card_title2}</h3>
+                        <p>{card_desc2}</p>
                       </div>
-                      <h3>{card_title2}</h3>
-                      <p>{card_desc2}</p>
-                    </div>
-                  </div>
-                  <div className={styles.item}>
-                    <div className={styles.card}>
-                      <div className={styles.image}>
-                        <Image
-                          src="/works-img3.png"
-                          width={65}
-                          height={65}
-                          alt="Microphone"
-                        />
+                    {/* </div> */}
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    {/* <div className={styles.item}> */}
+                      <div className={styles.card}>
+                        <div className={styles.image}>
+                          <Image
+                            src="/works-img3.png"
+                            width={65}
+                            height={65}
+                            alt="Microphone"
+                          />
+                        </div>
+                        <h3>{card_title3}</h3>
+                        <p>{card_desc3}</p>
                       </div>
-                      <h3>{card_title3}</h3>
-                      <p>{card_desc3}</p>
-                    </div>
-                  </div>
-                </OwlCarousel>
+                    {/* </div> */}
+                  </SwiperSlide>
+                </Swiper>
               </div>
               <div className={styles.link}>
                 <a href="#">{button}</a>

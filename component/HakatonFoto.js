@@ -1,62 +1,74 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import styles from '../styles/HakatonFoto.module.css'
-import Image from 'next/image';
-import { FiX } from "react-icons/fi";
-const data = [
-    {
-        id: 1,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 2,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 3,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 4,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 5,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 6,
-        image: '/hakatonFotoImg.png',
-    },
-    {
-        id: 7,
-        image: '/hakatonFotoImg.png',
-    }
-]
+import { useRouter } from 'next/router';
+// import { FiX } from "react-icons/fi";
 
-export default function HakatonFoto() {
+export default function HakatonFoto({ data, galleryID }) {
 
-    const [modalActive, setModalActive] = React.useState(0);
+    // const [modalActive, setModalActive] = React.useState(0);
+    const { query, locale } = useRouter();
+    const [more, setMore] = useState(4);
 
-    const closeModal = () => {
-        setModalActive(0);
-    }
+    // const closeModal = () => {
+    //     setModalActive(0);
+    // }
 
-    const openModal = (e, num) => {
-        e.stopPropagation();
-        setModalActive(num);
-    }
+    // const openModal = (e, num) => {
+    //     e.stopPropagation();
+    //     setModalActive(num);
+    // }
 
-    const buttonclkc = () => {
-        setModalActive(0);
-    }
+    // const buttonclkc = () => {
+    //     setModalActive(0);
+    // }
+
+    useEffect(() => {
+        let lightbox = new PhotoSwipeLightbox({
+            gallery: '#' + galleryID,
+            children: 'a',
+            pswpModule: () => import('photoswipe'),
+        });
+        lightbox.init();
+
+        return () => {
+            lightbox.destroy();
+            lightbox = null;
+        };
+    }, []);
 
     return (
         <div className={styles.hakatonFoto}>
-            <h3 className={styles.hakatonFoto_title}>Foto</h3>
+            {
+                locale === "uz-UZ" ?
+                    <h3 className={styles.hakatonFoto_title}>Foto</h3>
+                    : locale === "ru-RU" ?
+                        <h3 className={styles.hakatonFoto_title}>Фото</h3>
+                        : <h3 className={styles.hakatonFoto_title}>Photo</h3>
+            }
 
-            <div className={styles.hakatonFoto_wrapper}>
+            <div className={styles.hakatonFoto_wrapper + ' pswp-gallery'} id={galleryID}>
                 {
-                    data.map(({ id, image }) => (
+                    data.filter(p => p.hackathons_translations_id === parseInt(query.id))
+                        .slice(0, more)
+                        .map((value, index) => (
+                            <a
+                                data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                key={galleryID + '-' + index}
+                                target="_blank"
+                                rel="noreferrer"
+                                data-pswp-width="1200"
+                                data-pswp-height="800"
+                            >
+                                <img src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`} alt={value.directus_files_id} />
+                            </a>
+                        ))
+                }
+                {/* {
+                    data
+                    .filter(p => p.hackathons_translations_id === parseInt(query.id))
+                    .map(({id, directus_files_id}) => (
                         <div
                             key={id}
                             onClick={closeModal}
@@ -69,15 +81,23 @@ export default function HakatonFoto() {
                                 <div
                                     onClick={(e) => openModal(e, id)}
                                 >
-                                    <Image src={image} width={296} height={178} alt={image} />
+                                    <img src={`https://admin.uzbekvoice.ai/assets/${directus_files_id}`}  alt={directus_files_id} />
                                 </div>
                             </div>
                         </div>
                     ))
-                }
+                } */}
             </div>
 
-            <button type='button'>Yana yuklash</button>
+            <button onClick={() => setMore(more + 4)} type='button'>
+                {
+                    locale === "uz-UZ" ?
+                        'Yana yuklash'
+                        : locale === "ru-RU" ?
+                            'Загрузи больше'
+                            : 'Load more'
+              }
+            </button>
         </div>
     )
 }

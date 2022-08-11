@@ -72,6 +72,7 @@
     display: flex;
     align-items: center;
     color: #8D53FD;
+    margin-top: 15px;
 }
 
 .resursCardBody a img {

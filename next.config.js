@@ -10,11 +10,30 @@ module.exports = {
         domain: 'uzbekvoiceapp.vercel.app',
         defaultLocale: 'uz-UZ',
         https: true,
-        
       },
-   
     ],
   },
+
+  async redirects() {
+    return [
+      {
+        source: '/bosqich',
+        destination: '/bosqich/1',
+        permanent: false,
+      },
+      {
+        source: '/hakaton',
+        destination: '/hakaton/1',
+        permanent: false,
+      },
+      {
+        source: '/teams',
+        destination: '/',
+        permanent: false,
+      },
+    ]
+  },
 }
+
 
 

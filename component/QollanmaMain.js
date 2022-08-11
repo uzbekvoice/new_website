@@ -3,13 +3,19 @@ import { useRouter } from "next/router";
 import styles from '../styles/QollanmaMain.module.css'
 
 const QollanmaMain = ({ data }) => {
-    // console.log(data, 'guide');
+    console.log(data, 'guide');
 
     const { locale } = useRouter()
 
     return (
         <div className={styles.qollanmaMain}>
-            <h3>Qo`llanma\Instruksia</h3>
+            {
+                locale === "uz-UZ" ?
+                    <h3>Qo`llanma\Instruksia</h3>
+                    : locale === "ru-RU" ?
+                        <h3>Руководство\Инструкция</h3>
+                        : <h3>Guide\Instruction</h3>
+            }
             <div className={styles.gradientOne}></div>
             <div className={styles.gradientTwo}></div>
             <div className={styles.gradientThree}></div>
@@ -30,7 +36,7 @@ const QollanmaMain = ({ data }) => {
                                             controls
                                             muted
                                             loop
-                                            autoPlay
+                                        // autoPlay
                                         ></video>
                                     </div>
                                 }
@@ -48,7 +54,7 @@ const QollanmaMain = ({ data }) => {
                                             controls
                                             muted
                                             loop
-                                            autoPlay
+                                        // autoPlay
                                         ></video>
                                     </div>
                                 }

@@ -1,79 +1,57 @@
-import React from "react";
-import Image from "next/image";
+import React, { useEffect } from 'react';
+import PhotoSwipeLightbox from 'photoswipe/lightbox';
+import 'photoswipe/style.css';
 import styles from "../styles/Prizes.module.css";
-import { FiX } from "react-icons/fi";
+// import { FiX } from "react-icons/fi";
 
-const data = [
-  {
-    id: 1,
-    image: '/unsplash_9mHJM_1GU1E.png',
-  },
-  {
-    id: 2,
-    image: '/unsplash_62vi3TG5EDg.png',
-  },
-  {
-    id: 3,
-    image: '/unsplash_gStQEmZy-F8.png',
-  },
-  {
-    id: 4,
-    image: '/unsplash_OHPdgstNFGs.png',
-  },
-  {
-    id: 5,
-    image: '/unsplash_ruJm3dBXCqw.png',
-  },
-  {
-    id: 6,
-    image: '/unsplash_UYgrVfIhBec.png',
-  },
-  {
-    id: 7,
-    image: '/unsplash_wHddViTmSvA.png',
-  }
-]
+export default function Prizes({ prize, galleryID, title }) {
 
-export default function Prizes() {
+  // const [modalActive, setModalActive] = React.useState(0);
 
-  const [modalActive, setModalActive] = React.useState(0);
+  // const closeModal = () => {
+  //   setModalActive(0);
+  // }
 
-  const closeModal = () => {
-    setModalActive(0);
-  }
+  // const openModal = (e, num) => {
+  //   e.stopPropagation();
+  //   setModalActive(num);
+  // }
 
-  const openModal = (e, num) => {
-    e.stopPropagation();
-    setModalActive(num);
-  }
+  // const buttonclkc = () => {
+  //   setModalActive(0);
+  // }
 
-  const buttonclkc = () => {
-    setModalActive(0);
-  }
+  useEffect(() => {
+    let lightbox = new PhotoSwipeLightbox({
+      gallery: '#' + galleryID,
+      children: 'a',
+      pswpModule: () => import('photoswipe'),
+    });
+    lightbox.init();
+
+    return () => {
+      lightbox.destroy();
+      lightbox = null;
+    };
+  }, []);
 
   return (
     <div className={styles.ceremony}>
-      <h2 className={styles.hakatonFoto_title}>Taqdirlash marosimi</h2>
-      <div className={styles.prizesPictures}>
+      <h2 className={styles.hakatonFoto_title}>{title}</h2>
+      <div className={styles.prizesPictures + ' pswp-gallery'} id={galleryID}>
 
         {
-          data.map(({ id, image }) => (
-            <div
-              key={id}
-              onClick={closeModal}
-              className={modalActive === id ? styles.modalImg : styles.hakatonFoto_card}
+          prize.map((value, index) => (
+            <a
+              href={`https://admin.uzbekvoice.ai/assets/${value}`}
+              key={galleryID + '-' + index}
+              target="_blank"
+              rel="noreferrer"
+              data-pswp-width="1200"
+              data-pswp-height="800"
             >
-              <div className={styles.modalWrap}>
-                <button type='button' onClick={buttonclkc} className={styles.iconTimes}>
-                  <FiX color='rgba(240, 248, 255, 0.952)' size={30} />
-                </button>
-                <div
-                  onClick={(e) => openModal(e, id)}
-                >
-                  <Image src={image} width={296} height={178} alt={image} />
-                </div>
-              </div>
-            </div>
+              <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
+            </a>
           ))
         }
       </div>

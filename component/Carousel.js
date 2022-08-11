@@ -39,7 +39,8 @@ export default function Slider(props) {
                   modules={[Navigation, Scrollbar, Autoplay, A11y, Pagination, Controller]}
                   spaceBetween={10}
                   slidesPerView={3}
-                  navigation
+                  loop={true}
+                  navigation                  
                   autoplay={true}
                   speed={300}
                   breakpoints={{

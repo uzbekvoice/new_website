@@ -89,6 +89,21 @@ a {
   background: blueviolet;
 }
 
+
+.bosqich.faol,
+.bosqich.active,
+.bosqich.активный {
+  color: #26db59;
+  background-color: #26db5926;
+}
+
+.bosqich.yakunlangan,
+.bosqich.законченный,
+.bosqich.finished {
+  background: rgba(253, 83, 83, 0.15);
+  color: rgba(253, 83, 83, 1);
+}
+
 .accordion__section {
   display: flex;
   flex-direction: column;
@@ -97,7 +112,6 @@ a {
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   background-color: #fff;
-
   cursor: pointer;
   padding: 18px;
   display: flex;
@@ -190,6 +204,55 @@ a {
   background: #8D53FD !important;
 }
 
+/********* swiper nav styles***************/
+
+.swiper-slide {
+  height: auto !important;
+}
+
+.swiper {
+  position: static !important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  border-radius: 50%;
+  background-color: #fff;
+  width: 32px !important;
+  height: 32px !important;
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  backdrop-filter: blur(60px);
+  color: #fff !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-button-prev {
+  left: -5% !important;
+}
+
+.swiper-button-next {
+  right: -5% !important;
+}
+
+.swiper-button-prev::after {
+  position: absolute;
+  content: url('../public/arrow-left.svg') !important;
+  left: 2px;
+  top: -9px;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next::after {
+  position: absolute;
+  content: url('../public/arrow-right.svg') !important;
+  left: 4px;
+  top: -9px;
+  width: 100%;
+  height: 100%;
+}
 
 /* nav style owl carousel */
 
@@ -203,14 +266,14 @@ a {
   backdrop-filter: blur(60px);
   position: absolute;
   top: 45%;
-  color: #fff !important; 
+  color: #fff !important;
 }
 
-.owl-carousel.owl-loaded .owl-nav button.owl-prev {  
+.owl-carousel.owl-loaded .owl-nav button.owl-prev {
   left: -7%;
 }
 
-.owl-carousel.owl-loaded .owl-nav button.owl-prev::after {  
+.owl-carousel.owl-loaded .owl-nav button.owl-prev::after {
   position: absolute;
   content: url('../public/arrow-left.svg');
   left: 0;
@@ -219,11 +282,11 @@ a {
   height: 100%;
 }
 
-.owl-carousel.owl-loaded .owl-nav button.owl-next {  
+.owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -7%;
 }
 
-.owl-carousel.owl-loaded .owl-nav button.owl-next ::after {  
+.owl-carousel.owl-loaded .owl-nav button.owl-next ::after {
   position: absolute;
   content: url('../public/arrow-right.svg');
   left: 0;
@@ -232,10 +295,22 @@ a {
   height: 100%;
 }
 
-.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-prev {  
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-prev {
   left: -4%;
 }
 
-.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {  
+.initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -4%;
+}
+
+
+/************STAT styles*************/
+@media (max-width: 767px) {
+  .stat_top_chart .recharts-responsive-container {
+    width: 700px !important;
+  }
+  
+  .stat_bottom_chart .recharts-responsive-container {
+    width: 600px !important;
+  }
 }

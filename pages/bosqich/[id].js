@@ -33,15 +33,20 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   const { locale, query } = useRouter();
 
-  const data = dataContest.data.filter(p => p.languages_id === locale);
-//   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id) );
+  const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
   const dataRules = data[0].contest_rules;
-  console.log(data);
+  const prize = [];
+
+  for (const key in data[0]) {
+    if (key.slice(-6) === "_image") {
+      prize.push(data[0][key])
+    }
+  }
 
   return (
     <div className={styles.bosqichPage}>
-      <div className={styles.isContinue}>yakunlangan</div>
-      <h1>{data[0].contest_title} konkurs tanlov</h1>
+      <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
+      <h1>{data[0].contest_title}</h1>
       <p className={styles.scheduleDate}>{data[0].contest_period}</p>
       <div className={styles.goal}>
         <div className={styles.card1}>
@@ -50,7 +55,13 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
               <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
             </div>
           </div>
-          <h2>Ko&apos;zlangan maqsad</h2>
+          {
+            locale === "uz-UZ" ?
+              <h2>Ko&apos;zlangan maqsad</h2>
+              : locale === "ru-RU" ?
+                <h2>Поставленная цель</h2>
+                : <h2>The intended purpose</h2>
+          }
           <p>
             {data[0].contest_expactations}
           </p>
@@ -61,22 +72,40 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
               <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
             </div>
           </div>
-          <h2>Erishilgan natija</h2>
+          {
+            locale === "uz-UZ" ?
+              <h2>Erishilgan natija</h2>
+              : locale === "ru-RU" ?
+                <h2>Достигнутый результат</h2>
+                : <h2>The result achieved</h2>
+          }
           <p>
             {data[0].contest_result}
           </p>
         </div>
       </div>
 
-      <BosqichPrizes resGifts={resGifts} />
+      <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
       <div className={styles.rules}>
-        <h2>Konkurs qoidalari</h2>
+        {
+          locale === "uz-UZ" ?
+            <h2>Konkurs qoidalari</h2>
+            : locale === "ru-RU" ?
+              <h2>Правила конкурса</h2>
+              : <h2>Contest rules</h2>
+        }
         <div className={styles.rulesCard}>
           {
             dataRules.map(({ contest_rule }, index) =>
               <div key={index} className={styles.rule1}>
-                <h2 >RULE {index + 1}</h2>
+                {
+                  locale === "uz-UZ" ?
+                    <h2>{index + 1} - QOIDA</h2>
+                    : locale === "ru-RU" ?
+                      <h2>{index + 1} - ПРАВИЛО</h2>
+                      : <h2>{index + 1} - RULE</h2>
+                }
                 <p>
                   {contest_rule}
                 </p>
@@ -86,9 +115,9 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         </div>
       </div>
 
-      <Winners users={users} userslist={userslist} />
+      <Winners bosqich={true} users={users} userslist={userslist} />
 
-      <Prizes />
+      <Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
     </div>
   );
 }

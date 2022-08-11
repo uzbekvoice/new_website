@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Hero.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import Home from "../pages";
 
 export default function Hero(props) {
   const { locale } = useRouter();
@@ -46,7 +45,7 @@ export default function Hero(props) {
         controls
         muted
         loop
-        autoPlay
+    
         // autoPlay
       ></video>
     </div>

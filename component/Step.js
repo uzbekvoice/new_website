@@ -1,61 +1,67 @@
 import React from "react";
 import styles from "../styles/Step.module.css";
 import { FiChevronRight } from "react-icons/fi";
-export default function Step() {
+import { useRouter } from "next/router";
+import Link from "next/link";
+
+
+export default function Step({ steps, HomeContent }) {
+  const { locale } = useRouter()
+
+  const data = steps.filter(p => p.languages_id === locale);
+
+  console.log(data);
+
   return (
     <div className={styles.content}>
-      <h3>Bosqichlar</h3>
+      {
+        HomeContent.steps
+          .filter((p) => p.languages_code === locale)
+          .map((value) =>
+            <h3> {value.title} </h3>
+          )
+      }
       <div className={styles.container}>
-        <div className={styles.card}>
-          <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4> <h5>yakunlangan</h5>
-          </div>
-          <div className={styles.data}>
-            <p>2021 yil oktyabr - dekabr</p>
-          </div>
-          <div className={styles.middle}>
-            <span>300+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-          </div>
-          <a href="#">
-            Batafsil <FiChevronRight size={23} />{" "}
-          </a>
-        </div>
 
-        <div className={styles.card}>
-          <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4>{" "}
-            <div className={styles.text2}>
-              <h5>davom etmoqda</h5>
-            </div>
-          </div>
-          <div className={styles.data}>
-            <p>2021 yil oktyabr - dekabr</p>
-          </div>
-          <div className={styles.middle}>
-            <span>1k+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-          </div>
-          <a href="#">
-            Batafsil <FiChevronRight size={23} />
-          </a>
-        </div>
-
-        <div className={styles.card}>
-          <div className={styles.text}>
-            <h4> 1- Bosqich tanlovi </h4>{" "}
-            <div className={styles.text3}>
-              <h5>tez kunda</h5>
-            </div>
-          </div>
-          <div className={styles.data}>
-            <p>2021 yil oktyabr - dekabr</p>
-          </div>
-          <div className={styles.middle}>
-            <span>300+</span> <p>Soat ovozli ma'lumotlar yig'ildi</p>
-          </div>
-          <a href="#">
-            Batafsil <FiChevronRight size={23} />{" "}
-          </a>
-        </div>
+        {
+          steps
+            .filter(p => p.languages_id === locale)
+            .map(({ contest_stages_id, contest_status, contest_title, contest_period, contest_expactations, contest_result, contest_hours }) =>
+              <div className={styles.card} key={contest_stages_id}>
+                <div className={styles.text}>
+                  <h4>{contest_title}</h4>
+                  <h5 className={'bosqich ' + `${contest_status}`}>{contest_status}</h5>
+                </div>
+                <div className={styles.middle}>
+                  <span>{contest_hours}</span>
+                   {
+                    !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
+                      <p>{contest_expactations}</p>
+                      :
+                      <p>{contest_result}</p>
+                  }
+               
+               
+                </div>
+                <div className={styles.cardFooter}>
+                  <div className={styles.data}>
+                    <p>{contest_period}</p>
+                  </div>
+                  {
+                    HomeContent.steps
+                      .filter((p) => p.languages_code === locale)
+                      .map((value) =>
+                        <Link href={`/bosqich/${contest_stages_id}`}>
+                          <a>
+                            {value.button} <FiChevronRight size={23} />{" "}
+                          </a>
+                        </Link>
+                      )
+                  }
+                </div>
+              </div>
+            )
+        }
       </div>
 
       <hr />
