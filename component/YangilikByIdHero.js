@@ -19,7 +19,15 @@ const YangilikByIdHero = ({ data }) => {
         <div className={styles.heroTitleWrapper}>
           <h3>{dataFilter.news_title}</h3>
           <div className={styles.heroTitleRight}>
-            <span>Поделиться в:</span>
+            <span>
+              {
+                locale === "uz-UZ" ?
+                  'Ulashish:'
+                  : locale === "ru-RU" ?
+                    'Поделиться в:'
+                    : 'Share to:'
+              }
+            </span>
             <div className={styles.iconWrapper}>
               <img src='/facebookNews.svg' alt='facebook' />
             </div>

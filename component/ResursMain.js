@@ -72,7 +72,13 @@ const ResursMain = ({ data }) => {
                                         <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
                                         <Link href={resource_link}>
                                             <a>
-                                                Узнать больше
+                                                {
+                                                    locale === "uz-UZ" ?
+                                                        'Batafsil'
+                                                        : locale === "ru-RU" ?
+                                                            'Узнать больше'
+                                                            : 'Read more'
+                                                }
                                                 <img src='/chevron-right.svg' />
                                             </a>
                                         </Link>
@@ -94,7 +100,13 @@ const ResursMain = ({ data }) => {
                                         <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
                                         <Link href={resource_link}>
                                             <a>
-                                                Узнать больше
+                                                {
+                                                    locale === "uz-UZ" ?
+                                                        'Batafsil'
+                                                        : locale === "ru-RU" ?
+                                                            'Узнать больше'
+                                                            : 'Read more'
+                                                }
                                                 <img src='/chevron-right.svg' />
                                             </a>
                                         </Link>

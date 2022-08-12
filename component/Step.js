@@ -34,17 +34,17 @@ export default function Step({ steps, HomeContent }) {
                 </div>
                 <div className={styles.middle}>
                   <span>{contest_hours}</span>
-                   {
+                  {
                     !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
                       <p>{contest_expactations}</p>
                       :
                       <p>{contest_result}</p>
                   }
-               
-               
+
+
                 </div>
                 <div className={styles.cardFooter}>
-                  <div className={styles.data}>
+                  <div className={contest_period.length < 4 ? styles.data_empty + ' ' + styles.data : styles.data}>
                     <p>{contest_period}</p>
                   </div>
                   {

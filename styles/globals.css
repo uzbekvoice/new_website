@@ -89,6 +89,14 @@ a {
   background: blueviolet;
 }
 
+.pswp img {
+  object-fit: contain;
+}
+
+.pswp__img--placeholder {
+  display: none !important;
+}
+
 
 .bosqich.faol,
 .bosqich.active,
@@ -102,6 +110,13 @@ a {
 .bosqich.finished {
   background: rgba(253, 83, 83, 0.15);
   color: rgba(253, 83, 83, 1);
+}
+
+.bosqich.soon,
+.bosqich.tez.orada,
+.bosqich.скоро {
+  background: rgba(111, 111, 111, 0.15);
+  color: #6F6F6F;
 }
 
 .accordion__section {
@@ -309,7 +324,7 @@ a {
   .stat_top_chart .recharts-responsive-container {
     width: 700px !important;
   }
-  
+
   .stat_bottom_chart .recharts-responsive-container {
     width: 600px !important;
   }

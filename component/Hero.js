@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Hero.module.css";
-import Image from "next/image";
 import { useRouter } from "next/router";
 
 export default function Hero(props) {
@@ -23,7 +22,7 @@ export default function Hero(props) {
                   <a href="https://t.me/UzbekVoiceBot">{button1}</a>
 
                   <div className={styles.header__content_info}>
-                    <Image
+                    <img
                       src="/telegramm-blue.png"
                       width={23}
                       height={18}

@@ -35,7 +35,7 @@
     {
       "id": 3,
       "languages_code": "en-US",
-      "bosqich": "Steps",
+      "bosqich": "Stages",
       "bosqichlar": ["stage 1", "stage 2", "stage 3"],
       "hakaton": "Hackathon",
       "hakatonlar": ["1st hackathon", "2nd hackathon"],

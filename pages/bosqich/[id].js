@@ -101,10 +101,10 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
               <div key={index} className={styles.rule1}>
                 {
                   locale === "uz-UZ" ?
-                    <h2>{index + 1} - QOIDA</h2>
+                    <h2>QOIDA {index + 1}</h2>
                     : locale === "ru-RU" ?
-                      <h2>{index + 1} - ПРАВИЛО</h2>
-                      : <h2>{index + 1} - RULE</h2>
+                      <h2>ПРАВИЛО {index + 1}</h2>
+                      : <h2>RULE {index + 1}</h2>
                 }
                 <p>
                   {contest_rule}
