@@ -37,5 +37,74 @@
       "placeholder_comment": "Leave your comments (optional)",
       "button": "Apply now"
     }
+  ],
+
+  
+  "hack_form": [
+    {
+      "id": 1,
+      "languages_code": "uz-UZ",
+      "title": "Voice AI Challenge 2022",
+      "descr": "Hakatonga ro'yxatdan o'ting",
+      "label_command": "Jamoa nomi",
+      "label_name": "Ism va familyangiz",
+      "label_phone": "Telefon raqamingiz",
+      "label_comment": "Lavozimingiz",
+      "placeholder_command": "Jamoa nomini kiriting",
+      "placeholder_name": "Ism va familyangizni kiriting",
+      "placeholder_comment": "Misol (dasturchi, dizayner, pm)",
+      "button": "Ro'yxatdan o'tish",
+      "parag": "5 причин принять участие в хакатоне:",
+        "parag1" : "loremmasdm adaakj abda bb",
+        "parag2" : "loremmasdm adaakj abda bb",
+        "parag3" : "loremmasdm adaakj abda bb",
+        "parag4" : "loremmasdm adaakj abda bb",
+        "parag5" : "loremmasdm adaakj abda bb"
+       
+    },
+    
+    {
+      "id": 2,
+      "languages_code": "ru-RU",
+      "title":"Voice AI Challenge 2022",
+      "descr": "Зарегистрируйтесть на хакатон",
+      "label_command": "Название команды",
+      "placeholder_command": "Введите название команды",
+      "label_name": "Имя и фамилия",
+      "label_phone": "Номер телефона",
+      "label_comment": "Ваша должность",
+      "placeholder_name": "Введите свое имя",
+      "placeholder_comment": "Например(проект менеджер, дизайнер, программист)",
+      "button": "Отправить заявку",
+      "parag": "5 причин принять участие в хакатоне:",
+        "parag1" : "Сделать что-нибудь новое и интересное.",
+        "parag2" : "Создать за выходные проект, на который давно не было времени.",
+        "parag3" : "Провести время с пользой в кругу профессионалов.",
+        "parag4" : "Нетворкинг – получение новых контактов.",
+        "parag5" : "Получить обратную связь о своем проекте или идее от других участников и жюри."
+  
+    },
+    {
+      "id": 3,
+      "languages_code": "en-US",
+      "title": "Voice AI Challenge 2022",
+      "descr": "Register for the hackathon",
+      "label_command": "Jamoa nomi",
+      "label_name": "Name",
+      "label_phone": "Phone number",
+      "label_comment": "Position",
+      "placeholder_name": "Enter your name",
+      "placeholder_comment": "Example (PM, programmer, designer)",
+      "button": "Sign up",
+      "parag": "5 причин принять участие в хакатоне:",
+        "parag1" : "loremmasdm adaakj abda bb",
+        "parag2" : "loremmasdm adaakj abda bb",
+        "parag3" : "loremmasdm adaakj abda bb",
+        "parag4" : "loremmasdm adaakj abda bb",
+        "parag5" : "Get feedback about your project or idea from other participants and the jury."
+    
+    }
   ]
 }
+
+
