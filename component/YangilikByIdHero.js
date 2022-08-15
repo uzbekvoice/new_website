@@ -1,11 +1,17 @@
 import { useRouter } from 'next/router';
 import React from 'react'
 import styles from '../styles/YangiliByIdHero.module.css'
+import {
+  FacebookShareButton,
+  TwitterShareButton,
+  TelegramShareButton
+} from 'next-share';
 
 const YangilikByIdHero = ({ data }) => {
   const { locale } = useRouter()
+  const router = useRouter()
   const dataFilter = data.data.filter(p => p.languages_code === locale)[0]
-  // console.log(dataFilter);
+
   return (
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
@@ -28,12 +34,18 @@ const YangilikByIdHero = ({ data }) => {
                     : 'Share to:'
               }
             </span>
-            <div className={styles.iconWrapper}>
+
+            <FacebookShareButton url={`${'https://' + router.domainLocales[0].domain + '/' + router.locale + router.asPath}`}>
               <img src='/facebookNews.svg' alt='facebook' />
-            </div>
-            <div className={styles.iconWrapper}>
+            </FacebookShareButton>
+
+            <TwitterShareButton url={`${'https://' + router.domainLocales[0].domain + '/' + router.locale + router.asPath}`} >
               <img src='/twitterNews.svg' alt='twitter' />
-            </div>
+            </TwitterShareButton>
+
+            <TelegramShareButton url={`${'https://' + router.domainLocales[0].domain + '/' + router.locale + router.asPath}`}>
+              <img src='/telegramNews.svg' alt='tg' />
+            </TelegramShareButton>
           </div>
         </div>
 

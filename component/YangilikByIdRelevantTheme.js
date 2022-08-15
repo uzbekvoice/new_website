@@ -47,8 +47,6 @@ const YangilikByIdRelevantTheme = ({ data }) => {
         }
     }
 
-    console.log(query, 'the');
-
     return (
         <div className={styles.yangilikByIdRelevantTheme}>
             <h3 className={styles.relevantThemeTitle}>{
