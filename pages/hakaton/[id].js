@@ -8,14 +8,35 @@ import HomeContent from "../homeapi/static.json";
 import HakatonForm from '../../component/HakatonForm'
 
 export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
-  console.log(hakatonHero.data);
+
+  // console.log(hakatonHero.data);
+
+  const handleSubmitForm = async ( users ) => {
+
+    console.log(users, 'users');
+    try {
+      const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
+        method: "POST",
+        mode:'no-cors',
+        body: JSON.stringify( users ),
+        headers: {
+          'Content-Type': 'application/json',          
+        }
+      });
+
+      // const resData = await res.json()
+      console.log("response data:", res)
+    } catch (error) {
+      console.log("Error: ", error);
+    }
+  }
+
   return (
     <>
       <HakatonHero data={hakatonHero.data} />
-      
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-      <HakatonForm />
-      <HakatonTeams data={hakatonTeam.data} /> 
+      <HakatonForm handleSubmitForm={handleSubmitForm} />
+      <HakatonTeams data={hakatonTeam.data} />
       <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
       <HakatonJuri data={hakatonJury.data} />
 

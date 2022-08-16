@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import styles from "../styles/HakatonForm.module.css";
 import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
-import axios from "axios";
+// import axios from "axios";
 
-export default function Partners() {
+export default function Partners({ handleSubmitForm }) {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [name_surname, setName] = useState("");
@@ -25,20 +25,9 @@ export default function Partners() {
         position,
       };
 
-    //   console.log(users);
+      //   console.log(users);
 
-      try {
-        const { data } = await axios({
-          url: "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
-          method: "POST",
-     
-          data: users,
-        });
-
-        console>log("response data:", data)
-      } catch (error) {
-        console.log("Error: ", error);
-      }
+      handleSubmitForm(users)
 
       setTimeout(() => setAlert("false"), 8000);
     } else {
