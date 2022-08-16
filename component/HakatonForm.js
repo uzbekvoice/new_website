@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/HakatonForm.module.css";
 import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
-// import axios from "axios";
 
-export default function Partners({ handleSubmitForm }) {
+export default function Partners() {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [name_surname, setName] = useState("");
@@ -26,8 +25,21 @@ export default function Partners({ handleSubmitForm }) {
       };
 
       //   console.log(users);
+      try {
+        const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
+          method: "POST",
+          mode: 'no-cors',
+          body: JSON.stringify(users),
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
 
-      handleSubmitForm(users)
+        // const resData = await res.json()
+        console.log("response data:", res)
+      } catch (error) {
+        console.log("Error: ", error);
+      }
 
       setTimeout(() => setAlert("false"), 8000);
     } else {
@@ -80,6 +92,7 @@ export default function Partners({ handleSubmitForm }) {
               className={styles.partners_right}
               onSubmit={handleSubmit}
               style={{ display: alert === "true" ? "none" : "flex" }}
+              method="post"
             >
               <label>{label_command}</label>
               <input

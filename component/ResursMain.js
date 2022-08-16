@@ -4,7 +4,7 @@ import Link from "next/link";
 import styles from '../styles/ResursMain.module.css'
 
 const ResursMain = ({ data }) => {
-    const [tagFilter, setTagFilter] = useState('java');
+    const [tagFilter, setTagFilter] = useState('all');
 
     const { locale } = useRouter();
 
@@ -69,7 +69,7 @@ const ResursMain = ({ data }) => {
                                 <div className={styles.resursCard} key={id}>
                                     <div className={styles.resursCardBody}>
                                         <h5>{resource_title}</h5>
-                                        <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
+                                        <p className={styles.descr} dangerouslySetInnerHTML={{ __html: resource_content }}></p>
                                         <Link href={resource_link}>
                                             <a>
                                                 {

@@ -67,7 +67,7 @@
     color: #8D53FD;
     font-weight: 500;
     font-size: 18px;
-    display: flex;
+    display: inline-flex;
     align-items: center;
 }
 
