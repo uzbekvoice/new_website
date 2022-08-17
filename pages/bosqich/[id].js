@@ -10,8 +10,8 @@ import BosqichPrizes from "../../component/BosqichPrizes";
 export async function getServerSideProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
   const res2 = await fetch("https://api.ry.team/leaderboard/votes/all");
-  const res3 = await fetch("https://admin.uzbekvoice.ai/items/contest_stages_translations");
-  const res4 = await fetch("https://admin.uzbekvoice.ai/items/contest_gifts_translations");
+  const res3 = await fetch("https://content.uzbekvoice.ai/items/contest_stages_translations");
+  const res4 = await fetch("https://content.uzbekvoice.ai/items/contest_gifts_translations");
 
   const data = await res.json();
   const users = await res2.json();

@@ -41,13 +41,13 @@ export default function HakatonFoto({ data, galleryID }) {
                         .slice(0, more)
                         .map((value, index) => (
                             <a
-                                data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                data-pswp-src={`https://content.uzbekvoice.ai/assets/${value.directus_files_id}`}
                                 key={galleryID + '-' + index}
                                 target="_blank"
                                 rel="noreferrer"                                  
                             >
                                 <img 
-                                src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`} 
+                                src={`https://content.uzbekvoice.ai/assets/${value.directus_files_id}`} 
                                 alt={value.directus_files_id} 
                                 />
                             </a>

@@ -26,7 +26,7 @@ export default function Partners() {
 
       //   console.log(users);
       try {
-        const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
+        const res = await fetch("https://content.uzbekvoice.ai/items/hackathon_registration_form", {
           method: "POST",
           // mode: 'no-cors',
           body: JSON.stringify(users),
