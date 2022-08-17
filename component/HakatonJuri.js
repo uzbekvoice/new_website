@@ -24,7 +24,7 @@ export default function HakatonJuri({ data }) {
                         .filter(p => p.hackathon_id === parseInt(query.id))
                         .map(({ id, jury_image, jury_link, jury_name }) => (
                             <div key={id} className={styles.hakatonJuri_card}>
-                                <img src={`https://admin.uzbekvoice.ai/assets/${jury_image}`} alt='img' />
+                                <img src={`https://content.uzbekvoice.ai/assets/${jury_image}`} alt='img' />
 
                                 <p>{jury_name}</p>
                                 <Link href={jury_link}>
