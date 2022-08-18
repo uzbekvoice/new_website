@@ -11,7 +11,13 @@ const YangilikSection = ({ data }) => {
   return (
     <section className={s.YangilikSection}>
       <div className={s.container}>
-        <h1 className={s.main}>Yangiliklar</h1>
+        {
+          locale === "uz-UZ" ?
+            <h1 className={s.main}>Yangiliklar</h1>
+            : locale === "ru-RU" ?
+              <h1 className={s.main}>Новости</h1>
+              : <h1 className={s.main}>News</h1>
+        }
         <div className={s.parent}>
           {data
             .filter(p => p.languages_code === locale && p.news_id)
@@ -23,11 +29,17 @@ const YangilikSection = ({ data }) => {
                   </div>
                   <div className={s.boxBody}>
                     <h3 className={s.title}>{el.news_title}</h3>
-                    <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ')}} className={s.desc}></h5>
+                    <h5 dangerouslySetInnerHTML={{ __html: el.news_content.split(" ", 20).join(' ') }} className={s.desc}></h5>
                     <div className={s.flexClass}>
                       <Link href={`/yangilik/${el.news_id}`}>
                         <a>
-                          Узнать больше
+                          {
+                            locale === "uz-UZ" ?
+                              'Batafsil'
+                              : locale === "ru-RU" ?
+                                'Узнать больше'
+                                : 'Read more'
+                          }
                           <img src='/chevron-right.svg' />
                         </a>
                       </Link>

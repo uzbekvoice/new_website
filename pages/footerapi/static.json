@@ -3,7 +3,7 @@
       {
         "id": 1,
         "languages_code": "uz-UZ",
-        "powered_by": "Tomonidan qo'llab-quvvatlanadi:",
+        "powered_by": "Powered by:",
         "guide": "Qo'llanma",
         "join_in_project": "Loyihada qatnashish",
         "partners": "Hamkorlar",
@@ -15,12 +15,12 @@
       {
         "id": 2,
         "languages_code": "ru-RU",
-        "powered_by": "Питаться от:",
+        "powered_by": "Powered by:",
         "guide": "Руководство",
         "join_in_project": "Участие в проекте",
         "partners": "Партнеры",
         "github": "Github",
-        "telegram": "Телеграмма команда",
+        "telegram": "Присоединиться к сообществу",
         "mozillo": "Дискурс Mozilla",
         "descr":"UzbekVoice.ai © 2022. Все права защищены."
       },

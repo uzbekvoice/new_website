@@ -5,16 +5,21 @@ import HakatonJuri from "../../component/HakatonJuri";
 import HakatonTeams from "../../component/HakatonTeams";
 import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
+import HakatonForm from '../../component/HakatonForm'
 
-export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
-  console.log(hakatonHero.data);
+export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }){
+  
+  // console.log(hakatonHero.data);
+  
   return (
     <>
-      <HakatonHero data={hakatonHero.data} />
+      <HakatonHero data={hakatonHero.data} />    
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
+      <HakatonForm />
       <HakatonTeams data={hakatonTeam.data} /> 
       <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
       <HakatonJuri data={hakatonJury.data} />
+
     </>
   );
 }

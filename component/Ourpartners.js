@@ -2,6 +2,7 @@ import React from "react";
 import styles from "../styles/Ourpartners.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import Link from "next/link";
 export default function Ourpartners(props) {
   const { locale } = useRouter();
   const { HomeContent } = props;
@@ -16,7 +17,9 @@ export default function Ourpartners(props) {
               <div key={i}>
                 <h2>{title}</h2>
                 <p>{desc}</p>
-                <a href="#">{button}</a>
+                <Link href="/hamkorlar">
+                  <a>{button}</a>
+                </Link>
               </div>
             );
           })}

@@ -110,7 +110,7 @@ export default function Contribution(props) {
                 </Swiper>
               </div>
               <div className={styles.link}>
-                <a href="#">{button}</a>
+                <a href="https://t.me/UzbekVoiceBot">{button}</a>
               </div>
             </div>
           );

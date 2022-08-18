@@ -65,7 +65,7 @@
 }
 
 .hakatonTeams_cardBody a {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     display: inline-flex;
     align-items: center;
     -webkit-box-align: center;

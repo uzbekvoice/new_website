@@ -26,7 +26,7 @@ export default function Step({ steps, HomeContent }) {
         {
           steps
             .filter(p => p.languages_id === locale)
-            .map(({ contest_stages_id, contest_status, contest_title, contest_period, contest_expactations, contest_result, contest_hours }) =>
+            .map(({ contest_stages_id, contest_status, contest_title, contest_period, contest_expactations, contest_result, contest_hours, home_contest_expactations }) =>
               <div className={styles.card} key={contest_stages_id}>
                 <div className={styles.text}>
                   <h4>{contest_title}</h4>
@@ -34,17 +34,18 @@ export default function Step({ steps, HomeContent }) {
                 </div>
                 <div className={styles.middle}>
                   <span>{contest_hours}</span>
-                   {
+                  <p>{contest_expactations}</p>
+                  {/* {
                     !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
                       <p>{contest_expactations}</p>
                       :
                       <p>{contest_result}</p>
-                  }
-               
-               
+                  } */}
+
+
                 </div>
                 <div className={styles.cardFooter}>
-                  <div className={styles.data}>
+                  <div className={contest_period.length < 4 ? styles.data_empty + ' ' + styles.data : styles.data}>
                     <p>{contest_period}</p>
                   </div>
                   {

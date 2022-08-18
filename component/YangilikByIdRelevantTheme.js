@@ -47,11 +47,15 @@ const YangilikByIdRelevantTheme = ({ data }) => {
         }
     }
 
-    console.log(query, 'the');
-
     return (
         <div className={styles.yangilikByIdRelevantTheme}>
-            <h3 className={styles.relevantThemeTitle}>Мавзуга оид</h3>
+            <h3 className={styles.relevantThemeTitle}>{
+                locale === "uz-UZ" ?
+                    'Mavzuga oid'
+                    : locale === "ru-RU" ?
+                        'По теме'
+                        : 'On the subject'
+            }</h3>
 
             <div className={styles.parent}>
                 {data
@@ -69,7 +73,13 @@ const YangilikByIdRelevantTheme = ({ data }) => {
                                     <div className={styles.flexClass}>
                                         <Link href={`/yangilik/${el.news_id}`}>
                                             <a>
-                                                Узнать больше
+                                                {
+                                                    locale === "uz-UZ" ?
+                                                        'Batafsil'
+                                                        : locale === "ru-RU" ?
+                                                            'Узнать больше'
+                                                            : 'Read more'
+                                                }
                                                 <img src='/chevron-right.svg' />
                                             </a>
                                         </Link>
@@ -81,7 +91,13 @@ const YangilikByIdRelevantTheme = ({ data }) => {
                     })}
             </div>
 
-            <button className={styles.moreBtn} onClick={()=>setMore(more + 3)}>Yana yuklash</button>
+            <button className={styles.moreBtn} onClick={() => setMore(more + 3)}>{
+                locale === "uz-UZ" ?
+                    'Yana yuklash'
+                    : locale === "ru-RU" ?
+                        'Загрузить больше'
+                        : 'Load more'
+            }</button>
 
             <div className={styles.mobileSlider}>
                 <h4>Смотрите еще</h4>
@@ -108,7 +124,13 @@ const YangilikByIdRelevantTheme = ({ data }) => {
                                         <div className={styles.flexClass}>
                                             <Link href={`/yangilik/${el.news_id}`}>
                                                 <a>
-                                                    Узнать больше
+                                                    {
+                                                        locale === "uz-UZ" ?
+                                                            'Batafsil'
+                                                            : locale === "ru-RU" ?
+                                                                'Узнать больше'
+                                                                : 'Read more'
+                                                    }
                                                     <img src='/chevron-right.svg' />
                                                 </a>
                                             </Link>

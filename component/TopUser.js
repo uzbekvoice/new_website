@@ -15,11 +15,11 @@ export default function TopUser({ users, userslist, HomeContent }) {
       {HomeContent.topuser
         .filter((p) => p.languages_code === locale)
         .map((HomeContent, i) => {
-          const { title, desc, top_listener, top_speaker, more } = HomeContent;
+          const { title, top_listener, top_speaker, more } = HomeContent;
           return (
             <div key={i}>
               <h3>{title}</h3>
-              <p>{desc}</p>
+
               <div className={styles.grid}>
                 <div className={styles.listner}>
                   <h4>{top_listener}</h4>

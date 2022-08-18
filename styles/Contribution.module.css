@@ -6,10 +6,12 @@
 .content h3 {
   font-size: 48px;
   font-weight: 900;
-  line-height: 53px;
+  /* line-height: 53px; */
   letter-spacing: 0.0022em;
   color: #12273c;
   margin: 0;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
 
 .container {
