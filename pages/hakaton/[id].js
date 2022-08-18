@@ -6,20 +6,30 @@ import HakatonTeams from "../../component/HakatonTeams";
 import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 import HakatonForm from '../../component/HakatonForm'
+import { useRouter } from "next/router";
 
-export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }){
-  
+export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
+
+  const { query, locale } = useRouter()
+
   // console.log(hakatonHero.data);
-  
+
+  const status = hakatonHero.data.filter(p => p.languages_code === locale && p.hackathons_id === parseInt(query.id))[0].status
+
+
   return (
     <>
-      <HakatonHero data={hakatonHero.data} />    
-      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-      <HakatonForm />
-      <HakatonTeams data={hakatonTeam.data} /> 
-      <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
-      <HakatonJuri data={hakatonJury.data} />
-
+      <HakatonHero data={hakatonHero.data} />
+      <InitiativePartners HomeContent={HomeContent} partners={partners.data} status={status}/>
+      {
+        status !== 'active'?
+        <>
+          
+          <HakatonTeams data={hakatonTeam.data} />
+          <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
+          <HakatonJuri data={hakatonJury.data} />
+        </>: <HakatonForm />
+      }
     </>
   );
 }

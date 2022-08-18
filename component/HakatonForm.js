@@ -195,6 +195,7 @@ export default function Partners() {
               </label>
               <label>{label_country}
                 <select>
+                  <option disabled selected>Choose</option>
                   {
                     country.map(({ id, value }) => <option key={id}>{value}</option>)
                   }
@@ -228,6 +229,7 @@ export default function Partners() {
                 <p>{label_isTeam}</p>
                 <label htmlFor="yes">Yes
                   <input
+                    className={styles.radioInput}
                     name="isTeam"
                     id="yes"
                     type="radio"
@@ -236,6 +238,7 @@ export default function Partners() {
                 </label>
                 <label htmlFor="no">No
                   <input
+                    className={styles.radioInput}
                     name="isTeam"
                     id="no"
                     type="radio"
@@ -271,6 +274,7 @@ export default function Partners() {
                 <p>{label_confirm}</p>
                 <label htmlFor="confim">Yes
                   <input
+                    className={styles.radioInput}
                     id='confim'
                     type="radio"
                     onChange={(e) => setConfirm(e.target.value)}

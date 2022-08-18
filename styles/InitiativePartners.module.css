@@ -57,13 +57,17 @@
   .partnersForHak {
     margin-top: 400px !important;
   }
+
+  .active h3 {
+    margin-top: 340px !important;
+  }
   
 }
 
 @media (max-width:767px) {
-
-  .partnersForHak {
-    margin-top: 400px !important;
+  
+  .active h3 {
+    margin-top: 300px !important;
   }
   
   .partners {
