@@ -34,7 +34,7 @@ export default function Step({ steps, HomeContent }) {
                 </div>
                 <div className={styles.middle}>
                   <span>{contest_hours}</span>
-                  <p>{home_contest_expactations}</p>
+                  <p>{contest_expactations}</p>
                   {/* {
                     !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
                       <p>{contest_expactations}</p>
