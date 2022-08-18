@@ -17,7 +17,7 @@ export default function HakatonTeams({ resGifts, title }) {
                     dataGifts.map(({ contest_gifts_id, gift_name, gift_image, place }) => (
                         <div key={contest_gifts_id} className={styles.hakatonTeams_card}>
                             <div className={styles.hakatonTeams_cardHeader}>
-                                <img src={`https://content.uzbekvoice.ai/assets/${gift_image}`} alt='img' />
+                                <img src={`https://admin.uzbekvoice.ai/assets/${gift_image}`} alt='img' />
                             </div>
                             <div className={styles.hakatonTeams_cardBody}>
                                 <h4>{gift_name}</h4>

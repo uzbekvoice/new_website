@@ -27,7 +27,7 @@ export default function OurTeam({ data, HomeContent }) {
           <div className={styles.item} key={id}>
             <div className={styles.avatarimg}>
               <img
-                src={`https://content.uzbekvoice.ai/assets/${profile_image}`}
+                src={`https://admin.uzbekvoice.ai/assets/${profile_image}`}
                 alt="partners1"
               />
             </div>

@@ -27,11 +27,11 @@ export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
 
 export async function getServerSideProps() {
 
-  const res = await fetch('https://content.uzbekvoice.ai/items/partners')
-  const res2 = await fetch('https://content.uzbekvoice.ai/items/hackathons_translations')
-  const res3 = await fetch('https://content.uzbekvoice.ai/items/hackathons_translations_files')
-  const res4 = await fetch('https://content.uzbekvoice.ai/items/hackathon_teams_translations')
-  const res5 = await fetch('https://content.uzbekvoice.ai/items/jury')
+  const res = await fetch('https://admin.uzbekvoice.ai/items/partners')
+  const res2 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations')
+  const res3 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
+  const res4 = await fetch('https://admin.uzbekvoice.ai/items/hackathon_teams_translations')
+  const res5 = await fetch('https://admin.uzbekvoice.ai/items/jury')
 
   const partners = await res.json();
   const hakatonHero = await res2.json();

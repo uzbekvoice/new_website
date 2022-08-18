@@ -29,12 +29,12 @@ export default function Prizes({ prize, galleryID, title }) {
         {
           prize.map((value, index) => (
             <a
-              href={`https://content.uzbekvoice.ai/assets/${value}`}
+              href={`https://admin.uzbekvoice.ai/assets/${value}`}
               key={galleryID + '-' + index}
               target="_blank"
               rel="noreferrer"              
             >
-              <img src={`https://content.uzbekvoice.ai/assets/${value}`} alt={value} />
+              <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
             </a>
           ))
         }

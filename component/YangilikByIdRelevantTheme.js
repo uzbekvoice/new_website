@@ -65,7 +65,7 @@ const YangilikByIdRelevantTheme = ({ data }) => {
                         return (
                             <div className={styles.box} key={el.id}>
                                 <div className={styles.boxHeader}>
-                                    <img src={`https://content.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
+                                    <img src={`https://admin.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
                                 </div>
                                 <div className={styles.boxBody}>
                                     <h3 className={styles.title}>{el.news_title}</h3>
@@ -116,7 +116,7 @@ const YangilikByIdRelevantTheme = ({ data }) => {
                             return (
                                 <div className={styles.box} key={el.id}>
                                     <div className={styles.boxHeader}>
-                                        <img src={`https://content.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
                                     </div>
                                     <div className={styles.boxBody}>
                                         <h3 className={styles.title}>{el.news_title}</h3>
