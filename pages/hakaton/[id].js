@@ -13,8 +13,7 @@ export default function hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
   
   return (
     <>
-      <HakatonHero data={hakatonHero.data} />
-      
+      <HakatonHero data={hakatonHero.data} />    
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
       <HakatonForm />
       <HakatonTeams data={hakatonTeam.data} /> 

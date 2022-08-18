@@ -5,23 +5,49 @@ import { useRouter } from "next/router";
 
 export default function Partners() {
   const { locale } = useRouter();
-  const [alert, setAlert] = useState("false");
-  const [name_surname, setName] = useState("");
-  const [telephone_number, setNumber] = useState("");
+  const [alert, setAlert] = useState("error");
+  const [fio, setFio] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [country, setCountry] = useState("");
+  const [place_work, setPlaceWork] = useState("");
+  const [age, setAge] = useState("");
+  const [problem, setProblem] = useState("");
+  const [isTeam, setIsTeam] = useState("");
   const [position, setPosition] = useState("");
-  const [team_title, setTeam] = useState("");
+  const [teamName, setTeamName] = useState("");
+  const [teamCount, setTeamCount] = useState("");
+  const [confirm, setConfirm] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (name_surname !== "" && telephone_number !== "") {
+    if (fio !== "" &&
+      email !== "" &&
+      phone !== "" &&
+      country !== "" &&
+      place_work !== "" &&
+      age !== "" &&
+      problem !== "" &&
+      position !== "" &&
+      teamName !== "" &&
+      teamCount !== ""
+    ) {
       setAlert("true");
 
       const users = {
-        team_title,
-        name_surname,
-        telephone_number,
+        fio,
+        email,
+        phone,
+        country,
+        place_work,
+        age,
+        problem,
+        isTeam,
         position,
+        teamName,
+        teamCount,
+        confirm,
       };
 
       //   console.log(users);
@@ -47,10 +73,18 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 5000);
     }
 
-    setName("");
-    setNumber("");
+    setFio("");
+    setEmail("");
+    setPhone("");
+    setCountry("");
+    setPlaceWork("");
+    setAge("");
+    setProblem("");
+    setIsTeam("");
     setPosition("");
-    setTeam("");
+    setTeamName("");
+    setTeamCount("");
+    setConfirm("");
   };
 
   return PartnersApi.hack_form
@@ -59,15 +93,29 @@ export default function Partners() {
       ({
         id,
         title,
-        guide,
-        label_phone,
-        label_comment,
         descr,
-        label_name,
-        label_command,
-        placeholder_command,
-        placeholder_name,
-        placeholder_comment,
+        label_fio,
+        label_email,
+        label_phone,
+        label_country,
+        label_place_work,
+        label_age,
+        label_problem,
+        label_isTeam,
+        label_position,
+        label_team_name,
+        label_team_count,
+        label_confirm,
+        placeholder_fio,
+        placeholder_email,
+        placeholder_phone,
+        placeholder_country,
+        placeholder_place_work,
+        placeholder_age,
+        placeholder_problem,
+        placeholder_position,
+        placeholder_team_name,
+        placeholder_team_count,
         button,
         parag,
         parag1,
@@ -80,54 +128,135 @@ export default function Partners() {
           <h3>{title}</h3>
           <p>{descr}</p>
           <div className={styles.partners}>
-            <div className={styles.partners_left}>
+            <ul className={styles.partners_left}>
               <li>{parag}</li>
               <li>{parag1}</li>
               <li>{parag2}</li>
               <li>{parag3}</li>
               <li>{parag4}</li>
               <li>{parag5}</li>
-            </div>
+            </ul>
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
               style={{ display: alert === "true" ? "none" : "flex" }}
               method="post"
             >
-              <label>{label_command}</label>
-              <input
-                value={team_title}
-                type="text"
-                placeholder={placeholder_command}
-                onChange={(e) => setTeam(e.target.value)}
-              />
-              <label>{label_name}</label>
-              <input
-                value={name_surname}
-                type="text"
-                placeholder={placeholder_name}
-                onChange={(e) => setName(e.target.value)}
-              />
-              <label>{label_phone}</label>
-              <input
-                value={telephone_number}
-                type="number"
-                placeholder="+998"
-                onChange={(e) => setNumber(e.target.value)}
-              />
-              <label>{label_comment}</label>
-              <input
-                value={position}
-                type="text"
-                placeholder={placeholder_comment}
-                onChange={(e) => setPosition(e.target.value)}
-              />
+              <label>{label_fio}
+                <input
+                  value={fio}
+                  type="text"
+                  placeholder={placeholder_fio}
+                  onChange={(e) => setFio(e.target.value)}
+                />
+              </label>
+              <label>{label_email}
+                <input
+                  value={email}
+                  type="email"
+                  placeholder={placeholder_email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+              <label>{label_phone}
+                <input
+                  value={phone}
+                  type="number"
+                  placeholder={placeholder_phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </label>
+              <label>{label_country}
+                <input
+                  value={country}
+                  type="text"
+                  placeholder={placeholder_country}
+                  onChange={(e) => setCountry(e.target.value)}
+                />
+              </label>
+              <label>{label_place_work}
+                <input
+                  value={place_work}
+                  type="text"
+                  placeholder={placeholder_place_work}
+                  onChange={(e) => setPlaceWork(e.target.value)}
+                />
+              </label>
+              <label>{label_age}
+                <input
+                  value={age}
+                  type="number"
+                  placeholder={placeholder_age}
+                  onChange={(e) => setAge(e.target.value)}
+                />
+              </label>
+              <label>{label_problem}
+                <input
+                  value={problem}
+                  type="text"
+                  placeholder={placeholder_problem}
+                  onChange={(e) => setProblem(e.target.value)}
+                />
+              </label>
+              <div>
+                <p>{label_isTeam}</p>
+                <label htmlFor="yes">Yes
+                  <input
+                    name="isTeam"
+                    id="yes"
+                    type="radio"
+                    onChange={(e) => setIsTeam(e.target.value)}
+                  />
+                </label>
+                <label htmlFor="no">No
+                  <input
+                    name="isTeam"
+                    id="no"
+                    type="radio"
+                    onChange={(e) => setIsTeam(e.target.value)}
+                  />
+                </label>
+              </div>
+              <label>{label_position}
+                <input
+                  value={position}
+                  type="text"
+                  placeholder={placeholder_position}
+                  onChange={(e) => setPosition(e.target.value)}
+                />
+              </label>
+              <label>{label_team_name}
+                <input
+                  value={teamName}
+                  type="text"
+                  placeholder={placeholder_team_name}
+                  onChange={(e) => setTeamName(e.target.value)}
+                />
+              </label>
+              <label>{label_team_count}
+                <input
+                  value={teamCount}
+                  type="number"
+                  placeholder={placeholder_team_count}
+                  onChange={(e) => setTeamCount(e.target.value)}
+                />
+              </label>
+              <div>
+                <p>{label_confirm}</p>
+                <label htmlFor="confim">Yes
+                  <input
+                    id='confim'
+                    type="radio"
+                    onChange={(e) => setConfirm(e.target.value)}
+                  />
+                </label>
+              </div>
 
-              <button type="submit">{button}</button>
               <div
                 style={{ display: alert === "error" ? "block" : "none" }}
                 className={styles.error}
               >
+              <button type="submit">{button}</button>
                 {locale === "uz-UZ" ? (
                   <span>Iltimos maydonlarni to'ldiring</span>
                 ) : locale === "ru-RU" ? (
