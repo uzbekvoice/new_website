@@ -65,17 +65,19 @@
     margin-bottom: 16px
 }
 
+/* #8D53FD -1.4%, #B38CFF */
+
 .partners_right {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     /* flex-direction: column; */
-    border: 2px solid rgba(0, 0, 0, 0.06);
+    /* border: 2px solid #bfa4f3; */
     background: rgba(255, 255, 255, 0.7);
     backdrop-filter: blur(80px);
     -webkit-backdrop-filter: blur(80px);
     -o-backdrop-filter: blur(80px);
-    border-radius: 24px;
+    border-radius: 10px;
     padding: 36px;
     margin-top: 20px;
 }
@@ -83,7 +85,7 @@
 .partners_right label {
     width: 48%;
     display: block;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 16px;
     line-height: 23px;
     color: #262626;
@@ -135,13 +137,15 @@
     width: auto;
     display: inline; 
     margin-left: 10px; 
+    padding: 10px;
 }
 
 
 .partners_right input {
-    background: rgba(255, 255, 255, 0.5);
-    border: 1px solid rgba(168, 166, 166, 0.25);
-    border-radius: 16px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(168, 166, 166, 0.25);
+    /* border-radius: 16px; */
     padding: 16px 20px;
     outline: none;
     font-weight: 400;
@@ -151,19 +155,56 @@
     width: 100%;
     color: #111;
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 10px;    
 }
 
-.partners_right input::placeholder,
-.partners_right textarea::placeholder {
+.partners_right select {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(168, 166, 166, 0.25);
+    padding: 16px 20px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    display: block;
+    line-height: 21px;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;    
+}
+
+.partners_right select option {
     color: #111;
-    opacity: 0.2;
+    opacity: 0.3;
+}
+
+.partners_right input::placeholder{
+    color: #111;
+    opacity: 0.3;
+}
+
+.partners_right input:focus,
+.partners_right select:focus {
+    border-bottom: 2px solid #8D53FD;
+    background-color: #ba99fc59;
+    color: #111;
+}
+
+.partners_right input:focus::placeholder{
+    color: #111;
+    opacity: 1;    
+}
+
+.partners_right input[type="date"]::-webkit-datetime-edit-text,
+.partners_right input[type="date"]::-webkit-datetime-edit-month-field,
+.partners_right input[type="date"]::-webkit-datetime-edit-day-field,
+.partners_right input[type="date"]::-webkit-datetime-edit-year-field {
+    color: #111;
+    opacity: 0.3;
 }
 
 .partners_right button {
-    margin: 0 auto;
     margin-top: 32px;
-    /* width: 30%; */
     cursor: pointer;
     padding: 18px 40px;
     border: none;
@@ -175,9 +216,13 @@
     border-radius: 16px;
 }
 
+.finally {
+    margin: 0 auto;
+}
+
 .error {
     width: 100% !important;
-    display: flex !important;
+    display: flex;
     flex-direction: column;
     margin: 10px auto 0;
     color: rgba(255, 0, 0, 0.76);

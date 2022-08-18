@@ -5,10 +5,12 @@ import { useRouter } from "next/router";
 
 export default function Partners() {
   const { locale } = useRouter();
-  const [alert, setAlert] = useState("error");
+  const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [tg_nike, setTgNike] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
   const [country, setCountry] = useState("");
   const [place_work, setPlaceWork] = useState("");
   const [age, setAge] = useState("");
@@ -25,6 +27,8 @@ export default function Partners() {
     if (fio !== "" &&
       email !== "" &&
       phone !== "" &&
+      tg_nike !== "" &&
+      dateOfBirth !== "" &&
       country !== "" &&
       place_work !== "" &&
       age !== "" &&
@@ -76,6 +80,8 @@ export default function Partners() {
     setFio("");
     setEmail("");
     setPhone("");
+    setDateOfBirth("");
+    setTgNike("");
     setCountry("");
     setPlaceWork("");
     setAge("");
@@ -97,6 +103,8 @@ export default function Partners() {
         label_fio,
         label_email,
         label_phone,
+        label_tg_nike,
+        label_date_of_brith,
         label_country,
         label_place_work,
         label_age,
@@ -110,6 +118,7 @@ export default function Partners() {
         placeholder_email,
         placeholder_phone,
         placeholder_country,
+        placeholder_tg,
         placeholder_place_work,
         placeholder_age,
         placeholder_problem,
@@ -123,6 +132,8 @@ export default function Partners() {
         parag3,
         parag4,
         parag5,
+        country,
+        position_role
       }) => (
         <div className={styles.hackaton} key={id}>
           <h3>{title}</h3>
@@ -166,13 +177,28 @@ export default function Partners() {
                   onChange={(e) => setPhone(e.target.value)}
                 />
               </label>
-              <label>{label_country}
+              <label>{label_tg_nike}
                 <input
-                  value={country}
+                  value={tg_nike}
                   type="text"
-                  placeholder={placeholder_country}
-                  onChange={(e) => setCountry(e.target.value)}
+                  placeholder={placeholder_tg}
+                  onChange={(e) => setTgNike(e.target.value)}
                 />
+              </label>
+              <label>{label_date_of_brith}
+                <input
+                  value={dateOfBirth}
+                  type="date"
+                  placeholder={''}
+                  onChange={(e) => setDateOfBirth(e.target.value)}
+                />
+              </label>
+              <label>{label_country}
+                <select>
+                  {
+                    country.map(({ id, value }) => <option key={id}>{value}</option>)
+                  }
+                </select>
               </label>
               <label>{label_place_work}
                 <input
@@ -218,12 +244,12 @@ export default function Partners() {
                 </label>
               </div>
               <label>{label_position}
-                <input
-                  value={position}
-                  type="text"
-                  placeholder={placeholder_position}
-                  onChange={(e) => setPosition(e.target.value)}
-                />
+                <select>
+                  <option disabled selected>choose</option>
+                  {
+                    position_role.map(({ id, value }) => <option key={id}>{value}</option>)
+                  }
+                </select>
               </label>
               <label>{label_team_name}
                 <input
@@ -252,18 +278,18 @@ export default function Partners() {
                 </label>
               </div>
 
-              <div
-                style={{ display: alert === "error" ? "block" : "none" }}
-                className={styles.error}
-              >
-              <button type="submit">{button}</button>
-                {locale === "uz-UZ" ? (
-                  <span>Iltimos maydonlarni to'ldiring</span>
-                ) : locale === "ru-RU" ? (
-                  <span>Пожалуйста, заполните поля</span>
-                ) : (
-                  <span>Please fill in the fields</span>
-                )}
+              <div className={styles.finally}>
+                <button type="submit">{button}</button>
+                <div style={{ display: alert === "error" ? "flex" : "none" }}
+                  className={styles.error}>
+                  {locale === "uz-UZ" ? (
+                    <span>Iltimos maydonlarni to'ldiring</span>
+                  ) : locale === "ru-RU" ? (
+                    <span>Пожалуйста, заполните поля</span>
+                  ) : (
+                    <span>Please fill in the fields</span>
+                  )}
+                </div>
               </div>
             </form>
 

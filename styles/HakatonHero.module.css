@@ -8,6 +8,17 @@
     z-index: -1;
 }
 
+.hakatonHeroWrappper.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/hakaton-hero-bg.jpg');
+    background-size: auto;
+    background-position: 25% -5%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
 .hakatonHero {
     display: grid;
     grid-template-columns: 1fr 1fr;

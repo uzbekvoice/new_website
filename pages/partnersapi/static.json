@@ -48,16 +48,19 @@
       "label_fio": "ФИО",
       "label_email": "Электронная почта",
       "label_phone": "Номер телефона",
-      "label_country": "Из какого вы города ?",
+      "label_tg_nike": "Телеграм ник",
+      "label_date_of_brith": "Дата рождения",
+      "label_country": "С какого вы региона",
       "label_place_work": "ВУЗ или место работы",
       "label_age": "Сколько вам лет?",
       "label_problem": "Какую задачу вы пытаетесь решить на хакатоне",
       "label_isTeam": "У вас есть команда",
-      "label_position": "Ваша должность в хакатоне",
+      "label_position": " Ваша роль в команде",
       "label_team_name": "Название команды, если у вас есть команда",
       "label_team_count": "Сколько человек в вашей команде",
       "label_confirm": "Подтверждаете всю введенную информацию?",
       "placeholder_fio": "placeholder_fio",
+      "placeholder_tg": "Телеграм ник",
       "placeholder_email": "placeholder_email",
       "placeholder_phone": "+998",
       "placeholder_country": "placeholder_country",
@@ -75,7 +78,27 @@
       "parag2": "Создать за выходные проект, на который давно не было времени.",
       "parag3": "Провести время с пользой в кругу профессионалов.",
       "parag4": "Нетворкинг – получение новых контактов.",
-      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри."
+      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри.",
+      "country": [
+        {"id": 1, "value": "Andijon viloyati"},
+        {"id": 2, "value": "Buxoro viloyati"},
+        {"id": 3, "value": "Farg`ona viloyati"},
+        {"id": 4, "value": "Jizzax viloyati"},
+        {"id": 5, "value": "Xorazm viloyati"},
+        {"id": 6, "value": "Namangan viloyati"},
+        {"id": 7, "value": "Navoiy viloyati"},
+        {"id": 8, "value": "Qashqadaryo viloyati"},
+        {"id": 9, "value": "Qoraqalpog`iston Respublikasi"},
+        {"id": 10, "value": "Samarqand viloyati"},
+        {"id": 11, "value": "Sirdaryo viloyati"},
+        {"id": 12, "value": "Surxondaryo viloyati"},
+        {"id": 13, "value": "Toshkent viloyati"}
+      ],
+      "position_role": [
+        {"id": 1, "value": "Менеджер проекта"},
+        {"id": 2, "value": "Программист"},
+        {"id": 3, "value": "Дизайнер"}
+      ]
     },
 
     {
@@ -86,12 +109,15 @@
       "label_fio": "ФИО",
       "label_email": "Электронная почта",
       "label_phone": "Номер телефона",
-      "label_country": "Из какого вы города ?",
+      "label_tg_nike": "Телеграм ник",
+      "label_date_of_brith": "Дата рождения",
+      "placeholder_tg": "Телеграм ник",
+      "label_country": "С какого вы региона",
       "label_place_work": "ВУЗ или место работы",
       "label_age": "Сколько вам лет?",
       "label_problem": "Какую задачу вы пытаетесь решить на хакатоне",
       "label_isTeam": "У вас есть команда",
-      "label_position": "Ваша должность в хакатоне",
+      "label_position": " Ваша роль в команде",
       "label_team_name": "Название команды, если у вас есть команда",
       "label_team_count": "Сколько человек в вашей команде",
       "label_confirm": "Подтверждаете всю введенную информацию?",
@@ -113,7 +139,27 @@
       "parag2": "Создать за выходные проект, на который давно не было времени.",
       "parag3": "Провести время с пользой в кругу профессионалов.",
       "parag4": "Нетворкинг – получение новых контактов.",
-      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри."
+      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри.",
+      "country": [
+        {"id": 1, "value": "Andijon viloyati"},
+        {"id": 2, "value": "Buxoro viloyati"},
+        {"id": 3, "value": "Farg`ona viloyati"},
+        {"id": 4, "value": "Jizzax viloyati"},
+        {"id": 5, "value": "Xorazm viloyati"},
+        {"id": 6, "value": "Namangan viloyati"},
+        {"id": 7, "value": "Navoiy viloyati"},
+        {"id": 8, "value": "Qashqadaryo viloyati"},
+        {"id": 9, "value": "Qoraqalpog`iston Respublikasi"},
+        {"id": 10, "value": "Samarqand viloyati"},
+        {"id": 11, "value": "Sirdaryo viloyati"},
+        {"id": 12, "value": "Surxondaryo viloyati"},
+        {"id": 13, "value": "Toshkent viloyati"}
+      ],
+      "position_role": [
+        {"id": 1, "value": "Менеджер проекта"},
+        {"id": 2, "value": "Программист"},
+        {"id": 3, "value": "Дизайнер"}
+      ]
     },
     {
       "id": 3,
@@ -123,18 +169,21 @@
       "label_fio": "ФИО",
       "label_email": "Электронная почта",
       "label_phone": "Номер телефона",
-      "label_country": "Из какого вы города ?",
+      "label_tg_nike": "Телеграм ник",
+      "label_date_of_brith": "Дата рождения",
+      "label_country": "С какого вы региона",
       "label_place_work": "ВУЗ или место работы",
       "label_age": "Сколько вам лет?",
       "label_problem": "Какую задачу вы пытаетесь решить на хакатоне",
       "label_isTeam": "У вас есть команда",
-      "label_position": "Ваша должность в хакатоне",
+      "label_position": " Ваша роль в команде",
       "label_team_name": "Название команды, если у вас есть команда",
       "label_team_count": "Сколько человек в вашей команде",
       "label_confirm": "Подтверждаете всю введенную информацию?",
       "placeholder_fio": "placeholder_fio",
       "placeholder_email": "placeholder_email",
       "placeholder_phone": "+998",
+      "placeholder_tg": "Телеграм ник",
       "placeholder_country": "placeholder_country",
       "placeholder_place_work": "placeholder_place_work",
       "placeholder_age": "placeholder_age",
@@ -150,7 +199,27 @@
       "parag2": "Создать за выходные проект, на который давно не было времени.",
       "parag3": "Провести время с пользой в кругу профессионалов.",
       "parag4": "Нетворкинг – получение новых контактов.",
-      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри."
+      "parag5": "Получить обратную связь о своем проекте или идее от других участников и жюри.",
+      "country": [
+        {"id": 1, "value": "Andijon viloyati"},
+        {"id": 2, "value": "Buxoro viloyati"},
+        {"id": 3, "value": "Farg`ona viloyati"},
+        {"id": 4, "value": "Jizzax viloyati"},
+        {"id": 5, "value": "Xorazm viloyati"},
+        {"id": 6, "value": "Namangan viloyati"},
+        {"id": 7, "value": "Navoiy viloyati"},
+        {"id": 8, "value": "Qashqadaryo viloyati"},
+        {"id": 9, "value": "Qoraqalpog`iston Respublikasi"},
+        {"id": 10, "value": "Samarqand viloyati"},
+        {"id": 11, "value": "Sirdaryo viloyati"},
+        {"id": 12, "value": "Surxondaryo viloyati"},
+        {"id": 13, "value": "Toshkent viloyati"}
+      ],
+      "position_role": [
+        {"id": 1, "value": "Менеджер проекта"},
+        {"id": 2, "value": "Программист"},
+        {"id": 3, "value": "Дизайнер"}
+      ]
     }
   ]
 }

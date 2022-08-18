@@ -8,8 +8,10 @@ export default function HakatonHero({ data }) {
     return (
         data
             .filter(p => p.languages_code === locale && p.hackathons_id === parseInt(query.id))
-            .map(({ id, hackathon_projects_count, hackathon_teams_count, hackathon_title, hackathons_content, hackathons_participants_count, hackaton_dates }) =>
-                <div className={styles.hakatonHeroWrappper} key={id}>
+            .map(({ id, hackathons_id, hackathon_projects_count, hackathon_teams_count, hackathon_title, hackathons_content, hackathons_participants_count, hackaton_dates }) =>
+                <div
+                    className={hackathons_id === 1 ? styles.hakatonHeroWrappper + ' ' + styles.one : styles.hakatonHeroWrappper}
+                    key={id}>
                     <div className='container__fluid'>
                         <div className={styles.hakatonHero}>
                             <h3 className={styles.hakatonHero_Left}>
