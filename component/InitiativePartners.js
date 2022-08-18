@@ -74,7 +74,7 @@ export default function InitiativePartners(props) {
             partners.map(({id, partner_link, partner_image, partner_title }) =>
               <Link href={partner_link} key={id}>
                 <a className={styles.item}>
-                  <img src={`https://content.uzbekvoice.ai/assets/${partner_image}`} />
+                  <img src={`https://admin.uzbekvoice.ai/assets/${partner_image}`} />
                   <span>{partner_title}</span>
                 </a>
               </Link>
