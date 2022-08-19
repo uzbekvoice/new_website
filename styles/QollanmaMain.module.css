@@ -108,7 +108,7 @@
     color: #8D53FD;
     display: inline-flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .qollanmaCardMobileHeader {
@@ -154,11 +154,11 @@
     }
 
     .qollanmaCardBody p {
-        font-size: 14px;
+        font-size: 16px;
     }
 
     .qollanmaCardBody h4 {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .qollanmaCardHeader {

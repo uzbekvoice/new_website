@@ -45,7 +45,7 @@ const QollanmaMain = ({ data }) => {
                                 <div className={styles.qollanmaCardBody}>
                                     <span>{gudline_created_date.slice(0, 10)}</span>
                                     <h4>{guideline_title}</h4>
-                                    <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 20).join(' ') }}></p>
+                                    <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 40).join(' ') }}></p>
 
                                     <Link href={`/guide/${guidelines_id}`}>
                                         <a>
