@@ -98,18 +98,20 @@ const ResursMain = ({ data }) => {
                                     <div className={styles.resursMobileCardBody}>
                                         <h5>{resource_title}</h5>
                                         <span dangerouslySetInnerHTML={{ __html: resource_content }}></span>
-                                        <Link href={resource_link}>
-                                            <a>
-                                                {
-                                                    locale === "uz-UZ" ?
-                                                        'Batafsil'
-                                                        : locale === "ru-RU" ?
-                                                            'Узнать больше'
-                                                            : 'Read more'
-                                                }
-                                                <img src='/chevron-right.svg' />
-                                            </a>
-                                        </Link>
+                                        <div>
+                                            <Link href={resource_link}>
+                                                <a>
+                                                    {
+                                                        locale === "uz-UZ" ?
+                                                            'Batafsil'
+                                                            : locale === "ru-RU" ?
+                                                                'Узнать больше'
+                                                                : 'Read more'
+                                                    }
+                                                    <img src='/chevron-right.svg' />
+                                                </a>
+                                            </Link>
+                                        </div>
                                     </div>
                                 </div>
 

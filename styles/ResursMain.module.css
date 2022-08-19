@@ -68,7 +68,7 @@
 
 .resursCardBody a {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 111.63%;
     display: inline-flex;
     align-items: center;
@@ -132,9 +132,15 @@
     font-weight: 500;
     font-size: 18px;
     line-height: 111.63%;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     color: #8D53FD;
+    margin-left: auto;
+}
+
+.resursMobileCardBody div {
+    display: flex;
+    justify-content: end;
 }
 
 .resursMobileCardBody a img {
@@ -147,6 +153,10 @@
 @media (max-width: 992px) {
     .resursMain {
         width: 90%;
+    }
+
+    .resursMobileCardBody a {
+        font-size: 16px;
     }
 }
 
@@ -163,7 +173,7 @@
         padding: 3px 8px;
         border-radius: 16px;
         font-size: 14px;
-    }
+    }    
 }
 
 @media (max-width: 576px) {
@@ -180,6 +190,11 @@
 
     .partInfoMobile {
         display: block;
+    }
+
+    .resursMobileCardBody a img {
+        width: 20px;
+        height: 20px;
     }
 }
 
