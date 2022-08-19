@@ -400,10 +400,17 @@ width: 100%!important;
     /* width: 100%; */
   }
 
-  .partners_right input {
+  .partners_right input  {
     padding: 13px 11px;
     font-size: 14px;
     line-height: 21px;
+    width: 100%;
+  }
+  .partners_right select  {
+    
+    font-size: 14px;
+    line-height: 21px;
+    width: 100%;
   }
 
   .partners_right button {
