@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 export default function OurTeam({ data, HomeContent }) {
   const { locale } = useRouter();
-  // console.log(data);
+  console.log(data);
   return (
     <div className={styles.ourteam}>
       {HomeContent.team
