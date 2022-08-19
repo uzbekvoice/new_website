@@ -30,6 +30,10 @@
   position: relative;
 }
 
+.partners_right span{
+    color: red;
+}
+
 /* .partners::before {
   content: "";
   filter: blur(91px);

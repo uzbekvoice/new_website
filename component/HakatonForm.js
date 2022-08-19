@@ -167,7 +167,7 @@ export default function Partners() {
               <hr></hr>
 
               <label>
-                {label_fio}
+                {label_fio} <span>*</span>
 
                 <input className={styles.firstinp}
                   value={fio}
@@ -177,7 +177,7 @@ export default function Partners() {
                 />
               </label>
               <label>
-                {label_date_of_brith}
+                {label_date_of_brith} <span>*</span>
                 <input
                   value={dateOfBirth}
                   type="date"
@@ -186,7 +186,7 @@ export default function Partners() {
                 />
               </label>
               <label>
-                {label_country}
+                {label_country} <span>*</span>
                 <select onChange={(e) => setCountry(e.target.value)}>
                   <option disabled selected>
                     Choose
@@ -197,7 +197,7 @@ export default function Partners() {
                 </select>
               </label>
               <label>
-                {label_place_work}
+                {label_place_work} <span>*</span>
                 <input
                   value={place_work}
                   type="text"
@@ -210,7 +210,7 @@ export default function Partners() {
               <h4>Контактные данные</h4>
               <hr></hr>
               <label>
-                {label_phone}
+                {label_phone} <span>*</span>
                 <input
                   value={phone}
                   type="number"
@@ -219,7 +219,7 @@ export default function Partners() {
                 />
               </label>
               <label>
-                {label_email}
+                {label_email} <span>*</span>
                 <input
                   value={email}
                   type="email"
@@ -229,7 +229,7 @@ export default function Partners() {
               </label>
 
               <label>
-                {label_tg_nike}
+                {label_tg_nike} <span>*</span>
                 <input
                   value={tg_nike}
                   type="text"
@@ -253,7 +253,7 @@ export default function Partners() {
               </label> */}
 
               <label>
-                {label_problem}
+                {label_problem} <span>*</span>
                 <textarea
                   value={problem}
                   type="text"
@@ -262,7 +262,7 @@ export default function Partners() {
                 />
               </label>
               <div>
-                <p>{label_isTeam}</p>
+                <p>{label_isTeam}</p> 
                 <label htmlFor="yes">
                   <input
                     className={styles.radioInput}
@@ -288,7 +288,7 @@ export default function Partners() {
               </div>
 
               <div>
-                <p>{label_position}</p>
+                <p>{label_position}</p> 
                 {position_role.map(({ id, value }) => (
                   <label>
                     <input
@@ -306,7 +306,7 @@ export default function Partners() {
               </div>
          
               
-                <label>{label_team_name}
+                <label>{label_team_name} <span>*</span>
                   <input
                     value={teamName}
                     type="text"
