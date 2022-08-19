@@ -337,10 +337,7 @@ width: 100%!important;
     flex-wrap: wrap;
   }
 
-  .partners_title {
-    font-size: 40px;
-    text-align: center;
-  }
+
 
   .partners_left,
   .partners_right {
@@ -359,7 +356,12 @@ width: 100%!important;
 
 @media (max-width: 767px) {
   .partners_left li {
-    font-size: 18px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    margin-top: 5px;
+    font-weight: 500;
+    line-height: 20px;
+    padding-right: 0;
   }
 
   .partners_right div label{
@@ -378,19 +380,21 @@ width: 100%!important;
     width: 100%;
   }
 
-  .partners_title {
-    font-size: 28px;
-    line-height: 110%;
-    text-align: center;
-  }
+  
 
   .partners_descr {
     font-size: 14px;
     line-height: 20px;
   }
 
-  .partners_left h3 {
-    font-size: 32px;
+  .hackaton h3 {
+    font-size: 28px;
+    line-height: 35px;
+  }
+
+  .hackaton p{
+    font-size: 16px;
+    line-height: 22px;
   }
 
   .partners_right label,
