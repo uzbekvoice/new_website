@@ -20,12 +20,11 @@ export default function Partners() {
   const [teamName, setTeamName] = useState("");
   const [teamCount, setTeamCount] = useState("");
   const [confirm, setConfirm] = useState("");
-
+ 
   const onConfirm = (e) => {
-    if (e.target.checked)
-      setConfirm('yes')
-    else setConfirm('')
-  }
+    if (e.target.checked) setConfirm("yes");
+    else setConfirm("");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -38,12 +37,12 @@ export default function Partners() {
       dateOfBirth !== "" &&
       country !== "" &&
       place_work !== "" &&
-      age !== "" &&
+      // age !== "" &&
       problem !== "" &&
       position !== "" &&
       teamName !== "" &&
       teamCount !== "" &&
-      confirm !== ''
+      confirm !== ""
     ) {
       setAlert("true");
       const users = {
@@ -52,7 +51,7 @@ export default function Partners() {
         telephone_number: phone,
         city: country,
         study_work_place: place_work,
-        age,
+        // age,
         solution: problem,
         is_team: isTeam,
         position,
@@ -60,21 +59,24 @@ export default function Partners() {
         number_participants: teamCount,
         confirmation: confirm,
         telegram_nik: tg_nike,
-        date_of_birth: dateOfBirth
+        date_of_birth: dateOfBirth,
       };
 
       console.log(users);
       try {
-        const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
-          method: "POST",
-          body: JSON.stringify(users),
-          headers: {
-            'Content-Type': 'application/json',
+        const res = await fetch(
+          "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
+          {
+            method: "POST",
+            body: JSON.stringify(users),
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
-        });
+        );
 
         // const resData = await res.json()
-        console.log("response data:", res)
+        console.log("response data:", res);
       } catch (error) {
         console.log("Error: ", error);
       }
@@ -92,12 +94,12 @@ export default function Partners() {
     setTgNike("");
     setCountry("");
     setPlaceWork("");
-    setAge("");
+    // setAge("");
     setProblem("");
     setIsTeam("");
     setPosition("");
     setTeamName("");
-    setTeamCount("");
+    // setTeamCount("");
     setConfirm("");
   };
 
@@ -132,7 +134,10 @@ export default function Partners() {
         placeholder_problem,
         placeholder_position,
         placeholder_team_name,
-        placeholder_team_count,
+        // placeholder_team_count,
+        choose,
+        yes, 
+        no,
         button,
         parag,
         parag1,
@@ -141,75 +146,61 @@ export default function Partners() {
         parag4,
         parag5,
         country,
-        position_role
+        position_role,
       }) => (
         <div className={styles.hackaton} key={id}>
           <h3>{title}</h3>
           <p>{descr}</p>
           <div className={styles.partners}>
-            <ul className={styles.partners_left}>
+            <div className={styles.partners_left}>
               <li>{parag}</li>
               <li>{parag1}</li>
               <li>{parag2}</li>
               <li>{parag3}</li>
               <li>{parag4}</li>
               <li>{parag5}</li>
-            </ul>
+            </div>
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
               style={{ display: alert === "true" ? "none" : "flex" }}
               method="post"
             >
-              <label>{label_fio}
-                <input
+              <h4>Персональная информация</h4>
+              <hr></hr>
+
+              <label>
+                {label_fio} <span>*</span>
+
+                <input className={styles.firstinp}
                   value={fio}
                   type="text"
                   placeholder={placeholder_fio}
                   onChange={(e) => setFio(e.target.value)}
                 />
               </label>
-              <label>{label_email}
-                <input
-                  value={email}
-                  type="email"
-                  placeholder={placeholder_email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-              </label>
-              <label>{label_phone}
-                <input
-                  value={phone}
-                  type="number"
-                  placeholder={placeholder_phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </label>
-              <label>{label_tg_nike}
-                <input
-                  value={tg_nike}
-                  type="text"
-                  placeholder={placeholder_tg}
-                  onChange={(e) => setTgNike(e.target.value)}
-                />
-              </label>
-              <label>{label_date_of_brith}
+              <label>
+                {label_date_of_brith} <span>*</span>
                 <input
                   value={dateOfBirth}
                   type="date"
-                  placeholder={''}
+                  placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
               </label>
-              <label>{label_country}
+              <label>
+                {label_country} <span>*</span>
                 <select onChange={(e) => setCountry(e.target.value)}>
-                  <option disabled selected>Choose</option>
-                  {
-                    country.map(({ id, value }) => <option key={id}>{value}</option>)
-                  }
+                  <option disabled selected>
+                   {choose}
+                  </option>
+                  {country.map(({ id, value }) => (
+                    <option key={id}>{value}</option>
+                  ))}
                 </select>
               </label>
-              <label>{label_place_work}
+              <label>
+                {label_place_work} <span>*</span>
                 <input
                   value={place_work}
                   type="text"
@@ -217,16 +208,56 @@ export default function Partners() {
                   onChange={(e) => setPlaceWork(e.target.value)}
                 />
               </label>
-              <label>{label_age}
+
+              {/*  Contact data */}
+              <h4>Контактные данные</h4>
+              <hr></hr>
+              <label>
+                {label_phone} <span>*</span>
+                <input
+                  value={phone}
+                  type="number"
+                  placeholder={placeholder_phone}
+                  onChange={(e) => setPhone(e.target.value)}
+                />
+              </label>
+              <label>
+                {label_email} <span>*</span>
+                <input
+                  value={email}
+                  type="email"
+                  placeholder={placeholder_email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </label>
+
+              <label>
+                {label_tg_nike} <span>*</span>
+                <input
+                  value={tg_nike}
+                  type="text"
+                  placeholder={placeholder_tg}
+                  onChange={(e) => setTgNike(e.target.value)}
+                />
+              </label>
+
+              {/*  Contact data */}
+              <h4>Дополнительная информация</h4>
+              <hr></hr>
+
+              {/* <label>
+                {label_age}
                 <input
                   value={age}
                   type="number"
                   placeholder={placeholder_age}
                   onChange={(e) => setAge(e.target.value)}
                 />
-              </label>
-              <label>{label_problem}
-                <input
+              </label> */}
+
+              <label>
+                {label_problem} <span>*</span>
+                <textarea
                   value={problem}
                   type="text"
                   placeholder={placeholder_problem}
@@ -234,69 +265,86 @@ export default function Partners() {
                 />
               </label>
               <div>
-                <p>{label_isTeam}</p>
-                <label htmlFor="yes">Yes
+                <p>{label_isTeam}</p> 
+                <label htmlFor="yes">
                   <input
                     className={styles.radioInput}
                     name="isTeam"
                     id="yes"
                     type="radio"
                     value={isTeam}
-                    onChange={() => setIsTeam('yes')}
+                    onChange={() => setIsTeam("yes")}
                   />
+                  {yes}
                 </label>
-                <label htmlFor="no">No
+                <label htmlFor="no">
                   <input
                     className={styles.radioInput}
                     name="isTeam"
                     id="no"
                     type="radio"
                     value={isTeam}
-                    onChange={() => setIsTeam('no')}
+                    onChange={() => setIsTeam("no")}
                   />
-                </label>
-              </div>
-              <label>{label_position}
-                <select onChange={(e) => setPosition(e.target.value)}>
-                  <option disabled selected>choose</option>
-                  {
-                    position_role.map(({ id, value }) => <option key={id}>{value}</option>)
-                  }
-                </select>
-              </label>
-              <label>{label_team_name}
-                <input
-                  value={teamName}
-                  type="text"
-                  placeholder={placeholder_team_name}
-                  onChange={(e) => setTeamName(e.target.value)}
-                />
-              </label>
-              <label>{label_team_count}
-                <input
-                  value={teamCount}
-                  type="number"
-                  placeholder={placeholder_team_count}
-                  onChange={(e) => setTeamCount(e.target.value)}
-                />
-              </label>
-              <div>
-                <p>{label_confirm}</p>
-                <label htmlFor="confim">Yes
-                  <input
-                    className={styles.radioInput}
-                    id='confim'
-                    type="checkbox"
-                    value={confirm}
-                    onChange={(e) => onConfirm(e)}
-                  />
+                  {no}
                 </label>
               </div>
 
+              <div>
+                <p>{label_position}</p> 
+                {position_role.map(({ id, value }) => (
+                  <label>
+                    <input
+                      key={id}
+                      className={styles.radioInput}
+                      name={position}
+                      // id={value}
+                      type="radio"
+                      value={value}
+                      onChange={() => setPosition(value)}
+                    />
+                    {value}
+                  </label>
+                ))}
+              </div>
+         
+              
+                <label>{label_team_name} <span>*</span>
+                  <input
+                    value={teamCount}
+                    type="text"
+                    placeholder={placeholder_team_name}
+                    onChange={(e) => setTeamCount(e.target.value)}
+                  />
+                </label>
+          
+
+
+              <h4> Просим ознакомиться с офертой (link)
+             </h4>
+              <hr></hr>
+              <div>
+                <p>{label_confirm}</p>
+                <label htmlFor="confim">
+                  
+                  <input
+                    className={styles.radioInput}
+                    id="confim"
+                    type="checkbox"
+                    value={confirm}
+                    onChange={(e) => onConfirm(e)}
+                  /> Принимаю 
+                </label>
+              </div>
+
+              <hr></hr>
+
               <div className={styles.finally}>
                 <button type="submit">{button}</button>
-                <div style={{ display: alert === "error" ? "flex" : "none" }}
-                  className={styles.error}>
+                <div
+                  style={{ display: alert === "error" ? "flex" : "none" }}
+                  className={styles.error}
+                >
                   {locale === "uz-UZ" ? (
                     <span>Iltimos maydonlarni to'ldiring</span>
                   ) : locale === "ru-RU" ? (
