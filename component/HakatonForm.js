@@ -18,7 +18,7 @@ export default function Partners() {
   const [isTeam, setIsTeam] = useState("");
   const [position, setPosition] = useState("");
   const [teamName, setTeamName] = useState("");
-  // const [teamCount, setTeamCount] = useState("");
+  const [teamCount, setTeamCount] = useState("");
   const [confirm, setConfirm] = useState("");
  
   const onConfirm = (e) => {
@@ -41,7 +41,7 @@ export default function Partners() {
       problem !== "" &&
       position !== "" &&
       teamName !== "" &&
-      // teamCount !== "" &&
+      teamCount !== "" &&
       confirm !== ""
     ) {
       setAlert("true");
@@ -56,7 +56,7 @@ export default function Partners() {
         is_team: isTeam,
         position,
         team_title: teamName,
-        // number_participants: teamCount,
+        number_participants: teamCount,
         confirmation: confirm,
         telegram_nik: tg_nike,
         date_of_birth: dateOfBirth,
@@ -308,7 +308,7 @@ export default function Partners() {
               
                 <label>{label_team_name} <span>*</span>
                   <input
-                    value={teamName}
+                    value={teamCount}
                     type="text"
                     placeholder={placeholder_team_name}
                     onChange={(e) => setTeamCount(e.target.value)}
