@@ -21,10 +21,17 @@ export default function Partners() {
   const [teamCount, setTeamCount] = useState("");
   const [confirm, setConfirm] = useState("");
 
+  const onConfirm = (e) => {
+    if (e.target.checked)
+      setConfirm('yes')
+    else setConfirm('')
+  }
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (fio !== "" &&
+    if (
+      fio !== "" &&
       email !== "" &&
       phone !== "" &&
       tg_nike !== "" &&
@@ -35,30 +42,31 @@ export default function Partners() {
       problem !== "" &&
       position !== "" &&
       teamName !== "" &&
-      teamCount !== ""
+      teamCount !== "" &&
+      confirm !== ''
     ) {
       setAlert("true");
-
       const users = {
-        fio,
+        name_surname: fio,
         email,
-        phone,
-        country,
-        place_work,
+        telephone_number: phone,
+        city: country,
+        study_work_place: place_work,
         age,
-        problem,
-        isTeam,
+        solution: problem,
+        is_team: isTeam,
         position,
-        teamName,
-        teamCount,
-        confirm,
+        team_title: teamName,
+        number_participants: teamCount,
+        confirmation: confirm,
+        telegram_nik: tg_nike,
+        date_of_birth: dateOfBirth
       };
 
-      //   console.log(users);
+      console.log(users);
       try {
         const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
           method: "POST",
-          // mode: 'no-cors',
           body: JSON.stringify(users),
           headers: {
             'Content-Type': 'application/json',
@@ -194,7 +202,7 @@ export default function Partners() {
                 />
               </label>
               <label>{label_country}
-                <select>
+                <select onChange={(e) => setCountry(e.target.value)}>
                   <option disabled selected>Choose</option>
                   {
                     country.map(({ id, value }) => <option key={id}>{value}</option>)
@@ -233,7 +241,8 @@ export default function Partners() {
                     name="isTeam"
                     id="yes"
                     type="radio"
-                    onChange={(e) => setIsTeam(e.target.value)}
+                    value={isTeam}
+                    onChange={() => setIsTeam('yes')}
                   />
                 </label>
                 <label htmlFor="no">No
@@ -242,12 +251,13 @@ export default function Partners() {
                     name="isTeam"
                     id="no"
                     type="radio"
-                    onChange={(e) => setIsTeam(e.target.value)}
+                    value={isTeam}
+                    onChange={() => setIsTeam('no')}
                   />
                 </label>
               </div>
               <label>{label_position}
-                <select>
+                <select onChange={(e) => setPosition(e.target.value)}>
                   <option disabled selected>choose</option>
                   {
                     position_role.map(({ id, value }) => <option key={id}>{value}</option>)
@@ -276,8 +286,9 @@ export default function Partners() {
                   <input
                     className={styles.radioInput}
                     id='confim'
-                    type="radio"
-                    onChange={(e) => setConfirm(e.target.value)}
+                    type="checkbox"
+                    value={confirm}
+                    onChange={(e) => onConfirm(e)}
                   />
                 </label>
               </div>
