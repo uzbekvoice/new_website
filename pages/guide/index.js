@@ -1,5 +1,5 @@
 import React from 'react'
-import QollanmaMain from '../component/QollanmaMain'
+import QollanmaMain from '../../component/QollanmaMain'
 
 export default function guide({ data }) {
   return (

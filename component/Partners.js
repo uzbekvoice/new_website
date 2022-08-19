@@ -102,14 +102,14 @@ export default function Partners() {
                         {
                             locale === "uz-UZ" ?
                                 <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chiqamiz.
-                                    <button>Yangi ariza yuborish</button>
+                                    <button type='button' onClick={()=>setAlert(false)}>Yangi ariza yuborish</button>
                                 </span>
                                 : locale === "ru-RU" ?
                                     <span>Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени.
-                                        <button>Отправить новую заявку</button>
+                                        <button type='button' onClick={()=>setAlert(false)}>Отправить новую заявку</button>
                                     </span>
                                     : <span>Thank you for your message. We will contact you as soon as possible.
-                                        <button>Submit a new application</button>
+                                        <button type='button' onClick={()=>setAlert(false)}>Submit a new application</button>
                                     </span>
                         }
                     </div>

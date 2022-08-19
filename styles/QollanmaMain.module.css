@@ -101,6 +101,14 @@
     align-items: center;
     letter-spacing: 0.0043em;
     color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 20px;
+}
+
+.qollanmaCardBody a {
+    color: #8D53FD;
+    display: inline-flex;
+    align-items: center;
+    font-size: 18px;
 }
 
 .qollanmaCardMobileHeader {

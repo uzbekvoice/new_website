@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRouter } from "next/router";
 import styles from '../styles/QollanmaMain.module.css'
+import Link from 'next/link'
 
 const QollanmaMain = ({ data }) => {
     console.log(data, 'guide');
@@ -26,7 +27,7 @@ const QollanmaMain = ({ data }) => {
                 {
                     data
                         .filter(p => p.languages_code === locale)
-                        .map(({ id, guideline_title, guidline_video, gudline_created_date, guideline_content }) => (
+                        .map(({ id, guideline_title, guidelines_id, guidline_video, gudline_created_date, guideline_content }) => (
                             <div key={id} className={styles.qollanmaCard}>
                                 {
                                     <div className={styles.qollanmaCardMobileHeader}>
@@ -45,6 +46,19 @@ const QollanmaMain = ({ data }) => {
                                     <span>{gudline_created_date.slice(0, 10)}</span>
                                     <h4>{guideline_title}</h4>
                                     <p dangerouslySetInnerHTML={{ __html: guideline_content.split(" ", 20).join(' ') }}></p>
+
+                                    <Link href={`/guide/${guidelines_id}`}>
+                                        <a>
+                                            {
+                                                locale === "uz-UZ" ?
+                                                    'Batafsil'
+                                                    : locale === "ru-RU" ?
+                                                        'Узнать больше'
+                                                        : 'Read more'
+                                            }
+                                            <img src='/chevron-right.svg' />
+                                        </a>
+                                    </Link>
                                 </div>
                                 {
                                     <div className={styles.qollanmaCardHeader}>
