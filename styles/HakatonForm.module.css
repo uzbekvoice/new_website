@@ -395,7 +395,7 @@ width: 100%!important;
 
   .partners_right label,
   .partners_right div {
-    font-size: 15px;
+    font-size: 14px;
     line-height: 22px;
     /* width: 100%; */
   }
@@ -414,6 +414,12 @@ width: 100%!important;
   }
 
   .partners_right button {
-    padding: 15px 30px;
+    font-size: 15px;
+    padding: 10px 10px;
+  }
+
+  .partners_right h4 {
+    font-size: 15px;
+
   }
 }
