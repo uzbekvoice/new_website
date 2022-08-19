@@ -35,6 +35,8 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
   const dataRules = data[0].contest_rules;
+  
+  console.log(dataRules);
   const prize = [];
 
   for (const key in data[0]) {

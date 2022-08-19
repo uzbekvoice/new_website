@@ -168,10 +168,16 @@
 @media (max-width: 650px) {
     .hakatonHero_Right {
         padding: 0;
-    }
+    }    
 }
 
+
 @media (max-width: 460px) {
+
+    .hakatonHero {
+        padding-top: 120px;
+        padding-bottom: 75px;
+    }
 
     .hakatonHero_Right div {
         margin-left: 60px;
