@@ -4,6 +4,7 @@ import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
 
 export default function Partners() {
+  
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
@@ -43,7 +44,9 @@ export default function Partners() {
       teamName !== "" &&
       teamCount !== "" &&
       confirm !== ""
-    ) {
+    ) 
+    
+    {
       setAlert("true");
       const users = {
         name_surname: fio,
@@ -84,7 +87,7 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 8000);
     } else {
       setAlert("error");
-      setTimeout(() => setAlert("false"), 5000);
+      setTimeout(() => setAlert("false"), 8000);
     }
 
     setFio("");
@@ -102,7 +105,7 @@ export default function Partners() {
     // setTeamCount("");
     setConfirm("");
   };
-
+  
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
     .map(
@@ -172,11 +175,12 @@ export default function Partners() {
               <label>
                 {label_fio} <span>*</span>
 
-                <input className={styles.firstinp}
+                <input className={styles.firstinp} 
                   value={fio}
                   type="text"
                   placeholder={placeholder_fio}
                   onChange={(e) => setFio(e.target.value)}
+                  
                 />
               </label>
               <label>
@@ -186,6 +190,7 @@ export default function Partners() {
                   type="date"
                   placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
+                 
                 />
               </label>
               <label>
@@ -216,7 +221,7 @@ export default function Partners() {
                 {label_phone} <span>*</span>
                 <input
                   value={phone}
-                  type="number"
+                  type="tel"
                   placeholder={placeholder_phone}
                   onChange={(e) => setPhone(e.target.value)}
                 />
@@ -233,7 +238,7 @@ export default function Partners() {
 
               <label>
                 {label_tg_nike} <span>*</span>
-                <input
+                <input 
                   value={tg_nike}
                   type="text"
                   placeholder={placeholder_tg}
@@ -289,6 +294,18 @@ export default function Partners() {
                   {no}
                 </label>
               </div>
+           {isTeam === "yes" ?
+            <label>{label_team_name} <span>*</span>
+            <input
+              value={teamCount}
+              type="text"
+              placeholder={placeholder_team_name}
+              onChange={(e) => setTeamCount(e.target.value)}
+            />
+          </label>
+ :false
+           }
+             
 
               <div>
                 <p>{label_position}</p> 
@@ -309,18 +326,13 @@ export default function Partners() {
               </div>
          
               
-                <label>{label_team_name} <span>*</span>
-                  <input
-                    value={teamCount}
-                    type="text"
-                    placeholder={placeholder_team_name}
-                    onChange={(e) => setTeamCount(e.target.value)}
-                  />
-                </label>
+             
           
+           
 
+              
 
-              <h4> Просим ознакомиться с офертой (link)
+              <h4> Просим ознакомиться с офертой <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true">(link)</a> 
              </h4>
               <hr></hr>
               <div>

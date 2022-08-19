@@ -1,6 +1,5 @@
 .hackaton {
   margin-top: 76px;
-  
 }
 
 .hackaton h3 {
@@ -30,8 +29,8 @@
   position: relative;
 }
 
-.partners_right span{
-    color: red;
+.partners_right span {
+  color: red;
 }
 
 /* .partners::before {
@@ -90,12 +89,14 @@
   border-radius: 5px;
   padding: 38px;
   margin-top: 20px;
-  
+
   width: 100%;
+}
+.partners_right a {
+  color: #2e69ff;
 }
 
 .partners_right label {
- 
   display: block;
   font-weight: 500;
   font-size: 16px;
@@ -122,10 +123,8 @@
   -moz-appearance: textfield;
 }
 
-.firstinp{
-   
-width: 100%!important;
-
+.firstinp {
+  width: 100% !important;
 }
 
 .partners_right div {
@@ -154,11 +153,10 @@ width: 100%!important;
 .partners_right div input {
   margin: 10px 0;
   width: 310px;
-  
+
   margin-right: 10px;
   padding: 10px;
   cursor: pointer;
-  
 }
 
 .partners_right h4 {
@@ -194,6 +192,10 @@ width: 100%!important;
   width: 310px;
 }
 
+.partners-right input:required {
+  border: 1px dashed red;
+}
+
 .partners_right textarea {
   background: transparent;
   border: none;
@@ -208,7 +210,7 @@ width: 100%!important;
   color: #111;
   margin-top: 10px;
   margin-bottom: 10px;
- 
+
   width: 100%;
 }
 
@@ -222,19 +224,17 @@ width: 100%!important;
 }
 .partners_right div .radioInput[type="checkbox"]:focus,
 .partners_right div .radioInput[type="radio"]:focus {
-    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0);
 }
 
 .partners_right div .radioInput[type="radio"] {
-    width: 20px!important;
-    margin: 0 10px 0 0!important;
-   
+  width: 20px !important;
+  margin: 0 10px 0 0 !important;
 }
 
 .partners_right div .radioInput[type="checkbox"] {
-    width: 20px!important;
-    margin: 0 10px 0 0!important;
-   
+  width: 20px !important;
+  margin: 0 10px 0 0 !important;
 }
 
 .partners_right select {
@@ -268,10 +268,10 @@ width: 100%!important;
 
 .partners_right input:focus,
 .partners_right select:focus,
-.partners_right textarea:focus  {
-    border-color: #2e69ff;
-    box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
-    color: #111;
+.partners_right textarea:focus {
+  border-color: #2e69ff;
+  box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
+  color: #111;
 }
 
 .partners_right input:focus::placeholder {
@@ -337,8 +337,6 @@ width: 100%!important;
     flex-wrap: wrap;
   }
 
-
-
   .partners_left,
   .partners_right {
     width: 100%;
@@ -353,7 +351,6 @@ width: 100%!important;
   }
 }
 
-
 @media (max-width: 767px) {
   .partners_left li {
     font-size: 16px;
@@ -364,25 +361,24 @@ width: 100%!important;
     padding-right: 0;
   }
 
-  .partners_right div label{
+  .partners_right div label {
     width: 100%;
- }
- .hackaton h3 {
+  }
+  .hackaton h3 {
     font-size: 28px;
     line-height: 35px;
   }
 
-  .hackaton p{
+  .hackaton p {
     font-size: 16px;
     line-height: 22px;
   }
 }
 
 @media (max-width: 576px) {
-
-    .partners{
-        margin-top: 25px;
-    }
+  .partners {
+    margin-top: 25px;
+  }
   .partners_right {
     padding: 20px;
     flex-direction: column;
@@ -393,14 +389,10 @@ width: 100%!important;
     width: 100%;
   }
 
-  
-
   .partners_descr {
     font-size: 14px;
     line-height: 20px;
   }
-
-
 
   .partners_right label,
   .partners_right div {
@@ -409,14 +401,13 @@ width: 100%!important;
     /* width: 100%; */
   }
 
-  .partners_right input  {
+  .partners_right input {
     padding: 13px 11px;
     font-size: 14px;
     line-height: 21px;
     width: 100%;
   }
-  .partners_right select  {
-    
+  .partners_right select {
     font-size: 14px;
     line-height: 21px;
     width: 100%;
@@ -429,6 +420,5 @@ width: 100%!important;
 
   .partners_right h4 {
     font-size: 15px;
-
   }
 }
