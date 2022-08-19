@@ -134,7 +134,10 @@ export default function Partners() {
         placeholder_problem,
         placeholder_position,
         placeholder_team_name,
-        placeholder_team_count,
+        // placeholder_team_count,
+        choose,
+        yes, 
+        no,
         button,
         parag,
         parag1,
@@ -189,7 +192,7 @@ export default function Partners() {
                 {label_country} <span>*</span>
                 <select onChange={(e) => setCountry(e.target.value)}>
                   <option disabled selected>
-                    Choose
+                   {choose}
                   </option>
                   {country.map(({ id, value }) => (
                     <option key={id}>{value}</option>
@@ -272,7 +275,7 @@ export default function Partners() {
                     value={isTeam}
                     onChange={() => setIsTeam("yes")}
                   />
-                  Yes
+                  {yes}
                 </label>
                 <label htmlFor="no">
                   <input
@@ -283,7 +286,7 @@ export default function Partners() {
                     value={isTeam}
                     onChange={() => setIsTeam("no")}
                   />
-                  No
+                  {no}
                 </label>
               </div>
 
