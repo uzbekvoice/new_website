@@ -153,6 +153,21 @@
     /* color: green; */
 }
 
+.thanks button {
+    display: block;
+    margin: 0 auto;
+    margin-top: 32px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 23px;
+    color: #FFFFFF;
+    background: linear-gradient(323.77deg, #8D53FD -1.4%, #B38CFF 95.18%), #F2B410;
+    border-radius: 16px;
+}
+
 @media (max-width: 992px) {
     .partners {
         flex-wrap: wrap;
