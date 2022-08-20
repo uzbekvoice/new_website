@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "../styles/HakatonForm.module.css";
 import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
-
+import "react-phone-number-input/style.css";
+import Input from 'react-phone-number-input/input'
 export default function Partners() {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
@@ -13,14 +14,16 @@ export default function Partners() {
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [country, setCountry] = useState("");
   const [place_work, setPlaceWork] = useState("");
-  const [age, setAge] = useState("");
+  // const [age, setAge] = useState("");
   const [problem, setProblem] = useState("");
   const [isTeam, setIsTeam] = useState("");
   const [position, setPosition] = useState("");
   const [teamName, setTeamName] = useState("");
-  const [teamCount, setTeamCount] = useState("");
+  // 
+  
+  
   const [confirm, setConfirm] = useState("");
- 
+
   const onConfirm = (e) => {
     if (e.target.checked) setConfirm("yes");
     else setConfirm("");
@@ -41,7 +44,7 @@ export default function Partners() {
       problem !== "" &&
       position !== "" &&
       teamName !== "" &&
-      teamCount !== "" &&
+      // teamCount !== "" &&
       confirm !== ""
     ) {
       setAlert("true");
@@ -56,7 +59,7 @@ export default function Partners() {
         is_team: isTeam,
         position,
         team_title: teamName,
-        number_participants: teamCount,
+        // number_participants: teamCount,
         confirmation: confirm,
         telegram_nik: tg_nike,
         date_of_birth: dateOfBirth,
@@ -76,7 +79,7 @@ export default function Partners() {
         );
 
         // const resData = await res.json()
-        console.log("response data:", res);
+        // console.log("response data:", res);
       } catch (error) {
         console.log("Error: ", error);
       }
@@ -84,7 +87,7 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 8000);
     } else {
       setAlert("error");
-      setTimeout(() => setAlert("false"), 5000);
+      setTimeout(() => setAlert("false"), 8000);
     }
 
     setFio("");
@@ -102,6 +105,8 @@ export default function Partners() {
     // setTeamCount("");
     setConfirm("");
   };
+
+  console.log(phone)
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -136,7 +141,7 @@ export default function Partners() {
         placeholder_team_name,
         // placeholder_team_count,
         choose,
-        yes, 
+        yes,
         no,
         button,
         parag,
@@ -171,8 +176,8 @@ export default function Partners() {
 
               <label>
                 {label_fio} <span>*</span>
-
-                <input className={styles.firstinp}
+                <input
+                  className={styles.firstinp}
                   value={fio}
                   type="text"
                   placeholder={placeholder_fio}
@@ -192,7 +197,7 @@ export default function Partners() {
                 {label_country} <span>*</span>
                 <select onChange={(e) => setCountry(e.target.value)}>
                   <option disabled selected>
-                   {choose}
+                    {choose}
                   </option>
                   {country.map(({ id, value }) => (
                     <option key={id}>{value}</option>
@@ -212,14 +217,25 @@ export default function Partners() {
               {/*  Contact data */}
               <h4>Контактные данные</h4>
               <hr></hr>
+
               <label>
                 {label_phone} <span>*</span>
-                <input
+                {/* <input
                   value={phone}
-                  type="number"
+                  type="tel"
                   placeholder={placeholder_phone}
                   onChange={(e) => setPhone(e.target.value)}
+                /> */}
+                <Input
+                  international
+                  country="UZ"
+                  defaultCountry="UZ"
+                  withCountryCallingCode
+                  value={phone}
+                  onChange={(setPhone)}
+                
                 />
+                
               </label>
               <label>
                 {label_email} <span>*</span>
@@ -228,6 +244,7 @@ export default function Partners() {
                   type="email"
                   placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
+             
                 />
               </label>
 
@@ -265,7 +282,7 @@ export default function Partners() {
                 />
               </label>
               <div>
-                <p>{label_isTeam}</p> 
+                <p>{label_isTeam}</p>
                 <label htmlFor="yes">
                   <input
                     className={styles.radioInput}
@@ -289,9 +306,22 @@ export default function Partners() {
                   {no}
                 </label>
               </div>
+              {isTeam === "yes" ? (
+                <label>
+                  {label_team_name} <span>*</span>
+                  <input
+                    value={teamName}
+                    type="text"
+                    placeholder={placeholder_team_name}
+                    onChange={(e) => setTeamName(e.target.value)}
+                  />
+                </label>
+              ) : (
+                false
+              )}
 
               <div>
-                <p>{label_position}</p> 
+                <p>{label_position}</p>
                 {position_role.map(({ id, value }) => (
                   <label>
                     <input
@@ -307,33 +337,26 @@ export default function Partners() {
                   </label>
                 ))}
               </div>
-         
-              
-                <label>{label_team_name} <span>*</span>
-                  <input
-                    value={teamCount}
-                    type="text"
-                    placeholder={placeholder_team_name}
-                    onChange={(e) => setTeamCount(e.target.value)}
-                  />
-                </label>
-          
 
-
-              <h4> Просим ознакомиться с офертой (link)
-             </h4>
+              <h4>
+                {" "}
+                Просим ознакомиться с офертой{" "}
+                <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true">
+                  (link)
+                </a>
+              </h4>
               <hr></hr>
               <div>
                 <p>{label_confirm}</p>
                 <label htmlFor="confim">
-                  
                   <input
                     className={styles.radioInput}
                     id="confim"
                     type="checkbox"
                     value={confirm}
                     onChange={(e) => onConfirm(e)}
-                  /> Принимаю 
+                  />{" "}
+                  Принимаю
                 </label>
               </div>
 
