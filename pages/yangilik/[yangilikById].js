@@ -3,6 +3,7 @@ import YangilikByIdHero from '../../component/YangilikByIdHero'
 import YangilikByIdRelevantTheme from '../../component/YangilikByIdRelevantTheme'
 
 const YangilikById = ({ data, dataTheme }) => {
+  console.log(data.data, 'd');
 
   return (
     <>
@@ -22,7 +23,7 @@ export async function getServerSideProps({ params }) {
 
   return {
     props: {
-      data, 
+      data,
       dataTheme
     },
   }
