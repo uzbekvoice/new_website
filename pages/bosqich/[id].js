@@ -35,7 +35,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
   const dataRules = data[0].contest_rules;
-  
+
   console.log(dataRules);
   const prize = [];
 
@@ -68,7 +68,9 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
             {data[0].contest_expactations}
           </p>
         </div>
-        <div className={styles.card2}>
+
+        {
+          (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&   <div className={styles.card2}>
           <div className={styles.block}>
             <div className={styles.goalIcon}>
               <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
@@ -85,6 +87,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
             {data[0].contest_result}
           </p>
         </div>
+        }       
       </div>
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
@@ -120,7 +123,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
       <Winners bosqich={true} users={users} userslist={userslist} />
 
       {
-        (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !=='активный') &&
+        (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
         < Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
       }
 
