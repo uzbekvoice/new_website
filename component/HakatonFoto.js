@@ -7,7 +7,7 @@ import { useRouter } from 'next/router';
 export default function HakatonFoto({ data, galleryID }) {
 
     const { query, locale } = useRouter();
-    const [more, setMore] = useState(8);
+    const [more, setMore] = useState(4);
 
     useEffect(() => {
         let lightbox = new PhotoSwipeLightbox({
