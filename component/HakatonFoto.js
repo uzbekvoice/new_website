@@ -56,7 +56,7 @@ export default function HakatonFoto({ data, galleryID }) {
             </div>
 
             {
-                more < 12 &&
+                more < 8 &&
                 <button onClick={() => setMore(more + 4)} type='button'>
                     {
                         locale === "uz-UZ" ?
