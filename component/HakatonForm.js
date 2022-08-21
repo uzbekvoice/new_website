@@ -14,14 +14,10 @@ export default function Partners() {
   const [dateOfBirth, setDateOfBirth] = useState("");
   const [country, setCountry] = useState("");
   const [place_work, setPlaceWork] = useState("");
-  // const [age, setAge] = useState("");
   const [problem, setProblem] = useState("");
   const [isTeam, setIsTeam] = useState("");
   const [position, setPosition] = useState("");
   const [teamName, setTeamName] = useState("");
-  // 
-  
-  
   const [confirm, setConfirm] = useState("");
 
   const onConfirm = (e) => {
@@ -40,11 +36,9 @@ export default function Partners() {
       dateOfBirth !== "" &&
       country !== "" &&
       place_work !== "" &&
-      // age !== "" &&
       problem !== "" &&
       position !== "" &&
       teamName !== "" &&
-      // teamCount !== "" &&
       confirm !== ""
     ) {
       setAlert("true");
@@ -54,12 +48,10 @@ export default function Partners() {
         telephone_number: phone,
         city: country,
         study_work_place: place_work,
-        // age,
         solution: problem,
         is_team: isTeam,
         position,
         team_title: teamName,
-        // number_participants: teamCount,
         confirmation: confirm,
         telegram_nik: tg_nike,
         date_of_birth: dateOfBirth,
@@ -78,7 +70,6 @@ export default function Partners() {
           }
         );
 
-        // const resData = await res.json()
         // console.log("response data:", res);
       } catch (error) {
         console.log("Error: ", error);
@@ -87,23 +78,9 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 8000);
     } else {
       setAlert("error");
-      setTimeout(() => setAlert("false"), 8000);
+      setTimeout(() => setAlert("false"), 5000);
     }
 
-    setFio("");
-    setEmail("");
-    setPhone("");
-    setDateOfBirth("");
-    setTgNike("");
-    setCountry("");
-    setPlaceWork("");
-    // setAge("");
-    setProblem("");
-    setIsTeam("");
-    setPosition("");
-    setTeamName("");
-    // setTeamCount("");
-    setConfirm("");
   };
 
   console.log(phone)
