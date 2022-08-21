@@ -129,7 +129,7 @@ export default function Partners() {
         parag5,
         country,
         position_role,
-      }) => (
+      }) =>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          (
         <div className={styles.hackaton} key={id}>
           <h3>{title}</h3>
           <p>{descr}</p>
@@ -197,12 +197,7 @@ export default function Partners() {
 
               <label>
                 {label_phone} <span>*</span>
-                {/* <input
-                  value={phone}
-                  type="tel"
-                  placeholder={placeholder_phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                /> */}
+         
                 <Input
                   international
                   country="UZ"
@@ -238,16 +233,6 @@ export default function Partners() {
               {/*  Contact data */}
               <h4>Дополнительная информация</h4>
               <hr></hr>
-
-              {/* <label>
-                {label_age}
-                <input
-                  value={age}
-                  type="number"
-                  placeholder={placeholder_age}
-                  onChange={(e) => setAge(e.target.value)}
-                />
-              </label> */}
 
               <label>
                 {label_problem} <span>*</span>
