@@ -147,6 +147,8 @@
   box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
 }
 
+
+
 .userbox input:valid {
   padding: 22px 0px 0px 10px;
 }
@@ -412,7 +414,8 @@
     /* width: 100%; */
   }
 
-  .partners_right input {
+  .partners_right input,
+  .partners_right textarea {
     padding: 13px 11px;
     font-size: 14px;
     line-height: 21px;
