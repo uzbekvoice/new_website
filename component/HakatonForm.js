@@ -38,7 +38,7 @@ export default function Partners() {
       place_work !== "" &&
       problem !== "" &&
       position !== "" &&
-      teamName !== "" &&
+      // teamName !== "" &&
       confirm !== ""
     ) {
       setAlert("true");
