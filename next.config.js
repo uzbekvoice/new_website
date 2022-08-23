@@ -3,7 +3,8 @@ module.exports = {
     // providing the locales supported by your application
     locales: ["uz-UZ", "en-US", "ru-RU"],
     //  default locale used when the non-locale paths are visited
-    defaultLocale: "uz-UZ",    
+    defaultLocale: "uz-UZ", 
+    localeDetection: false   
   },
 
   async redirects() {
