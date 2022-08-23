@@ -3,7 +3,7 @@ import styles from "../styles/HakatonForm.module.css";
 import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
 import "react-phone-number-input/style.css";
-import Input from 'react-phone-number-input/input'
+import Input from "react-phone-number-input/input";
 export default function Partners() {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
@@ -80,10 +80,9 @@ export default function Partners() {
       setAlert("error");
       setTimeout(() => setAlert("false"), 5000);
     }
-
   };
 
-  console.log(phone)
+  console.log(phone);
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -92,6 +91,12 @@ export default function Partners() {
         id,
         title,
         descr,
+        form_title,
+        form_title2,
+        form_title3,
+        confirm_accept,
+        link,
+        oferta,
         label_fio,
         label_email,
         label_phone,
@@ -99,22 +104,16 @@ export default function Partners() {
         label_date_of_brith,
         label_country,
         label_place_work,
-        label_age,
         label_problem,
         label_isTeam,
         label_position,
         label_team_name,
-        label_team_count,
         label_confirm,
         placeholder_fio,
         placeholder_email,
-        placeholder_phone,
-        placeholder_country,
         placeholder_tg,
         placeholder_place_work,
-        placeholder_age,
         placeholder_problem,
-        placeholder_position,
         placeholder_team_name,
         // placeholder_team_count,
         choose,
@@ -129,7 +128,7 @@ export default function Partners() {
         parag5,
         country,
         position_role,
-      }) =>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          (
+      }) => (
         <div className={styles.hackaton} key={id}>
           <h3>{title}</h3>
           <p>{descr}</p>
@@ -148,7 +147,7 @@ export default function Partners() {
               style={{ display: alert === "true" ? "none" : "flex" }}
               method="post"
             >
-              <h4>Персональная информация</h4>
+              <h4>{form_title}</h4>
               <hr></hr>
 
               <label>
@@ -192,22 +191,19 @@ export default function Partners() {
               </label>
 
               {/*  Contact data */}
-              <h4>Контактные данные</h4>
+              <h4>{form_title2}</h4>
               <hr></hr>
 
               <label>
                 {label_phone} <span>*</span>
-         
                 <Input
                   international
                   country="UZ"
                   defaultCountry="UZ"
                   withCountryCallingCode
                   value={phone}
-                  onChange={(setPhone)}
-                
+                  onChange={setPhone}
                 />
-                
               </label>
               <label>
                 {label_email} <span>*</span>
@@ -216,7 +212,6 @@ export default function Partners() {
                   type="email"
                   placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
-             
                 />
               </label>
 
@@ -231,7 +226,7 @@ export default function Partners() {
               </label>
 
               {/*  Contact data */}
-              <h4>Дополнительная информация</h4>
+              <h4>{form_title3}</h4>
               <hr></hr>
 
               <label>
@@ -302,9 +297,9 @@ export default function Partners() {
 
               <h4>
                 {" "}
-                Просим ознакомиться с офертой{" "}
+                {oferta}
                 <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true">
-                  (link)
+                  {link}
                 </a>
               </h4>
               <hr></hr>
@@ -318,7 +313,7 @@ export default function Partners() {
                     value={confirm}
                     onChange={(e) => onConfirm(e)}
                   />{" "}
-                  Принимаю
+                  {confirm_accept}
                 </label>
               </div>
 
