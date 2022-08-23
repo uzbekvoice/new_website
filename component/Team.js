@@ -20,7 +20,7 @@ const Team = ({ data }) => {
 
         <div className={styles.heroDescr} dangerouslySetInnerHTML={{ __html: dataFilter.team_project_content }}></div>
 
-        <a href={`https://admin.uzbekvoice.ai/assets/${dataFilter.team_project_file}`}>
+        <a href={`https://admin.uzbekvoice.ai/assets/${dataFilter.team_project_file}`} target="_blank">
           {
             locale === "uz-UZ" ?
             'Jamoa loyihasi'

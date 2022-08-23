@@ -134,12 +134,24 @@ export default function Partners() {
           <p>{descr}</p>
           <div className={styles.partners}>
             <div className={styles.partners_left}>
+              <div className={styles.cards}>
               <li>{parag}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag1}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag2}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag3}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag4}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag5}</li>
+              </div>
             </div>
             <form
               className={styles.partners_right}
@@ -149,81 +161,91 @@ export default function Partners() {
             >
               <h4>{form_title}</h4>
               <hr></hr>
-
-              <label>
-                {label_fio} <span>*</span>
+              <div className={styles.userbox}>
                 <input
-                  className={styles.firstinp}
+                  required
                   value={fio}
                   type="text"
-                  placeholder={placeholder_fio}
+                  // placeholder={placeholder_fio}
                   onChange={(e) => setFio(e.target.value)}
                 />
-              </label>
-              <label>
-                {label_date_of_brith} <span>*</span>
+                <label>{label_fio} </label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
                   value={dateOfBirth}
                   type="date"
-                  placeholder={""}
+                  min="1970-01-01" max="2010-12-31"
+                  required
+                  // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
-              </label>
-              <label>
-                {label_country} <span>*</span>
-                <select onChange={(e) => setCountry(e.target.value)}>
-                  <option disabled selected>
-                    {choose}
-                  </option>
-                  {country.map(({ id, value }) => (
-                    <option key={id}>{value}</option>
-                  ))}
-                </select>
-              </label>
-              <label>
-                {label_place_work} <span>*</span>
+                <label>{label_date_of_brith}</label>
+              </div>
+
+              <div className={styles.country}>
+                <label>
+                  {label_country} <span>*</span>
+                  <select onChange={(e) => setCountry(e.target.value)}>
+                    <option disabled selected>
+                      {choose}
+                    </option>
+                    {country.map(({ id, value }) => (
+                      <option key={id}>{value}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
                   value={place_work}
                   type="text"
-                  placeholder={placeholder_place_work}
+                  required
+                  // placeholder={placeholder_place_work}
                   onChange={(e) => setPlaceWork(e.target.value)}
                 />
-              </label>
+                <label>{label_place_work}</label>
+              </div>
 
               {/*  Contact data */}
               <h4>{form_title2}</h4>
               <hr></hr>
-
-              <label>
-                {label_phone} <span>*</span>
+              <div className={styles.userbox}>
                 <Input
                   international
                   country="UZ"
                   defaultCountry="UZ"
                   withCountryCallingCode
+                  
                   value={phone}
+                  required
                   onChange={setPhone}
                 />
-              </label>
-              <label>
-                {label_email} <span>*</span>
+                <label>{label_phone}</label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
                   value={email}
                   type="email"
-                  placeholder={placeholder_email}
+                  required
+                  // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-              </label>
-
-              <label>
-                {label_tg_nike} <span>*</span>
+                <label>{label_email}</label>
+              </div>
+              <div className={styles.userbox}>
                 <input
                   value={tg_nike}
                   type="text"
-                  placeholder={placeholder_tg}
+                  // placeholder={placeholder_tg}
+                  required
                   onChange={(e) => setTgNike(e.target.value)}
                 />
-              </label>
+                <label>{label_tg_nike}</label>
+              </div>
 
               {/*  Contact data */}
               <h4>{form_title3}</h4>
@@ -238,7 +260,7 @@ export default function Partners() {
                   onChange={(e) => setProblem(e.target.value)}
                 />
               </label>
-              <div>
+              <div className={styles.teamyes}>
                 <p>{label_isTeam}</p>
                 <label htmlFor="yes">
                   <input
@@ -263,21 +285,28 @@ export default function Partners() {
                   {no}
                 </label>
               </div>
+
+              
               {isTeam === "yes" ? (
-                <label>
-                  {label_team_name} <span>*</span>
+               <div className={styles.userbox}>
                   <input
                     value={teamName}
                     type="text"
-                    placeholder={placeholder_team_name}
+                    required
+                    // placeholder={placeholder_team_name}
                     onChange={(e) => setTeamName(e.target.value)}
                   />
+                  <label>
+                  {placeholder_team_name} 
                 </label>
+                </div>
               ) : (
                 false
               )}
+             
+          
 
-              <div>
+              <div className={styles.position}>
                 <p>{label_position}</p>
                 {position_role.map(({ id, value }) => (
                   <label>
@@ -298,11 +327,17 @@ export default function Partners() {
               <h4>
                 {" "}
                 {oferta}
-                <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true">
+                <a
+                  href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true"
+                  target="_blank"
+                >
                   {link}
                 </a>
               </h4>
-              <hr></hr>
+              <div className={styles.lastline}>
+                <hr></hr>
+              </div>
+
               <div>
                 <p>{label_confirm}</p>
                 <label htmlFor="confim">

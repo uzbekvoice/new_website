@@ -36,7 +36,8 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
   const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
   const dataRules = data[0].contest_rules;
 
-  console.log(dataRules);
+
+ 
   const prize = [];
 
   for (const key in data[0]) {
@@ -102,15 +103,9 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         }
         <div className={styles.rulesCard}>
           {
-            dataRules.map(({ contest_rule }, index) =>
+            dataRules.map(({ contest_rule, rule}, index) =>
               <div key={index} className={styles.rule1}>
-                {
-                  locale === "uz-UZ" ?
-                    <h2>QOIDA {index + 1}</h2>
-                    : locale === "ru-RU" ?
-                      <h2>ПРАВИЛО {index + 1}</h2>
-                      : <h2>RULE {index + 1}</h2>
-                }
+              <h2>{rule}</h2>
                 <p>
                   {contest_rule}
                 </p>
