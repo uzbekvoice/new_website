@@ -28,8 +28,8 @@ export default function HakatonMentors({ data }) {
 
                                 <p>{mentor_name}</p>
                                 <h5>{mentor_job}</h5>
-                                <Link href={mentor_link}>
-                                    <a>
+                                
+                                    <a target="_blank" href={mentor_link}>
                                         {
                                             locale === "uz-UZ" ?
                                                 <span>Bog'lanish</span>
@@ -39,7 +39,7 @@ export default function HakatonMentors({ data }) {
                                         }
                                         <img src='/chevron-right.svg' />
                                     </a>
-                                </Link>
+                               
                             </div>
                         ))
                 }
