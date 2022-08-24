@@ -23,7 +23,17 @@
 .ourteam p{
   margin-top: 5px;
   font-size: 14px;
-  color: #12273c;
+
+  color: #12273ce3;
+}
+
+.ourteam h5 {
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.0022em;
+  color: rgba(128, 128, 128, 0.692);
+  margin-top: 12px;
+
 }
 
 .firstblock {

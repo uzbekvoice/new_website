@@ -8,10 +8,18 @@
 
 .prizesPictures img {
   width: 100%;
-  height: 370px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   border-radius: 16px;
+}
+
+.prizesPictures div {
+  border-radius: 16px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.527);
 }
 
 .ceremony {
@@ -35,14 +43,6 @@
 
   .prizesPictures img {
     object-position: 50% 30%;
-    height: 340px;
-  }
-}
-
-@media (max-width: 992px) {
-  .modalImg .modalWrap {
-    width: 50%;
-    height: 55%;
   }
 }
 

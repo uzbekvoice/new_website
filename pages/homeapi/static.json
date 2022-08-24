@@ -95,19 +95,38 @@
 "steps" : [
   {
     "languages_code": "uz-UZ",
-    "title": "Bosqichlar",
+    "title": "Ovoz yigish bosqichlari",
     "button": "Batafsil"
   },
 
   {
     "languages_code": "en-US",
-    "title": "Stages",
+    "title": "Voice collection campaign phases",
     "button": "Read more"
   },
   {
     "languages_code": "ru-RU",
-    "title": "Этапы",
+    "title": "Этапы кампании сбора голосов",
     "button": "Подробнее"
+  }
+],
+
+"seocontent" : [
+  {
+    "languages_code": "uz-UZ",
+    "title": "Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi",
+    "desc": "Uzbekvoice.ai - o'zbek tilini kompyuterga o'rgatish tashabbusi"
+  },
+
+  {
+    "languages_code": "ru-RU",
+    "title": "Uzbekvoice.ai - Инициатива по обучению узбекской речи накомпьютере",
+    "button": "Uzbekvoice.ai - Инициатива по обучению узбекской речи накомпьютере"
+  },
+  {
+    "languages_code": "en-US",
+    "title": "Uzbekvoice.ai - An initiative to teach Uzbek speech to computers",
+    "button": "Uzbekvoice.ai - An initiative to teach Uzbek speech to computers"
   }
 ],
 

@@ -7,7 +7,17 @@ import { useRouter } from 'next/router';
 export default function HakatonFoto({ data, galleryID }) {
 
     const { query, locale } = useRouter();
-    const [more, setMore] = useState(4);
+    const [more, setMore] = useState(8);
+
+    let qw = data.filter(p => p.hackathons_translations_id === parseInt(query.id));
+
+    let loop = more - qw.length;
+
+    if (loop > 0) {
+        for (let i = 0; i < loop; i++) {
+            qw.push({ directus_files_id: '' })
+        }
+    }
 
     useEffect(() => {
         let lightbox = new PhotoSwipeLightbox({
@@ -37,26 +47,29 @@ export default function HakatonFoto({ data, galleryID }) {
 
             <div className={styles.hakatonFoto_wrapper + ' pswp-gallery'} id={galleryID}>
                 {
-                    data.filter(p => p.hackathons_translations_id === parseInt(query.id))
+                    qw
                         .slice(0, more)
                         .map((value, index) => (
-                            <a
-                                data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
-                                key={galleryID + '-' + index}
-                                target="_blank"
-                                rel="noreferrer"
-                            >
-                                <img
-                                    src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
-                                    alt={value.directus_files_id}
-                                />
-                            </a>
+                            value.directus_files_id ?
+                                <a
+                                    data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                    key={galleryID + '-' + index}
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
+                                    <img
+                                        src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                        alt={value.directus_files_id}
+                                    />
+                                </a>
+                                :
+                                <span></span>
                         ))
                 }
             </div>
 
             {
-                more < 8 &&
+                qw.length > 8 && more < 12 &&
                 <button onClick={() => setMore(more + 4)} type='button'>
                     {
                         locale === "uz-UZ" ?
