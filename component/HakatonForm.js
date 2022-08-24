@@ -178,7 +178,6 @@ export default function Partners() {
                 <input
                   value={dateOfBirth}
                   type="date"
-                
                   required
                   
                   // placeholder={""}
