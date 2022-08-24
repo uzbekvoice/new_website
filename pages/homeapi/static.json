@@ -95,18 +95,18 @@
 "steps" : [
   {
     "languages_code": "uz-UZ",
-    "title": "Bosqichlar",
+    "title": "Ovoz yigish bosqichlari",
     "button": "Batafsil"
   },
 
   {
     "languages_code": "en-US",
-    "title": "Stages",
+    "title": "Voice collection campaign phases",
     "button": "Read more"
   },
   {
     "languages_code": "ru-RU",
-    "title": "Этапы",
+    "title": "Этапы кампании сбора голосов",
     "button": "Подробнее"
   }
 ],

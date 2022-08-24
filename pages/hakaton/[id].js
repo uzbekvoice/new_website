@@ -7,6 +7,7 @@ import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 import HakatonForm from '../../component/HakatonForm'
 import { useRouter } from "next/router";
+import HakatonMentors from "../../component/HakatonMentors";
 
 export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
 
@@ -28,6 +29,7 @@ export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
             <HakatonTeams data={hakatonTeam.data} />
             <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
             <HakatonJuri data={hakatonJury.data} />
+            <HakatonMentors data={hakatonJury.data} />
           </>
           : <HakatonForm />
       }

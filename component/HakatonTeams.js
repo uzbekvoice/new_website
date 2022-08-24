@@ -5,7 +5,6 @@ import styles from '../styles/HakatonTeams.module.css'
 
 export default function HakatonTeams({ data }) {
     const { locale, query } = useRouter();
-    console.log(data, 'team');
 
     return (
         <div className={styles.hakatonTeams}>

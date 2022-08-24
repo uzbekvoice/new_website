@@ -1,0 +1,120 @@
+.hakatonJuri {
+    margin-top: 160px;
+}
+
+.hakatonJuri_title {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 110%;
+    text-align: center;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+    margin-bottom: 14px;
+}
+
+.hakatonJuri_wrapper {
+    display: flex;
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+.hakatonJuri_card {
+    width: 23.5%;
+    margin-top: 34px;
+    text-align: center;
+}
+
+.hakatonJuri_card img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.hakatonJuri_card p {
+    margin: 26px 0 10px;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #12273C;
+}
+
+.hakatonJuri_card a {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 111.63%;
+    display: inline-flex;
+    align-items: center;
+    color: #8D53FD;
+    font-family: 'Inter', sans-serif;
+}
+
+.hakatonJuri_card a img {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+
+@media (max-width: 992px) {
+
+    .hakatonJuri_card p {
+        font-size: 18px;
+    }
+    
+    .hakatonJuri_card a {
+        font-size: 16px;
+    }
+
+    .hakatonJuri_card a img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 860px) {
+    .hakatonJuri_card {
+        width: 32%;
+    }
+}
+
+@media (max-width: 767px) {
+    .hakatonJuri_title {
+        font-size: 40px;
+    }
+
+    .hakatonJuri_card {
+        width: 32%;
+    }
+}
+
+@media (max-width: 520px) {
+    .hakatonJuri_card {
+        width: 48%;
+    }
+
+    .hakatonJuri_card p {
+        margin: 12px 0 8px;
+    }
+}
+
+@media (max-width: 460px) {
+    .hakatonJuri_card p {
+        font-size: 14px;
+    }
+    
+    .hakatonJuri_card a {
+        font-size: 14px;
+    }
+
+    .hakatonJuri_card a img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .hakatonJuri_title {
+        font-size: 28px;
+    }
+}

@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PhotoSwipeLightbox from 'photoswipe/lightbox';
 import 'photoswipe/style.css';
 import styles from "../styles/Prizes.module.css";
 
 export default function Prizes({ prize, galleryID, title }) {
+
+  const [more, setMore] = useState(8);
+  let loop = more - prize.length;
+
+  if (loop > 0) {
+    for (let i = 0; i < loop; i++) {
+      prize.push('')
+    }
+  }
 
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
@@ -21,6 +30,7 @@ export default function Prizes({ prize, galleryID, title }) {
     };
   }, []);
 
+
   return (
     <div className={styles.ceremony}>
       <h2 className={styles.hakatonFoto_title}>{title}</h2>
@@ -28,14 +38,17 @@ export default function Prizes({ prize, galleryID, title }) {
 
         {
           prize.map((value, index) => (
-            <a
-              href={`https://admin.uzbekvoice.ai/assets/${value}`}
-              key={galleryID + '-' + index}
-              target="_blank"
-              rel="noreferrer"              
-            >
-              <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
-            </a>
+            value ?
+              <a
+                href={`https://admin.uzbekvoice.ai/assets/${value}`}
+                key={galleryID + '-' + index}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
+              </a>
+              :
+              <div></div>
           ))
         }
       </div>
