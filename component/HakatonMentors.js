@@ -7,7 +7,7 @@ import styles from '../styles/HakatonMentors.module.css'
 export default function HakatonMentors({ data }) {
 
     const { query, locale } = useRouter()
-
+ console.log(data)
     return (
         <div className={styles.hakatonJuri}>
             {
@@ -21,13 +21,14 @@ export default function HakatonMentors({ data }) {
             <div className={styles.hakatonJuri_wrapper}>
                 {
                     data
-                        .filter(p => p.hackathon_id === parseInt(query.id))
-                        .map(({ id, jury_image, jury_link, jury_name }) => (
+                        .filter(p => p.hackathon_id === parseInt(query.id) & p.languages_code === locale)
+                        .map(({ id, mentor_image, mentor_link, mentor_name, mentor_job, }) => (
                             <div key={id} className={styles.hakatonJuri_card}>
-                                <img src={`https://admin.uzbekvoice.ai/assets/${jury_image}`} alt='img' />
+                                <img src={`https://admin.uzbekvoice.ai/assets/${mentor_image}`} target='_blank' alt='img' />
 
-                                <p>{jury_name}</p>
-                                <Link href={jury_link}>
+                                <p>{mentor_name}</p>
+                                <h5>{mentor_job}</h5>
+                                <Link href={mentor_link}>
                                     <a>
                                         {
                                             locale === "uz-UZ" ?

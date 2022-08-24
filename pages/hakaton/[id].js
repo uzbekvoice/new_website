@@ -9,7 +9,7 @@ import HakatonForm from '../../component/HakatonForm'
 import { useRouter } from "next/router";
 import HakatonMentors from "../../component/HakatonMentors";
 
-export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury }) {
+export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTeam, hakatonJury, mentor }) {
 
   const router = useRouter()
   const { query, locale } = router
@@ -29,7 +29,7 @@ export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
             <HakatonTeams data={hakatonTeam.data} />
             <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
             <HakatonJuri data={hakatonJury.data} />
-            <HakatonMentors data={hakatonJury.data} />
+            <HakatonMentors data={mentor.data} />
           </>
           : <HakatonForm />
       }
@@ -44,12 +44,14 @@ export async function getServerSideProps() {
   const res3 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
   const res4 = await fetch('https://admin.uzbekvoice.ai/items/hackathon_teams_translations')
   const res5 = await fetch('https://admin.uzbekvoice.ai/items/jury')
+  const res6 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_mentors_translations')
 
   const partners = await res.json();
   const hakatonHero = await res2.json();
   const hakatonFoto = await res3.json();
   const hakatonTeam = await res4.json();
   const hakatonJury = await res5.json();
+  const mentor = await res6.json();
 
   return {
     props: {
@@ -57,7 +59,8 @@ export async function getServerSideProps() {
       hakatonHero,
       hakatonFoto,
       hakatonTeam,
-      hakatonJury
+      hakatonJury,
+      mentor
     },
 
   };
