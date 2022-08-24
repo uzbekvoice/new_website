@@ -7,15 +7,15 @@ import styles from '../styles/HakatonMentors.module.css'
 export default function HakatonMentors({ data }) {
 
     const { query, locale } = useRouter()
- console.log(data)
+
     return (
         <div className={styles.hakatonJuri}>
             {
                 locale === "uz-UZ" ?
                     <h3 className={styles.hakatonJuri_title}>Mentorlar</h3>
                     : locale === "ru-RU" ?
-                        <h3 className={styles.hakatonJuri_title}>Mentorlar ru</h3>
-                        : <h3 className={styles.hakatonJuri_title}>Mentorlar en</h3>
+                        <h3 className={styles.hakatonJuri_title}>Менторы </h3>
+                        : <h3 className={styles.hakatonJuri_title}>Mentors</h3>
             }
 
             <div className={styles.hakatonJuri_wrapper}>

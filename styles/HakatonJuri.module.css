@@ -1,6 +1,4 @@
-.hakatonJuri {
-    /* padding-bottom: 115px; */
-}
+
 
 .hakatonJuri_title {
     font-weight: 800;
@@ -40,6 +38,15 @@
     line-height: 110%;
     letter-spacing: 0.0022em;
     color: #12273C;
+}
+
+.hakatonJuri_card h5 {
+    margin: 15px 0 10px;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 110%;
+    letter-spacing: 0.0022em;
+    color: #666666;
 }
 
 .hakatonJuri_card a {

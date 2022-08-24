@@ -7,6 +7,7 @@ import styles from '../styles/HakatonJuri.module.css'
 export default function HakatonJuri({ data }) {
 
     const { query, locale } = useRouter()
+  
 
     return (
         <div className={styles.hakatonJuri}>
@@ -21,12 +22,13 @@ export default function HakatonJuri({ data }) {
             <div className={styles.hakatonJuri_wrapper}>
                 {
                     data
-                        .filter(p => p.hackathon_id === parseInt(query.id))
-                        .map(({ id, jury_image, jury_link, jury_name }) => (
+                        .filter(p => p.hackathon_id === parseInt(query.id) & p.languages_code === locale)
+                        .map(({ id, jury_image, jury_link, jury_name, jury_job }) => (
                             <div key={id} className={styles.hakatonJuri_card}>
-                                <img src={`https://admin.uzbekvoice.ai/assets/${jury_image}`} alt='img' />
+                                <img src={`https://admin.uzbekvoice.ai/assets/${jury_image}`} target='_blank' alt='img' />
 
                                 <p>{jury_name}</p>
+                                <h5>{jury_job}</h5>
                                 <Link href={jury_link}>
                                     <a>
                                         {
