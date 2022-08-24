@@ -134,9 +134,8 @@ export default function Partners() {
           <p>{descr}</p>
           <div className={styles.partners}>
             <div className={styles.partners_left}>
-              <div className={styles.cards}>
-              <li>{parag}</li>
-              </div>
+              <h4>{parag}</h4>
+           
               <div className={styles.cards}>
               <li>{parag1}</li>
               </div>

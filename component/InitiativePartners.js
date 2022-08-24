@@ -53,13 +53,14 @@ export default function InitiativePartners(props) {
           const { title, desc } = HomeContent;
           return (
             <div key={i} className={status === "active" && styles.active}>
-              <h3
+              <div
                 className={
                   pathname === "/hakaton/[id]" && styles.partnersForHak
                 }
               >
-                {title}
-              </h3>
+                <h3>{title}</h3>
+              </div>
+
               <p>{desc}</p>
             </div>
           );
