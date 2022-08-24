@@ -12,6 +12,17 @@
   text-align: center;
 }
 
+.hackaton h6{
+  display: none;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 28px;
+  color: #12273c;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
 .hackaton p {
   font-size: 20px;
   font-weight: 400;
@@ -294,13 +305,23 @@ color: #666666;
   color: #111;
   opacity: 0.3;
 }
-.partners_right input[type="date"]::-webkit-datetime-edit-text,
-.partners_right input[type="date"]::-webkit-datetime-edit-month-field,
-.partners_right input[type="date"]::-webkit-datetime-edit-day-field,
-.partners_right input[type="date"]::-webkit-datetime-edit-year-field {
-  color: #111;
-  opacity: 0.3;
+.userbox input[type="date"]
+ {
+  color: white;
 }
+.userbox input[type="date"]:focus,
+.userbox input[type="date"]:valid
+ {
+  color: black;
+}
+
+
+/* .userbox input[type="date"]::-webkit-datetime-edit-text:valid,
+.userbox input[type="date"]::-webkit-datetime-edit-month-field:valid,
+.userbox input[type="date"]::-webkit-datetime-edit-day-field:valid,
+.userbox input[type="date"]::-webkit-datetime-edit-year-field:valid {
+  color: black;
+} */
 
 .partners_right button {
  
@@ -354,8 +375,19 @@ color: #666666;
   }
   .cards{
     width: 100%;
-    padding: 5px 15px;
+    
   }
+
+.hackaton h6{
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 16px;
+}
+.hackaton p{
+  display: none;
+}
 
   .partners_right{
     margin-top: 30px;
@@ -417,7 +449,9 @@ color: #666666;
     padding: 20px;
     flex-direction: column;
   }
-
+.cards{
+  padding: 5px 15px;
+}
   .thanks,
   .partners_right {
     width: 100%;

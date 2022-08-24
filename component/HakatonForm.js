@@ -154,7 +154,7 @@ export default function Partners() {
               </div>
             </div>
 
-    
+            <h6>{descr}</h6>
            
             <form
               className={styles.partners_right}
@@ -179,9 +179,9 @@ export default function Partners() {
                 <input
                   value={dateOfBirth}
                   type="date"
-                  min="1970-01-01" max="2010-12-31"
+                
                   required
-                  data-focus-method="touch"
+                  
                   // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
