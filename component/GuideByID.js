@@ -5,7 +5,7 @@ import styles from '../styles/GuideByID.module.css'
 const GuideByID = ({ data }) => {
     const { locale, query } = useRouter()
     const dataFilter = data.filter(p => p.languages_code === locale && p.guidelines_id === parseInt(query.id))[0]
-    console.log(data);
+    // console.log(data);
     return (
         <div className={styles.yangilikByIdHero}>
             <div className={styles.heroImg}>

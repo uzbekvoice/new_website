@@ -52,7 +52,7 @@ export default function InitiativePartners(props) {
         .map((HomeContent, i) => {
           const { title, desc } = HomeContent;
           return (
-            <div key={i}  className={status === 'active' && styles.active}>
+            <div key={i}  className={status === 'active' && styles.active }>
               <h3 className={pathname==='/hakaton/[id]' && styles.partnersForHak}>{title}</h3>
               <p>{desc}</p>
             </div>
@@ -72,7 +72,7 @@ export default function InitiativePartners(props) {
         >
           {
             partners.map(({id, partner_link, partner_image, partner_title }) =>
-              <Link href={partner_link} key={id}>
+              <Link href={partner_link} key={id} target="_blank">
                 <a className={styles.item}>
                   <img src={`https://admin.uzbekvoice.ai/assets/${partner_image}`} />
                   <span>{partner_title}</span>

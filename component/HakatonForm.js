@@ -57,7 +57,7 @@ export default function Partners() {
         date_of_birth: dateOfBirth,
       };
 
-      console.log(users);
+      // console.log(users);
       try {
         const res = await fetch(
           "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
@@ -82,7 +82,7 @@ export default function Partners() {
     }
   };
 
-  console.log(phone);
+  
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)

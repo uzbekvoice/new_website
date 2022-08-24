@@ -5,7 +5,7 @@ import styles from '../styles/TeamByID.module.css'
 const Team = ({ data }) => {
   const { locale, query } = useRouter()
   const dataFilter = data.filter(p => p.languages_code === locale && p.hackathon_teams_id === parseInt(query.id))[0]
-  console.log(dataFilter);
+  // console.log(dataFilter);
   return (
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
