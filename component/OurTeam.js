@@ -23,7 +23,9 @@ export default function OurTeam({ data, HomeContent }) {
         })}
 
       <div className={styles.firstblock}>
-        {data.map(({ id, profile_image, profile_link, profile_name, telegram_link }) => (
+        {data
+        .filter((p) => p.languages_code === locale)
+        .map(({ id, profile_image, profile_linkedin, profile_name, profile_role, profile_tg }) => (
           <div className={styles.item} key={id}>
             <div className={styles.avatarimg}>
               <img
@@ -33,13 +35,14 @@ export default function OurTeam({ data, HomeContent }) {
             </div>
 
             <h4>{profile_name}</h4>
+            <h5>{profile_role}</h5>
             <div>
-              <Link href={profile_link}>
+              <Link href={profile_linkedin}>
                 <a className={styles.FaLinkedin}>
                   <FaLinkedin size={22} />
                 </a>
               </Link>
-              <Link href={telegram_link}>
+              <Link href={profile_tg}>
                 <a>
                   <FaTelegramPlane size={22} />
                 </a>

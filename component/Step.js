@@ -8,10 +8,6 @@ import Link from "next/link";
 export default function Step({ steps, HomeContent }) {
   const { locale } = useRouter()
 
-  const data = steps.filter(p => p.languages_id === locale);
-
-  console.log(data);
-
   return (
     <div className={styles.content}>
       {

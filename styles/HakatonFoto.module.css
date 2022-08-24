@@ -25,6 +25,11 @@
     border-radius: 16px;
 }
 
+.hakatonFoto_wrapper span {
+    border-radius: 16px;
+    background-color: rgba(128, 128, 128, 0.527);
+}
+
 
 .hakatonFoto button {
     font-weight: 400;
