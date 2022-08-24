@@ -63,12 +63,16 @@
   z-index: 0;
 }
 
+.show{
+  display: none;
+}
+
 .partners_left li {
  
   list-style: none;
   font-size: 18px;
   text-align: left;
-  font-weight: 500;
+  font-weight: 400;
   line-height: 28px;
   color: #12273c;
 
@@ -113,7 +117,7 @@
   left: 0;
   padding: 15px 10px;
   font-size: 16px;
-  color: #111;
+  
   pointer-events: none;
   transition: 0.5s;
 }
@@ -165,8 +169,8 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 23px;
-  color: #262626;
-  margin-bottom: 7px;
+  color: #111;
+  margin-bottom: 10px;
   text-align: left;
   margin-top: 0;
 }
@@ -178,6 +182,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 33%;
+  
 }
 
 .partners_right .position {
@@ -192,6 +197,7 @@
   justify-content: flex-start;
   text-align: left;
   width: 15%;
+ 
 }
 .teamyes input {
   width: 16px;
@@ -228,7 +234,7 @@
   border: none;
   border: 1px solid #b8bdc9;
   border-radius: 4px;
-  padding: 0 0.625em;
+  padding: 10px 15px;
   height: 130px;
   outline: none;
   font-weight: 400;
@@ -249,12 +255,13 @@
 
 .partners_right div .radioInput[type="radio"] {
   width: 20px !important;
-  margin: 0 10px 0 0 !important;
+  margin: 0 3px 0 0 !important;
 }
 
 .partners_right div .radioInput[type="checkbox"] {
   width: 20px !important;
-  margin: 0 10px 0 0 !important;
+  margin: 0 3px 0 0 !important;
+  
 }
 
 .partners_right select {
@@ -274,6 +281,13 @@
   margin-top: 2px;
   margin-bottom: 10px;
   width: 310px;
+}
+.partners_right label,
+.partners_right div {
+color: #666666;
+  
+ 
+  /* width: 100%; */
 }
 
 .partners_right select option {
@@ -336,7 +350,13 @@
 @media (max-width: 992px) {
   .partners {
     flex-wrap: wrap;
+    justify-content: center;
   }
+
+  
+
+
+ 
   .cards{
     width: 100%;
   }
@@ -360,7 +380,7 @@
     font-size: 16px;
     margin-bottom: 12px;
     margin-top: 5px;
-    font-weight: 500;
+    font-weight: 100;
     line-height: 20px;
     padding-right: 0;
   }
@@ -372,6 +392,7 @@
     justify-content: flex-start;
     text-align: left;
     width: 25%;
+   
   }
 
   .partners_right .position label {
@@ -407,10 +428,14 @@
     line-height: 20px;
   }
 
+
+
   .partners_right label,
   .partners_right div {
     font-size: 14px;
     line-height: 22px;
+    
+   
     /* width: 100%; */
   }
 

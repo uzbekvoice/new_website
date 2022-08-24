@@ -153,6 +153,9 @@ export default function Partners() {
               <li>{parag5}</li>
               </div>
             </div>
+
+    
+           
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
@@ -178,13 +181,14 @@ export default function Partners() {
                   type="date"
                   min="1970-01-01" max="2010-12-31"
                   required
+                  data-focus-method="touch"
                   // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
                 <label>{label_date_of_brith}</label>
               </div>
 
-              <div className={styles.country}>
+              <div className={styles.city}>
                 <label>
                   {label_country} <span>*</span>
                   <select onChange={(e) => setCountry(e.target.value)}>
