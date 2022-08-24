@@ -352,13 +352,13 @@ color: #666666;
     flex-wrap: wrap;
     justify-content: center;
   }
-
-  
-
-
- 
   .cards{
     width: 100%;
+    padding: 5px 15px;
+  }
+
+  .partners_right{
+    margin-top: 30px;
   }
 
   .partners_left,
