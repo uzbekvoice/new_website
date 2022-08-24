@@ -10,13 +10,13 @@ export default function Step({ steps, HomeContent }) {
 
   return (
     <div className={styles.content}>
-      {
-        HomeContent.steps
-          .filter((p) => p.languages_code === locale)
-          .map((value) =>
-            <h3> {value.title} </h3>
-          )
-      }
+   {locale === "uz-UZ" ? (
+                      <h3>Ovoz yig'ish bosqichlari</h3>
+                    ) : locale === "ru-RU" ? (
+                      <h3>Этапы кампании сбора голосов</h3>
+                    ) : (
+                      <h3>Voice collection campaign phases</h3>
+                    )}
       <div className={styles.container}>
 
         {

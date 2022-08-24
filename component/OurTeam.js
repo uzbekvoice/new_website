@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 export default function OurTeam({ data, HomeContent }) {
   const { locale } = useRouter();
-
+console.log(data)
   return (
     <div className={styles.ourteam}>
       {HomeContent.team
@@ -25,7 +25,7 @@ export default function OurTeam({ data, HomeContent }) {
       <div className={styles.firstblock}>
         {data
         .filter((p) => p.languages_code === locale)
-        .map(({ id, profile_image, profile_linkedin, profile_name, profile_role, profile_tg }) => (
+        .map(({ id, profile_image, profile_linkedin, profile_name, profile_tg, profile_role }) => (
           <div className={styles.item} key={id}>
             <div className={styles.avatarimg}>
               <img
@@ -35,16 +35,16 @@ export default function OurTeam({ data, HomeContent }) {
             </div>
 
             <h4>{profile_name}</h4>
-            <h5>{profile_role}</h5>
+            <p>{profile_role}</p>
             <div>
               <Link href={profile_linkedin}>
                 <a className={styles.FaLinkedin}>
-                  <FaLinkedin size={22} />
+                  <FaLinkedin size={20} />
                 </a>
               </Link>
               <Link href={profile_tg}>
                 <a>
-                  <FaTelegramPlane size={22} />
+                  <FaTelegramPlane size={20} />
                 </a>
               </Link>
             </div>
