@@ -14,17 +14,23 @@
 
 .ourteam h4 {
   font-size: 15px;
-  font-weight: 00;
+  font-weight: 550;
   letter-spacing: 0.0022em;
   color: #12273c;
   margin-top: 12px;
+}  
+
+.ourteam p{
+  margin-top: 5px;
+  font-size: 14px;
+  color: #12273c;
 }
 
 .firstblock {
   margin-top: 30px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 28px;
+  column-gap: 12px;
 }
 
 .item {

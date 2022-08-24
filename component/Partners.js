@@ -30,13 +30,13 @@ export default function Partners() {
                 },
                 body: JSON.stringify({
                     chat_id: chad_id,
-                    text: "Ismi: " + name + "\nTelefon raqam: " + number + "\nIzoh: " + comment
+                    text: "Ism: " + name + "\nTelefon raqam: " + number + "\nIzoh: " + comment
                 })
             }).then(function (response) {
                 console.log(response);
             });
 
-            setTimeout(() => setAlert('false'), 8000)
+            // setTimeout(() => setAlert('false'), 8000)
         } else {
             setAlert('error')
             setTimeout(() => setAlert('false'), 5000)
@@ -51,7 +51,7 @@ export default function Partners() {
         PartnersApi.partners
             .filter((p) => p.languages_code === locale)
             .map(({
-                id, title, guide, label_phone, label_comment, descr, label_name, placeholder_name, placeholder_comment, button
+                id, title, label_phone, label_comment, descr, label_name, placeholder_name, placeholder_comment, button
             }) =>
                 <div className={styles.partners} key={id}>
                     <div className={styles.partners_left}>
@@ -101,10 +101,16 @@ export default function Partners() {
                     <div className={styles.thanks} style={{ display: alert === 'true' ? 'flex' : 'none' }}>
                         {
                             locale === "uz-UZ" ?
-                                <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chiqamiz.</span>
+                                <span>Murojatingiz uchun raxmat. Biz siz bilan yaqin orada aloqaga chiqamiz.
+                                    <button type='button' onClick={()=>setAlert(false)}>Yangi ariza yuborish</button>
+                                </span>
                                 : locale === "ru-RU" ?
-                                    <span>Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени.</span>
-                                    : <span>Thank you for your message. We will contact you as soon as possible.</span>
+                                    <span>Спасибо за ваш запрос. Мы свяжемся с Вами в скором времени.
+                                        <button type='button' onClick={()=>setAlert(false)}>Отправить новую заявку</button>
+                                    </span>
+                                    : <span>Thank you for your message. We will contact you as soon as possible.
+                                        <button type='button' onClick={()=>setAlert(false)}>Submit a new application</button>
+                                    </span>
                         }
                     </div>
                 </div>

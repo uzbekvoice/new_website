@@ -354,6 +354,7 @@
     line-height: 27px;
     margin-top: 12px;
     margin-bottom: 32px;
+    text-align: center;
   }
 
   .header__content video {

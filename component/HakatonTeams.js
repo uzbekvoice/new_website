@@ -5,7 +5,7 @@ import styles from '../styles/HakatonTeams.module.css'
 
 export default function HakatonTeams({ data }) {
     const { locale, query } = useRouter();
-    // console.log(data);
+    console.log(data, 'team');
 
     return (
         <div className={styles.hakatonTeams}>
@@ -20,7 +20,7 @@ export default function HakatonTeams({ data }) {
             <div className={styles.hakatonTeams_wrapper}>
                 {
                     data
-                        .filter(p => p.languages_code === locale && p.hackathon_id === parseInt(query.id))
+                        .filter(p => p.languages_code === locale && p.hackathon_id === parseInt(query.id) && p.hackathon_teams_id !== null)
                         .map(({ hackathon_teams_id, team_image, team_project_content, team_title, team_winner_place }) => (
                             <div key={hackathon_teams_id} className={styles.hakatonTeams_card}>
                                 <div className={styles.hakatonTeams_cardHeader}>

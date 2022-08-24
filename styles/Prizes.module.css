@@ -8,49 +8,11 @@
 
 .prizesPictures img {
   width: 100%;
+  height: 370px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
 }
-/* 
-.modalImg {
-  position: fixed;
-  z-index: 100;
-  width: 100%;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  visibility: visible;
-  opacity: 1;
-}
-
-.modalImg .modalWrap {
-  width: 40%;
-  height: 60%;
-  position: relative;
-}
-
-.modalImg .modalWrap div {
-  width: 100%;
-  height: 100%;
-}
-
-.modalWrap img {
-  width: 100%;
-  height: 100%;
-}
-
-.iconTimes {
-  position: absolute;
-  right: -30px;
-  top: -30px;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  background-color: transparent !important;
-  border: none;
-} */
 
 .ceremony {
   margin-top: 140px;
@@ -65,25 +27,15 @@
   letter-spacing: 0.0022em;
   color: #12273c;
 }
-/* 
-.hakatonFoto_card {
-  cursor: pointer;
-}
-
-.hakatonFoto_card div {
-  width: 100%;
-  height: 100%;
-}
-
-.hakatonFoto_card div span {
-  width: 100% !important;
-  height: 100% !important;
-} */
-
 
 @media (max-width: 1110px) {
   .prizesPictures {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .prizesPictures img {
+    object-position: 50% 30%;
+    height: 340px;
   }
 }
 
@@ -99,11 +51,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .modalImg .modalWrap {
-    width: 60%;
-    height: 55%;
-  }
-
   .hakatonFoto_title {
     font-size: 40px;
   }
@@ -111,30 +58,18 @@
   .hakatonFoto {
     padding-bottom: 80px;
   }
-}
 
-@media (max-width: 576px) {
-  .modalImg .modalWrap {
-    height: 50%;
+  .prizesPictures img {
+    object-position: 50% 20%;
   }
 }
+
 
 @media (max-width: 500px) {
-
-  .iconTimes {
-    right: -7px;
-    top: -35px;
-  }
 
   .ceremony {
     margin-top: 100px;
     text-align: center;
-  }
-
-
-  .modalImg .modalWrap {
-    width: 90%;
-    height: 250px;
   }
 
   .hakatonFoto {
@@ -155,6 +90,10 @@
 
   .hakatonFoto_wrapper {
     margin-bottom: 30px;
+  }
+
+  .prizesPictures img {
+    object-position: 50% 20%;
   }
 
 }

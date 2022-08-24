@@ -14,13 +14,13 @@ export default function Step({ steps, HomeContent }) {
 
   return (
     <div className={styles.content}>
-      {
-        HomeContent.steps
-          .filter((p) => p.languages_code === locale)
-          .map((value) =>
-            <h3> {value.title} </h3>
-          )
-      }
+   {locale === "uz-UZ" ? (
+                      <h3>Ovoz yig'ish bosqichlari</h3>
+                    ) : locale === "ru-RU" ? (
+                      <h3>Этапы кампании сбора голосов</h3>
+                    ) : (
+                      <h3>Voice collection campaign phases</h3>
+                    )}
       <div className={styles.container}>
 
         {
@@ -34,21 +34,20 @@ export default function Step({ steps, HomeContent }) {
                 </div>
                 <div className={styles.middle}>
                   <span>{contest_hours}</span>
-                  <p>{contest_expactations}</p>
+                  <p>{home_contest_expactations}</p>
                   {/* {
                     !(contest_status === 'yakunlangan' || contest_status === 'законченный' || contest_status === 'finished') ?
                       <p>{contest_expactations}</p>
                       :
                       <p>{contest_result}</p>
                   } */}
-
-
                 </div>
                 <div className={styles.cardFooter}>
                   <div className={contest_period.length < 4 ? styles.data_empty + ' ' + styles.data : styles.data}>
                     <p>{contest_period}</p>
                   </div>
                   {
+                    contest_stages_id < 3 &&
                     HomeContent.steps
                       .filter((p) => p.languages_code === locale)
                       .map((value) =>

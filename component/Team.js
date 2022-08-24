@@ -20,8 +20,14 @@ const Team = ({ data }) => {
 
         <div className={styles.heroDescr} dangerouslySetInnerHTML={{ __html: dataFilter.team_project_content }}></div>
 
-        <a href={dataFilter.team_project_link}>
-          Team project link
+        <a href={`https://admin.uzbekvoice.ai/assets/${dataFilter.team_project_file}`} target="_blank">
+          {
+            locale === "uz-UZ" ?
+            'Jamoa loyihasi'
+            : locale === "ru-RU" ?
+            'Командный проект'
+            : 'Team project'
+          }
           <img src='/chevron-right.svg' alt='chevron' />
         </a>
       </div>

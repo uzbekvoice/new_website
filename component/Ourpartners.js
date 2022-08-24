@@ -25,7 +25,10 @@ export default function Ourpartners(props) {
           })}
       </div>
       <div className={styles.imgunit}>
-        <Image src="/robot.png" width={432} height={476} alt="robot" />
+        <div className={styles.image}>
+        <img src="/robot.png"  alt="robot" />
+        </div>
+    
       </div>
     </div>
   );

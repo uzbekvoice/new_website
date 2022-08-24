@@ -2,67 +2,75 @@ import React, { useState } from "react";
 import styles from "../styles/HakatonForm.module.css";
 import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
-
+import "react-phone-number-input/style.css";
+import Input from "react-phone-number-input/input";
 export default function Partners() {
   const { locale } = useRouter();
-  const [alert, setAlert] = useState("error");
+  const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [tg_nike, setTgNike] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
   const [country, setCountry] = useState("");
   const [place_work, setPlaceWork] = useState("");
-  const [age, setAge] = useState("");
   const [problem, setProblem] = useState("");
   const [isTeam, setIsTeam] = useState("");
   const [position, setPosition] = useState("");
   const [teamName, setTeamName] = useState("");
-  const [teamCount, setTeamCount] = useState("");
   const [confirm, setConfirm] = useState("");
+
+  const onConfirm = (e) => {
+    if (e.target.checked) setConfirm("yes");
+    else setConfirm("");
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (fio !== "" &&
+    if (
+      fio !== "" &&
       email !== "" &&
       phone !== "" &&
+      tg_nike !== "" &&
+      dateOfBirth !== "" &&
       country !== "" &&
       place_work !== "" &&
-      age !== "" &&
       problem !== "" &&
       position !== "" &&
-      teamName !== "" &&
-      teamCount !== ""
+      // teamName !== "" &&
+      confirm !== ""
     ) {
       setAlert("true");
-
       const users = {
-        fio,
+        name_surname: fio,
         email,
-        phone,
-        country,
-        place_work,
-        age,
-        problem,
-        isTeam,
+        telephone_number: phone,
+        city: country,
+        study_work_place: place_work,
+        solution: problem,
+        is_team: isTeam,
         position,
-        teamName,
-        teamCount,
-        confirm,
+        team_title: teamName,
+        confirmation: confirm,
+        telegram_nik: tg_nike,
+        date_of_birth: dateOfBirth,
       };
 
-      //   console.log(users);
+      console.log(users);
       try {
-        const res = await fetch("https://admin.uzbekvoice.ai/items/hackathon_registration_form", {
-          method: "POST",
-          // mode: 'no-cors',
-          body: JSON.stringify(users),
-          headers: {
-            'Content-Type': 'application/json',
+        const res = await fetch(
+          "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
+          {
+            method: "POST",
+            body: JSON.stringify(users),
+            headers: {
+              "Content-Type": "application/json",
+            },
           }
-        });
+        );
 
-        // const resData = await res.json()
-        console.log("response data:", res)
+        // console.log("response data:", res);
       } catch (error) {
         console.log("Error: ", error);
       }
@@ -72,20 +80,9 @@ export default function Partners() {
       setAlert("error");
       setTimeout(() => setAlert("false"), 5000);
     }
-
-    setFio("");
-    setEmail("");
-    setPhone("");
-    setCountry("");
-    setPlaceWork("");
-    setAge("");
-    setProblem("");
-    setIsTeam("");
-    setPosition("");
-    setTeamName("");
-    setTeamCount("");
-    setConfirm("");
   };
+
+  console.log(phone);
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -94,28 +91,34 @@ export default function Partners() {
         id,
         title,
         descr,
+        form_title,
+        form_title2,
+        form_title3,
+        confirm_accept,
+        link,
+        oferta,
         label_fio,
         label_email,
         label_phone,
+        label_tg_nike,
+        label_date_of_brith,
         label_country,
         label_place_work,
-        label_age,
         label_problem,
         label_isTeam,
         label_position,
         label_team_name,
-        label_team_count,
         label_confirm,
         placeholder_fio,
         placeholder_email,
-        placeholder_phone,
-        placeholder_country,
+        placeholder_tg,
         placeholder_place_work,
-        placeholder_age,
         placeholder_problem,
-        placeholder_position,
         placeholder_team_name,
-        placeholder_team_count,
+        // placeholder_team_count,
+        choose,
+        yes,
+        no,
         button,
         parag,
         parag1,
@@ -123,147 +126,248 @@ export default function Partners() {
         parag3,
         parag4,
         parag5,
+        country,
+        position_role,
       }) => (
         <div className={styles.hackaton} key={id}>
           <h3>{title}</h3>
           <p>{descr}</p>
           <div className={styles.partners}>
-            <ul className={styles.partners_left}>
+            <div className={styles.partners_left}>
+              <div className={styles.cards}>
               <li>{parag}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag1}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag2}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag3}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag4}</li>
+              </div>
+              <div className={styles.cards}>
               <li>{parag5}</li>
-            </ul>
+              </div>
+            </div>
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
               style={{ display: alert === "true" ? "none" : "flex" }}
               method="post"
             >
-              <label>{label_fio}
+              <h4>{form_title}</h4>
+              <hr></hr>
+              <div className={styles.userbox}>
                 <input
+                  required
                   value={fio}
                   type="text"
-                  placeholder={placeholder_fio}
+                  // placeholder={placeholder_fio}
                   onChange={(e) => setFio(e.target.value)}
                 />
-              </label>
-              <label>{label_email}
+                <label>{label_fio} </label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
-                  value={email}
-                  type="email"
-                  placeholder={placeholder_email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={dateOfBirth}
+                  type="date"
+                  min="1970-01-01" max="2010-12-31"
+                  required
+                  // placeholder={""}
+                  onChange={(e) => setDateOfBirth(e.target.value)}
                 />
-              </label>
-              <label>{label_phone}
-                <input
-                  value={phone}
-                  type="number"
-                  placeholder={placeholder_phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                />
-              </label>
-              <label>{label_country}
-                <input
-                  value={country}
-                  type="text"
-                  placeholder={placeholder_country}
-                  onChange={(e) => setCountry(e.target.value)}
-                />
-              </label>
-              <label>{label_place_work}
+                <label>{label_date_of_brith}</label>
+              </div>
+
+              <div className={styles.country}>
+                <label>
+                  {label_country} <span>*</span>
+                  <select onChange={(e) => setCountry(e.target.value)}>
+                    <option disabled selected>
+                      {choose}
+                    </option>
+                    {country.map(({ id, value }) => (
+                      <option key={id}>{value}</option>
+                    ))}
+                  </select>
+                </label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
                   value={place_work}
                   type="text"
-                  placeholder={placeholder_place_work}
+                  required
+                  // placeholder={placeholder_place_work}
                   onChange={(e) => setPlaceWork(e.target.value)}
                 />
-              </label>
-              <label>{label_age}
-                <input
-                  value={age}
-                  type="number"
-                  placeholder={placeholder_age}
-                  onChange={(e) => setAge(e.target.value)}
+                <label>{label_place_work}</label>
+              </div>
+
+              {/*  Contact data */}
+              <h4>{form_title2}</h4>
+              <hr></hr>
+              <div className={styles.userbox}>
+                <Input
+                  international
+                  country="UZ"
+                  defaultCountry="UZ"
+                  withCountryCallingCode
+                  
+                  value={phone}
+                  required
+                  onChange={setPhone}
                 />
-              </label>
-              <label>{label_problem}
+                <label>{label_phone}</label>
+              </div>
+
+              <div className={styles.userbox}>
                 <input
+                  value={email}
+                  type="email"
+                  required
+                  // placeholder={placeholder_email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <label>{label_email}</label>
+              </div>
+              <div className={styles.userbox}>
+                <input
+                  value={tg_nike}
+                  type="text"
+                  // placeholder={placeholder_tg}
+                  required
+                  onChange={(e) => setTgNike(e.target.value)}
+                />
+                <label>{label_tg_nike}</label>
+              </div>
+
+              {/*  Contact data */}
+              <h4>{form_title3}</h4>
+              <hr></hr>
+
+              <label>
+                {label_problem} <span>*</span>
+                <textarea
                   value={problem}
                   type="text"
                   placeholder={placeholder_problem}
                   onChange={(e) => setProblem(e.target.value)}
                 />
               </label>
-              <div>
+              <div className={styles.teamyes}>
                 <p>{label_isTeam}</p>
-                <label htmlFor="yes">Yes
+                <label htmlFor="yes">
                   <input
+                    className={styles.radioInput}
                     name="isTeam"
                     id="yes"
                     type="radio"
-                    onChange={(e) => setIsTeam(e.target.value)}
+                    value={isTeam}
+                    onChange={() => setIsTeam("yes")}
                   />
+                  {yes}
                 </label>
-                <label htmlFor="no">No
+                <label htmlFor="no">
                   <input
+                    className={styles.radioInput}
                     name="isTeam"
                     id="no"
                     type="radio"
-                    onChange={(e) => setIsTeam(e.target.value)}
+                    value={isTeam}
+                    onChange={() => setIsTeam("no")}
                   />
-                </label>
-              </div>
-              <label>{label_position}
-                <input
-                  value={position}
-                  type="text"
-                  placeholder={placeholder_position}
-                  onChange={(e) => setPosition(e.target.value)}
-                />
-              </label>
-              <label>{label_team_name}
-                <input
-                  value={teamName}
-                  type="text"
-                  placeholder={placeholder_team_name}
-                  onChange={(e) => setTeamName(e.target.value)}
-                />
-              </label>
-              <label>{label_team_count}
-                <input
-                  value={teamCount}
-                  type="number"
-                  placeholder={placeholder_team_count}
-                  onChange={(e) => setTeamCount(e.target.value)}
-                />
-              </label>
-              <div>
-                <p>{label_confirm}</p>
-                <label htmlFor="confim">Yes
-                  <input
-                    id='confim'
-                    type="radio"
-                    onChange={(e) => setConfirm(e.target.value)}
-                  />
+                  {no}
                 </label>
               </div>
 
-              <div
-                style={{ display: alert === "error" ? "block" : "none" }}
-                className={styles.error}
-              >
-              <button type="submit">{button}</button>
-                {locale === "uz-UZ" ? (
-                  <span>Iltimos maydonlarni to'ldiring</span>
-                ) : locale === "ru-RU" ? (
-                  <span>Пожалуйста, заполните поля</span>
-                ) : (
-                  <span>Please fill in the fields</span>
-                )}
+              
+              {isTeam === "yes" ? (
+               <div className={styles.userbox}>
+                  <input
+                    value={teamName}
+                    type="text"
+                    required
+                    // placeholder={placeholder_team_name}
+                    onChange={(e) => setTeamName(e.target.value)}
+                  />
+                  <label>
+                  {placeholder_team_name} 
+                </label>
+                </div>
+              ) : (
+                false
+              )}
+             
+          
+
+              <div className={styles.position}>
+                <p>{label_position}</p>
+                {position_role.map(({ id, value }) => (
+                  <label>
+                    <input
+                      key={id}
+                      className={styles.radioInput}
+                      name={position}
+                      // id={value}
+                      type="radio"
+                      value={value}
+                      onChange={() => setPosition(value)}
+                    />
+                    {value}
+                  </label>
+                ))}
+              </div>
+
+              <h4>
+                {" "}
+                {oferta}
+                <a
+                  href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true"
+                  target="_blank"
+                >
+                  {link}
+                </a>
+              </h4>
+              <div className={styles.lastline}>
+                <hr></hr>
+              </div>
+
+              <div>
+                <p>{label_confirm}</p>
+                <label htmlFor="confim">
+                  <input
+                    className={styles.radioInput}
+                    id="confim"
+                    type="checkbox"
+                    value={confirm}
+                    onChange={(e) => onConfirm(e)}
+                  />{" "}
+                  {confirm_accept}
+                </label>
+              </div>
+
+              <hr></hr>
+
+              <div className={styles.finally}>
+                <button type="submit">{button}</button>
+                <div
+                  style={{ display: alert === "error" ? "flex" : "none" }}
+                  className={styles.error}
+                >
+                  {locale === "uz-UZ" ? (
+                    <span>Iltimos maydonlarni to'ldiring</span>
+                  ) : locale === "ru-RU" ? (
+                    <span>Пожалуйста, заполните поля</span>
+                  ) : (
+                    <span>Please fill in the fields</span>
+                  )}
+                </div>
               </div>
             </form>
 

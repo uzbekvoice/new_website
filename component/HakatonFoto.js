@@ -44,26 +44,29 @@ export default function HakatonFoto({ data, galleryID }) {
                                 data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
                                 key={galleryID + '-' + index}
                                 target="_blank"
-                                rel="noreferrer"                                  
+                                rel="noreferrer"
                             >
-                                <img 
-                                src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`} 
-                                alt={value.directus_files_id} 
+                                <img
+                                    src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                    alt={value.directus_files_id}
                                 />
                             </a>
                         ))
-                }               
+                }
             </div>
 
-            <button onClick={() => setMore(more + 4)} type='button'>
-                {
-                    locale === "uz-UZ" ?
-                        'Yana yuklash'
-                        : locale === "ru-RU" ?
-                            'Загрузить больше'
-                            : 'Load more'
-                }
-            </button>
+            {
+                more < 8 &&
+                <button onClick={() => setMore(more + 4)} type='button'>
+                    {
+                        locale === "uz-UZ" ?
+                            'Yana yuklash'
+                            : locale === "ru-RU" ?
+                                'Загрузить больше'
+                                : 'Load more'
+                    }
+                </button>
+            }
         </div>
     )
 }

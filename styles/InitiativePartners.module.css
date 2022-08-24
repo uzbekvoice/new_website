@@ -14,7 +14,7 @@
 }
 
 .partnersForHak {
-  margin-top: 350px !important;
+  margin-top: 370px !important;
 }
 
 .item {
@@ -57,13 +57,17 @@
   .partnersForHak {
     margin-top: 400px !important;
   }
+
+  .active h3 {
+    margin-top: 340px !important;
+  }
   
 }
 
 @media (max-width:767px) {
-
-  .partnersForHak {
-    margin-top: 400px !important;
+  
+  .active h3 {
+    margin-top: 300px !important;
   }
   
   .partners {
@@ -92,9 +96,23 @@
 
 }
 
-@media (max-width:465px) {
+@media (max-width: 537px) {
+  .active h3 {
+    margin-top: 340px !important;
+  }
 
   .partnersForHak {
-    margin-top: 300px !important;
+    margin-top: 420px !important;
+  }
+}
+
+@media (max-width:461px) {
+
+  .partnersForHak {
+    margin-top: 280px !important;
+  }
+
+  .active h3 {
+    margin-top: 280px !important;
   }
 }

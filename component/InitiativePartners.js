@@ -17,7 +17,7 @@ const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
 export default function InitiativePartners(props) {
   const { locale, pathname } = useRouter();
 
-  const { HomeContent, partners } = props;
+  const { HomeContent, partners, status } = props;
 
   const Responsive = {
     0: {
@@ -52,7 +52,7 @@ export default function InitiativePartners(props) {
         .map((HomeContent, i) => {
           const { title, desc } = HomeContent;
           return (
-            <div key={i}>
+            <div key={i}  className={status === 'active' && styles.active}>
               <h3 className={pathname==='/hakaton/[id]' && styles.partnersForHak}>{title}</h3>
               <p>{desc}</p>
             </div>

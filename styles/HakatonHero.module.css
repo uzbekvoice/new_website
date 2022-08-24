@@ -2,6 +2,20 @@
     background-image: url('/hakaton-hero-bg.png');
     background-size: cover;
     position: absolute;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.hakatonHeroWrappper.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hakaton-hero-bg.jpg');
+    background-size: auto;
+    background-position: 25% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
     left: 0;
     top: 0;
     width: 100%;
@@ -16,6 +30,14 @@
     position: relative;
     background-color: transparent;
     position: relative;
+}
+
+
+.hakatonHero.active {
+ grid-template-columns: 1fr;   
+ text-align: center;
+ padding-top: 160px;
+ padding-bottom: 120px;
 }
 
 .hakatonHero::after {
@@ -146,10 +168,16 @@
 @media (max-width: 650px) {
     .hakatonHero_Right {
         padding: 0;
-    }
+    }    
 }
 
+
 @media (max-width: 460px) {
+
+    .hakatonHero {
+        padding-top: 120px;
+        padding-bottom: 75px;
+    }
 
     .hakatonHero_Right div {
         margin-left: 60px;

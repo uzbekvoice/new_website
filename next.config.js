@@ -3,15 +3,8 @@ module.exports = {
     // providing the locales supported by your application
     locales: ["uz-UZ", "en-US", "ru-RU"],
     //  default locale used when the non-locale paths are visited
-    defaultLocale: "uz-UZ",
-
-    domains: [
-      {
-        domain: 'uzbekvoiceapp.vercel.app',
-        defaultLocale: 'uz-UZ',
-        https: true,
-      },
-    ],
+    defaultLocale: "uz-UZ", 
+    localeDetection: false   
   },
 
   async redirects() {
@@ -28,6 +21,11 @@ module.exports = {
       },
       {
         source: '/teams',
+        destination: '/',
+        permanent: false,
+      },
+      {
+        source: '/guide',
         destination: '/',
         permanent: false,
       },
