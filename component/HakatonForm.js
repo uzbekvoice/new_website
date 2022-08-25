@@ -57,7 +57,7 @@ export default function Partners() {
         date_of_birth: dateOfBirth,
       };
 
-      console.log(users);
+      // console.log(users);
       try {
         const res = await fetch(
           "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
@@ -82,7 +82,7 @@ export default function Partners() {
     }
   };
 
-  console.log(phone);
+  
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -134,9 +134,8 @@ export default function Partners() {
           <p>{descr}</p>
           <div className={styles.partners}>
             <div className={styles.partners_left}>
-              <div className={styles.cards}>
-              <li>{parag}</li>
-              </div>
+              <h4>{parag}</h4>
+           
               <div className={styles.cards}>
               <li>{parag1}</li>
               </div>
@@ -153,6 +152,9 @@ export default function Partners() {
               <li>{parag5}</li>
               </div>
             </div>
+
+            <h6>{descr}</h6>
+           
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
@@ -176,15 +178,15 @@ export default function Partners() {
                 <input
                   value={dateOfBirth}
                   type="date"
-                  min="1970-01-01" max="2010-12-31"
                   required
+                  
                   // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
                 <label>{label_date_of_brith}</label>
               </div>
 
-              <div className={styles.country}>
+              <div className={styles.city}>
                 <label>
                   {label_country} <span>*</span>
                   <select onChange={(e) => setCountry(e.target.value)}>
@@ -218,7 +220,7 @@ export default function Partners() {
                   country="UZ"
                   defaultCountry="UZ"
                   withCountryCallingCode
-                  
+                  maxlength="17"
                   value={phone}
                   required
                   onChange={setPhone}

@@ -52,14 +52,21 @@ export default function InitiativePartners(props) {
         .map((HomeContent, i) => {
           const { title, desc } = HomeContent;
           return (
-            <div key={i}  className={status === 'active' && styles.active}>
-              <h3 className={pathname==='/hakaton/[id]' && styles.partnersForHak}>{title}</h3>
+            <div key={i} className={status === "active" && styles.active}>
+              <div
+                className={
+                  pathname === "/hakaton/[id]" && styles.partnersForHak
+                }
+              >
+                <h3>{title}</h3>
+              </div>
+
               <p>{desc}</p>
             </div>
           );
         })}
 
-      <div className={styles.sliders + ' sliders'}>
+      <div className={styles.sliders + " sliders"}>
         <OwlCarousel
           className={styles.slider}
           loop
@@ -70,16 +77,21 @@ export default function InitiativePartners(props) {
           autoplay
           autoplayTimeout={1500000}
         >
-          {
-            partners.map(({id, partner_link, partner_image, partner_title }) =>
-              <Link href={partner_link} key={id}>
-                <a className={styles.item}>
-                  <img src={`https://admin.uzbekvoice.ai/assets/${partner_image}`} />
-                  <span>{partner_title}</span>
-                </a>
-              </Link>
+          {partners.map(
+            ({ id, partner_link, partner_image, partner_title }) => (
+              <a
+                href={partner_link}
+                key={id}
+                target="_blank"
+                className={styles.item}
+              >
+                <img
+                  src={`https://admin.uzbekvoice.ai/assets/${partner_image}`}
+                />
+                <span>{partner_title}</span>
+              </a>
             )
-          }
+          )}
         </OwlCarousel>
       </div>
     </div>

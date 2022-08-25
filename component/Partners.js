@@ -33,7 +33,7 @@ export default function Partners() {
                     text: "Ism: " + name + "\nTelefon raqam: " + number + "\nIzoh: " + comment
                 })
             }).then(function (response) {
-                console.log(response);
+                // console.log(response);
             });
 
             // setTimeout(() => setAlert('false'), 8000)
