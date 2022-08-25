@@ -511,6 +511,9 @@ color: #666666;
     line-height: 20px;
   }
 
+  .userbox input[type="email"] {
+    padding: 22px 0 0 10px;
+  }
 
 
   .partners_right label,
