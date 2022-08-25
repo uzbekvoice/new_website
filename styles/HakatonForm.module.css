@@ -167,6 +167,26 @@
   left: 0;
   font-size: 12px;
 }
+/* .userbox input[type="email"]:invalid  {
+opacity: 1;
+visibility: visible;
+border-color: red;
+} */
+
+.userbox input[type="email"]:invalid:focus-visible {
+	border-color: red;
+  box-shadow: 0 0 0 3px rgba(255, 46, 46, 0.25);
+}
+
+.userbox input[type="email"]:invalid ~label {
+  top: -10px;
+  left: 0;
+  font-size: 12px;
+}
+
+
+
+
 
 .userbox input:focus {
   padding: 22px 0px 0px 10px;
@@ -326,6 +346,9 @@ color: #666666;
  {
   color: black;
 }
+
+
+
 
 
 /* .userbox input[type="date"]::-webkit-datetime-edit-text:valid,

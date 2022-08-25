@@ -4,6 +4,7 @@ import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
 import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
+
 export default function Partners() {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
@@ -81,7 +82,7 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 5000);
     }
   };
-
+  
   
 
   return PartnersApi.hack_form
@@ -177,12 +178,14 @@ export default function Partners() {
               <div className={styles.userbox}>
                 <input
                   value={dateOfBirth}
-                  type="date"
+                  type="date" 
+                 
                   required
                   
                   // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
+ 
                 <label>{label_date_of_brith}</label>
               </div>
 
@@ -229,10 +232,12 @@ export default function Partners() {
               </div>
 
               <div className={styles.userbox}>
-                <input
+                <input 
                   value={email}
                   type="email"
                   required
+              
+                 
                   // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
@@ -271,6 +276,7 @@ export default function Partners() {
                     id="yes"
                     type="radio"
                     value={isTeam}
+                    required
                     onChange={() => setIsTeam("yes")}
                   />
                   {yes}
@@ -281,6 +287,7 @@ export default function Partners() {
                     name="isTeam"
                     id="no"
                     type="radio"
+                    required
                     value={isTeam}
                     onChange={() => setIsTeam("no")}
                   />
@@ -314,6 +321,7 @@ export default function Partners() {
                   <label>
                     <input
                       key={id}
+                      required
                       className={styles.radioInput}
                       name={position}
                       // id={value}
@@ -347,6 +355,7 @@ export default function Partners() {
                     className={styles.radioInput}
                     id="confim"
                     type="checkbox"
+                    required
                     value={confirm}
                     onChange={(e) => onConfirm(e)}
                   />{" "}
