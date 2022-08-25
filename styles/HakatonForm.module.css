@@ -159,6 +159,7 @@
   width: 100%;
   color: #111;
   width: 310px;
+  padding: 22px 0px 0px 10px;
 }
 
 .userbox input:focus ~ label,
@@ -167,6 +168,7 @@
   left: 0;
   font-size: 12px;
 }
+
 /* .userbox input[type="email"]:invalid  {
 opacity: 1;
 visibility: visible;
@@ -184,17 +186,17 @@ border-color: red;
   font-size: 12px;
 }
 
-
-
-
+.userbox input[type="email"]:focus ~label {
+  top: -10px !important;
+  left: 0;
+  font-size: 12px !important;
+}
 
 .userbox input:focus {
   padding: 22px 0px 0px 10px;
   border-color: #2e69ff;
   box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
 }
-
-
 
 .userbox input:valid {
   padding: 22px 0px 0px 10px;

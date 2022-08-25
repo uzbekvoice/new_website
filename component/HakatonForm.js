@@ -235,13 +235,11 @@ export default function Partners() {
                 <input 
                   value={email}
                   type="email"
-                  required
-              
-                 
+                  required                  
                   // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label>{label_email}</label>
+                <label style={{top: !email && '0px', fontSize: !email && '16px'}}>{label_email}</label>
               </div>
               <div className={styles.userbox}>
                 <input
