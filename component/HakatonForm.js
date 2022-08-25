@@ -220,7 +220,7 @@ export default function Partners() {
                   country="UZ"
                   defaultCountry="UZ"
                   withCountryCallingCode
-                  
+                  maxlength="17"
                   value={phone}
                   required
                   onChange={setPhone}
