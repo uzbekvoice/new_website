@@ -64,7 +64,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 8622:
+/***/ 701:
 /***/ ((module) => {
 
 // Exports
@@ -785,7 +785,7 @@ function HakatonHero({ data  }) {
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _styles_HakatonJuri_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8622);
+/* harmony import */ var _styles_HakatonJuri_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(701);
 /* harmony import */ var _styles_HakatonJuri_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_styles_HakatonJuri_module_css__WEBPACK_IMPORTED_MODULE_4__);
 
 
@@ -1047,7 +1047,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_HakatonHero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9849);
 /* harmony import */ var _component_HakatonJuri__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4001);
 /* harmony import */ var _component_HakatonTeams__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(5926);
-/* harmony import */ var _component_InitiativePartners__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(701);
+/* harmony import */ var _component_InitiativePartners__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(5611);
 /* harmony import */ var _homeapi_static_json__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(9160);
 /* harmony import */ var _component_HakatonForm__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(8691);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(1853);

@@ -1287,7 +1287,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _component_Carousel__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4239);
 /* harmony import */ var _component_Contribution__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8667);
 /* harmony import */ var _component_Hero__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5149);
-/* harmony import */ var _component_InitiativePartners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(701);
+/* harmony import */ var _component_InitiativePartners__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5611);
 /* harmony import */ var _component_Ourpartners__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7039);
 /* harmony import */ var _component_OurTeam__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(6741);
 /* harmony import */ var _component_Question_Question__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7363);

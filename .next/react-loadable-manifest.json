@@ -1,20 +1,34 @@
 {
   "..\\component\\HakatonFoto.js -> photoswipe": {
-    "id": "..\\component\\HakatonFoto.js -> photoswipe",
+    "id": 5826,
     "files": [
-      "static/chunks/node_modules_photoswipe_dist_photoswipe_esm_js.js"
+      "static/chunks/fe75db45.54af53e59c400078.js"
     ]
   },
   "..\\component\\InitiativePartners.js -> react-owl-carousel": {
-    "id": "..\\component\\InitiativePartners.js -> react-owl-carousel",
+    "id": 2568,
     "files": [
-      "static/chunks/node_modules_react-owl-carousel_umd_OwlCarousel_js.js"
+      "static/chunks/568.909e252c42959d58.js"
+    ]
+  },
+  "..\\component\\Prizes.js -> photoswipe": {
+    "id": 5826,
+    "files": [
+      "static/chunks/fe75db45.54af53e59c400078.js"
+    ]
+  },
+  "..\\component\\YangilikByIdRelevantTheme.js -> react-owl-carousel": {
+    "id": 2568,
+    "files": [
+      "static/chunks/568.909e252c42959d58.js"
     ]
   },
   "index.js -> ../component/Stat": {
-    "id": "index.js -> ../component/Stat",
+    "id": 6469,
     "files": [
-      "static/chunks/component_Stat_js.js"
+      "static/chunks/902.ed212b04d47cf2d0.js",
+      "static/css/f86076ca038566c5.css",
+      "static/chunks/469.7a6098bfd2df6363.js"
     ]
   }
 }

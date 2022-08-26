@@ -1,6 +1,24 @@
 {
   "/_app": "pages/_app.js",
+  "/api/hello": "pages/api/hello.js",
+  "/guide/[id]": "pages/guide/[id].js",
+  "/bosqich/[id]": "pages/bosqich/[id].js",
+  "/resus": "pages/resus.js",
+  "/teams/[id]": "pages/teams/[id].js",
+  "/yangilik/[yangilikById]": "pages/yangilik/[yangilikById].js",
+  "/yangilik": "pages/yangilik.js",
+  "/hakaton/[id]": "pages/hakaton/[id].js",
+  "/guide": "pages/guide.js",
+  "/": "pages/index.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/hakaton/[id]": "pages/hakaton/[id].js"
+  "/uz-UZ/404": "pages/uz-UZ/404.html",
+  "/en-US/404": "pages/en-US/404.html",
+  "/ru-RU/404": "pages/ru-RU/404.html",
+  "/uz-UZ/500": "pages/uz-UZ/500.html",
+  "/en-US/500": "pages/en-US/500.html",
+  "/ru-RU/500": "pages/ru-RU/500.html",
+  "/uz-UZ/hamkorlar": "pages/uz-UZ/hamkorlar.html",
+  "/en-US/hamkorlar": "pages/en-US/hamkorlar.html",
+  "/ru-RU/hamkorlar": "pages/ru-RU/hamkorlar.html"
 }
