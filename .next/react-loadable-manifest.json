@@ -1,0 +1,20 @@
+{
+  "..\\component\\HakatonFoto.js -> photoswipe": {
+    "id": "..\\component\\HakatonFoto.js -> photoswipe",
+    "files": [
+      "static/chunks/node_modules_photoswipe_dist_photoswipe_esm_js.js"
+    ]
+  },
+  "..\\component\\InitiativePartners.js -> react-owl-carousel": {
+    "id": "..\\component\\InitiativePartners.js -> react-owl-carousel",
+    "files": [
+      "static/chunks/node_modules_react-owl-carousel_umd_OwlCarousel_js.js"
+    ]
+  },
+  "index.js -> ../component/Stat": {
+    "id": "index.js -> ../component/Stat",
+    "files": [
+      "static/chunks/component_Stat_js.js"
+    ]
+  }
+}
