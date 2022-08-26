@@ -254,7 +254,7 @@ export default function Partners() {
               <h4>{form_title3}</h4>
               <hr></hr>
 
-              <label>
+              <label  style={{color: "#111"}}>
                 {label_problem} <span>*</span>
                 <textarea
                   value={problem}
