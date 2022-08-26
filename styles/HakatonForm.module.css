@@ -169,11 +169,60 @@
   font-size: 12px;
 }
 
-/* .userbox input[type="email"]:invalid  {
-opacity: 1;
-visibility: visible;
-border-color: red;
-} */
+.userbox input[type="date"], 
+.userbox input[type="date"]:focus {
+  padding: 22px 10px 0px 10px !important;
+}
+
+.userbox input[type="date"]::-webkit-datetime-edit, 
+.userbox input[type="date"]::-webkit-inner-spin-button, 
+.userbox input[type="date"]::-webkit-clear-button {
+  color: transparent;
+  position: relative;  
+}
+
+.userbox input[type="date"]::before {
+  position: absolute;
+  content: '-';
+  left: 34px;
+}
+
+.userbox input[type="date"]::after {
+  position: absolute;
+  content: '-';
+  left: 60px;
+}
+
+.userbox input[type="date"]::-webkit-datetime-edit-year-field{
+  position: absolute !important;
+  color:#000;
+  left: 57px;
+} 
+
+.userbox input[type="date"]::-webkit-datetime-edit-month-field{
+  position: absolute !important;
+  color:#000;
+  left: 31px;
+}
+
+.userbox input[type="date"]::-webkit-datetime-edit-day-field{
+  position: absolute !important;
+  color:#000;
+  left: 4px; 
+}
+
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-day-field {
+    color: transparent;
+}
+
+.userbox input[type="date"]:focus::-webkit-datetime-edit-year-field, 
+.userbox input[type="date"]:focus::-webkit-datetime-edit-month-field, 
+.userbox input[type="date"]:focus::-webkit-datetime-edit-day-field {
+    color: #000;    
+}
+
 
 .userbox input[type="email"]:invalid:focus-visible {
 	border-color: red;

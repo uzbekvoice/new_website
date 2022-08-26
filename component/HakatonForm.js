@@ -82,8 +82,8 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 5000);
     }
   };
-  
-  
+
+
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -136,26 +136,26 @@ export default function Partners() {
           <div className={styles.partners}>
             <div className={styles.partners_left}>
               <h4>{parag}</h4>
-           
+
               <div className={styles.cards}>
-              <li>{parag1}</li>
+                <li>{parag1}</li>
               </div>
               <div className={styles.cards}>
-              <li>{parag2}</li>
+                <li>{parag2}</li>
               </div>
               <div className={styles.cards}>
-              <li>{parag3}</li>
+                <li>{parag3}</li>
               </div>
               <div className={styles.cards}>
-              <li>{parag4}</li>
+                <li>{parag4}</li>
               </div>
               <div className={styles.cards}>
-              <li>{parag5}</li>
+                <li>{parag5}</li>
               </div>
             </div>
 
             <h6>{descr}</h6>
-           
+
             <form
               className={styles.partners_right}
               onSubmit={handleSubmit}
@@ -178,14 +178,12 @@ export default function Partners() {
               <div className={styles.userbox}>
                 <input
                   value={dateOfBirth}
-                  type="date" 
-                 
+                  type="date"
                   required
-                  
-                  // placeholder={""}
+                  placeholder=""
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
- 
+
                 <label>{label_date_of_brith}</label>
               </div>
 
@@ -232,14 +230,14 @@ export default function Partners() {
               </div>
 
               <div className={styles.userbox}>
-                <input 
+                <input
                   value={email}
                   type="email"
-                  required                  
+                  required
                   // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label style={{top: !email && '0px', fontSize: !email && '16px'}}>{label_email}</label>
+                <label style={{ top: !email && '0px', fontSize: !email && '16px' }}>{label_email}</label>
               </div>
               <div className={styles.userbox}>
                 <input
@@ -293,9 +291,9 @@ export default function Partners() {
                 </label>
               </div>
 
-              
+
               {isTeam === "yes" ? (
-               <div className={styles.userbox}>
+                <div className={styles.userbox}>
                   <input
                     value={teamName}
                     type="text"
@@ -304,14 +302,14 @@ export default function Partners() {
                     onChange={(e) => setTeamName(e.target.value)}
                   />
                   <label>
-                  {placeholder_team_name} 
-                </label>
+                    {placeholder_team_name}
+                  </label>
                 </div>
               ) : (
                 false
               )}
-             
-          
+
+
 
               <div className={styles.position}>
                 <p>{label_position}</p>
