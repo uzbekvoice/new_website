@@ -17,7 +17,7 @@ export default function Prizes({ prize, galleryID, title }) {
   useEffect(() => {
     let lightbox = new PhotoSwipeLightbox({
       gallery: '#' + galleryID,
-      children: 'a',
+      children: 'a',  
       showAnimationDuration: 200,
       hideAnimationDuration: 50,
       pswpModule: () => import('photoswipe'),
@@ -43,7 +43,9 @@ export default function Prizes({ prize, galleryID, title }) {
                 href={`https://admin.uzbekvoice.ai/assets/${value}`}
                 key={galleryID + '-' + index}
                 target="_blank"
-                rel="noreferrer"
+                rel="noreferrer"  
+                data-pswp-width="1200" 
+                data-pswp-height="800"               
               >
                 <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
               </a>

@@ -4,6 +4,7 @@ import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
 import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
+
 export default function Partners() {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
@@ -81,7 +82,7 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 5000);
     }
   };
-
+  
   
 
   return PartnersApi.hack_form
@@ -107,12 +108,12 @@ export default function Partners() {
         label_problem,
         label_isTeam,
         label_position,
-        label_team_name,
+        // label_team_name,
         label_confirm,
-        placeholder_fio,
-        placeholder_email,
-        placeholder_tg,
-        placeholder_place_work,
+        // placeholder_fio,
+        // placeholder_email,
+        // placeholder_tg,
+        // placeholder_place_work,
         placeholder_problem,
         placeholder_team_name,
         // placeholder_team_count,
@@ -177,12 +178,14 @@ export default function Partners() {
               <div className={styles.userbox}>
                 <input
                   value={dateOfBirth}
-                  type="date"
+                  type="date" 
+                 
                   required
                   
                   // placeholder={""}
                   onChange={(e) => setDateOfBirth(e.target.value)}
                 />
+ 
                 <label>{label_date_of_brith}</label>
               </div>
 
@@ -220,7 +223,7 @@ export default function Partners() {
                   country="UZ"
                   defaultCountry="UZ"
                   withCountryCallingCode
-                  
+                  maxlength="17"
                   value={phone}
                   required
                   onChange={setPhone}
@@ -229,14 +232,14 @@ export default function Partners() {
               </div>
 
               <div className={styles.userbox}>
-                <input
+                <input 
                   value={email}
                   type="email"
-                  required
+                  required                  
                   // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label>{label_email}</label>
+                <label style={{top: !email && '0px', fontSize: !email && '16px'}}>{label_email}</label>
               </div>
               <div className={styles.userbox}>
                 <input
@@ -253,7 +256,7 @@ export default function Partners() {
               <h4>{form_title3}</h4>
               <hr></hr>
 
-              <label>
+              <label  style={{color: "#111"}}>
                 {label_problem} <span>*</span>
                 <textarea
                   value={problem}
@@ -271,6 +274,7 @@ export default function Partners() {
                     id="yes"
                     type="radio"
                     value={isTeam}
+                    required
                     onChange={() => setIsTeam("yes")}
                   />
                   {yes}
@@ -281,6 +285,7 @@ export default function Partners() {
                     name="isTeam"
                     id="no"
                     type="radio"
+                    required
                     value={isTeam}
                     onChange={() => setIsTeam("no")}
                   />
@@ -314,6 +319,7 @@ export default function Partners() {
                   <label>
                     <input
                       key={id}
+                      required
                       className={styles.radioInput}
                       name={position}
                       // id={value}
@@ -347,6 +353,7 @@ export default function Partners() {
                     className={styles.radioInput}
                     id="confim"
                     type="checkbox"
+                    required
                     value={confirm}
                     onChange={(e) => onConfirm(e)}
                   />{" "}

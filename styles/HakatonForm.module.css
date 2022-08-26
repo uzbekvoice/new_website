@@ -159,6 +159,7 @@
   width: 100%;
   color: #111;
   width: 310px;
+  padding: 22px 0px 0px 10px;
 }
 
 .userbox input:focus ~ label,
@@ -168,13 +169,34 @@
   font-size: 12px;
 }
 
+/* .userbox input[type="email"]:invalid  {
+opacity: 1;
+visibility: visible;
+border-color: red;
+} */
+
+.userbox input[type="email"]:invalid:focus-visible {
+	border-color: red;
+  box-shadow: 0 0 0 3px rgba(255, 46, 46, 0.25);
+}
+
+.userbox input[type="email"]:invalid ~label {
+  top: -10px;
+  left: 0;
+  font-size: 12px;
+}
+
+.userbox input[type="email"]:focus ~label {
+  top: -10px !important;
+  left: 0;
+  font-size: 12px !important;
+}
+
 .userbox input:focus {
   padding: 22px 0px 0px 10px;
   border-color: #2e69ff;
   box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
 }
-
-
 
 .userbox input:valid {
   padding: 22px 0px 0px 10px;
@@ -208,6 +230,9 @@
   
 }
 
+.city label{
+  color: #111!important;
+}
 .partners_right .position {
   margin-top: 30px;
 
@@ -326,6 +351,9 @@ color: #666666;
  {
   color: black;
 }
+
+
+
 
 
 /* .userbox input[type="date"]::-webkit-datetime-edit-text:valid,
@@ -486,6 +514,9 @@ color: #666666;
     line-height: 20px;
   }
 
+  .userbox input[type="email"] {
+    padding: 22px 0 0 10px;
+  }
 
 
   .partners_right label,

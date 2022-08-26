@@ -8,7 +8,7 @@ import Seocontent from "./homeapi/static.json";
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
-  
+
   return (
     <>
       <NextNProgress color="blueviolet" />
@@ -23,11 +23,9 @@ function MyApp({ Component, pageProps }) {
 
         {Seocontent.seocontent
           .filter((p) => p.languages_code === locale)
-          .map(({ title, desc }) => (
-            <NextSeo title={title} description={desc} titleTemplate={title} />
+          .map(({ title, desc }, i) => (
+            <NextSeo key={i} title={title} description={desc} titleTemplate={title} />
           ))}
-
-          
 
         <Component {...pageProps} />
       </Layout>

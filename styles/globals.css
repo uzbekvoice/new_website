@@ -89,7 +89,7 @@ a {
 }
 
 .pswp img {
-  object-fit: contain;
+  object-fit: contain !important;
 }
 
 .pswp__img--placeholder {

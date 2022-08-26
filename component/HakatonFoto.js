@@ -56,6 +56,8 @@ export default function HakatonFoto({ data, galleryID }) {
                                     key={galleryID + '-' + index}
                                     target="_blank"
                                     rel="noreferrer"
+                                    data-pswp-width="1200"
+                                    data-pswp-height="800"
                                 >
                                     <img
                                         src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}

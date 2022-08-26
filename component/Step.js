@@ -46,12 +46,16 @@ export default function Step({ steps, HomeContent }) {
                     contest_stages_id < 3 &&
                     HomeContent.steps
                       .filter((p) => p.languages_code === locale)
-                      .map((value) =>
+                      .map((value ,id) =>
+
+                      <div key={id}>
                         <Link href={`/bosqich/${contest_stages_id}`}>
                           <a>
                             {value.button} <FiChevronRight size={23} />{" "}
                           </a>
                         </Link>
+                      </div>
+                      
                       )
                   }
                 </div>
