@@ -12,7 +12,7 @@
   text-align: center;
 }
 
-.hackaton h6{
+.hackaton h6 {
   display: none;
   font-size: 20px;
   font-weight: 400;
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-.hackaton h4{
+.hackaton h4 {
 
   font-size: 22px;
   font-weight: 500;
@@ -59,23 +59,17 @@
 .partners::before {
   content: "";
   filter: blur(91px);
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(0, 133, 255, 0.58)),
-    to(rgba(173, 0, 255, 0.11))
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(0, 133, 255, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
-  background: linear-gradient(
-    180deg,
-    rgba(0, 133, 255, 0.58) 0%,
-    rgba(173, 0, 255, 0.11) 100%
-  );
+  background: -webkit-gradient(linear,
+      left top,
+      left bottom,
+      from(rgba(0, 133, 255, 0.58)),
+      to(rgba(173, 0, 255, 0.11)));
+  background: -o-linear-gradient(top,
+      rgba(0, 133, 255, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
+  background: linear-gradient(180deg,
+      rgba(0, 133, 255, 0.58) 0%,
+      rgba(173, 0, 255, 0.11) 100%);
   -webkit-filter: blur(91px);
   position: absolute;
   top: 0%;
@@ -86,12 +80,12 @@
   z-index: 0;
 }
 
-.show{
+.show {
   display: none;
 }
 
 .partners_left li {
- 
+
   list-style: none;
   font-size: 18px;
   text-align: left;
@@ -101,7 +95,7 @@
 
 }
 
-.cards{
+.cards {
   width: 95%;
   padding: 15px 15px;
   background: rgba(255, 255, 255, 0.5);
@@ -123,9 +117,10 @@
   -o-backdrop-filter: blur(80px);
   border-radius: 5px;
   padding: 0 38px 38px 38px;
-  
+
   width: 100%;
 }
+
 .partners_right a {
   color: #2e69ff;
 }
@@ -140,7 +135,7 @@
   left: 0;
   padding: 15px 10px;
   font-size: 16px;
-  
+
   pointer-events: none;
   transition: 0.5s;
 }
@@ -162,23 +157,23 @@
   padding: 22px 0px 0px 10px;
 }
 
-.userbox input:focus ~ label,
-.userbox input:valid ~ label {
+.userbox input:focus~label,
+.userbox input:valid~label {
   top: -10px;
   left: 0;
   font-size: 12px;
 }
 
-.userbox input[type="date"], 
+.userbox input[type="date"],
 .userbox input[type="date"]:focus {
   padding: 22px 10px 0px 10px !important;
 }
 
-.userbox input[type="date"]::-webkit-datetime-edit, 
-.userbox input[type="date"]::-webkit-inner-spin-button, 
+.userbox input[type="date"]::-webkit-datetime-edit,
+.userbox input[type="date"]::-webkit-inner-spin-button,
 .userbox input[type="date"]::-webkit-clear-button {
   color: transparent;
-  position: relative;  
+  position: relative;
 }
 
 .userbox input[type="date"]::before {
@@ -193,49 +188,53 @@
   left: 60px;
 }
 
-.userbox input[type="date"]::-webkit-datetime-edit-year-field{
+.userbox input[type="date"]::-webkit-datetime-edit-year-field {
   position: absolute !important;
-  color:#000;
+  color: #000;
   left: 57px;
-} 
+}
 
-.userbox input[type="date"]::-webkit-datetime-edit-month-field{
+.userbox input[type="date"]::-webkit-datetime-edit-month-field {
   position: absolute !important;
-  color:#000;
+  color: #000;
   left: 31px;
 }
 
-.userbox input[type="date"]::-webkit-datetime-edit-day-field{
+.userbox input[type="date"]::-webkit-datetime-edit-day-field {
   position: absolute !important;
-  color:#000;
-  left: 4px; 
+  color: #000;
+  left: 4px;
 }
 
-.userbox input[type="date"]:in-range::-webkit-datetime-edit-year-field, 
-.userbox input[type="date"]:in-range::-webkit-datetime-edit-month-field, 
-.userbox input[type="date"]:in-range::-webkit-datetime-edit-day-field {
-    color: transparent;
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-year-field,
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-month-field,
+.userbox input[type="date"]:in-range::-webkit-datetime-edit-day-field,
+.userbox input[type="date"]:in-range::after,
+.userbox input[type="date"]:in-range::before {
+  color: transparent;
 }
 
-.userbox input[type="date"]:focus::-webkit-datetime-edit-year-field, 
-.userbox input[type="date"]:focus::-webkit-datetime-edit-month-field, 
-.userbox input[type="date"]:focus::-webkit-datetime-edit-day-field {
-    color: #000;    
+.userbox input[type="date"]:focus::-webkit-datetime-edit-year-field,
+.userbox input[type="date"]:focus::-webkit-datetime-edit-month-field,
+.userbox input[type="date"]:focus::-webkit-datetime-edit-day-field,
+.userbox input[type="date"]:focus::before,
+.userbox input[type="date"]:focus::after {
+  color: #000;
 }
 
 
 .userbox input[type="email"]:invalid:focus-visible {
-	border-color: red;
+  border-color: red;
   box-shadow: 0 0 0 3px rgba(255, 46, 46, 0.25);
 }
 
-.userbox input[type="email"]:invalid ~label {
+.userbox input[type="email"]:invalid~label {
   top: -10px;
   left: 0;
   font-size: 12px;
 }
 
-.userbox input[type="email"]:focus ~label {
+.userbox input[type="email"]:focus~label {
   top: -10px !important;
   left: 0;
   font-size: 12px !important;
@@ -250,6 +249,7 @@
 .userbox input:valid {
   padding: 22px 0px 0px 10px;
 }
+
 .partners_right select:focus {
   border-color: #2e69ff;
   box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
@@ -276,12 +276,13 @@
   justify-content: flex-start;
   text-align: left;
   width: 33%;
-  
+
 }
 
-.city label{
-  color: #111!important;
+.city label {
+  color: #111 !important;
 }
+
 .partners_right .position {
   margin-top: 30px;
 
@@ -294,8 +295,9 @@
   justify-content: flex-start;
   text-align: left;
   width: 15%;
- 
+
 }
+
 .teamyes input {
   width: 16px;
   height: 16px;
@@ -358,7 +360,7 @@
 .partners_right div .radioInput[type="checkbox"] {
   width: 20px !important;
   margin: 0 3px 0 0 !important;
-  
+
 }
 
 .partners_right select {
@@ -379,11 +381,12 @@
   margin-bottom: 10px;
   width: 310px;
 }
+
 .partners_right label,
 .partners_right div {
-color: #666666;
-  
- 
+  color: #666666;
+
+
   /* width: 100%; */
 }
 
@@ -391,13 +394,13 @@ color: #666666;
   color: #111;
   opacity: 0.3;
 }
-.userbox input[type="date"]
- {
+
+.userbox input[type="date"] {
   color: white;
 }
+
 .userbox input[type="date"]:focus,
-.userbox input[type="date"]:valid
- {
+.userbox input[type="date"]:valid {
   color: black;
 }
 
@@ -413,7 +416,7 @@ color: #666666;
 } */
 
 .partners_right button {
- 
+
   cursor: pointer;
   padding: 12px 16px;
   border: none;
@@ -462,23 +465,25 @@ color: #666666;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .cards{
+
+  .cards {
     width: 100%;
-    
+
   }
 
-.hackaton h6{
-  display: block;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 20px;
-  margin-top: 16px;
-}
-.hackaton p{
-  display: none;
-}
+  .hackaton h6 {
+    display: block;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 16px;
+  }
 
-  .partners_right{
+  .hackaton p {
+    display: none;
+  }
+
+  .partners_right {
     margin-top: 30px;
   }
 
@@ -493,10 +498,16 @@ color: #666666;
 
   .thanks {
     margin: 50px auto 0;
-  }
+  }  
 }
 
 @media (max-width: 767px) {
+
+  .userbox input[type="date"]::after ,
+  .userbox input[type="date"]::before {
+    display: none !important;
+  }
+
   .partners_left li {
     font-size: 16px;
     margin-bottom: 12px;
@@ -505,7 +516,7 @@ color: #666666;
     line-height: 20px;
     padding-right: 0;
   }
- 
+
   .teamyes label {
     margin: 0;
     display: inline-flex;
@@ -513,12 +524,13 @@ color: #666666;
     justify-content: flex-start;
     text-align: left;
     width: 25%;
-   
+
   }
 
   .partners_right .position label {
     width: 100%;
   }
+
   .hackaton h3 {
     font-size: 28px;
     line-height: 35px;
@@ -534,24 +546,27 @@ color: #666666;
   .partners {
     margin-top: 25px;
   }
+
   .partners_right {
     padding: 20px;
     flex-direction: column;
   }
-.cards{
-  padding: 5px 15px;
-}
-.hackaton h4{
 
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 20px;
-  color: #12273c;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  text-align: left;
-  padding-left: 2px;
-}
+  .cards {
+    padding: 5px 15px;
+  }
+
+  .hackaton h4 {
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #12273c;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-align: left;
+    padding-left: 2px;
+  }
 
   .thanks,
   .partners_right {
@@ -572,8 +587,8 @@ color: #666666;
   .partners_right div {
     font-size: 14px;
     line-height: 22px;
-    
-   
+
+
     /* width: 100%; */
   }
 
@@ -584,6 +599,7 @@ color: #666666;
     line-height: 21px;
     width: 100%;
   }
+
   .partners_right select {
     font-size: 14px;
     line-height: 21px;
