@@ -370,7 +370,7 @@ export default function Partners() {
               </div>
               <ReCAPTCHA
     // sitekey="6LdOKLEhAAAAAKPMaI1f5RrNqiedwS0Rw9AePzSg" localhost
-    sitekey="6LcJc7EhAAAAAH0x_sVS2Ai9EwXpeQkwaFN3sE7d"
+    sitekey="6Le1nrEhAAAAAAlDtbfUzzjJYe_ua0atkArv_Ta5"
     onChange={onChange}
   />,
 
