@@ -4,7 +4,7 @@ exports.id = 473;
 exports.ids = [473];
 exports.modules = {
 
-/***/ 483:
+/***/ 3946:
 /***/ ((module) => {
 
 // Exports
@@ -40,7 +40,7 @@ var external_react_ = __webpack_require__(6689);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(1853);
 // EXTERNAL MODULE: ./styles/GuideByID.module.css
-var GuideByID_module = __webpack_require__(483);
+var GuideByID_module = __webpack_require__(3946);
 var GuideByID_module_default = /*#__PURE__*/__webpack_require__.n(GuideByID_module);
 ;// CONCATENATED MODULE: ./component/GuideByID.js
 

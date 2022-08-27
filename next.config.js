@@ -1,3 +1,21 @@
+/** @type {import('next').NextConfig} */
+const webpack = require("webpack");
+const nextConfig = {
+
+  reactStrictMode: true,
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    config.plugins.push(
+      new webpack.ProvidePlugin({
+        $: "jquery",
+        jQuery: "jquery",
+        "window.jQuery": "jquery",
+      })
+    );
+    return config;
+
+    }
+  }
+
 module.exports = {
   i18n: {
     // providing the locales supported by your application
@@ -6,6 +24,8 @@ module.exports = {
     defaultLocale: "uz-UZ", 
     localeDetection: false   
   },
+
+  nextConfig,
 
   async redirects() {
     return [
@@ -31,6 +51,8 @@ module.exports = {
       },
     ]
   },
+
+  
 }
 
 
