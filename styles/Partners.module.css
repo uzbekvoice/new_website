@@ -118,6 +118,7 @@
     padding-top: 13px;
     padding-bottom: 13px;
     resize: none;
+    margin-bottom: 15px;
 }
 
 .partners_right button {
@@ -236,5 +237,6 @@
     .partners_right textarea {
         font-size: 16px;
         line-height: 21px;
+        
     }
 }

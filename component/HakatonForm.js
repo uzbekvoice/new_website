@@ -4,6 +4,7 @@ import PartnersApi from "../pages/partnersapi/static.json";
 import { useRouter } from "next/router";
 import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
+import ReCAPTCHA from "react-google-recaptcha";
 
 export default function Partners() {
   const { locale } = useRouter();
@@ -20,11 +21,20 @@ export default function Partners() {
   const [position, setPosition] = useState("");
   const [teamName, setTeamName] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [verifed, setVerifed] = useState(false);
 
   const onConfirm = (e) => {
     if (e.target.checked) setConfirm("yes");
     else setConfirm("");
   };
+
+
+//recaptcha
+  function onChange(value) {
+    // console.log("Captcha value:", value);
+    setVerifed(true);
+  }
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -358,11 +368,15 @@ export default function Partners() {
                   {confirm_accept}
                 </label>
               </div>
+              <ReCAPTCHA
+    sitekey="6LdOKLEhAAAAAKPMaI1f5RrNqiedwS0Rw9AePzSg"
+    onChange={onChange}
+  />,
 
               <hr></hr>
 
               <div className={styles.finally}>
-                <button type="submit">{button}</button>
+                <button type="submit" disabled={!verifed} style={{background: verifed === true ? "#18bd5b": "black"}}>{button}</button>
                 <div
                   style={{ display: alert === "error" ? "flex" : "none" }}
                   className={styles.error}
