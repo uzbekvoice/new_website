@@ -13,7 +13,7 @@ const Stat = dynamic(
   { ssr: false }
 )
 
-import HomeContent from './homeapi/static.json'
+// import HomeContent from './homeapi/static.json'
 
 export async function getServerSideProps() {
   const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
