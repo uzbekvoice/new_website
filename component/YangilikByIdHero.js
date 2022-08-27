@@ -12,6 +12,7 @@ const YangilikByIdHero = ({ data }) => {
   const router = useRouter()
   const dataFilter = data.data.filter(p => p.languages_code === locale)[0]
 
+  console.log(router);
   return (
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
@@ -35,15 +36,15 @@ const YangilikByIdHero = ({ data }) => {
               }
             </span>
 
-            <FacebookShareButton url={`${'http://uzbekvoiceapp.vercel.app/' + router.locale + router.asPath}`}>
+            <FacebookShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`}>
               <img src='/facebookNews.svg' alt='facebook' />
             </FacebookShareButton>
 
-            <TwitterShareButton url={`${'http://uzbekvoiceapp.vercel.app/' + router.locale + router.asPath}`} >
+            <TwitterShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`} >
               <img src='/twitterNews.svg' alt='twitter' />
             </TwitterShareButton>
 
-            <TelegramShareButton url={`${'http://uzbekvoiceapp.vercel.app/' + router.locale + router.asPath}`}>
+            <TelegramShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`}>
               <img src='/telegramNews.svg' alt='tg' />
             </TelegramShareButton>
           </div>

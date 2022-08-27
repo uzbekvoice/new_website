@@ -78,6 +78,7 @@ const YangilikByIdHero = ({ data  })=>{
     const router = (0,router_.useRouter)();
     const dataFilter = data.data.filter((p)=>p.languages_code === locale
     )[0];
+    console.log(router);
     return /*#__PURE__*/ (0,jsx_runtime_.jsxs)("div", {
         className: (YangiliByIdHero_module_default()).yangilikByIdHero,
         children: [
@@ -108,21 +109,21 @@ const YangilikByIdHero = ({ data  })=>{
                                         children: locale === "uz-UZ" ? "Ulashish:" : locale === "ru-RU" ? "\u041F\u043E\u0434\u0435\u043B\u0438\u0442\u044C\u0441\u044F \u0432:" : "Share to:"
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx(external_next_share_namespaceObject.FacebookShareButton, {
-                                        url: `${"http://uzbekvoiceapp.vercel.app/" + router.locale + router.asPath}`,
+                                        url: `${"https://new.uzbekvoice.ai/" + router.locale + router.asPath}`,
                                         children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                             src: "/facebookNews.svg",
                                             alt: "facebook"
                                         })
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx(external_next_share_namespaceObject.TwitterShareButton, {
-                                        url: `${"http://uzbekvoiceapp.vercel.app/" + router.locale + router.asPath}`,
+                                        url: `${"https://new.uzbekvoice.ai/" + router.locale + router.asPath}`,
                                         children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                             src: "/twitterNews.svg",
                                             alt: "twitter"
                                         })
                                     }),
                                     /*#__PURE__*/ jsx_runtime_.jsx(external_next_share_namespaceObject.TelegramShareButton, {
-                                        url: `${"http://uzbekvoiceapp.vercel.app/" + router.locale + router.asPath}`,
+                                        url: `${"https://new.uzbekvoice.ai/" + router.locale + router.asPath}`,
                                         children: /*#__PURE__*/ jsx_runtime_.jsx("img", {
                                             src: "/telegramNews.svg",
                                             alt: "tg"
