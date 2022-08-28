@@ -12,6 +12,8 @@ import {
   ResponsiveContainer,
   AreaChart,
   Area,
+  Label,
+  LabelList
 } from "recharts";
 import { useRouter } from "next/router";
 
@@ -120,6 +122,33 @@ export default function Stat(props) {
       Tinglangan: 4800,
     },
   ];
+  // const data3 = [
+  //   {
+  //     "name": "x1",
+  //     "uv": 180000,
+     
+  //   },
+  //   {
+  //     "name": "Page B",
+  //     "uv": 270000,
+      
+  //   },
+  //   {
+  //     "name": "Page C",
+  //     "uv": 900000,
+     
+  //   },
+  //   {
+  //     "name": "Page D",
+  //     "uv": 1800000,
+      
+  //   },
+  //   {
+  //     "name": "Page D",
+  //     "uv": 9000000,
+     
+  //   }
+  // ]
 
   return (
     <div className={styles.statistic}>
@@ -145,8 +174,8 @@ export default function Stat(props) {
             );
           })}
 
-        <div className={styles.img_bottom + ' stat_top_chart'}>
-          <ResponsiveContainer width="100%" height={251}>
+        <div className={styles.img_bottom + " stat_top_chart"}>
+          <ResponsiveContainer width="100%" height={351}>
             <BarChart
               width={500}
               height={300}
@@ -160,8 +189,7 @@ export default function Stat(props) {
             >
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="name" />
-              <YAxis yAxisId="left" orientation="left" stroke="#8884d8" />
-              <YAxis yAxisId="right" orientation="right" stroke="#82ca9d" />
+            
 
               <Tooltip />
               <Legend />
@@ -179,7 +207,25 @@ export default function Stat(props) {
             alt="stat"
           /> */}
         </div>
-        <div className={styles.img_hour + ' stat_bottom_chart'}>
+
+        {/* <BarChart
+  width={730}
+  height={350}
+  data={data3}
+  margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
+>
+  <CartesianGrid strokeDasharray="3 3" />
+  <XAxis dataKey="name">
+    
+  </XAxis>
+
+ 
+  <Bar dataKey="uv" fill="rgba(55, 65, 81, 0.2)">
+    <LabelList dataKey="uv" position="top" />
+  </Bar>
+</BarChart> */}
+   
+        <div className={styles.img_hour + " stat_bottom_chart"}>
           {/* <Image
             src="/stat-hour.jpg"
             width={1052}
@@ -187,10 +233,8 @@ export default function Stat(props) {
             quality={100}
             alt="stat"
           /> */}
-          <ResponsiveContainer width="100%"
-            height={350}>
+          <ResponsiveContainer width="100%" height={350}>
             <AreaChart
-
               data={dates}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
             >

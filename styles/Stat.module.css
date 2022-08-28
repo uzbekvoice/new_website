@@ -79,6 +79,12 @@
     display: flex;
 }
 
+
+
+
+
+
+
 @media (max-width:800px) {
     .content {
         margin-top: 90px;
