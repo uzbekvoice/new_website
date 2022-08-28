@@ -307,6 +307,7 @@
         margin-top: 5px;
         position: static;
         border: none;
+        background: transparent;
     }
 
     .chevronRotate .rotateChevron {
