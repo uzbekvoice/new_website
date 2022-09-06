@@ -1,7 +1,9 @@
 .main {
     text-align: center;
-    font-size: 40px;
+    font-size: 48px;
     margin: 70px 0;
+    font-weight: 800;
+    color: #12273C;
 }
 
 .title {
