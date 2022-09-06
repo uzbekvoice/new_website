@@ -11,7 +11,7 @@ const GuideByID = ({ data }) => {
             <div className={styles.heroImg}>
                 <video
                     poster='/video-poster.jpg'
-                    src={`https://admin.uzbekvoice.ai/assets/${dataFilter.guidline_video}`}
+                    src={`http://localhost:8055/assets/${dataFilter.guidline_video}`}
                     controls
                     muted
                     loop

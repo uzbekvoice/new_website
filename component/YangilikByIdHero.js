@@ -16,7 +16,7 @@ const YangilikByIdHero = ({ data }) => {
   return (
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
-        <img src={`https://admin.uzbekvoice.ai/assets/${dataFilter.news_image}`} alt='news-img' />
+        <img src={`http://localhost:8055/assets/${dataFilter.news_image}`} alt='news-img' />
       </div>
 
       <div className={styles.heroBody}>

@@ -26,7 +26,7 @@ export default function HakatonJuri({ data }) {
           .map(({ id, jury_image, jury_link, jury_name, jury_job }) => (
             <div key={id} className={styles.hakatonJuri_card}>
               <img
-                src={`https://admin.uzbekvoice.ai/assets/${jury_image}`}
+                src={`http://localhost:8055/assets/${jury_image}`}
                 alt="img"
               />
 

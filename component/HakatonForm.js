@@ -71,7 +71,7 @@ export default function Partners() {
       // console.log(users);
       try {
         const res = await fetch(
-          "https://admin.uzbekvoice.ai/items/hackathon_registration_form",
+          "http://localhost:8055/items/hackathon_registration_form",
           {
             method: "POST",
             body: JSON.stringify(users),
