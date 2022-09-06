@@ -29,7 +29,7 @@ export default function OurTeam({ data, HomeContent }) {
           <div className={styles.item} key={id}>
             <div className={styles.avatarimg}>
               <img
-                src={`http://localhost:8055/assets/${profile_image}`}
+                src={`https://localhost:8055/assets/${profile_image}`}
                 alt="partners1"
               />
             </div>
