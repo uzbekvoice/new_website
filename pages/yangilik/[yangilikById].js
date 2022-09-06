@@ -15,8 +15,8 @@ const YangilikById = ({ data, dataTheme }) => {
 export default YangilikById
 
 export async function getServerSideProps({ params }) {
-  const res = await fetch(`https://admin.uzbekvoice.ai/items/news_translations/?filter[news_id]=${params.yangilikById}`)
-  const res2 = await fetch('https://admin.uzbekvoice.ai/items/news_translations')
+  const res = await fetch(`http://localhost:8055/items/news_translations/?filter[news_id]=${params.yangilikById}`)
+  const res2 = await fetch('http://localhost:8055/items/news_translations')
   const data = await res.json()
   const dataTheme = await res2.json()
 

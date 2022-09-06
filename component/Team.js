@@ -9,7 +9,7 @@ const Team = ({ data }) => {
   return (
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
-        <img src={`https://admin.uzbekvoice.ai/assets/${dataFilter.team_image}`} alt='news-img' />
+        <img src={`http://localhost:8055/assets/${dataFilter.team_image}`} alt='news-img' />
       </div>
 
       <div className={styles.heroBody}>
@@ -20,7 +20,7 @@ const Team = ({ data }) => {
 
         <div className={styles.heroDescr} dangerouslySetInnerHTML={{ __html: dataFilter.team_project_content }}></div>
 
-        <a href={`https://admin.uzbekvoice.ai/assets/${dataFilter.team_project_file}`} target="_blank">
+        <a href={`http://localhost:8055/assets/${dataFilter.team_project_file}`} target="_blank">
           {
             locale === "uz-UZ" ?
             'Jamoa loyihasi'

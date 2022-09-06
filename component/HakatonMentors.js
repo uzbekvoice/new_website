@@ -24,7 +24,7 @@ export default function HakatonMentors({ data }) {
                         .filter(p => p.hackathon_id === parseInt(query.id) & p.languages_code === locale)
                         .map(({ id, mentor_image, mentor_link, mentor_name, mentor_job, }) => (
                             <div key={id} className={styles.hakatonJuri_card}>
-                                <img src={`https://admin.uzbekvoice.ai/assets/${mentor_image}`} target='_blank' alt='img' />
+                                <img src={`http://localhost:8055/assets/${mentor_image}`} target='_blank' alt='img' />
 
                                 <p>{mentor_name}</p>
                                 <h5>{mentor_job}</h5>

@@ -52,7 +52,7 @@ export default function HakatonFoto({ data, galleryID }) {
                         .map((value, index) => (
                             value.directus_files_id ?
                                 <a
-                                    data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                    data-pswp-src={`http://localhost:8055/assets/${value.directus_files_id}`}
                                     key={galleryID + '-' + index}
                                     target="_blank"
                                     rel="noreferrer"
@@ -60,7 +60,7 @@ export default function HakatonFoto({ data, galleryID }) {
                                     data-pswp-height="800"
                                 >
                                     <img
-                                        src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                        src={`http://localhost:8055/assets/${value.directus_files_id}`}
                                         alt={value.directus_files_id}
                                     />
                                 </a>

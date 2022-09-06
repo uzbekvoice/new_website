@@ -13,7 +13,7 @@ const TeamByID = ({ data }) => {
 export default TeamByID
 
 export async function getServerSideProps({ params }) {
-    const res = await fetch(`https://admin.uzbekvoice.ai/items/hackathon_teams_translations`)
+    const res = await fetch(`http://localhost:8055/items/hackathon_teams_translations`)
     const data = await res.json()
 
     return {
