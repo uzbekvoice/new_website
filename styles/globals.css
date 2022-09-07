@@ -1,7 +1,9 @@
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-display: fallback;
   font-weight: 400
+
 }
 
 
@@ -9,12 +11,14 @@
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
+  font-display: fallback;
   font-weight: 700
 }
 
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
+  font-display: fallback;
   font-weight: 800
 }
 
