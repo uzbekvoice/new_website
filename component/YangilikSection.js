@@ -24,7 +24,7 @@ const YangilikSection = ({ data }) => {
               return (
                 <div className={s.box} key={el.id}>
                   <div className={s.boxHeader}>
-                    <img src={`http://localhost:8055/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
+                    <img src={`https://admin.uzbekvoice.ai/assets/${el.news_image}`} alt={el.news_image} key={el.id} />
                   </div>
                   <div className={s.boxBody}>
                     <h3 className={s.title}>{el.news_title}</h3>

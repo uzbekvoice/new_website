@@ -29,7 +29,11 @@ export default function OurTeam({ data, HomeContent }) {
           <div className={styles.item} key={id}>
             <div className={styles.avatarimg}>
               <img
+<<<<<<< HEAD
                 src={`https://localhost:8055/assets/${profile_image}`}
+=======
+                src={`https://admin.uzbekvoice.ai/assets/${profile_image}`}
+>>>>>>> parent of 5cb49f2 (api change url localhost)
                 alt="partners1"
               />
             </div>

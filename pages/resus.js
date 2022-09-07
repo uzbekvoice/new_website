@@ -12,7 +12,7 @@ export default function resus({ data }) {
 }
 
 export async function getServerSideProps() {
-  const res = await fetch('http://localhost:8055/items/resources_translations')
+  const res = await fetch('https://admin.uzbekvoice.ai/items/resources_translations')
   const data = await res.json()
 
   return {
