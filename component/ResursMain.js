@@ -84,7 +84,7 @@ const ResursMain = ({ data }) => {
                                         </Link>
                                     </div>
                                     <div className={styles.resursCardHeader}>
-                                        <img src={`http://localhost:8055/assets/${resource_image}`} alt='image' />
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${resource_image}`} alt='image' />
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@ const ResursMain = ({ data }) => {
                             <div className={styles.partInfoMobile}>
                                 <div className={styles.resursMobileCard} key={id}>
                                     <div className={styles.resursMobileCardHeader}>
-                                        <img src={`http://localhost:8055/assets/${resource_image}`} alt='image' />
+                                        <img src={`https://admin.uzbekvoice.ai/assets/${resource_image}`} alt='image' />
                                     </div>
 
                                     <div className={styles.resursMobileCardBody}>

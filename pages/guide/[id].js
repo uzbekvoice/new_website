@@ -13,7 +13,7 @@ const GuideBy = ({ data }) => {
 export default GuideBy
 
 export async function getServerSideProps() {
-    const res = await fetch('http://localhost:8055/items/guidelines_translations')
+    const res = await fetch('https://admin.uzbekvoice.ai/items/guidelines_translations')
     const data = await res.json()
 
     return {

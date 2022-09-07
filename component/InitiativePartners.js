@@ -86,7 +86,7 @@ export default function InitiativePartners(props) {
                 className={styles.item}
               >
                 <img
-                  src={`http://localhost:8055/assets/${partner_image}`}
+                  src={`https://admin.uzbekvoice.ai/assets/${partner_image}`}
                 />
                 <span>{partner_title}</span>
               </a>

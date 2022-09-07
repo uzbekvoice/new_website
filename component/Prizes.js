@@ -40,14 +40,14 @@ export default function Prizes({ prize, galleryID, title }) {
           prize.map((value, index) => (
             value ?
               <a
-                href={`http://localhost:8055/assets/${value}`}
+                href={`https://admin.uzbekvoice.ai/assets/${value}`}
                 key={galleryID + '-' + index}
                 target="_blank"
                 rel="noreferrer"  
                 data-pswp-width="1200" 
                 data-pswp-height="800"               
               >
-                <img src={`http://localhost:8055/assets/${value}`} alt={value} />
+                <img src={`https://admin.uzbekvoice.ai/assets/${value}`} alt={value} />
               </a>
               :
               <div></div>
