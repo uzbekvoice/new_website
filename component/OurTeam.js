@@ -4,7 +4,6 @@ import Link from "next/link";
 import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useRouter } from "next/router";
-import { getAssetURL } from "../utils/get-assets-url";
 
 
 export default function OurTeam({ data, HomeContent }) {
@@ -31,7 +30,7 @@ export default function OurTeam({ data, HomeContent }) {
             <div className={styles.avatarimg}>
               <img
 
-                src={getAssetURL(profile_image)}
+                src={`https://admin.uzbekvoice.ai/assets/${profile_image}`}
 
                 alt="partners1"
               />
