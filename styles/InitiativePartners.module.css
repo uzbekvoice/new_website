@@ -14,7 +14,7 @@
 }
 
 .partnersForHak {
-  margin-top: 370px !important;
+  margin-top: 520px ;
 }
 
 .item {
@@ -55,7 +55,7 @@
 
 @media (max-width: 893px) {
   .partnersForHak {
-    margin-top: 400px !important;
+    margin-top: 540px ;
   }
 
   .active h3 {
@@ -98,18 +98,18 @@
 
 @media (max-width: 537px) {
   .active h3 {
-    margin-top: 340px !important;
+    margin-top: 300px !important;
   }
 
   .partnersForHak {
-    margin-top: 420px !important;
+    margin-top: 500px ;
   }
 }
 
 @media (max-width:461px) {
 
   .partnersForHak {
-    margin-top: 280px !important;
+    margin-top: 420px !important;
   }
 
   .active h3 {

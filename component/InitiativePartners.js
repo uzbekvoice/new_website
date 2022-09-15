@@ -46,7 +46,7 @@ export default function InitiativePartners(props) {
     },
   };
   return (
-    <div className={styles.initpartners + " initpartners"}>
+    <div className={styles.initpartners}>
       {HomeContent.partner
         .filter((p) => p.languages_code === locale)
         .map((HomeContent, i) => {
