@@ -88,6 +88,11 @@
 @media (max-width: 767px) {
   .grid {
     grid-template-columns: 1fr;
+    
+  }
+  .roadmap_page {
+    padding-bottom: 200px;
+ 
   }
 
   .roadmap_heading h2 {
