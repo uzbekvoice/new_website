@@ -38,7 +38,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
         bosqichlar,
         hakaton,
         hakatonlar,
-        resurs,
+        roadmap,
         qollanma,
         boshqa,
         boshqalar,
@@ -181,12 +181,12 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               </ul>
             </div>
 
-            <Link href="/resus">
+            <Link href="/roadmap">
               <a
                 onClick={() => setMenuToggle(false)}
-                className={router.pathname == "/resus" ? "item active" : 'item'}
+                className={router.pathname == "/roadmap" ? "item active" : 'item'}
               >
-                {resurs}
+                {roadmap}
               </a>
             </Link>
             <Link href="/guide">
