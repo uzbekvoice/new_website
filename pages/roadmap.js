@@ -26,7 +26,7 @@ export default function Roadmap({ roadmaps }) {
         <div className={styles.container_page}>
           {dates.map((data, id) => (
             <div key={id} className={styles.roadmap_heading}>
-              <h2> {data.roadmap_title}</h2>
+                 {<h2 dangerouslySetInnerHTML={{ __html: data.roadmap_title}} /> }
             </div>
           ))}
         </div>
@@ -39,7 +39,7 @@ export default function Roadmap({ roadmaps }) {
               ({ id, roadmap_title, roadmap_heading, roadmap_content }) => (
                 <div key={id}>
                   <h2> {roadmap_heading} </h2>
-                  <h2> {roadmap_title}</h2>
+                  {<h2 dangerouslySetInnerHTML={{ __html: roadmap_title}} /> }
 
                   {<p dangerouslySetInnerHTML={{ __html: roadmap_content }} />}
                 </div>
