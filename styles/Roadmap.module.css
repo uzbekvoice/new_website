@@ -127,6 +127,15 @@
     }
   }
 
+  @media (max-width: 460px) {
+    .roadmaphero{
+        top: 66px;
+    }
+    .roadmap_page {
+        top: 66px;
+      }
+  }
+
 .item {
   position: relative;
 }
