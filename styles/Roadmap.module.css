@@ -117,11 +117,12 @@
     .roadmap_heading h2 {
       font-size: 22px;
       font-weight: 600;
+      line-height: 2.1rem;
     }
     .page_heading h2 {
       font-size: 22px;
       font-weight: 600;
-      line-height: 3rem;
+      line-height: 2.1rem;
     }
     
     .page_heading p {

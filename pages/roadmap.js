@@ -38,7 +38,7 @@ export default function Roadmap({ roadmaps }) {
             {dates.map(
               ({ id, roadmap_title, roadmap_heading, roadmap_content }) => (
                 <div key={id}>
-                  <h2> {roadmap_heading} </h2>
+                  <h2> {roadmap_heading} </h2><br/>
                   {<h2 dangerouslySetInnerHTML={{ __html: roadmap_title}} /> }
 
                   {<p dangerouslySetInnerHTML={{ __html: roadmap_content }} />}
