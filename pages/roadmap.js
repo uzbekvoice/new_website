@@ -2,7 +2,7 @@ import { data } from "jquery";
 import React from "react";
 import styles from "../styles/Roadmap.module.css";
 import { useRouter } from "next/router";
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const res = await fetch(
     "https://admin.uzbekvoice.ai/items/roadmap_translations"
   );
