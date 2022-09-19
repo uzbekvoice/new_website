@@ -32,7 +32,7 @@
   position: relative;
   top: 80px;
   width: 100%;
-  background: #15192c;
+  /* background: #15192c; */
 }
 
 .container_page {
@@ -55,7 +55,7 @@
 }
 
 .page_heading {
-  color: #ffffff;
+  color: #000;
 }
 .page_heading h2 {
   font-size: 30px;
@@ -155,6 +155,7 @@
   font-style: normal;
   font-size: 1.125rem;
   line-height: 1.65rem;
+  font-weight: 600;
   color: #a787ff;
   margin-bottom: 1rem;
   padding: 0.25rem 0.5rem;
@@ -178,7 +179,7 @@
   justify-content: flex-start;
   flex-wrap: wrap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
   line-height: 27px;
   margin-bottom: 1rem;
@@ -189,7 +190,7 @@
 
 .roadmap_list li {
   list-style: none;
-  color: #fff;
+  color: #000;
   width: 100%;
   margin: 0 0 1rem;
 }
