@@ -369,8 +369,8 @@ export default function Partners() {
                 </label>
               </div>
               <ReCAPTCHA
-    // sitekey="6LdOKLEhAAAAAKPMaI1f5RrNqiedwS0Rw9AePzSg" localhost
-    sitekey="6LcJc7EhAAAAAH0x_sVS2Ai9EwXpeQkwaFN3sE7d"
+   
+    sitekey={process.env.REACT_APP_SITE_KEY}
     onChange={onChange}
   />,
 
