@@ -195,6 +195,11 @@
   margin: 0 0 1rem;
 }
 
+.roadmap_list li a{
+color: #a787ff;
+text-decoration: underline;
+}
+
 .roadmap_list .done {
   opacity: 0.5;
   color: #a3a8b8;
