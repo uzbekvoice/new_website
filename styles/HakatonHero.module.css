@@ -191,8 +191,9 @@
     }
 
     .hakatonHeroWrappper {
-    
         top: 64px;
-      
+    }
+    .hakatonHeroWrappper.one {
+        top: 64px;
     }
 }
