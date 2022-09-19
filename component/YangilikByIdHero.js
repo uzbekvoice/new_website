@@ -41,15 +41,15 @@ const YangilikByIdHero = ({ data }) => {
               }
             </span>
 
-            <FacebookShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`}>
+            <FacebookShareButton url={`${'https://uzbekvoice.ai/' + router.locale + router.asPath}`}>
               <img src='/facebookNews.svg' alt='facebook' />
             </FacebookShareButton>
 
-            <TwitterShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`} >
+            <TwitterShareButton url={`${'https://uzbekvoice.ai/' + router.locale + router.asPath}`} >
               <img src='/twitterNews.svg' alt='twitter' />
             </TwitterShareButton>
 
-            <TelegramShareButton url={`${'https://new.uzbekvoice.ai/' + router.locale + router.asPath}`}>
+            <TelegramShareButton url={`${'https://uzbekvoice.ai/' + router.locale + router.asPath}`}>
               <img src='/telegramNews.svg' alt='tg' />
             </TelegramShareButton>
           </div>
