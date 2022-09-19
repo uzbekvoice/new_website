@@ -28,13 +28,11 @@ export default function Partners() {
     else setConfirm("");
   };
 
-
-//recaptcha
+  //recaptcha
   function onChange(value) {
     // console.log("Captcha value:", value);
     setVerifed(true);
   }
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -92,8 +90,6 @@ export default function Partners() {
       setTimeout(() => setAlert("false"), 5000);
     }
   };
-
-
 
   return PartnersApi.hack_form
     .filter((p) => p.languages_code === locale)
@@ -184,7 +180,6 @@ export default function Partners() {
                 />
                 <label>{label_fio} </label>
               </div>
-
               <div className={styles.userbox}>
                 <input
                   value={dateOfBirth}
@@ -196,7 +191,6 @@ export default function Partners() {
 
                 <label>{label_date_of_brith}</label>
               </div>
-
               <div className={styles.city}>
                 <label>
                   {label_country} <span>*</span>
@@ -210,7 +204,6 @@ export default function Partners() {
                   </select>
                 </label>
               </div>
-
               <div className={styles.userbox}>
                 <input
                   value={place_work}
@@ -221,7 +214,6 @@ export default function Partners() {
                 />
                 <label>{label_place_work}</label>
               </div>
-
               {/*  Contact data */}
               <h4>{form_title2}</h4>
               <hr></hr>
@@ -238,7 +230,6 @@ export default function Partners() {
                 />
                 <label>{label_phone}</label>
               </div>
-
               <div className={styles.userbox}>
                 <input
                   value={email}
@@ -247,7 +238,11 @@ export default function Partners() {
                   // placeholder={placeholder_email}
                   onChange={(e) => setEmail(e.target.value)}
                 />
-                <label style={{ top: !email && '0px', fontSize: !email && '16px' }}>{label_email}</label>
+                <label
+                  style={{ top: !email && "0px", fontSize: !email && "16px" }}
+                >
+                  {label_email}
+                </label>
               </div>
               <div className={styles.userbox}>
                 <input
@@ -259,12 +254,10 @@ export default function Partners() {
                 />
                 <label>{label_tg_nike}</label>
               </div>
-
               {/*  Contact data */}
               <h4>{form_title3}</h4>
               <hr></hr>
-
-              <label  style={{color: "#111"}}>
+              <label style={{ color: "#111" }}>
                 {label_problem} <span>*</span>
                 <textarea
                   value={problem}
@@ -300,8 +293,6 @@ export default function Partners() {
                   {no}
                 </label>
               </div>
-
-
               {isTeam === "yes" ? (
                 <div className={styles.userbox}>
                   <input
@@ -311,16 +302,11 @@ export default function Partners() {
                     // placeholder={placeholder_team_name}
                     onChange={(e) => setTeamName(e.target.value)}
                   />
-                  <label>
-                    {placeholder_team_name}
-                  </label>
+                  <label>{placeholder_team_name}</label>
                 </div>
               ) : (
                 false
               )}
-
-
-
               <div className={styles.position}>
                 <p>{label_position}</p>
                 {position_role.map(({ id, value }) => (
@@ -339,7 +325,6 @@ export default function Partners() {
                   </label>
                 ))}
               </div>
-
               <h4>
                 {" "}
                 {oferta}
@@ -353,7 +338,6 @@ export default function Partners() {
               <div className={styles.lastline}>
                 <hr></hr>
               </div>
-
               <div>
                 <p>{label_confirm}</p>
                 <label htmlFor="confim">
@@ -369,17 +353,18 @@ export default function Partners() {
                 </label>
               </div>
               <ReCAPTCHA
-
-   
-    sitekey={process.env.REACT_APP_SITE_KEY}
-
-    onChange={onChange}
-  />,
-
-              <hr></hr>
-
+                sitekey="6LdBgQ4iAAAAAHKkhQM5c82v9HARYH5_gu2nU3Es"
+                onChange={onChange}
+              />
+              ,<hr></hr>
               <div className={styles.finally}>
-                <button type="submit" disabled={!verifed} style={{background: verifed === true ? "#18bd5b": "black"}}>{button}</button>
+                <button
+                  type="submit"
+                  disabled={!verifed}
+                  style={{ background: verifed === true ? "#18bd5b" : "black" }}
+                >
+                  {button}
+                </button>
                 <div
                   style={{ display: alert === "error" ? "flex" : "none" }}
                   className={styles.error}

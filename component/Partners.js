@@ -93,15 +93,15 @@ export default function Partners() {
             />
             <label>{label_phone}</label>
             <Input
-                  international
-                  country="UZ"
-                  defaultCountry="UZ"
-                  withCountryCallingCode
-                  maxlength="17"
-                  value={number}
-                  required
-                  onChange={setNumber}
-                />
+              international
+              country="UZ"
+              defaultCountry="UZ"
+              withCountryCallingCode
+              maxlength="17"
+              value={number}
+              required
+              onChange={setNumber}
+            />
             <label>{label_comment}</label>
             <textarea
               value={comment}
@@ -110,18 +110,18 @@ export default function Partners() {
               cols="50"
               placeholder={placeholder_comment}
             ></textarea>
-
-
-           
-            <ReCAPTCHA 
-            sitekey={process.env.REACT_APP_SITE_KEY}
-
+            <ReCAPTCHA
+              sitekey="6LdBgQ4iAAAAAHKkhQM5c82v9HARYH5_gu2nU3Es"
               onChange={onChange}
-              
             />
-          
-    
-            ,<button type="submit" disabled={!verifed} style={{background: verifed === true ? "#18bd5b": "black"}}>{button}</button>
+            
+            <button
+              type="submit"
+              disabled={!verifed}
+              style={{ background: verifed === true ? "#18bd5b" : "black" }}
+            >
+              {button}
+            </button>
             <div
               style={{ display: alert === "error" ? "block" : "none" }}
               className={styles.error}
