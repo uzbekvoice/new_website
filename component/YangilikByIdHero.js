@@ -1,19 +1,24 @@
 import { useRouter } from 'next/router';
 import React from 'react'
 import styles from '../styles/YangiliByIdHero.module.css'
+
+import { NextSeo } from 'next-seo';
 import {
   FacebookShareButton,
   TwitterShareButton,
   TelegramShareButton
 } from 'next-share';
+import Head from 'next/head';
 
 const YangilikByIdHero = ({ data }) => {
   const { locale } = useRouter()
   const router = useRouter()
   const dataFilter = data.data.filter(p => p.languages_code === locale)[0]
 
-  console.log(router);
+  // console.log(router);
   return (
+<>
+<NextSeo   title={dataFilter.news_title } description={dataFilter.news_content.split(" ", 20).join(' ')} titleTemplate={dataFilter.news_title} />
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
         <img src={`https://admin.uzbekvoice.ai/assets/${dataFilter.news_image}`} alt='news-img' />
@@ -56,6 +61,7 @@ const YangilikByIdHero = ({ data }) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
 
