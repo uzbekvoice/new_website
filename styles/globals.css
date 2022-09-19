@@ -1,7 +1,6 @@
 @font-face {
   font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
-  font-display: fallback;
+  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf); 
   font-weight: 400
 
 }
@@ -11,21 +10,18 @@
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
-  font-display: fallback;
   font-weight: 700
 }
 
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
-  font-display: fallback;
   font-weight: 800
 }
 
  body {
   margin: 0;
   overflow-x: hidden;
-  position: relative;
   font-family: "Objektiv";
 }
 
@@ -53,6 +49,14 @@ a {
   margin: 0 auto;
   padding: 0 86px;
 }
+
+.containerroadmap{
+  width: 100%;
+  
+}
+
+
+
 
 @media (max-width: 1200px) {
   .container__fluid {

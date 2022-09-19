@@ -24,7 +24,7 @@ function MyApp({ Component, pageProps }) {
         {Seocontent.seocontent
           .filter((p) => p.languages_code === locale)
           .map(({ title, desc }, i) => (
-            <NextSeo key={i} title={title} description={desc} titleTemplate={title} />
+            <NextSeo key={i}  title={title} description={desc} titleTemplate={title} />
           ))}
 
         <Component {...pageProps} />

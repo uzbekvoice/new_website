@@ -51,7 +51,8 @@ const YangilikByIdHero = ({ data }) => {
         </div>
 
         <div className={styles.heroDescr}>
-          {dataFilter.news_content}
+         
+          <p dangerouslySetInnerHTML={{__html: dataFilter.news_content}}/>
         </div>
       </div>
     </div>
