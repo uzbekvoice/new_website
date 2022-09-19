@@ -114,8 +114,8 @@ export default function Partners() {
 
            
             <ReCAPTCHA 
-            //   sitekey="6LdOKLEhAAAAAKPMaI1f5RrNqiedwS0Rw9AePzSg" localhost
-            sitekey="6Le1nrEhAAAAAAlDtbfUzzjJYe_ua0atkArv_Ta5"
+            sitekey={process.env.REACT_APP_SITE_KEY}
+
               onChange={onChange}
               
             />
