@@ -1,31 +1,26 @@
 @font-face {
   font-family: "Objektiv";
-  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf); 
-  font-weight: 400
-
+  src: url(../public/Objektiv/ObjektivMk1-Regular.ttf);
+  font-weight: 400;
 }
-
-
 
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Bold.ttf);
-  font-weight: 700
+  font-weight: 700;
 }
 
 @font-face {
   font-family: "Objektiv";
   src: url(../public/Objektiv/ObjektivMk1-Black.ttf);
-  font-weight: 800
+  font-weight: 800;
 }
 
- body {
+body {
   margin: 0;
   overflow-x: hidden;
   font-family: "Objektiv";
 }
-
-
 
 a {
   color: inherit;
@@ -39,9 +34,8 @@ a {
 }
 
 .item.active {
-  color: #8D53FD;
+  color: #8d53fd;
 }
-
 
 .container__fluid {
   max-width: 1440px;
@@ -50,13 +44,9 @@ a {
   padding: 0 86px;
 }
 
-.containerroadmap{
+.containerroadmap {
   width: 100%;
-  
 }
-
-
-
 
 @media (max-width: 1200px) {
   .container__fluid {
@@ -70,7 +60,6 @@ a {
   }
 }
 
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -78,7 +67,8 @@ a {
 }
 
 .btn {
-  background: linear-gradient(9deg, #8D53FD -1.4%, #B38CFF 95.18%), linear-gradient(0deg, #8D53FD, #8D53FD);
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
+    linear-gradient(0deg, #8d53fd, #8d53fd);
   box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
   padding: 13px 24px;
   color: white !important;
@@ -96,7 +86,6 @@ a {
 .pswp__img--placeholder {
   display: none !important;
 }
-
 
 .bosqich.faol,
 .bosqich.active,
@@ -116,7 +105,7 @@ a {
 .bosqich.tez.orada,
 .bosqich.скоро {
   background: rgba(111, 111, 111, 0.15);
-  color: #6F6F6F;
+  color: #6f6f6f;
 }
 
 .accordion__section {
@@ -133,7 +122,7 @@ a {
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.08);  
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 16px;
   outline: none;
   transition: background-color 0.6s ease;
@@ -166,7 +155,6 @@ a {
     text-align: left;
     font-size: 12px;
   }
-
 }
 
 /* Style the accordion chevron icon */
@@ -179,7 +167,6 @@ a {
 .rotate {
   transform: rotate(90deg);
 }
-
 
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
@@ -215,13 +202,13 @@ a {
 .owl-carousel button.owl-dot {
   width: 8px;
   height: 8px;
-  background: #E7E7E7 !important;
+  background: #e7e7e7 !important;
   margin: 0 3px;
   border-radius: 50%;
 }
 
 .owl-carousel button.owl-dot.active {
-  background: #8D53FD !important;
+  background: #8d53fd !important;
 }
 
 /********* swiper nav styles***************/
@@ -258,7 +245,7 @@ a {
 
 .swiper-button-prev::after {
   position: absolute;
-  content: url('../public/arrow-left.svg') !important;
+  content: url("../public/arrow-left.svg") !important;
   left: 2px;
   top: -9px;
   width: 100%;
@@ -267,7 +254,7 @@ a {
 
 .swiper-button-next::after {
   position: absolute;
-  content: url('../public/arrow-right.svg') !important;
+  content: url("../public/arrow-right.svg") !important;
   left: 4px;
   top: -9px;
   width: 100%;
@@ -295,7 +282,7 @@ a {
 
 .owl-carousel.owl-loaded .owl-nav button.owl-prev::after {
   position: absolute;
-  content: url('../public/arrow-left.svg');
+  content: url("../public/arrow-left.svg");
   left: 0;
   top: 4px;
   width: 100%;
@@ -308,7 +295,7 @@ a {
 
 .owl-carousel.owl-loaded .owl-nav button.owl-next ::after {
   position: absolute;
-  content: url('../public/arrow-right.svg');
+  content: url("../public/arrow-right.svg");
   left: 0;
   top: 4px;
   width: 100%;
@@ -322,7 +309,6 @@ a {
 .initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -4%;
 }
-
 
 /************STAT styles*************/
 @media (max-width: 767px) {
