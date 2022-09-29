@@ -5,7 +5,6 @@ import { FaTelegramPlane } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { useRouter } from "next/router";
 
-
 export default function OurTeam({ data, HomeContent }) {
   const { locale } = useRouter();
 
@@ -24,34 +23,47 @@ export default function OurTeam({ data, HomeContent }) {
 
       <div className={styles.firstblock}>
         {data
-        .filter((p) => p.languages_code === locale)
-        .map(({ id, profile_image, profile_linkedin, profile_name, profile_tg, profile_role }) => (
-          <div className={styles.item} key={id}>
-            <div className={styles.avatarimg}>
-              <img
+          .filter((p) => p.languages_code === locale)
+          .map(
+            ({
+              team_members_id,
+              profile_image,
+              profile_linkedin,
+              profile_name,
+              profile_tg,
+              profile_role,
+            }) => (
+              <>
+              {team_members_id !== null &&  (
+      <div className={styles.item} key={team_members_id}>
+      <div className={styles.avatarimg}>
+        <img
+          src={`https://admin.uzbekvoice.ai/assets/${profile_image}`}
+          alt="partners1"
+        />
+      </div>
 
-                src={`https://admin.uzbekvoice.ai/assets/${profile_image}`}
+      <h4>{profile_name}</h4>
+      <p>{profile_role}</p>
+      <div>
+        <Link href={profile_linkedin}>
+          <a className={styles.FaLinkedin}>
+            <FaLinkedin size={20} />
+          </a>
+        </Link>
+        <Link href={profile_tg}>
+          <a>
+            <FaTelegramPlane size={20} />
+          </a>
+        </Link>
+      </div>
+    </div>
 
-                alt="partners1"
-              />
-            </div>
-
-            <h4>{profile_name}</h4>
-            <p>{profile_role}</p>
-            <div>
-              <Link href={profile_linkedin}>
-                <a className={styles.FaLinkedin}>
-                  <FaLinkedin size={20} />
-                </a>
-              </Link>
-              <Link href={profile_tg}>
-                <a>
-                  <FaTelegramPlane size={20} />
-                </a>
-              </Link>
-            </div>
-          </div>
-        ))}
+              )}
+          
+              </>
+            )
+          )}
       </div>
     </div>
   );
