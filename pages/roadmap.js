@@ -2,6 +2,7 @@ import { data } from "jquery";
 import React from "react";
 import styles from "../styles/Roadmap.module.css";
 import { useRouter } from "next/router";
+import { IoCheckmarkCircle } from "react-icons/io5"
 export async function getServerSideProps() {
   const res = await fetch(
     "https://admin.uzbekvoice.ai/items/roadmap_translations"
@@ -57,7 +58,7 @@ export default function Roadmap({ roadmaps }) {
                   <div key={id} className={styles.item}>
                     <div className={styles.roadmap_title}>{title}</div>
                     <ul className={styles.roadmap_list}>
-                      <div
+               <div
                         key={i}
                         dangerouslySetInnerHTML={{ __html: content }}
                       ></div>
