@@ -32,7 +32,7 @@ export default function Oromgoh() {
           <li><span>&#10003; </span> va albatta ovozli ma'lumotlar yozish</li>
         </ul>
         <div className={styles.btn}>
-          <button>Ishtirok etish</button>
+          <a href="#">Ishtirok etish</a>
         </div>
       </div>
     </div>

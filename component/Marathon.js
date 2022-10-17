@@ -29,8 +29,8 @@ export default function Marathon() {
         <p>3000 soat</p>
 
         <div className={styles.btn}>
-          <h4>Sovrindorlarni sovgalar </h4>
-          <button>Kutmoqda</button>
+          <p>Sovrindorlarni sovgalar </p>
+          <a href="/bosqich/2" >Kutmoqda</a>
         </div>
       </div>
     </div>

@@ -24,6 +24,7 @@
 .block p {
   text-align: center;
   font-size: 18px;
+  margin-bottom: 25px;
 }
 
 .flex {
@@ -64,7 +65,8 @@
   margin-top: 50px;
   text-align: center;
 }
-.desc button {
+.desc a{
+    
   color: white;
   padding: 16px 24px;
   background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
