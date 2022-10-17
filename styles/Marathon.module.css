@@ -80,7 +80,7 @@
   margin-top: 15px;
 }
 
-.block button:hover {
+.block a:hover {
   background: #8a2be2;
   cursor: pointer;
 }
