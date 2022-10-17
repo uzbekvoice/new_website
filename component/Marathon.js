@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Marathon.module.css";
+import Link from "next/link";
 
 export default function Marathon() {
   return (
@@ -30,7 +31,10 @@ export default function Marathon() {
 
         <div className={styles.btn}>
           <p>Sovrindorlarni sovgalar </p>
-          <a href="/bosqich/2" >Kutmoqda</a>
+          <Link href="/bosqich/2">
+          <a>Kutmoqda</a>
+          </Link>
+          
         </div>
       </div>
     </div>
