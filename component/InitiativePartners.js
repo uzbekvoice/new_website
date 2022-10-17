@@ -72,7 +72,7 @@ export default function InitiativePartners(props) {
           loop
           margin={10}
           dots={false}
-          nav={true}
+          // nav={true}
           responsive={Responsive}
           autoplay
           autoplayTimeout={1500000}
