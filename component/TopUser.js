@@ -73,7 +73,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                   {/* More voice top user */}
                   <div className={styles.voice_user}>
                     {showModal ? (
-                      <>
+                      
                         <div
                           onClick={() => setShowModal(false)}
                           className={styles.modal_bg}
@@ -112,7 +112,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                             </div>
                           </div>
                         </div>
-                      </>
+                    
                     ) : null}
                   </div>
                   {/* //More voice top user */}
@@ -120,7 +120,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                   {/* More listening top user */}
                   <div className={styles.voice_user}>
                     {showModal2 ? (
-                      <>
+                     
                         <div
                           onClick={() => setShowModal2(false)}
                           className={styles.modal_bg}
@@ -161,7 +161,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                             </div>
                           </div>
                         </div>
-                      </>
+                    
                     ) : null}
                   </div>
                   {/* //More listening top user */}

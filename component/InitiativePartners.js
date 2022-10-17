@@ -1,50 +1,19 @@
 import React from "react";
 import styles from "../styles/InitiativePartners.module.css";
-var $ = require("jquery");
-if (typeof window !== "undefined") {
-  // Client-side-only code
-  window.$ = window.jQuery = require("jquery");
-}
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import dynamic from "next/dynamic";
 import { useRouter } from "next/router";
-import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Scrollbar, Pagination, A11y, Autoplay , Controller} from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
 
-const OwlCarousel = dynamic(() => import("react-owl-carousel"), {
-  ssr: false,
-});
 export default function InitiativePartners(props) {
   const { locale, pathname } = useRouter();
 
   const { HomeContent, partners, status } = props;
 
-  const Responsive = {
-    0: {
-      items: 2,
-      margin: 5,
-    },
 
-    580: {
-      items: 2,
-      margin: 10,
-    },
-
-    900: {
-      items: 3,
-      margin: 20,
-    },
-
-    1200: {
-      items: 4,
-      margin: 20,
-    },
-
-    1400: {
-      items: 4,
-      margin: 10,
-    },
-  };
+ 
   return (
     <div className={styles.initpartners}>
       {HomeContent.partner
@@ -66,22 +35,47 @@ export default function InitiativePartners(props) {
           );
         })}
 
-      <div className={styles.sliders + " sliders"}>
-        <OwlCarousel
-          className={styles.slider}
-          loop
-          margin={10}
-          dots={false}
-          // nav={true}
-          responsive={Responsive}
-          autoplay
-          autoplayTimeout={1500000}
-        >
+      <div className={styles.sliders}>
+          <Swiper
+                  modules={[Navigation, Scrollbar, Autoplay, A11y, Pagination, Controller]}
+                  spaceBetween={10}
+                  slidesPerView={3}
+                  loop={true}
+                  navigation                  
+                  autoplay={true}
+                  speed={300}
+                  breakpoints={{
+                    0: {
+                      slidesPerView: 1,
+                      spaceBetween: 5,
+                    },
+                    580: {
+                      slidesPerView: 2,
+                      spaceBetween: 10,
+                    },
+                    900: {
+                      slidesPerView: 3,
+                      spaceBetween: 10,
+                    },
+                    1200: {
+                      slidesPerView: 4,
+                      spaceBetween: 20,
+                    },
+                    1400: {
+                      slidesPerView: 4,
+                      spaceBetween: 10,
+                    },
+                  }}
+                  scrollbar={{ draggable: true }}
+                >
+                 
           {partners.map(
             ({ id, partner_link, partner_image, partner_title }) => (
-              <a
+              <SwiperSlide key={id}>
+                <div  className={styles.item}>
+                <a
                 href={partner_link}
-                key={id}
+               
                 target="_blank"
                 className={styles.item}
               >
@@ -90,9 +84,13 @@ export default function InitiativePartners(props) {
                 />
                 <span>{partner_title}</span>
               </a>
+                </div>
+            
+              </SwiperSlide>
             )
           )}
-        </OwlCarousel>
+      
+      </Swiper>
       </div>
     </div>
   );

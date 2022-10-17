@@ -4,10 +4,10 @@ import ResusHero from '../component/ResusHero'
 
 export default function resus({ data }) {
   return (
-    <>
+    <div>
       <ResusHero />
       <ResursMain data={data.data} />
-    </>
+    </div>
   )
 }
 

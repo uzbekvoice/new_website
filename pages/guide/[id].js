@@ -4,9 +4,9 @@ import GuideByID from '../../component/GuideByID';
 const GuideBy = ({ data }) => {
         
     return (
-        <>
+      
             <GuideByID data={data.data} />
-        </>
+     
     )
 }
 

@@ -4,9 +4,9 @@ import Team from '../../component/Team';
 const TeamByID = ({ data }) => {
         
     return (
-        <>
+   
             <Team data={data.data} />
-        </>
+    
     )
 }
 

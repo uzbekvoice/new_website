@@ -3,9 +3,9 @@ import QollanmaMain from '../../component/QollanmaMain'
 
 export default function guide({ data }) {
   return (
-    <>
+ 
       <QollanmaMain data={data.data} />
-    </>
+ 
   )
 }
 

@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
 
   return (
-    <>
+    <div>
       <NextNProgress color="blueviolet" />
       <Layout>
         <Head>
@@ -31,7 +31,7 @@ function MyApp({ Component, pageProps }) {
 
         <Component {...pageProps} />
       </Layout>
-    </>
+    </div>
   );
 }
 

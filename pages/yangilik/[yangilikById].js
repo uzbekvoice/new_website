@@ -5,10 +5,10 @@ import YangilikByIdRelevantTheme from '../../component/YangilikByIdRelevantTheme
 const YangilikById = ({ data, dataTheme }) => {
 
   return (
-    <>
+    <div>
       <YangilikByIdHero data={data} />
       <YangilikByIdRelevantTheme data={dataTheme.data} />
-    </>
+    </div>
   )
 }
 

@@ -64,7 +64,7 @@ export default function Home({ users, userslist, partners, teamMembers, faq, ste
         <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
         <Ourpartners HomeContent={HomeContent} />
         <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-        <OurTeam data={teamMembers.data} HomeContent={HomeContent} />
+        <OurTeam data={teamMembers.data}  />
         <Question data={faq.data} HomeContent={HomeContent} />
       </div>
   );

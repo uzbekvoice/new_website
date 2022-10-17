@@ -186,14 +186,14 @@ a {
 
 /***** partners slider *****/
 
-.sliders .owl-carousel .owl-stage {
+/* .sliders  {
   display: flex !important;
   align-items: center;
-}
+} */
 
 /* dots style owl carousel */
 
-.owl-dots {
+/* .owl-dots {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -209,7 +209,7 @@ a {
 
 .owl-carousel button.owl-dot.active {
   background: #8d53fd !important;
-}
+} */
 
 /********* swiper nav styles***************/
 
@@ -263,7 +263,7 @@ a {
 
 /* nav style owl carousel */
 
-.owl-carousel.owl-loaded .owl-nav button.owl-prev,
+/* .owl-carousel.owl-loaded .owl-nav button.owl-prev,
 .owl-carousel.owl-loaded .owl-nav button.owl-next {
   border-radius: 50%;
   background-color: #fff;
@@ -308,7 +308,7 @@ a {
 
 .initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -4%;
-}
+} */
 
 /************STAT styles*************/
 @media (max-width: 767px) {
