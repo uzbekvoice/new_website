@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Oromgoh.module.css";
+import Link from "next/link";
 
 export default function Oromgoh() {
   return (
