@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }) {
         <Head>
           <meta
             name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=not"
           />
           <meta name="google-site-verification" content="bFnjq-PIuIrpOIHmhgutTVLrhdHsCZTam66nqRCiE0k" />
           <link rel="icon" href="/favicon.png" />
