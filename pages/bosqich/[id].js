@@ -5,6 +5,7 @@ import styles from "../../styles/Bosqich.module.css";
 import Winners from "../../component/Winners";
 import Prizes from "../../component/Prizes";
 import BosqichPrizes from "../../component/BosqichPrizes";
+import Oromgoh from "../../component/Oromgoh";
 
 
 export async function getServerSideProps() {
@@ -92,6 +93,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
       </div>
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
+      <Oromgoh />
 
       <div className={styles.rules}>
         {

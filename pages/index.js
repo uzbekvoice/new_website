@@ -15,6 +15,7 @@ const Stat = dynamic(
 )
 
 import HomeContent from './homeapi/static.json'
+import Marathon from "../component/Marathon";
 
 export async function getServerSideProps() {
 
@@ -55,6 +56,7 @@ export default function Home({ users, userslist, partners, teamMembers, faq, ste
   return (
       <div>
         <Hero HomeContent={HomeContent} />
+        <Marathon />
         <Slider HomeContent={HomeContent} />
         <Stat HomeContent={HomeContent} />
         <Step steps={steps.data} HomeContent={HomeContent} />
