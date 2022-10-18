@@ -32,7 +32,7 @@ export default function OurTeam({ data }) {
               profile_tg,
               profile_role,
             }) => (
-              <div key={team_members_id}>
+              < >
                 {team_members_id !== null && (
                   <div  className={styles.item} >
                     <div className={styles.avatarimg}>
@@ -58,7 +58,7 @@ export default function OurTeam({ data }) {
                     </div>
                   </div>
                 )}
-              </div>
+              </>
             )
           )}
       </div>
