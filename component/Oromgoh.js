@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "../styles/Oromgoh.module.css";
 import Link from "next/link";
+import BusAnimation from "./BusAnimation";
 
 export default function Oromgoh() {
   return (
@@ -19,10 +20,7 @@ export default function Oromgoh() {
         </div>
       </div>
 
-      {/* Animatsiya uchun joy */}
-      {/* <div></div> */}
-      {/* Animatsiya uchun joy */}
-
+    <BusAnimation />
       <div className={styles.desc}>
         <ul>
           <li>
