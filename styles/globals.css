@@ -117,13 +117,14 @@ a {
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
+  width: 83%;
   background-color: #fff;
   cursor: pointer;
-  padding: 18px;
+  padding: 18px 0;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: none;
   border-radius: 16px;
   outline: none;
   transition: background-color 0.6s ease;
@@ -156,6 +157,10 @@ a {
     text-align: left;
     font-size: 12px;
   }
+
+  .accordion{ /** accordion open & close buttons **/
+    width: 100%;
+  }
 }
 
 /* Style the accordion chevron icon */
@@ -174,6 +179,7 @@ a {
   background-color: white;
   overflow: hidden;
   transition: max-height 0.6s ease;
+  opacity: 1;
   /* border:  1px solid rgba(0, 0, 0, 0.08); */
 }
 
@@ -187,14 +193,14 @@ a {
 
 /***** partners slider *****/
 
-/* .sliders  {
+.sliders .owl-carousel .owl-stage {
   display: flex !important;
   align-items: center;
-} */
+}
 
 /* dots style owl carousel */
 
-/* .owl-dots {
+.owl-dots {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -210,7 +216,7 @@ a {
 
 .owl-carousel button.owl-dot.active {
   background: #8d53fd !important;
-} */
+}
 
 /********* swiper nav styles***************/
 
@@ -264,7 +270,7 @@ a {
 
 /* nav style owl carousel */
 
-/* .owl-carousel.owl-loaded .owl-nav button.owl-prev,
+.owl-carousel.owl-loaded .owl-nav button.owl-prev,
 .owl-carousel.owl-loaded .owl-nav button.owl-next {
   border-radius: 50%;
   background-color: #fff;
@@ -309,7 +315,7 @@ a {
 
 .initpartners .owl-carousel.owl-loaded .owl-nav button.owl-next {
   right: -4%;
-} */
+}
 
 /************STAT styles*************/
 @media (max-width: 767px) {
