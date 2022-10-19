@@ -130,12 +130,16 @@
 
     .hakatonTeams_cardHeader {
         width: 30%;
-        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 130px;
+        padding: 7px;
         /* margin-right: 15px; */
     }
     .hakatonTeams_cardHeader img {
         width: 100px;
-        height: 100%;
+       
         border-radius: 10px 0 0 10px;
     }
 
