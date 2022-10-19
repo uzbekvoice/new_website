@@ -32,7 +32,6 @@
   padding: 20px 25px;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .desc ul {
@@ -52,7 +51,7 @@
 .desc a {
   color: white;
   padding: 10px 15px;
-  background: linear-gradient(318.45deg, #00EAF6 -64.55%, #0093F8 142.36%);
+  background: linear-gradient(318.45deg, #00eaf6 -64.55%, #0093f8 142.36%);
   border-radius: 12px;
   font-size: 20px;
   text-align: center;
@@ -65,14 +64,18 @@
   cursor: pointer;
 }
 
-@media (max-width: 700px){
-
-  .desc{
+@media (max-width: 700px) {
+  .desc {
     flex-direction: column;
-
   }
 
-  .desc a{
+  .desc a {
     margin-top: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  .desc a {
+    width: 100%;
   }
 }
