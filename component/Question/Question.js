@@ -29,7 +29,7 @@ export default function Question({ data, HomeContent }) {
             ))}
         </div>
         <div className={styles.emailInfo}>
-          <span>Savollar bormi? </span>
+          <span>Savollar bormi? </span> 
           Quyidagi linkda biz savollaringiz javob beramiz <br />
           <a className={styles.emailLink} href="mailto:uzbekvoice-ai@gmail.com">
             uzbekvoice-ai@gmail.com
