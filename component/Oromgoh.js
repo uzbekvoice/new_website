@@ -36,12 +36,12 @@ export default function Oromgoh() {
   <li><span>&#10003; </span> Tekin ovqat</li>
   <li><span>&#10003; </span> va albatta ovozli ma'lumotlar yozish</li>
 </ul>
-<div className={styles.btn}>
+
     <Link href="#">
     <a >Ishtirok etish</a>
     </Link>
   
-</div>
+
 </div>
 </div>
   );

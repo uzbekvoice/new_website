@@ -31,6 +31,8 @@
   display: flex;
   padding: 20px 25px;
   justify-content: space-between;
+  align-items: center;
+  
 }
 
 .desc ul {
@@ -46,13 +48,10 @@
   font-size: 18px;
   margin-top: 10px;
 }
-.btn {
-  margin-top: 80px;
-  text-align: center;
-}
+
 .desc a {
   color: white;
-  padding: 10px 24px;
+  padding: 10px 15px;
   background: linear-gradient(318.45deg, #00EAF6 -64.55%, #0093F8 142.36%);
   border-radius: 12px;
   font-size: 20px;
@@ -64,4 +63,16 @@
 .block a:hover {
   background: #8a2be2;
   cursor: pointer;
+}
+
+@media (max-width: 700px){
+
+  .desc{
+    flex-direction: column;
+
+  }
+
+  .desc a{
+    margin-top: 40px;
+  }
 }
