@@ -1,0 +1,25 @@
+.container{
+    margin-top: 140px;
+}
+
+.sliders {
+  
+    text-align: center;
+    position: relative;
+  }
+
+
+
+  .item {
+    border-radius: 30px; 
+    overflow: hidden;
+    max-height: 550px;
+    
+  }
+
+  .item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+

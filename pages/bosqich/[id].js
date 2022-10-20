@@ -11,6 +11,8 @@ import OnlineOfline from "../../component/OnlineOfline";
 import InitiativePartners from "../../component/InitiativePartners";
 import HomeContent from "../homeapi/static.json";
 import Question from "../../component/Question/Question";
+import PhotoAlbom from "../../component/PhotoAlbom";
+import AboutOromgoh from "../../component/AboutOromgoh";
 
 export async function getServerSideProps() {
   const res = await fetch(
@@ -150,6 +152,7 @@ export default function Bosqich({
         <>
           <Oromgoh data ={camp.data}/>
           <OnlineOfline />
+          <AboutOromgoh />
 
         </>
       ) : (
@@ -179,17 +182,23 @@ export default function Bosqich({
 
       {/* {
         (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
-    
-      } */}
-
-      <Prizes
+               <Prizes
         title={data[0].contest_award_ceremony}
         prize={prize}
         galleryID="my-test-gallery"
       />
+      } */}
+
+
+      
+
+ 
 
 { parseInt(query.id) === 2 ? (
+  <div>
+  <PhotoAlbom />
  <Question data={faq.data} HomeContent={HomeContent} />
+ </div>
 ) : (
   false
 )}
