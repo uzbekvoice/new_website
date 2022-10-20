@@ -75,15 +75,16 @@ export default function Bosqich({
 
   return (
     <div className={styles.bosqichPage}>
-      {parseInt(query.id) !== 2 ? (
-        <>
-          <div
+        <div
             className={
               styles.isContinue + " " + data[0].contest_status + " bosqich"
             }
           >
             {data[0].contest_status}
           </div>
+      {parseInt(query.id) !== 2 ? (
+        <>
+        
           <h1>{data[0].contest_title}</h1>
           <p className={styles.scheduleDate}>{data[0].contest_period}</p>
           <div className={styles.goal}>
