@@ -242,6 +242,9 @@
   margin: 60px 0;
 }
 
+
+
+
 .onlineOfline .table {
   display: flex;
   justify-content: space-between;
@@ -251,9 +254,20 @@
 .onlineOfline li {
   font-size: 18px;
   margin-top: 10px;
+  width: 80%;
 }
 
 
+.onlineOfline a {
+  color: white;
+  padding: 16px 24px;
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%), linear-gradient(0deg, #8d53fd, #8d53fd);
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+
+}
 .onlineOfline button {
   color: white;
   padding: 16px 24px;
@@ -262,12 +276,14 @@
   border-radius: 12px;
   font-size: 20px;
   text-align: center;
-  min-width: 215px;
   border: none;
+  margin-top: 30px;
+
+}
+.btn{
   display: flex;
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
+  justify-content: center;
+
 }
 
 .onlineRegister input {
@@ -301,4 +317,17 @@
 .agree input {
   width: 100px;
   margin: 0;
+}
+
+@media (max-width: 700px){
+  .onlineOfline .table {
+    display: flex;
+    flex-direction: column;
+    
+    margin: 70px 0;
+  }
+
+  .onlineOfline ul {
+    margin-bottom: 50px;
+  }
 }
