@@ -2,15 +2,11 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/Bosqich.module.css";
+import Marathon from "../../component/Marathon";
 import Winners from "../../component/Winners";
 import Prizes from "../../component/Prizes";
 import BosqichPrizes from "../../component/BosqichPrizes";
 import Oromgoh from "../../component/Oromgoh";
-import InitiativePartners from "../../component/InitiativePartners";
-import HomeContent from "../homeapi/static.json"
-import Question from "../../component/Question/Question";
-
-
 
 
 export async function getServerSideProps() {
@@ -18,30 +14,24 @@ export async function getServerSideProps() {
   const res2 = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard");
   const res3 = await fetch("https://admin.uzbekvoice.ai/items/contest_stages_translations");
   const res4 = await fetch("https://admin.uzbekvoice.ai/items/contest_gifts_translations");
-  const res5 = await fetch('https://admin.uzbekvoice.ai/items/partners');
-  const res6 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
 
   const data = await res.json();
   const users = await res2.json();
   const dataContest = await res3.json();
   const resGifts = await res4.json();
-  const partners = await res5.json();
-  const faq = await res6.json();
 
   return {
     props: {
       users: data,
       userslist: users,
       dataContest,
-      resGifts,
-      partners,
-      faq
+      resGifts
     },
 
   };
 }
 
-export default function Bosqich({ users, userslist, dataContest, resGifts, partners, faq  }) {
+export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   const { locale, query } = useRouter();
 
@@ -60,49 +50,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts, partn
 
   return (
     <div className={styles.bosqichPage}>
-      <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
-      <h1>{data[0].contest_title}</h1>
-      <p className={styles.scheduleDate}>{data[0].contest_period}</p>
-      <div className={styles.goal}>
-        <div className={styles.card1}>
-          <div className={styles.block}>
-            <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
-            </div>
-          </div>
-          {
-            locale === "uz-UZ" ?
-              <h2>Ko&apos;zlangan maqsad</h2>
-              : locale === "ru-RU" ?
-                <h2>Поставленная цель</h2>
-                : <h2>The intended purpose</h2>
-          }
-          <p>
-            {data[0].contest_expactations}
-          </p>
-        </div>
-
-        {
-          (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&   <div className={styles.card2}>
-          <div className={styles.block}>
-            <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
-            </div>
-          </div>
-          {
-            locale === "uz-UZ" ?
-              <h2>Erishilgan natija</h2>
-              : locale === "ru-RU" ?
-                <h2>Достигнутый результат</h2>
-                : <h2>The result achieved</h2>
-          }
-          <p>
-            {data[0].contest_result}
-          </p>
-        </div>
-        }       
-      </div>
-
+      <Marathon />
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
       <Oromgoh />
 
@@ -129,14 +77,11 @@ export default function Bosqich({ users, userslist, dataContest, resGifts, partn
       </div>
 
       <Winners bosqich={true} users={users} userslist={userslist} />
-      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
 
       {
         (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
         < Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
       }
-
-      <Question  data={faq.data} HomeContent={HomeContent} />
 
     </div>
   );
