@@ -101,7 +101,10 @@ const FormRegister = () => {
                     <label htmlFor="agree">Lager Nizomi bilan tanishib chiqdim</label>
                     <input onChange={(e) => setConfirm(e.target.value)} type="checkbox" name="" id="agree" />
                 </div>
+                <div className={style.btn}>
                 <button type="submit">Jo'natish</button>
+                </div>
+               
             </form>
         </>
     )

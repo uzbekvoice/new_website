@@ -155,7 +155,7 @@ export default function Bosqich({
       {parseInt(query.id) === 2 ? (
         <>
           <Oromgoh data ={camp.data}/>
-          <OnlineOfline />
+          <OnlineOfline data ={camp.data}/>
           <AboutOromgoh />
 
         </>
