@@ -1,6 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "../styles/PhotoAlbom.module.css";
+import { useRouter } from 'next/router';
 import {
   Navigation,
   Scrollbar,
@@ -13,7 +14,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function PhotoAlbom() {
+
+export default function PhotoAlbom({data}) {
+  let qw = data.filter(p => p.hackathons_translations_id === 1);
   return (
     <div className={styles.container}>
       <div className={styles.sliders}>
@@ -40,11 +43,16 @@ export default function PhotoAlbom() {
           }}
           scrollbar={{ draggable: true }}
         >
-          <SwiperSlide>
-            <div className={styles.item}>
-              <img src="/imgforslide.png" />
-            </div>
-          </SwiperSlide>
+
+          {qw.map(({id, directus_files_id}) =>
+           <SwiperSlide key={id}>
+           <div className={styles.item}>
+             <img src={`https://admin.uzbekvoice.ai/assets/${directus_files_id}`}/>
+           </div>
+         </SwiperSlide>
+          
+          )}
+         
         </Swiper>
       </div>
     </div>

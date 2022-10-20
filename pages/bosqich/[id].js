@@ -32,7 +32,8 @@ export async function getServerSideProps() {
     "https://admin.uzbekvoice.ai/items/faq_translations"
   );
 
-  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations")
+  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations");
+  const res8 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
 
   const data = await res.json();
   const users = await res2.json();
@@ -41,6 +42,7 @@ export async function getServerSideProps() {
   const partners = await res5.json();
   const faq = await res6.json();
   const camp =await res7.json();
+  const photo =await res8.json();
 
   return {
     props: {
@@ -50,7 +52,8 @@ export async function getServerSideProps() {
       resGifts,
       partners,
       faq,
-      camp
+      camp,
+      photo
     },
   };
 }
@@ -62,7 +65,8 @@ export default function Bosqich({
   resGifts,
   partners,
   faq,
-  camp
+  camp,
+  photo
 }) {
   const { locale, query } = useRouter();
 
@@ -190,13 +194,9 @@ export default function Bosqich({
       } */}
 
 
-      
-
- 
-
 { parseInt(query.id) === 2 ? (
   <div>
-  <PhotoAlbom />
+  <PhotoAlbom data={photo.data}/>
  <Question data={faq.data} HomeContent={HomeContent} />
  </div>
 ) : (

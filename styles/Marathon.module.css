@@ -1,13 +1,40 @@
 .goal__box {
   padding: 35px 25px;
   border-radius: 10px;
-  margin-top: 150px;
+  margin-top: 130px;
 }
-.box__title{
+
+.goal__box a {
+  color: white;
+  padding: 10px 15px;
+  background: linear-gradient(318.45deg, #00eaf6 -64.55%, #0093f8 142.36%);
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  min-width: 215px;
+  border: none;
+}
+
+.status {
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+.status p{
+  padding: 5px 20px;
+ 
+  border-radius: 12px;
+  color: #26db59;
+    background-color: #26db5926;
+}
+
+.box__title {
   text-align: center;
   font-size: 45px;
 }
-.deadline{
+.deadline {
   display: flex;
   justify-content: space-around;
   padding: 25px 0 25px;
@@ -15,17 +42,17 @@
   font-weight: 600;
   font-family: system-ui;
 }
-.aimtext{
+.aimtext {
   text-align: center;
 }
-.archeryAssets{
+.archeryAssets {
   display: flex;
   justify-content: space-between;
 }
-.archerTarget{
+.archerTarget {
   position: relative;
 }
-.timeInfo{
+.timeInfo {
   position: absolute;
   bottom: 30%;
   left: 30%;
@@ -33,53 +60,53 @@
 }
 
 @media (min-width: 370px) and (max-width: 767px) {
-  .archeryAssets{
+  .archeryAssets {
     justify-content: space-evenly;
     height: 300px;
     padding: 20px 0;
   }
-  .box__title{
+  .box__title {
     font-size: 25px;
   }
-  .deadline{
+  .deadline {
     justify-content: space-between;
     font-size: 21px;
   }
-  .archerImage{
+  .archerImage {
     width: 150px;
     height: 240px;
   }
-  .archerTarget{
+  .archerTarget {
     position: relative;
   }
-  .timeInfo{
+  .timeInfo {
     bottom: 20%;
     right: 30%;
     text-align: center;
     font-size: 20px;
   }
 }
-@media (min-width: 320px) and (max-width: 370px){
-  .archeryAssets{
+@media (min-width: 320px) and (max-width: 370px) {
+  .archeryAssets {
     justify-content: space-evenly;
     height: 300px;
     padding: 20px 0;
   }
-  .box__title{
+  .box__title {
     font-size: 25px;
   }
-  .deadline{
+  .deadline {
     justify-content: space-between;
     font-size: 21px;
   }
-  .archerImage{
+  .archerImage {
     width: 140px;
     height: 220px;
   }
-  .archerTarget{
+  .archerTarget {
     position: relative;
   }
-  .timeInfo{
+  .timeInfo {
     bottom: 28%;
     right: 30%;
     text-align: center;
