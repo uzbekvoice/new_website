@@ -21,10 +21,10 @@
 }
 
 .desc ul {
-  list-style: none;
   display: grid;
   grid-template-columns: auto auto auto auto;
   text-align: center;
+  list-style: none;
 }
 
 .desc span {

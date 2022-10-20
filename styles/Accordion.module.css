@@ -24,10 +24,8 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
 }
 
-.emailInfo{
-  width: 100%;
-}
 .faqButton{ /** faq button **/
+  width: 80%;
   background-color: #00C5FF;
   color: #ffffff;
   border-radius: 5px;
