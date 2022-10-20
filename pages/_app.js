@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }) {
             content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
           />
           <meta name="google-site-verification" content="bFnjq-PIuIrpOIHmhgutTVLrhdHsCZTam66nqRCiE0k" />
-          <link rel="icon" href="/favicon.png" />
+          <link rel="icon" href="/faviconnew.svg" />
     
         </Head>
 

@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
 import styles from "../../styles/Bosqich.module.css";
+import Marathon from "../../component/Marathon";
 import Winners from "../../component/Winners";
 import Prizes from "../../component/Prizes";
 import BosqichPrizes from "../../component/BosqichPrizes";
@@ -93,6 +94,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         }
       </div>
 
+      <Marathon />
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
       <Oromgoh />
 

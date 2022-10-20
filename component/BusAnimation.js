@@ -4,7 +4,7 @@ export default function BusAnimation() {
   return (
     <div className={styles.country_wrap}>
     <div className={styles.mountain}>
-        <img className={styles.imagemountain} src="/mountain.jpg" alt="mountain"/>
+        <img className={styles.imagemountain} src="/mountain-min.jpg" alt="mountain"/>
     </div>
 
    
