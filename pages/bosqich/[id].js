@@ -9,17 +9,26 @@ import BosqichPrizes from "../../component/BosqichPrizes";
 import Oromgoh from "../../component/Oromgoh";
 import OnlineOfline from "../../component/OnlineOfline";
 import InitiativePartners from "../../component/InitiativePartners";
-import HomeContent from "../homeapi/static.json"
+import HomeContent from "../homeapi/static.json";
 import Question from "../../component/Question/Question";
 
-
 export async function getServerSideProps() {
-  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
-  const res2 = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard");
-  const res3 = await fetch("https://admin.uzbekvoice.ai/items/contest_stages_translations");
-  const res4 = await fetch("https://admin.uzbekvoice.ai/items/contest_gifts_translations");
-  const res5 = await fetch('https://admin.uzbekvoice.ai/items/partners');
-  const res6 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
+  const res = await fetch(
+    "https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard"
+  );
+  const res2 = await fetch(
+    "https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard"
+  );
+  const res3 = await fetch(
+    "https://admin.uzbekvoice.ai/items/contest_stages_translations"
+  );
+  const res4 = await fetch(
+    "https://admin.uzbekvoice.ai/items/contest_gifts_translations"
+  );
+  const res5 = await fetch("https://admin.uzbekvoice.ai/items/partners");
+  const res6 = await fetch(
+    "https://admin.uzbekvoice.ai/items/faq_translations"
+  );
 
   const data = await res.json();
   const users = await res2.json();
@@ -35,99 +44,127 @@ export async function getServerSideProps() {
       dataContest,
       resGifts,
       partners,
-      faq
+      faq,
     },
-
   };
 }
 
-export default function Bosqich({ users, userslist, dataContest, resGifts , partners, faq }) {
-
+export default function Bosqich({
+  users,
+  userslist,
+  dataContest,
+  resGifts,
+  partners,
+  faq,
+}) {
   const { locale, query } = useRouter();
 
-  const data = dataContest.data.filter(p => p.languages_id === locale && p.contest_stages_id === parseInt(query.id));
+  const data = dataContest.data.filter(
+    (p) =>
+      p.languages_id === locale && p.contest_stages_id === parseInt(query.id)
+  );
   const dataRules = data[0].contest_rules;
-
-
 
   const prize = [];
 
   for (const key in data[0]) {
     if (key.slice(-6) === "_image") {
-      prize.push(data[0][key])
+      prize.push(data[0][key]);
     }
   }
 
   return (
     <div className={styles.bosqichPage}>
-      <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
-      <h1>{data[0].contest_title}</h1>
-      <p className={styles.scheduleDate}>{data[0].contest_period}</p>
-      <div className={styles.goal}>
-        <div className={styles.card1}>
-          <div className={styles.block}>
-            <div className={styles.goalIcon}>
-              <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
-            </div>
-          </div>
-          {
-            locale === "uz-UZ" ?
-              <h2>Ko&apos;zlangan maqsad</h2>
-              : locale === "ru-RU" ?
-                <h2>Поставленная цель</h2>
-                : <h2>The intended purpose</h2>
-          }
-          <p>
-            {data[0].contest_expactations}
-          </p>
-        </div>
-
-        {
-          (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') && <div className={styles.card2}>
-            <div className={styles.block}>
-              <div className={styles.goalIcon}>
-                <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
-              </div>
-            </div>
-            {
-              locale === "uz-UZ" ?
-                <h2>Erishilgan natija</h2>
-                : locale === "ru-RU" ?
-                  <h2>Достигнутый результат</h2>
-                  : <h2>The result achieved</h2>
+      {parseInt(query.id) !== 2 ? (
+        <>
+          <div
+            className={
+              styles.isContinue + " " + data[0].contest_status + " bosqich"
             }
-            <p>
-              {data[0].contest_result}
-            </p>
+          >
+            {data[0].contest_status}
           </div>
-        }
-      </div>
+          <h1>{data[0].contest_title}</h1>
+          <p className={styles.scheduleDate}>{data[0].contest_period}</p>
+          <div className={styles.goal}>
+            <div className={styles.card1}>
+              <div className={styles.block}>
+                <div className={styles.goalIcon}>
+                  <Image
+                    src="/bosqichIcon1.png"
+                    width={100}
+                    height={100}
+                    alt="bosqich"
+                  />
+                </div>
+              </div>
+              {locale === "uz-UZ" ? (
+                <h2>Ko&apos;zlangan maqsad</h2>
+              ) : locale === "ru-RU" ? (
+                <h2>Поставленная цель</h2>
+              ) : (
+                <h2>The intended purpose</h2>
+              )}
+              <p>{data[0].contest_expactations}</p>
+            </div>
 
-      <Marathon />
+            {data[0].contest_status !== "faol" &&
+              data[0].contest_status !== "active" &&
+              data[0].contest_status !== "активный" && (
+                <div className={styles.card2}>
+                  <div className={styles.block}>
+                    <div className={styles.goalIcon}>
+                      <Image
+                        src="/bosqichIcon2.svg"
+                        width={100}
+                        height={100}
+                        alt="bosqich2"
+                      />
+                    </div>
+                  </div>
+                  {locale === "uz-UZ" ? (
+                    <h2>Erishilgan natija</h2>
+                  ) : locale === "ru-RU" ? (
+                    <h2>Достигнутый результат</h2>
+                  ) : (
+                    <h2>The result achieved</h2>
+                  )}
+                  <p>{data[0].contest_result}</p>
+                </div>
+              )}
+          </div>
+        </>
+      ) : (
+        <Marathon />
+      )}
+
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
-      <Oromgoh />
 
-      <OnlineOfline />
+      {parseInt(query.id) === 2 ? (
+        <>
+          <Oromgoh />
+          <OnlineOfline />
+
+        </>
+      ) : (
+        false
+      )}
 
       <div className={styles.rules}>
-        {
-          locale === "uz-UZ" ?
-            <h2>Konkurs qoidalari</h2>
-            : locale === "ru-RU" ?
-              <h2>Правила конкурса</h2>
-              : <h2>Contest rules</h2>
-        }
+        {locale === "uz-UZ" ? (
+          <h2>Konkurs qoidalari</h2>
+        ) : locale === "ru-RU" ? (
+          <h2>Правила конкурса</h2>
+        ) : (
+          <h2>Contest rules</h2>
+        )}
         <div className={styles.rulesCard}>
-          {
-            dataRules.map(({ contest_rule, rule }, index) =>
-              <div key={index} className={styles.rule1}>
-                <h2>{rule}</h2>
-                <p>
-                  {contest_rule}
-                </p>
-              </div>
-            )
-          }
+          {dataRules.map(({ contest_rule, rule }, index) => (
+            <div key={index} className={styles.rule1}>
+              <h2>{rule}</h2>
+              <p>{contest_rule}</p>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -139,10 +176,18 @@ export default function Bosqich({ users, userslist, dataContest, resGifts , part
     
       } */}
 
-< Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
+      <Prizes
+        title={data[0].contest_award_ceremony}
+        prize={prize}
+        galleryID="my-test-gallery"
+      />
 
-<Question  data={faq.data} HomeContent={HomeContent} />
-
+{ parseInt(query.id) === 2 ? (
+ <Question data={faq.data} HomeContent={HomeContent} />
+) : (
+  false
+)}
+     
     </div>
   );
 }
