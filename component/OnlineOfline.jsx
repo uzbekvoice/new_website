@@ -1,5 +1,9 @@
+import { useState } from 'react'
 import style from '../styles/Bosqich.module.css'
+import FormRegister from './OnliOfflineRegisterForm'
+
 const OnlineOfline = () => {
+    const [show, setShow] = useState(false)
     return (
         <>
             <div className={style.onlineOfline}>
@@ -23,9 +27,15 @@ const OnlineOfline = () => {
                         </ul>
                     </div>
 
-                    <a href="">
+                    <button style={{
+                        marginBottom: "30px"
+                    }} onClick={() => setShow(!show)}>
                         Ro'yxatdan o'ting
-                    </a>
+                    </button>
+                    {
+                        show ?
+                            <FormRegister /> : null
+                    }
                 </div>
             </div>
         </>
