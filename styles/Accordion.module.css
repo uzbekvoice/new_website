@@ -6,7 +6,6 @@
   position: relative;
   padding: 0 108px;
 }
-
 .question h3 {
   font-size: 48px;
   font-weight: 900;
@@ -18,32 +17,27 @@
 
 .faqSides{ /** question and email text sides **/
   display: flex;
-  align-items: baseline;
+  align-items: flex-start;
 }
-.emailLink{ /** email address's style **/
-  color: rgb(0, 149, 255);
-  font-weight: 700;
-}
-
 .main{ /** accordion_section_main **/
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-  grid-gap: 0.5rem;
 }
 
 .emailInfo{
   width: 100%;
 }
 .faqButton{ /** faq button **/
-  background-color: #FFDF39;
+  background-color: #00C5FF;
+  color: #ffffff;
   border-radius: 5px;
   padding: 20px;
   font-size: 20px;
   font-weight: 700;
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .faqButton:hover{ /** faq button hover **/
-  background-color: #5954FE;
+  background-color: rgb(128, 128, 128);
   color: #fff;
   cursor: pointer;
 }
@@ -55,7 +49,6 @@
   font-family: system-ui;
   font-weight: 700;
 }
-
 .accordion_text {
   text-align: left;
   font-weight: 400;
@@ -97,4 +90,3 @@
     padding: 15px 0;
   }
 }
-
