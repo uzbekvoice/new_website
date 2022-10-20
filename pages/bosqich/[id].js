@@ -30,12 +30,15 @@ export async function getServerSideProps() {
     "https://admin.uzbekvoice.ai/items/faq_translations"
   );
 
+  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations")
+
   const data = await res.json();
   const users = await res2.json();
   const dataContest = await res3.json();
   const resGifts = await res4.json();
   const partners = await res5.json();
   const faq = await res6.json();
+  const camp =await res7.json();
 
   return {
     props: {
@@ -45,6 +48,7 @@ export async function getServerSideProps() {
       resGifts,
       partners,
       faq,
+      camp
     },
   };
 }
@@ -56,6 +60,7 @@ export default function Bosqich({
   resGifts,
   partners,
   faq,
+  camp
 }) {
   const { locale, query } = useRouter();
 
@@ -75,16 +80,16 @@ export default function Bosqich({
 
   return (
     <div className={styles.bosqichPage}>
-        <div
+       
+      {parseInt(query.id) !== 2 ? (
+        <>
+         <div
             className={
               styles.isContinue + " " + data[0].contest_status + " bosqich"
             }
           >
             {data[0].contest_status}
           </div>
-      {parseInt(query.id) !== 2 ? (
-        <>
-        
           <h1>{data[0].contest_title}</h1>
           <p className={styles.scheduleDate}>{data[0].contest_period}</p>
           <div className={styles.goal}>
@@ -136,14 +141,14 @@ export default function Bosqich({
           </div>
         </>
       ) : (
-        <Marathon />
+        <Marathon data = {camp.data}/>
       )}
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
       {parseInt(query.id) === 2 ? (
         <>
-          <Oromgoh />
+          <Oromgoh data ={camp.data}/>
           <OnlineOfline />
 
         </>
