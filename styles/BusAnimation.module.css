@@ -395,9 +395,22 @@
     transform: translateY(-5%);
   }
 }
+@media (max-width: 930px){
+  .car_body{
+    margin-top: 120px;
+  }
+}
+@media (max-width: 580px){
+  .car_body{
+    margin-top: 140px;
+  }
+}
 
-
-
+@media (max-width: 450px){
+  .car_body{
+    margin-top: 150px;
+  }
+}
 
 
 
