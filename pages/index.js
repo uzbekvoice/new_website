@@ -15,6 +15,7 @@ const Stat = dynamic(
 )
 
 import HomeContent from './homeapi/static.json'
+import Marathon from "../component/Marathon";
 
 export async function getServerSideProps() {
 
@@ -29,6 +30,7 @@ export async function getServerSideProps() {
   const res5 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
   const res6 = await fetch('https://admin.uzbekvoice.ai/items/contest_stages_translations');
 
+  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations")
 
   const data = await res.json();
   const users = await res2.json();
@@ -36,6 +38,7 @@ export async function getServerSideProps() {
   const teamMembers = await res4.json();
   const faq = await res5.json();
   const steps = await res6.json();
+  const camp = await res7.json();
 
   return {
     props: {
@@ -44,17 +47,19 @@ export async function getServerSideProps() {
       partners,
       teamMembers,
       faq,
-      steps
+      steps,
+      camp
     },
 
   };
 }
 
-export default function Home({ users, userslist, partners, teamMembers, faq, steps }) {
+export default function Home({ users, userslist, partners, teamMembers, faq, steps, camp }) {
 
   return (
       <div>
         <Hero HomeContent={HomeContent} />
+        <Marathon  data={camp.data}/>
         <Slider HomeContent={HomeContent} />
         <Stat HomeContent={HomeContent} />
         <Step steps={steps.data} HomeContent={HomeContent} />
@@ -62,7 +67,7 @@ export default function Home({ users, userslist, partners, teamMembers, faq, ste
         <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
         <Ourpartners HomeContent={HomeContent} />
         <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-        <OurTeam data={teamMembers.data} HomeContent={HomeContent} />
+        <OurTeam data={teamMembers.data}  />
         <Question data={faq.data} HomeContent={HomeContent} />
       </div>
   );

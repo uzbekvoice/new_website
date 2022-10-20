@@ -20,20 +20,20 @@ export default function Hakaton({ partners, hakatonHero, hakatonFoto, hakatonTea
 
 
   return (
-    <>
+    <div>
       <HakatonHero data={hakatonHero.data} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} status={status} />
       {
         status !== 'active' ?
-          <>
+          <div>
             <HakatonTeams data={hakatonTeam.data} />
             <HakatonFoto data={hakatonFoto.data} galleryID="gallery--responsive-images" />
             <HakatonJuri data={hakatonJury.data} />
             <HakatonMentors data={mentor.data} />
-          </>
+          </div>
           : <HakatonForm />
       }
-    </>
+    </div>
   );
 }
 

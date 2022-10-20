@@ -328,10 +328,7 @@ export default function Partners() {
               <h4>
                 {" "}
                 {oferta}
-                <a
-                  href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true"
-                  target="_blank"
-                >
+                <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true" target="_blank">
                   {link}
                 </a>
               </h4>

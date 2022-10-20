@@ -96,7 +96,7 @@ export default function Winners({ users, userslist, bosqich }) {
           {/* More voice top user */}
           <div className={styles.voice_user}>
             {showModal ? (
-              <>
+          
                 <div onClick={() => setShowModal(false)} className={styles.modal_bg}>
                   <div onClick={e => e.stopPropagation()} className={styles.modal_content}>
                     <div className={styles.modal_heading}>
@@ -136,7 +136,7 @@ export default function Winners({ users, userslist, bosqich }) {
                     </div>
                   </div>
                 </div>
-              </>
+           
             ) : null}
           </div>
           {/* //More voice top user */}
@@ -144,7 +144,7 @@ export default function Winners({ users, userslist, bosqich }) {
           {/* More listening top user */}
           <div className={styles.voice_user}>
             {showModal2 ? (
-              <>
+           
                 <div onClick={() => setShowModal2(false)} className={styles.modal_bg}>
                   <div onClick={e => e.stopPropagation()} className={styles.modal_content}>
                     <div className={styles.modal_heading}>
@@ -183,7 +183,7 @@ export default function Winners({ users, userslist, bosqich }) {
                     </div>
                   </div>
                 </div>
-              </>
+           
             ) : null}
           </div>
           {/* //More listening top user */}

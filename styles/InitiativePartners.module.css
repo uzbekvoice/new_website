@@ -17,8 +17,13 @@
   margin-top: 520px ;
 }
 
+.sliders{
+  position: relative;
+  margin-top: 64px;
+}
+
 .item {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -27,7 +32,7 @@
   filter: grayscale();
   transition: all 0.5s;
   height: 280px;
-  position: relative;
+  
 }
 
 .item span {
@@ -36,6 +41,12 @@
   bottom: 20px;
   display: inline-block;
   text-align: center;
+}
+
+.item img{
+  width: 100%;
+  
+  
 }
 
 .item:hover {

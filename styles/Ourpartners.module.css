@@ -87,8 +87,21 @@ width: 550px;
 @media (max-width:500px){
 
   .image img{
-    width: 420px;
+    width: 360px;
    
+  }
+}
+@media (max-width:360px){
+
+  .image img{
+    width: 310px;
+   
+   
+  }
+
+  .detail h2 {
+   margin-top: 50px;
+ 
   }
 }
 

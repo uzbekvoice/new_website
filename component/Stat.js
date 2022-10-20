@@ -175,10 +175,10 @@ export default function Stat(props) {
           })}
 
         <div className={styles.img_bottom + " stat_top_chart"}>
-          <ResponsiveContainer width="100%" height={351}>
+          <ResponsiveContainer width="100%" height={300}>
             <BarChart
               width={500}
-              height={300}
+              height={280}
               data={data}
               margin={{
                 top: 20,

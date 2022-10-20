@@ -17,7 +17,7 @@ const YangilikByIdHero = ({ data }) => {
 
   // console.log(router);
   return (
-<>
+<div>
 <NextSeo   title={dataFilter.news_title } description={dataFilter.news_content.split(" ", 20).join(' ')} titleTemplate={dataFilter.news_title} />
     <div className={styles.yangilikByIdHero}>
       <div className={styles.heroImg}>
@@ -61,7 +61,7 @@ const YangilikByIdHero = ({ data }) => {
         </div>
       </div>
     </div>
-    </>
+    </div>
   )
 }
 

@@ -69,6 +69,7 @@ export default function Slider(props) {
                         src="/goals-1.png"
                         width={205}
                         height={205}
+                        
                         alt="goal-1"
                         priority={true}
                       />

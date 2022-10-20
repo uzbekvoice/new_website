@@ -15,6 +15,10 @@
 }
 
 
+
+
+
+
 .container {
   height: 80px;
   display: flex;
@@ -42,7 +46,7 @@
 }
 
 .header__main img {
-  width: 220px;
+  width: 150px;
 }
 
 .header__menu {
@@ -395,7 +399,7 @@
 
 @media (max-width: 600px) {
   .header__main .header_logo {
-    width: 165px;
+    width: 110px;
   }
 }
 

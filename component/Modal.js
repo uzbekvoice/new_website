@@ -4,13 +4,13 @@ import {FiXCircle} from 'react-icons/fi'
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
   return (
-    <>
+    <div>
       <button type="button" onClick={() => setShowModal(true)}>
         Barchasini ko'rish
       </button>
 
       {showModal ? (
-        <>
+        <div>
           <div className={styles.modal_bg} >
             <div className={styles.modal_content}>
               <div className={styles.modal_heading}>
@@ -43,8 +43,8 @@ export default function Modal() {
             </div>
           </div>
          
-        </>
+        </div>
       ) : null}
-    </>
+    </div>
   );
 }

@@ -16,18 +16,55 @@
   margin: 32px 0px;
 }
 
+.faqSides{ /** question and email text sides **/
+  display: flex;
+  align-items: baseline;
+}
+.emailLink{ /** email address's style **/
+  color: rgb(0, 149, 255);
+  font-weight: 700;
+}
+
+.main{ /** accordion_section_main **/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  grid-gap: 0.5rem;
+}
+
+.emailInfo{
+  width: 100%;
+}
+.faqButton{ /** faq button **/
+  background-color: #FFDF39;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 25px;
+}
+.faqButton:hover{ /** faq button hover **/
+  background-color: #5954FE;
+  color: #fff;
+  cursor: pointer;
+}
+
 .accordion_title {
   color: #12273c;
   font-weight: 500;
-  font-size: 22px;
+  font-size: 18px;
+  font-family: system-ui;
+  font-weight: 700;
 }
+
 .accordion_text {
   text-align: left;
   font-weight: 400;
-  font-size: 16px;
-  padding: 18px;
+  font-size: 15px;
   line-height: 25px;
   font-family: 'Rubik', sans-serif;
+}
+.accordion_readbtn{ /** accordion read element **/
+  padding-left: 10px;
 }
 
 @media (max-width: 767px) {
@@ -51,9 +88,13 @@
   }
   .accordion_text {
     text-align: left;
-   font-size: 12px;
-    
+    font-size: 12px;
   }
-
+  .faqSides{
+    display: inline;
+  }
+  .faqButton{
+    padding: 15px 0;
+  }
 }
 

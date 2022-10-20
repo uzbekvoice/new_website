@@ -230,26 +230,7 @@
     "desc": "Команда и партнеры UzbekVoice.ai объединяют людей с открытыми взглядами и приглашают единомышленников к корпоративному, институциональному и научному сотрудничеству."
   }
 ],
-"team":[
-  {
-    "languages_code": "uz-UZ",
-    "title": "Uzbekvoice Jamoasi",
-    "desc": ""
 
-  },
-  {
-    "languages_code": "en-US",
-    "title": "Uzbekvoice Team",
-    "desc": ""
-  
-  },
-  {
-    "languages_code": "ru-RU",
-    "title": "Команда Узбеквоисе",
-    "desc": ""
-
-  }
-],
 
 "faq":[
   {

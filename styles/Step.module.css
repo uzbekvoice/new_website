@@ -15,24 +15,30 @@
 
 .content::before {
   content: "";
-  background: -webkit-gradient(linear,
-      left top,
-      left bottom,
-      from(rgba(255, 0, 128, 0.58)),
-      to(rgba(173, 0, 255, 0.11)));
-  background: -o-linear-gradient(top,
-      rgba(183, 0, 255, 0.58) 0%,
-      rgba(173, 0, 255, 0.11) 100%);
-  background: linear-gradient(180deg,
-      rgba(210, 35, 233, 0.58) 0%,
-      rgba(173, 0, 255, 0.11) 100%);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(255, 0, 128, 0.58)),
+    to(rgba(173, 0, 255, 0.11))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(183, 0, 255, 0.58) 0%,
+    rgba(173, 0, 255, 0.11) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(210, 35, 233, 0.58) 0%,
+    rgba(173, 0, 255, 0.11) 100%
+  );
   -webkit-filter: blur(100px);
   filter: blur(100px);
   position: absolute;
   left: 40%;
   top: 35%;
-  width: 300px;
-  height: 300px;
+  width: 231px;
+  height: 231px;
   border-radius: 50%;
   z-index: -5;
 }
@@ -49,7 +55,6 @@
   padding: 20px;
   border-radius: 20px;
   border: 1px solid #d9d9d9;
-
 }
 
 .card:nth-child(2) {
@@ -180,8 +185,6 @@
     color: #12273c;
   }
 
- 
-
   .cardFooter p,
   .cardFooter a {
     margin-top: 10px;
@@ -196,7 +199,6 @@
   .text h5 {
     font-size: 11px;
   }
- 
 }
 
 @media (max-width: 991px) {
@@ -208,7 +210,7 @@
   .data {
     position: static;
     margin-left: 0;
-  } 
+  }
   .content h3 {
     font-size: 28px;
     font-weight: 800;
@@ -268,5 +270,12 @@
 
   .text h5 {
     font-size: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .content::before {
+    width: 160px;
+    height: 160px;
   }
 }

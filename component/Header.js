@@ -49,7 +49,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
           <Link href="/">
             <a>
            
-                <img className={styles.header_logo} src="/logo.png" alt="logo" />
+                <img className={styles.header_logo} src="/newlogo.png" alt="logo" />
              
             </a>
           </Link>

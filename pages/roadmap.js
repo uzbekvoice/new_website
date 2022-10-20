@@ -21,7 +21,7 @@ export default function Roadmap({ roadmaps }) {
   //   const datalist = dates[1].data;
 
   return (
-    <>
+   <div>
       <div className={styles.roadmaphero}>
         <div className={styles.container_page}>
           {dates.map((data, id) => (
@@ -67,39 +67,10 @@ export default function Roadmap({ roadmaps }) {
               })
             )}
 
-            {/* <div className={styles.item}>
-              <div className={styles.roadmap_title}>APIs &#38; UI</div>
-              <ul className={styles.roadmap_list}>
-                <li className={styles.done}>GraphQL API</li>
-                <li>REST API</li>
-                <li>React Admin UI</li>
-                <li>Subscriptions</li>
-                <li>Websockets</li>
-              </ul>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.roadmap_title}>APIs &#38; UI</div>
-              <ul className={styles.roadmap_list}>
-                <li className={styles.done}>GraphQL API</li>
-                <li>REST API</li>
-                <li>React Admin UI</li>
-                <li>Subscriptions</li>
-                <li>Websockets</li>
-              </ul>
-            </div>
-            <div className={styles.item}>
-              <div className={styles.roadmap_title}>APIs &#38; UI</div>
-              <ul className={styles.roadmap_list}>
-                <li className={styles.done}>GraphQL API</li>
-                <li>REST API</li>
-                <li>React Admin UI</li>
-                <li>Subscriptions</li>
-                <li>Websockets</li>
-              </ul>
-            </div> */}
+  
           </div>
         </div>
       </div>
-    </>
+      </div>
   );
 }

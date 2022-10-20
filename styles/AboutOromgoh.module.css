@@ -1,0 +1,13 @@
+.container{
+    margin-top: 80px;
+}
+
+.container p{
+    margin-top: 80px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    letter-spacing: 0.0043em;
+    color: rgba(0, 0, 0, 0.6);
+}

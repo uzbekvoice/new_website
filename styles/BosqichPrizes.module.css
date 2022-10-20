@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.formarathon{
+    margin-top: 0px;
+}
+
 .hakatonTeams_title {
     font-weight: 800;
     font-size: 48px;
@@ -33,6 +37,7 @@
 .hakatonTeams_cardHeader img {
     width: 100%;
     height: 250px;
+    object-fit: contain;
 }
 
 .hakatonTeams_cardBody {
@@ -128,6 +133,7 @@
     .hakatonTeams_cardHeader img {
         width: 100px;
         height: 100%;
+        object-fit: contain;
         border-radius: 10px 0 0 10px;
     }
 
