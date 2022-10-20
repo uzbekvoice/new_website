@@ -7,6 +7,7 @@ import Winners from "../../component/Winners";
 import Prizes from "../../component/Prizes";
 import BosqichPrizes from "../../component/BosqichPrizes";
 import Oromgoh from "../../component/Oromgoh";
+import OnlineOfline from "../../component/OnlineOfline";
 
 
 export async function getServerSideProps() {
@@ -39,7 +40,7 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
   const dataRules = data[0].contest_rules;
 
 
- 
+
   const prize = [];
 
   for (const key in data[0]) {
@@ -50,9 +51,54 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
 
   return (
     <div className={styles.bosqichPage}>
+      <div className={styles.isContinue + ' ' + data[0].contest_status + ' bosqich'}>{data[0].contest_status}</div>
+      <h1>{data[0].contest_title}</h1>
+      <p className={styles.scheduleDate}>{data[0].contest_period}</p>
+      <div className={styles.goal}>
+        <div className={styles.card1}>
+          <div className={styles.block}>
+            <div className={styles.goalIcon}>
+              <Image src="/bosqichIcon1.png" width={100} height={100} alt='bosqich' />
+            </div>
+          </div>
+          {
+            locale === "uz-UZ" ?
+              <h2>Ko&apos;zlangan maqsad</h2>
+              : locale === "ru-RU" ?
+                <h2>Поставленная цель</h2>
+                : <h2>The intended purpose</h2>
+          }
+          <p>
+            {data[0].contest_expactations}
+          </p>
+        </div>
+
+        {
+          (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') && <div className={styles.card2}>
+            <div className={styles.block}>
+              <div className={styles.goalIcon}>
+                <Image src="/bosqichIcon2.svg" width={100} height={100} alt='bosqich2' />
+              </div>
+            </div>
+            {
+              locale === "uz-UZ" ?
+                <h2>Erishilgan natija</h2>
+                : locale === "ru-RU" ?
+                  <h2>Достигнутый результат</h2>
+                  : <h2>The result achieved</h2>
+            }
+            <p>
+              {data[0].contest_result}
+            </p>
+          </div>
+        }
+      </div>
+
       <Marathon />
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
       <Oromgoh />
+
+      <OnlineOfline />
 
       <div className={styles.rules}>
         {
@@ -64,9 +110,9 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
         }
         <div className={styles.rulesCard}>
           {
-            dataRules.map(({ contest_rule, rule}, index) =>
+            dataRules.map(({ contest_rule, rule }, index) =>
               <div key={index} className={styles.rule1}>
-              <h2>{rule}</h2>
+                <h2>{rule}</h2>
                 <p>
                   {contest_rule}
                 </p>
