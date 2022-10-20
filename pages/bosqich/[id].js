@@ -8,6 +8,9 @@ import Prizes from "../../component/Prizes";
 import BosqichPrizes from "../../component/BosqichPrizes";
 import Oromgoh from "../../component/Oromgoh";
 import OnlineOfline from "../../component/OnlineOfline";
+import InitiativePartners from "../../component/InitiativePartners";
+import HomeContent from "../homeapi/static.json"
+import Question from "../../component/Question/Question";
 
 
 export async function getServerSideProps() {
@@ -15,24 +18,30 @@ export async function getServerSideProps() {
   const res2 = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard");
   const res3 = await fetch("https://admin.uzbekvoice.ai/items/contest_stages_translations");
   const res4 = await fetch("https://admin.uzbekvoice.ai/items/contest_gifts_translations");
+  const res5 = await fetch('https://admin.uzbekvoice.ai/items/partners');
+  const res6 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
 
   const data = await res.json();
   const users = await res2.json();
   const dataContest = await res3.json();
   const resGifts = await res4.json();
+  const partners = await res5.json();
+  const faq = await res6.json();
 
   return {
     props: {
       users: data,
       userslist: users,
       dataContest,
-      resGifts
+      resGifts,
+      partners,
+      faq
     },
 
   };
 }
 
-export default function Bosqich({ users, userslist, dataContest, resGifts }) {
+export default function Bosqich({ users, userslist, dataContest, resGifts , partners, faq }) {
 
   const { locale, query } = useRouter();
 
@@ -123,11 +132,16 @@ export default function Bosqich({ users, userslist, dataContest, resGifts }) {
       </div>
 
       <Winners bosqich={true} users={users} userslist={userslist} />
+      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
 
-      {
+      {/* {
         (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
-        < Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
-      }
+    
+      } */}
+
+< Prizes title={data[0].contest_award_ceremony} prize={prize} galleryID="my-test-gallery" />
+
+<Question  data={faq.data} HomeContent={HomeContent} />
 
     </div>
   );
