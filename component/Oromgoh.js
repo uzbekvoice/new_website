@@ -29,7 +29,6 @@ export default function Oromgoh() {
             <span>&#10003; </span> Tabiatda dam olish
           </li>
           <li><span>&#10003; </span> O'yin kulgu</li>
-          <li><span>&#10003; </span> Tekin ovqat</li>
           <li><span>&#10003; </span> va albatta ovozli ma'lumotlar yozish</li>
         </ul>
         <div className={styles.btn}>
