@@ -344,10 +344,9 @@
 }
 .radiobtn label {
   width: 50px;
-  
   padding: 6px;
   height: auto;
-  margin: 0 0.3vw;
+  margin: 4px;
 }
 
 .radiobtn label {
