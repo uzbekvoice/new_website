@@ -5,6 +5,12 @@
 
 }
 
+.formobile {
+  padding: 35px 25px;
+  border-radius: 10px;
+  margin-top: 130px;
+}
+
 .goal__box a {
   color: white;
   padding: 10px 15px;
@@ -60,7 +66,12 @@
   font-size: 23px;
 }
 
-
+@media (max-width: 767px){
+  .formobile {
+    
+    margin-top: 0px;
+  }
+}
 
 @media (min-width: 370px) and (max-width: 767px) {
 
