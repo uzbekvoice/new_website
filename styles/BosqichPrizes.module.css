@@ -3,6 +3,10 @@
     position: relative;
 }
 
+.formarathon{
+    margin-top: 0px;
+}
+
 .hakatonTeams_title {
     font-weight: 800;
     font-size: 48px;
@@ -15,7 +19,7 @@
 
 .hakatonTeams_wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
 }

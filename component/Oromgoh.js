@@ -2,41 +2,61 @@ import React from "react";
 import styles from "../styles/Oromgoh.module.css";
 import Link from "next/link";
 
-export default function Oromgoh() {
+
+import BusAnimation from "./BusAnimation";
+import { useRouter } from "next/router";
+
+
+export default function Oromgoh({ data }) {
+  const { locale } = useRouter();
+  const dates = data.filter((c) => c.languages_code === locale)
+  const list = dates[0].camp_info;
   return (
-    <div className={styles.block}>
-      <h1>Oromgohda qatnashing</h1>
 
-      <div className={styles.flex}>
-        <div>
-          <h3>Boshlanishi</h3>
-          <h4>21 Oktyabr</h4>
-        </div>
+    <div>
+      {data
+        .filter((c) => c.languages_code === locale)
+        .map(
+          ({
+            camp_title,
+            camp_start,
+            start,
+             finish,
+             start_date,
+            finish_date,
+          }) => (
+            <div className={styles.block}>
+              <h1>{camp_title}</h1>
 
-        <div>
-          <h3>Tugalanishi</h3>
-          <h4>15 Noyabr</h4>
-        </div>
-      </div>
+              <div className={styles.flex}>
+                <div>
+                  <h3>{start}</h3>
+                  <h4>{start_date}</h4>
+                </div>
 
-      {/* Animatsiya uchun joy */}
-      {/* <div></div> */}
-      {/* Animatsiya uchun joy */}
+                <div>
+                  <h3>{finish}</h3>
+                  <h4>{finish_date}</h4>
+                </div>
+              </div>
 
+              <BusAnimation />
+            </div>
+          )
+        )}
       <div className={styles.desc}>
-        <ul>
-          <li>
-            <span>&#10003; </span> Tabiatda dam olish
-          </li>
-          <li><span>&#10003; </span> O'yin kulgu</li>
-          <li><span>&#10003; </span> va albatta ovozli ma'lumotlar yozish</li>
-        </ul>
-        <div className={styles.btn}>
-          <Link href="/">
-            <a>Ishtirok etish</a>
-          </Link>
-        </div>
+      <ul>
+        {list.map(({ camp_info }) => (
+         
+            <li>
+              <span>&#10003; </span> {camp_info}
+            </li>
+         
+        ))}
+         </ul>
+
       </div>
+
     </div>
   );
 }

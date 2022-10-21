@@ -4,12 +4,13 @@ import styles from '../styles/BosqichPrizes.module.css'
 
 export default function HakatonTeams({ resGifts, title, }) {
 
-    const { locale , query } = useRouter();
+    const { locale , query, pathname } = useRouter();
     const dataGifts = resGifts.data.filter(p => p.languages_code === locale);
+    console.log(pathname)
 
 
     return (
-        <div className={styles.hakatonTeams}>
+        <div className={parseInt(query.id) === 1 ? styles.hakatonTeams : styles.formarathon}>
             <h3 className={styles.hakatonTeams_title}>{title}</h3>
 
             <div className={styles.hakatonTeams_wrapper}>
