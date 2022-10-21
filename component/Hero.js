@@ -40,7 +40,7 @@ export default function Hero(props) {
       </div>
       <video
         poster="./video-poster.jpg"
-        src="./video.mp4"
+        src="./newvideo.mp4"
         controls
         muted
         loop
