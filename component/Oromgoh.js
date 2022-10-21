@@ -45,7 +45,7 @@ export default function Oromgoh({ data }) {
           )
         )}
       <div className={styles.desc}>
-      <ul>
+      {/* <ul>
         {list.map(({ camp_info }) => (
          
             <li>
@@ -53,7 +53,7 @@ export default function Oromgoh({ data }) {
             </li>
          
         ))}
-         </ul>
+         </ul> */}
 
       </div>
 
