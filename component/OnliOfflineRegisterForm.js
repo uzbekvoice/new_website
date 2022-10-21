@@ -188,7 +188,7 @@ const FormRegister = () => {
         </select>
         <div className={style.agree}>
           <label htmlFor="agree">
-            Lager <a href="/nizom.pdf" download>Nizomi</a> bilan tanishib chiqdim
+            Lager <a href="/Nizom.pdf" download>Nizomi</a> bilan tanishib chiqdim
           </label>
           <input
             onChange={(e) => setConfirm(e.target.value)}
