@@ -49,10 +49,10 @@ const FormRegister = () => {
         console.log("Error: ", error);
       }
 
-      setTimeout(() => setAlert("false"), 8000);
+      setTimeout(() => setAlert("false"), 9000);
     } else {
       setAlert("error");
-      setTimeout(() => setAlert("false"), 5000);
+      setTimeout(() => setAlert("false"), 6000);
     }
   };
   return (
@@ -87,7 +87,7 @@ const FormRegister = () => {
         />
         {/* <input onChange={(e) => setPhone(e.target.value)} placeholder="Telefon raqamingiz" type="phone" re /> */}
 
-        <p>Futbolka o'lchami:</p>
+        <label >Futbolka o'lchami:</label>
         <div className={style.radio_container}>
           <div className={style.radiobtn}>
             <input
@@ -96,6 +96,7 @@ const FormRegister = () => {
               name="sweater"
               onChange={(e) => setSize(e.target.value)}
               id="xs"
+             
             />
             <label for="xs">XS </label>
           </div>
@@ -159,7 +160,8 @@ const FormRegister = () => {
                     <option value="xxl">XXL</option>
                 </select> */}
         <p>Qaysi viloyatdansiz ?</p>
-        <select onChange={(e) => setCountry(e.target.value)}>
+        <select name="region" onChange={(e) => setCountry(e.target.value)} id="region" required>
+        <option value="">Iltimos tanlang</option> 
           <option value="Andijon viloyati">Andijon viloyati</option>
           <option value="Buxoro viloyati">Buxoro viloyati</option>
           <option value="Fargʻona viloyati">Fargʻona viloyati</option>
@@ -177,11 +179,12 @@ const FormRegister = () => {
           <option value="Toshkent viloyati">Toshkent viloyati</option>
         </select>
         <p>O'zbek tilini bilish darajangiz</p>
-        <select onChange={(e) => setLevel(e.target.value)}>
+        <select name="level" onChange={(e) => setLevel(e.target.value)} id="level" required>
+        <option value="">Iltimos tanlang</option> 
           <option value="yomon">yomon</option>
           <option value="urtacha"> o'rtacha</option>
           <option value="yaxshi">yaxshi</option>
-          <option value="motherlevel">ona tilim</option>
+          <option value="onatilim">ona tilim</option>
         </select>
         <div className={style.agree}>
           <label htmlFor="agree">
@@ -199,6 +202,18 @@ const FormRegister = () => {
           <button type="submit">Jo'natish</button>
         </div>
       </form>
+      <div
+                  style={{ display: alert === "error" ? "flex" : "none" }}
+                  className={style.error}
+                >
+                  {locale === "uz-UZ" ? (
+                    <span>Iltimos maydonlarni to'ldiring</span>
+                  ) : locale === "ru-RU" ? (
+                    <span>Пожалуйста, заполните поля</span>
+                  ) : (
+                    <span>Please fill in the fields</span>
+                  )}
+                </div>
       <div
         className={style.thanks}
         style={{ display: alert === "true" ? "flex" : "none" }}
