@@ -157,6 +157,33 @@
   padding: 22px 0px 0px 10px;
 }
 
+.birth{
+  position: relative;
+  display: flex;
+ 
+  justify-content: flex-start;
+  
+}
+
+.birth input {
+ 
+  background: transparent;
+  border: none;
+  border: 1px solid #b8bdc9;
+  border-radius: 4px;
+  
+  height: 2.5em;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  width: 100%;
+  color: #111;
+ width: 70px;
+  padding: 0px 0px 0px 10px;
+  margin-right: 10px;
+}
+
 .userbox input:focus~label,
 .userbox input:valid~label {
   top: -10px;

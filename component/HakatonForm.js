@@ -13,7 +13,9 @@ export default function Partners() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [tg_nike, setTgNike] = useState("");
-  const [dateOfBirth, setDateOfBirth] = useState("");
+  const [day, setDay] = useState("");
+  const [month, setMonth] = useState("");
+  const [year, setYear] = useState("");
   const [country, setCountry] = useState("");
   const [place_work, setPlaceWork] = useState("");
   const [problem, setProblem] = useState("");
@@ -42,7 +44,9 @@ export default function Partners() {
       email !== "" &&
       phone !== "" &&
       tg_nike !== "" &&
-      dateOfBirth !== "" &&
+      day !== "" &&
+      month !== "" &&
+      year !== "" &&
       country !== "" &&
       place_work !== "" &&
       problem !== "" &&
@@ -63,7 +67,9 @@ export default function Partners() {
         team_title: teamName,
         confirmation: confirm,
         telegram_nik: tg_nike,
-        date_of_birth: dateOfBirth,
+        day: day,
+        month: month,
+        year: year,
       };
 
       // console.log(users);
@@ -180,16 +186,33 @@ export default function Partners() {
                 />
                 <label>{label_fio} </label>
               </div>
-              <div className={styles.userbox}>
-                <input
-                  value={dateOfBirth}
-                  type="date"
-                  required
-                  placeholder=""
-                  onChange={(e) => setDateOfBirth(e.target.value)}
-                />
+              <div>
+                <label>{label_date_of_brith}</label><span>*</span>
+                <div className={styles.birth}>
+                  {/* <label>{label_date_of_brith}</label> */}
+                  <input
+                    value={day}
+                    type="number"
+                    required
+                    placeholder="kun"
+                    onChange={(e) => setDay(e.target.value)}
+                  />
 
-                <label>{label_date_of_brith}</label>
+                  <input
+                    value={month}
+                    type="number"
+                    required
+                    placeholder="oy"
+                    onChange={(e) => setMonth(e.target.value)}
+                  />
+                  <input
+                    value={year}
+                    type="number"
+                    required
+                    placeholder="yil"
+                    onChange={(e) => setYear(e.target.value)}
+                  />
+                </div>
               </div>
               <div className={styles.city}>
                 <label>
@@ -328,7 +351,10 @@ export default function Partners() {
               <h4>
                 {" "}
                 {oferta}
-                <a href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true" target="_blank">
+                <a
+                  href="https://docs.google.com/document/d/1VNxNKmMLo1KtuZN_jjnsOS9PqftUDUPz/edit$1usp=sharing&ouid=105377763824178379927&rtpof=true&sd=true"
+                  target="_blank"
+                >
                   {link}
                 </a>
               </h4>
