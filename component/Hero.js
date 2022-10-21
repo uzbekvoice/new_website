@@ -44,6 +44,7 @@ export default function Hero(props) {
         controls
         muted
         loop
+        type="video/mp4 mp4 m4v f4v f4p"
     
         // autoPlay
       ></video>
