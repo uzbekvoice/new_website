@@ -257,25 +257,10 @@
 }
 
 .onlineOfline li {
-  position: relative;
   font-size: 18px;
   margin-top: 10px;
-  width: 85%;
-  /* list-style: none; */
- 
-
+  width: 80%;
 }
-/* .onlineOfline li::before {
- content: url("/tick_green.webp");
- position:relative;
- right: 15px;
-} */
-/* .onlineOfline span{
-   display: inline-block;
-    color: #4bb543;
-    font-size: 120%;
-
-} */
 
 .onlineOfline a {
   color: white;
@@ -305,6 +290,9 @@
   display: flex;
   justify-content: center;
 }
+
+
+/************ FORM STYLE **************/
 
 .onlineRegister input {
   background: transparent;
@@ -340,25 +328,24 @@
   padding: 10px 15px;
 }
 
-.radiobtn {
-  display: inline-block;
-}
+
 
 .radio_container input {
  display: none;
 
 }
-
-.radiobtn input[type="radio"] {
-    display: inline-block;
-    width: 200px;
-    height: 50px;
-    
+.radio_container {
+  margin: 20px 0px;
 }
 
+
+.radiobtn {
+  display: inline-block;
+}
 .radiobtn label {
   width: 50px;
-  padding: 5px;
+  
+  padding: 6px;
   height: auto;
   margin: 0 0.3vw;
 }
@@ -373,14 +360,14 @@
 
   transition: 0.1s ease-out;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 20px;
   text-transform: uppercase;
 }
 
-/* .radiobtn input:checked + label {
+.radiobtn input:checked~label {
   background-color: #9AFE1C;
     color: #fff;
-} */
+}
 
 .onlineRegister input:focus {
   border-color: #2e69ff;
@@ -434,6 +421,7 @@
   width: 50px;
   margin-right: 25px;
 }
+/************ END FORM STYLE **************/
 
 @media (max-width: 700px) {
   .onlineOfline .table {
@@ -445,6 +433,5 @@
 
   .onlineOfline ul {
     margin-bottom: 50px;
-   
   }
 }

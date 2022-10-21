@@ -156,7 +156,7 @@ export default function Bosqich({
         <>
           <Oromgoh data ={camp.data}/>
           <OnlineOfline data ={camp.data}/>
-          <AboutOromgoh />
+          <AboutOromgoh data ={camp.data}/>
 
         </>
       ) : (
