@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function AboutOromgoh({ data }) {
   const { locale } = useRouter();
   const dates = data.filter((c) => c.languages_code === locale);
-  console.log(dates);
+  // console.log(dates);
   return (
     <>
       {dates.map(({ about_oromgoh, oromgoh_text }) => (

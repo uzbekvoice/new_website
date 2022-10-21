@@ -6,7 +6,7 @@ export default function HakatonTeams({ resGifts, title, }) {
 
     const { locale , query, pathname } = useRouter();
     const dataGifts = resGifts.data.filter(p => p.languages_code === locale);
-    console.log(pathname)
+    // console.log(pathname)
 
 
     return (

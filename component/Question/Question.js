@@ -30,7 +30,7 @@ export default function Question({ data, HomeContent }) {
             ))}
         </div>
         <div className={styles.faqButton}>
-          <Link href="/hamkorlar">Savol qoldirish</Link>
+          <Link href="https://t.me/uzbekvoice">Savol qoldirish</Link>
         </div>
       </div>
     </div>
