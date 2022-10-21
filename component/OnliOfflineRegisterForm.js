@@ -1,7 +1,5 @@
 import { useState } from "react";
 import style from '../styles/Bosqich.module.css'
-import "react-phone-number-input/style.css";
-import Input from "react-phone-number-input/input";
 
 const FormRegister = () => {
     const [alert, setAlert] = useState("false");
@@ -56,6 +54,11 @@ const FormRegister = () => {
             setAlert("error");
             setTimeout(() => setAlert("false"), 5000);
         }
+
+    };
+
+    const validate = () => {
+        return fio.length & age.length;
     };
     return (
         <>
@@ -64,20 +67,10 @@ const FormRegister = () => {
                 onSubmit={handleSubmit}
                 method="post"
             >
-                <input onChange={(e) => setFio(e.target.value)} placeholder="Ism familiya" type="text" required />
-                <input onChange={(e) => setAge(e.target.value)} placeholder="Yoshingiz" type="text" required />
-                <Input
-                  international
-                  country="UZ"
-                  defaultCountry="UZ"
-                  withCountryCallingCode
-                  maxlength="17"
-                  value={phone}
-                  required
-                  onChange={setPhone}
-                />
-                {/* <input onChange={(e) => setPhone(e.target.value)} placeholder="Telefon raqamingiz" type="phone" re /> */}
-                <p>Size of Sweatshirt</p>
+                <input value={fio} onChange={(e) => setFio(e.target.value)} placeholder="Ism familiya" type="text" />
+                <input value={age} onChange={(e) => setAge(e.target.value)} placeholder="Yoshingiz" type="text" />
+                <input onChange={(e) => setPhone(e.target.value)} placeholder="Telefon raqamingiz" type="phone" />
+                <h2>Size of Sweatshirt</h2>
                 <select onChange={(e) => setSize(e.target.value)}>
                     <option value="xs">XS</option>
                     <option value="s">S</option>
@@ -86,7 +79,7 @@ const FormRegister = () => {
                     <option value="xl">XL</option>
                     <option value="xxl">XXL</option>
                 </select>
-                <p>Qaysi viloyatdansiz ?</p>
+                <h2>Qaysi viloyatdansiz ?</h2>
                 <select onChange={(e) => setCountry(e.target.value)}>
                     <option value="Andijon viloyati">Andijon viloyati</option>
                     <option value="Buxoro viloyati">Buxoro viloyati</option>
@@ -102,7 +95,7 @@ const FormRegister = () => {
                     <option value="Surxondaryo viloyati">Surxondaryo viloyati</option>
                     <option value="Toshkent viloyati">Toshkent viloyati</option>
                 </select>
-                <p>O'zbek tilini bilish darajangiz</p>
+                <h2>O'zbek tilini bilish darajangiz</h2>
                 <select onChange={(e) => setLevel(e.target.value)}>
                     <option value="yomon">yomon</option>
                     <option value="urtacha"> o'rtacha</option>
@@ -110,15 +103,15 @@ const FormRegister = () => {
                     <option value="motherlevel">ona tilim</option>
                 </select>
                 <div className={style.agree}>
-                    <label htmlFor="agree">Lager <a href="#">Nizomi</a> bilan tanishib chiqdim</label>
+                    <label htmlFor="agree">Lager Nizomi bilan tanishib chiqdim</label>
                     <input onChange={(e) => setConfirm(e.target.value)} type="checkbox" name="" id="agree" />
                 </div>
                 <div className={style.btn}>
-                <button type="submit">Jo'natish</button>
+                    <button type="submit" disabled={!validate()}>Jo'natish</button>
                 </div>
-               
+
             </form>
         </>
     )
 }
-export default FormRegister
+export default FormRegister;

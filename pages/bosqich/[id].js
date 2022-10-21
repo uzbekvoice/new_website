@@ -196,7 +196,7 @@ export default function Bosqich({
 
 { parseInt(query.id) === 2 ? (
   <div>
-  <PhotoAlbom data={photo.data}/>
+  {/* <PhotoAlbom data={photo.data}/> */}
  <Question data={faq.data} HomeContent={HomeContent} />
  </div>
 ) : (

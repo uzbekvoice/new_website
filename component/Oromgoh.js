@@ -1,14 +1,18 @@
 import React from "react";
 import styles from "../styles/Oromgoh.module.css";
 import Link from "next/link";
+
+
 import BusAnimation from "./BusAnimation";
 import { useRouter } from "next/router";
+
 
 export default function Oromgoh({ data }) {
   const { locale } = useRouter();
   const dates = data.filter((c) => c.languages_code === locale)
   const list = dates[0].camp_info;
   return (
+
     <div>
       {data
         .filter((c) => c.languages_code === locale)
@@ -52,6 +56,7 @@ export default function Oromgoh({ data }) {
          </ul>
 
       </div>
+
     </div>
   );
 }

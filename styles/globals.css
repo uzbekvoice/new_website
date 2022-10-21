@@ -111,7 +111,6 @@ a {
 .accordion__section {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */

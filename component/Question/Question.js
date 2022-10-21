@@ -2,6 +2,7 @@ import React from "react";
 import Accordion from "./Accordion";
 import { useRouter } from "next/router";
 import styles from "../../styles/Accordion.module.css";
+import Link from "next/link";
 
 export default function Question({ data, HomeContent }) {
   const { locale } = useRouter();
@@ -28,15 +29,8 @@ export default function Question({ data, HomeContent }) {
               <Accordion key={id} title={question} content={answer} />
             ))}
         </div>
-        <div className={styles.emailInfo}>
-          <span>Savollar bormi? </span> 
-          Quyidagi linkda biz savollaringiz javob beramiz <br />
-          <a className={styles.emailLink} href="mailto:uzbekvoice-ai@gmail.com">
-            uzbekvoice-ai@gmail.com
-          </a>
-          <div className={styles.faqButton}>
-            Savol qoldirish
-          </div>
+        <div className={styles.faqButton}>
+          <Link href="/hamkorlar">Savol qoldirish</Link>
         </div>
       </div>
     </div>

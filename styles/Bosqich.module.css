@@ -60,8 +60,8 @@
   text-align: center;
 }
 
-.card1>h2,
-.card2>h2 {
+.card1 > h2,
+.card2 > h2 {
   margin-top: 6px;
   line-height: 32px;
 
@@ -74,8 +74,8 @@
   color: #12273c;
 }
 
-.card1>p,
-.card2>p {
+.card1 > p,
+.card2 > p {
   margin-top: 8px;
   line-height: 28px;
   color: rgba(113, 125, 138, 1);
@@ -88,16 +88,18 @@
   letter-spacing: -0.5px;
 }
 
-.card1>p>span,
-.card2>p>span {
+.card1 > p > span,
+.card2 > p > span {
   color: #44484c;
 }
 
 .card2::before {
   content: "";
-  background: linear-gradient(180deg,
-      rgba(0, 194, 255, 1) 0%,
-      rgba(82, 0, 255, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 1) 0%,
+    rgba(82, 0, 255, 1) 100%
+  );
   filter: blur(219px);
   height: 238.2720184326172px;
   width: 247.03199768066406px;
@@ -143,9 +145,11 @@
 
 .rules::before {
   content: "";
-  background: linear-gradient(180deg,
-      rgba(0, 194, 255, 0.8) 0%,
-      rgba(82, 0, 255, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 194, 255, 0.8) 0%,
+    rgba(82, 0, 255, 0.8) 100%
+  );
   filter: blur(219px);
   height: 238.2720184326172px;
   width: 247.03199768066406px;
@@ -156,7 +160,6 @@
 .rulesCard {
   margin-top: 50px;
   text-align: start;
-
 }
 
 .rule1 {
@@ -242,8 +245,10 @@
   margin: 60px 0;
 }
 
-
-
+.onlineOfline p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
 
 .onlineOfline .table {
   display: flex;
@@ -257,55 +262,77 @@
   width: 80%;
 }
 
-
 .onlineOfline a {
   color: white;
   padding: 16px 24px;
-  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%), linear-gradient(0deg, #8d53fd, #8d53fd);
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
+    linear-gradient(0deg, #8d53fd, #8d53fd);
   box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
   border-radius: 12px;
   font-size: 20px;
   text-align: center;
-
+  cursor: pointer;
 }
 .onlineOfline button {
   color: white;
   padding: 16px 24px;
-  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%), linear-gradient(0deg, #8d53fd, #8d53fd);
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
+    linear-gradient(0deg, #8d53fd, #8d53fd);
   box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
   border-radius: 12px;
   font-size: 20px;
   text-align: center;
   border: none;
   margin-top: 30px;
-
+  cursor: pointer;
 }
-.btn{
+.btn {
   display: flex;
   justify-content: center;
-
 }
 
 .onlineRegister input {
+  background: transparent;
+  border: none;
+  border: 1px solid #b8bdc9;
+  border-radius: 4px;
+
+  height: 3.3em;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   width: 100%;
-  border: 2px solid #0000001a;
-  border-radius: 24px;
-  padding: 16px;
-  background-color: white;
-  margin-bottom: 12px;
+  color: #111;
+  margin-bottom: 25px;
+  padding: 10px 15px;
 }
 
 .onlineOfline select {
+  background: transparent;
+  border: none;
+  border: 1px solid #b8bdc9;
+  border-radius: 4px;
+
+  height: 3.3em;
+  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
   width: 100%;
-  border: 2px solid #0000001a;
-  border-radius: 24px;
-  padding: 16px;
-  background-color: white;
-  margin-bottom: 12px;
+  color: #111;
+  margin-bottom: 25px;
+  padding: 10px 15px;
 }
 
-.onlineRegister input :focus-visible {
-  border: none;
+.onlineRegister input:focus {
+  border-color: #2e69ff;
+  box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
+}
+
+.onlineRegister select:focus {
+  border-color: #2e69ff;
+  box-shadow: 0 0 0 3px rgb(46 105 255 / 25%);
 }
 
 .agree {
@@ -314,16 +341,27 @@
   text-align: center;
 }
 
+.agree a {
+  color: blue;
+  padding: 0;
+  background: transparent;
+  font-size: 16px;
+  box-shadow: white;
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 0%);
+
+}
+
 .agree input {
   width: 100px;
   margin: 0;
+  height: 16px;
 }
 
-@media (max-width: 700px){
+@media (max-width: 700px) {
   .onlineOfline .table {
     display: flex;
     flex-direction: column;
-    
+
     margin: 70px 0;
   }
 
