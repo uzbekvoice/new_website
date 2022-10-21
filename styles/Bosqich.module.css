@@ -408,11 +408,11 @@
   -webkit-backdrop-filter: blur(80px);
   -o-backdrop-filter: blur(80px);
   border-radius: 24px;
-  padding: 80px;
+  padding: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 50px;
+  margin-top: 25px;
   font-size: 20px;
   /* color: green; */
 }
@@ -420,6 +420,13 @@
 .thanks img {
   width: 50px;
   margin-right: 25px;
+}
+.error {
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  margin: 10px auto 0;
+  color: rgba(255, 0, 0, 0.76);
 }
 /************ END FORM STYLE **************/
 
