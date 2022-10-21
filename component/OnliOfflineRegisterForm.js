@@ -2,8 +2,9 @@ import { useState } from "react";
 import style from '../styles/Bosqich.module.css'
 import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
-
+import { useRouter } from "next/router";
 const FormRegister = () => {
+    const {locale} = useRouter();
     const [alert, setAlert] = useState("false");
     const [fio, setFio] = useState("");
     const [age, setAge] = useState("");
@@ -65,7 +66,7 @@ const FormRegister = () => {
                 method="post"
             >
                 <input onChange={(e) => setFio(e.target.value)} placeholder="Ism familiya" type="text" required />
-                <input onChange={(e) => setAge(e.target.value)} placeholder="Yoshingiz" type="text" required />
+                <input onChange={(e) => setAge(e.target.value)} placeholder="Yoshingiz" type="number" maxLength="2" required />
                 <Input
                   international
                   country="UZ"
@@ -111,13 +112,35 @@ const FormRegister = () => {
                 </select>
                 <div className={style.agree}>
                     <label htmlFor="agree">Lager <a href="#">Nizomi</a> bilan tanishib chiqdim</label>
-                    <input onChange={(e) => setConfirm(e.target.value)} type="checkbox" name="" id="agree" />
+                    <input onChange={(e) => setConfirm(e.target.value)} type="checkbox" name="" id="agree"  required/>
                 </div>
                 <div className={style.btn}>
                 <button type="submit">Jo'natish</button>
                 </div>
                
             </form>
+            <div
+              className={style.thanks}
+              style={{ display: alert === "true" ? "flex" : "none" }}
+            >
+                 <img src="/tick_green.webp" alt="" />
+              {locale === "uz-UZ" ? (
+               
+                <span>
+                 Biz siz bilan yaqin orada aloqaga
+                  chiqamiz.
+                </span>
+              ) : locale === "ru-RU" ? (
+                <span>
+                  Мы свяжемся с Вами в скором времени.
+                </span>
+              ) : (
+                <span>
+                We will contact you as soon as
+                  possible.
+                </span>
+              )}
+            </div>
         </>
     )
 }
