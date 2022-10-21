@@ -37,6 +37,19 @@
     background-color: #26db5926;
 }
 
+.status a{
+  color: white;
+  padding: 16px 24px;
+  background: linear-gradient(9deg, #8d53fd -1.4%, #b38cff 95.18%),
+    linear-gradient(0deg, #8d53fd, #8d53fd);
+  box-shadow: 0px 8px 32px rgb(141 83 253 / 24%);
+  border-radius: 12px;
+  font-size: 20px;
+  text-align: center;
+  min-width: 215px;
+  border: none;
+}
+
 .box__title {
   text-align: center;
   font-size: 45px;
