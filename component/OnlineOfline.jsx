@@ -15,13 +15,13 @@ const OnlineOfline = ({ data }) => {
       {dates.map(
         ({ camp_second_title, online, offline, participate_button_title }) => (
           <div className={style.onlineOfline}>
-            <h2
+            {/* <h2
               style={{
                 textAlign: "center",
               }}
             >
               {camp_second_title}
-            </h2>
+            </h2> */}
             <div className={style.tableOnline}>
               <div className={style.table}>
                 <ul>

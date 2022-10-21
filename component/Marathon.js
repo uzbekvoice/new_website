@@ -24,7 +24,7 @@ export default function Marathon({ data }) {
             goal_title,
             goal,
           }) => (
-            <div className={styles.goal__box}>
+            <div className={parseInt(query.id) === 2 ? styles.goal__box: styles.formobile}>
               <h2 className={styles.box__title}>
                 {title} <br />
                 {title_stage}

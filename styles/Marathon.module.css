@@ -60,9 +60,15 @@
   font-size: 23px;
 }
 
+
+
 @media (min-width: 370px) and (max-width: 767px) {
+
+  .goal__box{
+    margin-top: 70px;
+  }
   .archeryAssets {
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 300px;
     padding: 20px 0;
   }
@@ -92,6 +98,10 @@
     justify-content: space-evenly;
     height: 300px;
     padding: 20px 0;
+  }
+
+  .goal__box{
+    margin-top: 60px;
   }
   .box__title {
     font-size: 25px;
