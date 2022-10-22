@@ -5,6 +5,7 @@ import NextNProgress from "nextjs-progressbar";
 import { useRouter } from "next/router";
 import { NextSeo } from "next-seo";
 import Seocontent from "./homeapi/static.json";
+import Gtag from "../component/Gtag";
 
 function MyApp({ Component, pageProps }) {
   const { locale } = useRouter();
@@ -28,7 +29,7 @@ function MyApp({ Component, pageProps }) {
           .map(({ title, desc }, i) => (
             <NextSeo key={i}  title={title} description={desc} titleTemplate={title} />
           ))}
-
+  <Gtag />
         <Component {...pageProps} />
       </Layout>
     </div>
