@@ -4,6 +4,8 @@ import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
 import { useRouter } from "next/router";
 const FormRegister = () => {
+
+  
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
@@ -55,12 +57,15 @@ const FormRegister = () => {
       setTimeout(() => setAlert("false"), 6000);
     }
   };
+
+  // console.log(age)
   return (
     <>
       <form
         className={style.onlineRegister}
         onSubmit={handleSubmit}
         method="post"
+        // style={{ display: alert === "true" ? "none" : "block" }}
       >
         <input
           onChange={(e) => setFio(e.target.value)}
@@ -74,7 +79,13 @@ const FormRegister = () => {
           type="number"
           maxLength="2"
           required
+          value={age}
         />
+ {/* <div>{ age >= 18 ?
+  <p>Qatnashingiz mumkin</p> : <p>Oromgohda qatnashish uchun yoshingiz kichik</p>
+ }
+  </div> */}
+
         <Input
           international
           country="UZ"
