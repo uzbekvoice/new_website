@@ -21,9 +21,10 @@ export default function Oromgoh({ data }) {
             camp_title,
             camp_start,
             start,
-             finish,
-             start_date,
-            finish_date,
+             camp_finish,
+             finish
+           
+          
           }) => (
             <div className={styles.block}>
               <h1>{camp_title}</h1>
@@ -31,12 +32,12 @@ export default function Oromgoh({ data }) {
               <div className={styles.flex}>
                 <div>
                   <h3>{start}</h3>
-                  <h4>{start_date}</h4>
+                  <h4>{camp_start}</h4>
                 </div>
 
                 <div>
                   <h3>{finish}</h3>
-                  <h4>{finish_date}</h4>
+                  <h4>{camp_finish}</h4>
                 </div>
               </div>
 
