@@ -16,10 +16,10 @@ import AboutOromgoh from "../../component/AboutOromgoh";
 
 export async function getServerSideProps() {
   const res = await fetch(
-    "https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard"
+    "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
   );
   const res2 = await fetch(
-    "https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard"
+    "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
   );
   const res3 = await fetch(
     "https://admin.uzbekvoice.ai/items/contest_stages_translations"

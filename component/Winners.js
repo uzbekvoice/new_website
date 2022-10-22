@@ -38,7 +38,7 @@ export default function Winners({ users, userslist, bosqich }) {
                 <div className={styles.item}>
                   <div className={styles.block}>
                     <Image src="/leader.png" width={72} height={72} alt="Leader" />
-                    <h5>{dates.username}</h5>
+                    <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
                   </div>
                   <span>{dates.total}</span>
                 </div>
@@ -74,7 +74,7 @@ export default function Winners({ users, userslist, bosqich }) {
                 <div className={styles.item}>
                   <div className={styles.block}>
                     <Image src="/leader.png" width={72} height={72} alt="Leader" />
-                    <h5>{dates.username}</h5>
+                    <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
                   </div>
                   <span>{dates.total}</span>
                 </div>

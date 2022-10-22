@@ -9,28 +9,36 @@ import Step from "../component/Step";
 import TopUser from "../component/TopUser";
 import dynamic from "next/dynamic";
 import { getDirectusClient } from "../lib/directus";
-const Stat = dynamic(
-  () => import('../component/Stat'),
-  { ssr: false }
-)
+const Stat = dynamic(() => import("../component/Stat"), { ssr: false });
 
-import HomeContent from './homeapi/static.json'
+import HomeContent from "./homeapi/static.json";
 import Marathon from "../component/Marathon";
 
 export async function getServerSideProps() {
-
   // const directus = await getDirectusClient();
   // const response = await directus.items("team_members_translations").readByQuery({
   //   fields: ["*"],
   // })
-  const res = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard");
-  const res2 = await fetch("https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard");
-  const res3 = await fetch('https://admin.uzbekvoice.ai/items/partners');
-  const res4 = await fetch('https://admin.uzbekvoice.ai/items/team_members_translations');
-  const res5 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations');
-  const res6 = await fetch('https://admin.uzbekvoice.ai/items/contest_stages_translations');
+  const res = await fetch(
+    "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
+  );
+  const res2 = await fetch(
+    "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
+  );
+  const res3 = await fetch("https://admin.uzbekvoice.ai/items/partners");
+  const res4 = await fetch(
+    "https://admin.uzbekvoice.ai/items/team_members_translations"
+  );
+  const res5 = await fetch(
+    "https://admin.uzbekvoice.ai/items/faq_translations"
+  );
+  const res6 = await fetch(
+    "https://admin.uzbekvoice.ai/items/contest_stages_translations"
+  );
 
-  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations")
+  const res7 = await fetch(
+    "https://admin.uzbekvoice.ai/items/camp_page_translations"
+  );
 
   const data = await res.json();
   const users = await res2.json();
@@ -48,27 +56,33 @@ export async function getServerSideProps() {
       teamMembers,
       faq,
       steps,
-      camp
+      camp,
     },
-
   };
 }
 
-export default function Home({ users, userslist, partners, teamMembers, faq, steps, camp }) {
-
+export default function Home({
+  users,
+  userslist,
+  partners,
+  teamMembers,
+  faq,
+  steps,
+  camp,
+}) {
   return (
-      <div>
-        <Hero HomeContent={HomeContent} />
-        <Marathon  data={camp.data}/>
-        <Slider HomeContent={HomeContent} />
-        <Stat HomeContent={HomeContent} />
-        <Step steps={steps.data} HomeContent={HomeContent} />
-        <Contribution HomeContent={HomeContent} />
-        <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
-        <Ourpartners HomeContent={HomeContent} />
-        <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
-        <OurTeam data={teamMembers.data}  />
-        <Question data={faq.data} HomeContent={HomeContent} />
-      </div>
+    <div>
+      <Hero HomeContent={HomeContent} />
+      <Marathon data={camp.data} />
+      <Slider HomeContent={HomeContent} />
+      <Stat HomeContent={HomeContent} />
+      <Step steps={steps.data} HomeContent={HomeContent} />
+      <Contribution HomeContent={HomeContent} />
+      <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
+      <Ourpartners HomeContent={HomeContent} />
+      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
+      <OurTeam data={teamMembers.data} />
+      <Question data={faq.data} HomeContent={HomeContent} />
+    </div>
   );
 }

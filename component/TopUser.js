@@ -33,7 +33,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                             height={72}
                             alt="Leader"
                           />
-                          <h5>{dates.username}</h5>
+                          <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
                         </div>
                         <span>{dates.total}</span>
                       </div>
@@ -58,7 +58,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                             height={72}
                             alt="Leader"
                           />
-                          <h5>{dates.username}</h5>
+                          <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
                         </div>
                         <span>{dates.total}</span>
                       </div>
@@ -89,7 +89,13 @@ export default function TopUser({ users, userslist, HomeContent }) {
                                 </button>
                               </div>
                               <div className={styles.title}>
-                                <h3>Eng faol so'zlovchilar</h3>
+                              {
+              locale === "uz-UZ" ?
+                <h3>Eng faol tinglovchi</h3>
+                : locale === "ru-RU" ?
+                  <h3>Активные участники</h3>
+                  : <h3>The most active listener</h3>
+            }
                               </div>
 
                               {/*body*/}
@@ -138,7 +144,15 @@ export default function TopUser({ users, userslist, HomeContent }) {
                                 </button>
                               </div>
                               <div className={styles.title}>
-                                <h3>Eng faol tinglovchilar</h3>
+        
+                                   {
+              locale === "uz-UZ" ?
+                <h3>Eng faol so'zlovchi</h3>
+                : locale === "ru-RU" ?
+                  <h3>Самый активный спикер</h3>
+                  : <h3>The most active speaker</h3>
+            }
+                                {/* <h3>Eng faol tinglovchilar</h3> */}
                               </div>
 
                               {/*body*/}
