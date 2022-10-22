@@ -4,8 +4,6 @@ import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
 import { useRouter } from "next/router";
 const FormRegister = () => {
-
-  
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
@@ -81,10 +79,15 @@ const FormRegister = () => {
           required
           value={age}
         />
- {/* <div>{ age >= 18 ?
-  <p>Qatnashingiz mumkin</p> : <p>Oromgohda qatnashish uchun yoshingiz kichik</p>
- }
-  </div> */}
+        {/* Alert uchun */}
+        {/* <div>
+          {age >= 18 ? (
+            <p>Qatnashingiz mumkin</p>
+          ) : (
+            <p>Oromgohda qatnashish uchun yoshingiz kichik</p>
+          )}
+        </div> */}
+           {/* Alert uchun */}
 
         <Input
           international
@@ -98,7 +101,7 @@ const FormRegister = () => {
         />
         {/* <input onChange={(e) => setPhone(e.target.value)} placeholder="Telefon raqamingiz" type="phone" re /> */}
 
-        <label >Futbolka o'lchami:</label>
+        <label>Futbolka o'lchami:</label>
         <div className={style.radio_container}>
           <div className={style.radiobtn}>
             <input
@@ -107,7 +110,6 @@ const FormRegister = () => {
               name="sweater"
               onChange={(e) => setSize(e.target.value)}
               id="xs"
-             
             />
             <label for="xs">XS </label>
           </div>
@@ -171,8 +173,13 @@ const FormRegister = () => {
                     <option value="xxl">XXL</option>
                 </select> */}
         <p>Qaysi viloyatdansiz ?</p>
-        <select name="region" onChange={(e) => setCountry(e.target.value)} id="region" required>
-        <option value="">Iltimos tanlang</option> 
+        <select
+          name="region"
+          onChange={(e) => setCountry(e.target.value)}
+          id="region"
+          required
+        >
+          <option value="">Iltimos tanlang</option>
           <option value="Andijon viloyati">Andijon viloyati</option>
           <option value="Buxoro viloyati">Buxoro viloyati</option>
           <option value="Fargʻona viloyati">Fargʻona viloyati</option>
@@ -190,8 +197,13 @@ const FormRegister = () => {
           <option value="Toshkent viloyati">Toshkent viloyati</option>
         </select>
         <p>O'zbek tilini bilish darajangiz</p>
-        <select name="level" onChange={(e) => setLevel(e.target.value)} id="level" required>
-        <option value="">Iltimos tanlang</option> 
+        <select
+          name="level"
+          onChange={(e) => setLevel(e.target.value)}
+          id="level"
+          required
+        >
+          <option value="">Iltimos tanlang</option>
           <option value="yomon">yomon</option>
           <option value="urtacha"> o'rtacha</option>
           <option value="yaxshi">yaxshi</option>
@@ -199,7 +211,11 @@ const FormRegister = () => {
         </select>
         <div className={style.agree}>
           <label htmlFor="agree">
-            Lager <a href="/Nizom.pdf" download>Nizomi</a> bilan tanishib chiqdim
+            Lager{" "}
+            <a href="/Nizom.pdf" download>
+              Nizomi
+            </a>{" "}
+            bilan tanishib chiqdim
           </label>
           <input
             onChange={(e) => setConfirm(e.target.value)}
@@ -214,17 +230,17 @@ const FormRegister = () => {
         </div>
       </form>
       <div
-                  style={{ display: alert === "error" ? "flex" : "none" }}
-                  className={style.error}
-                >
-                  {locale === "uz-UZ" ? (
-                    <span>Iltimos maydonlarni to'ldiring</span>
-                  ) : locale === "ru-RU" ? (
-                    <span>Пожалуйста, заполните поля</span>
-                  ) : (
-                    <span>Please fill in the fields</span>
-                  )}
-                </div>
+        style={{ display: alert === "error" ? "flex" : "none" }}
+        className={style.error}
+      >
+        {locale === "uz-UZ" ? (
+          <span>Iltimos maydonlarni to'ldiring</span>
+        ) : locale === "ru-RU" ? (
+          <span>Пожалуйста, заполните поля</span>
+        ) : (
+          <span>Please fill in the fields</span>
+        )}
+      </div>
       <div
         className={style.thanks}
         style={{ display: alert === "true" ? "flex" : "none" }}

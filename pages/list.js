@@ -37,8 +37,8 @@ export default function List({users}) {
 	</thead>
 	<tbody>
 
-        {user.map(({name_surname, age, contacts, size_sweat, region, level_of_uzbek }) => (
-		<tr>
+        {user.map(({id ,name_surname, age, contacts, size_sweat, region, level_of_uzbek }) => (
+		<tr key={id}>
         <td data-label="FIO">{name_surname}</td>
         <td data-label="Yoshi">{age}</td>
         <td data-label="Telefon raqami">{contacts}</td>
