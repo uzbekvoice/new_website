@@ -19,10 +19,10 @@ export async function getServerSideProps() {
   // const response = await directus.items("team_members_translations").readByQuery({
   //   fields: ["*"],
   // })
-  const res = await fetch(
+  const res2 = await fetch(
     "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
   );
-  const res2 = await fetch(
+  const res = await fetch(
     "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
   );
   const res3 = await fetch("https://admin.uzbekvoice.ai/items/partners");

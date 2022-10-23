@@ -13,6 +13,8 @@ const FormRegister = () => {
   const [size, setSize] = useState("");
   const [level, setLevel] = useState("");
   const [confirm, setConfirm] = useState("");
+  const [touched, setTouched] = useState(false);
+  const isValid = age >= 18;
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
@@ -63,6 +65,7 @@ const FormRegister = () => {
         className={style.onlineRegister}
         onSubmit={handleSubmit}
         method="post"
+
         // style={{ display: alert === "true" ? "none" : "block" }}
       >
         <input
@@ -78,16 +81,19 @@ const FormRegister = () => {
           maxLength="2"
           required
           value={age}
+          onBlur={() => setTouched(true)}
         />
         {/* Alert uchun */}
-        {/* <div>
-          {age >= 18 ? (
-            <p>Qatnashingiz mumkin</p>
+        {/* {touched ? (
+          isValid ? (
+            <span>Qatnashingiz mumkin</span>
           ) : (
-            <p>Oromgohda qatnashish uchun yoshingiz kichik</p>
-          )}
-        </div> */}
-           {/* Alert uchun */}
+            <span>Oromgohda qatnashish uchun yoshingiz kichik</span>
+          )
+        ) : null} */}
+        {/* Alert uchun */}
+
+        Convert toe 
 
         <Input
           international
