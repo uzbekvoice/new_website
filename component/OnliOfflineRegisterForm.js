@@ -93,7 +93,7 @@ const FormRegister = () => {
         ) : null} */}
         {/* Alert uchun */}
 
-        Convert toe 
+    
 
         <Input
           international
