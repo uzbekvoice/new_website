@@ -21,7 +21,7 @@ const FormRegister = () => {
       fio !== "" &&
       level !== "" &&
       phone !== "" &&
-      age !== "" &&
+      age !== "" && age >=18 &&
       country !== "" &&
       size !== "" &&
       confirm !== ""
@@ -84,13 +84,13 @@ const FormRegister = () => {
           onBlur={() => setTouched(true)}
         />
         {/* Alert uchun */}
-        {/* {touched ? (
+        {touched ? (
           isValid ? (
-            <span>Qatnashingiz mumkin</span>
+            <></>
           ) : (
-            <span>Oromgohda qatnashish uchun yoshingiz kichik</span>
+            <h6>Yoshingiz 18 yoshdan katta bo'lishi kerak</h6>
           )
-        ) : null} */}
+        ) : null}
         {/* Alert uchun */}
 
     
@@ -240,7 +240,7 @@ const FormRegister = () => {
         className={style.error}
       >
         {locale === "uz-UZ" ? (
-          <span>Iltimos maydonlarni to'ldiring</span>
+          <span>Iltimos maydonlarni to'g'ri to'ldirganingizni tekshiring</span>
         ) : locale === "ru-RU" ? (
           <span>Пожалуйста, заполните поля</span>
         ) : (

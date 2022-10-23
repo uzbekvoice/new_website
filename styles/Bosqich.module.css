@@ -311,6 +311,15 @@
   padding: 10px 15px;
 }
 
+.onlineRegister h6{
+  font-weight: 400;
+  font-size: 13px;
+  color: red;
+  margin-top: -20px;
+  margin-bottom: 20px;
+
+}
+
 .onlineOfline select {
   background: transparent;
   border: none;
