@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../styles/Stat.module.css";
+import Image from "next/image";
 import {
   BarChart,
   Bar,
@@ -13,13 +14,14 @@ import {
   AreaChart,
   Area,
   Label,
-  LabelList
+  LabelList,
 } from "recharts";
 import { useRouter } from "next/router";
 
 export default function Stat(props) {
   const { locale } = useRouter();
   const { HomeContent } = props;
+  const { stat } = props;
 
   const data = [
     {
@@ -95,58 +97,37 @@ export default function Stat(props) {
       amt: 2100,
     },
   ];
-  const dates = [
-    {
-      name: "1 m",
-      Ovozli: 100,
-      Tinglangan: 100,
-    },
-    {
-      name: "2 m",
-      Ovozli: 5000,
-      Tinglangan: 3000,
-    },
-    {
-      name: "3 m",
-      Ovozli: 4000,
-      Tinglangan: 3000,
-    },
-    {
-      name: "4 m",
-      Ovozli: 8780,
-      Tinglangan: 3908,
-    },
-    {
-      name: "5 m",
-      Ovozli: 9000,
-      Tinglangan: 4800,
-    },
-  ];
+
+
+  const dates = stat.map(({ date, total, valid} )  =>  ({ ["Sana"]:date.slice(0, 10), ["So'zlangan"]: Math.floor(total / 3600), ["Tinglangan"]: Math.floor(valid / 3600) }));
+
+  console.log(dates)
+
   // const data3 = [
   //   {
   //     "name": "x1",
   //     "uv": 180000,
-     
+
   //   },
   //   {
   //     "name": "Page B",
   //     "uv": 270000,
-      
+
   //   },
   //   {
   //     "name": "Page C",
   //     "uv": 900000,
-     
+
   //   },
   //   {
   //     "name": "Page D",
   //     "uv": 1800000,
-      
+
   //   },
   //   {
   //     "name": "Page D",
   //     "uv": 9000000,
-     
+
   //   }
   // ]
 
@@ -175,7 +156,7 @@ export default function Stat(props) {
           })}
 
         <div className={styles.img_bottom + " stat_top_chart"}>
-          <ResponsiveContainer width="100%" height={300}>
+          {/* <ResponsiveContainer width="100%" height={300}>
             <BarChart
               width={500}
               height={280}
@@ -197,7 +178,7 @@ export default function Stat(props) {
               <Bar yAxisId="right" dataKey="Ovozli" fill="#33BEF9" />
               <Bar yAxisId="right" dataKey="amt" fill="#8D53FD" />
             </BarChart>
-          </ResponsiveContainer>
+          </ResponsiveContainer> */}
           {/* 
           <Image
             src="/stat-bottom.png"
@@ -224,13 +205,14 @@ export default function Stat(props) {
     <LabelList dataKey="uv" position="top" />
   </Bar>
 </BarChart> */}
-   
+
         <div className={styles.img_hour + " stat_bottom_chart"}>
           {/* <Image
-            src="/stat-hour.jpg"
-            width={1052}
-            height={389}
-            quality={100}
+            src="/frame.png"
+            width={300}
+            height={350}
+  
+         
             alt="stat"
           /> */}
           <ResponsiveContainer width="100%" height={350}>
@@ -248,13 +230,13 @@ export default function Stat(props) {
                   <stop offset="95%" stopColor="#33BFFA" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <XAxis dataKey="name" />
+              <XAxis dataKey="Sana" />
               <YAxis />
               <CartesianGrid strokeDasharray="3 3" />
               <Tooltip />
               <Area
                 type="monotone"
-                dataKey="Ovozli"
+                dataKey="So'zlangan"
                 stroke="#FD5353"
                 fillOpacity={1}
                 fill="url(#colorUv)"

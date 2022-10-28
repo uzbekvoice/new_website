@@ -39,6 +39,9 @@ export async function getServerSideProps() {
   const res7 = await fetch(
     "https://admin.uzbekvoice.ai/items/camp_page_translations"
   );
+  const res8 = await fetch(
+    "https://common.uzbekvoice.ai/api/v1/uz/clips/stats"
+  );
 
   const data = await res.json();
   const users = await res2.json();
@@ -47,6 +50,7 @@ export async function getServerSideProps() {
   const faq = await res5.json();
   const steps = await res6.json();
   const camp = await res7.json();
+  const statsvotes = await res8.json();
 
   return {
     props: {
@@ -57,6 +61,7 @@ export async function getServerSideProps() {
       faq,
       steps,
       camp,
+      statsvotes 
     },
   };
 }
@@ -69,13 +74,14 @@ export default function Home({
   faq,
   steps,
   camp,
+  statsvotes
 }) {
   return (
     <div>
       <Hero HomeContent={HomeContent} />
       <Marathon data={camp.data} />
       <Slider HomeContent={HomeContent} />
-      <Stat HomeContent={HomeContent} />
+      <Stat stat={statsvotes} HomeContent={HomeContent} />
       <Step steps={steps.data} HomeContent={HomeContent} />
       <Contribution HomeContent={HomeContent} />
       <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
