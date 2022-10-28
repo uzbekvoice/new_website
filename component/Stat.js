@@ -167,7 +167,7 @@ export default function Stat(props) {
                   </div>
 
                   <div className={styles.block}>
-                    <span> ~300</span> <p> {parag2}</p>
+                    <span> ~2000</span> <p> {parag2}</p>
                   </div>
                 </div>
               </div>
