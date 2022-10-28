@@ -1,56 +1,20 @@
-import React from 'react'
-
+import React from "react";
+import TableUser from "../component/TableUser";
 
 export async function getServerSideProps() {
-   
-    const res = await fetch(
-      "https://admin.uzbekvoice.ai/items/camp_form"
-    );
+  const res = await fetch("https://admin.uzbekvoice.ai/items/camp_form");
 
-  
-    const data = await res.json();
+  const data = await res.json();
 
-  
-    return {
-      props: {
-        users: data,
-      },
-    };
-  }
+  return {
+    props: {
+      users: data,
+    },
+  };
+}
 
-export default function List({users}) {
-    
-    const user = users.data;
-    console.log(user)
+export default function List({ users }) {
   return (
-    <div className='userlist'><table>
-	<caption>Foydalanuvchilar</caption>
-	<thead>
-		<tr>
-			<th>FIO</th>
-			<th>Yoshi</th>
-			<th>Telefon raqami</th>
-			<th>Futbolka ulchami</th>
-			<th>Region</th>
-            <th>Til bilish darjasi</th>
-		</tr>
-	</thead>
-	<tbody>
-
-        {user.map(({id ,name_surname, age, contacts, size_sweat, region, level_of_uzbek }) => (
-		<tr key={id}>
-        <td data-label="FIO">{name_surname}</td>
-        <td data-label="Yoshi">{age}</td>
-        <td data-label="Telefon raqami">{contacts}</td>
-        <td data-label="Futbolka ulchami">{size_sweat}</td>
-        <td data-label="Region">{region}</td>
-        <td data-label="Til bilish darjasi">{level_of_uzbek}</td>
-    </tr>
-
-        ))}
-
-		
-	</tbody>
-</table></div>
+    <TableUser users={users.data} />
   )
 }
