@@ -17,6 +17,7 @@ import {
   LabelList,
 } from "recharts";
 import { useRouter } from "next/router";
+import StatHours from "./StatHours";
 
 export default function Stat(props) {
   const { locale } = useRouter();
@@ -206,15 +207,10 @@ export default function Stat(props) {
   </Bar>
 </BarChart> */}
 
-        <div className={styles.img_hour + " stat_bottom_chart"}>
-          {/* <Image
-            src="/frame.png"
-            width={300}
-            height={350}
+        <div className={styles.img_hour}>
   
-         
-            alt="stat"
-          /> */}
+        <StatHours />
+
           <ResponsiveContainer width="100%" height={350}>
             <AreaChart
               data={dates}
