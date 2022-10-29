@@ -218,7 +218,7 @@ const FormRegister = () => {
         <div className={style.agree}>
           <label htmlFor="agree">
             Lager{" "}
-            <a href="/Nizom.pdf" download>
+            <a href="/UzbekVoicenizom.pdf" download>
               Nizomi
             </a>{" "}
             bilan tanishib chiqdim
