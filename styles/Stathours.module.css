@@ -1,0 +1,171 @@
+.hammasi {
+  display: inline-block;
+  position: relative;
+  /* left: 50%;
+    transform: translateX(-50%); */
+  border: 1px solid #888d91;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+/** TEXTS **/
+
+.texts h3 {
+  font-size: 30px;
+  margin-bottom: 0;
+  font-family: system-ui;
+  text-align: left;
+}
+.texts p {
+  font-size: 17px;
+  text-align: left;
+  width: 50%;
+  margin: 0;
+  line-height: 24px;
+}
+
+/** DIAGRAMMS **/
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: -70px;
+  text-align: center;
+}
+.diagramms {
+  color: #888d91;
+  font-weight: 700;
+  font-family: system-ui;
+ 
+}
+.diagramms .background {
+  background-color: #d8d9dd;
+  color: #888d91;
+  font-weight: 700;
+  font-family: system-ui;
+  width: 140px;
+  height: 20px;
+  border-radius: 3px 3px 0 0;
+  margin: 20px;
+  padding: 15px 10px 0;
+}
+
+.firstp{
+    color: #33BFFA!important;
+}
+
+.secondp{
+    color: #8D53FD!important;
+   
+}
+.diagramms:nth-child(1) .background {
+    background:  #33BFFA;
+   height: 20px;
+ }
+.diagramms:nth-child(2) .background {
+  
+  height: 70px;
+}
+.diagramms:nth-child(3) .background {
+  height: 130px;
+}
+.diagramms:nth-child(4) .background {
+  height: 200px;
+}
+.diagramms:nth-child(5) .background {
+  height: 250px;
+}
+.diagramms p {
+  color: #333a48;
+  font-weight: 600;
+  font-family: system-ui;
+  font-size: 15px;
+  line-height: 17px;
+  margin: 5px;
+}
+
+@media (max-width: 1080px) {
+  .diagramms .background {
+    width: 100px;
+  }
+}
+@media (max-width: 765px) {
+  .diagramms .background {
+    width: 70px;
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .texts h3 {
+    font-size: 20px;
+  }
+  .texts p {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .diagramms p {
+    font-size: 12px;
+    line-height: 17px;
+    font-weight: 600;
+  }
+
+  .diagramms:nth-child(2) .background {
+    height: 50px;
+  }
+  .diagramms:nth-child(3) .background {
+    height: 80px;
+  }
+  .diagramms:nth-child(4) .background {
+    height: 120px;
+  }
+  .diagramms:nth-child(5) .background {
+    height: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+
+    .hammasi{
+       padding: 0;
+        border: none;
+    }
+    .diagramms .background {
+      width: 52px;
+      margin: 6px;
+      padding: 5px;
+      font-size: 8px;
+    }
+    .texts h3 {
+      font-size: 14px;
+    }
+
+    .diagramms {
+        font-size: 12px;
+    }
+    .texts p {
+      font-size: 10px;
+      line-height: 17px;
+      
+    }
+    .diagramms p {
+      font-size: 9px;
+      line-height: 12px;
+      font-weight: 700;
+    }
+  
+    .diagramms:nth-child(2) .background {
+      height: 30px;
+    }
+    .diagramms:nth-child(3) .background {
+      height: 50px;
+    }
+    .diagramms:nth-child(4) .background {
+      height: 90px;
+    }
+    .diagramms:nth-child(5) .background {
+      height: 140px;
+    }
+  }
+  
