@@ -100,7 +100,7 @@ export default function Stat(props) {
   ];
 
 
-  const dates = stat.map(({ date, total, valid} )  =>  ({ ["Sana"]:date.slice(0, 10), ["So'zlangan"]: Math.floor(total / 3600), ["Tinglangan"]: Math.floor(valid / 3600) }));
+  const dates = stat.map(({ date, total, valid} )  =>  ({ ["Sana"]:date.slice(0, 10), ["So'zlangan soat"]: Math.floor(total / 3600), ["Tinglangan soat"]: Math.floor(valid / 3600) }));
 
   console.log(dates)
 
@@ -232,14 +232,14 @@ export default function Stat(props) {
               <Tooltip />
               <Area
                 type="monotone"
-                dataKey="So'zlangan"
+                dataKey="So'zlangan soat"
                 stroke="#FD5353"
                 fillOpacity={1}
                 fill="url(#colorUv)"
               />
               <Area
                 type="monotone"
-                dataKey="Tinglangan"
+                dataKey="Tinglangan soat"
                 stroke="#33BFFA"
                 fillOpacity={1}
                 fill="url(#colorPv)"
