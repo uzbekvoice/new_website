@@ -3,7 +3,7 @@ import style from "../styles/Bosqich.module.css";
 import "react-phone-number-input/style.css";
 import Input from "react-phone-number-input/input";
 import { useRouter } from "next/router";
-const FormRegister = () => {
+const FormRegister = ({ form }) => {
   const { locale } = useRouter();
   const [alert, setAlert] = useState("false");
   const [fio, setFio] = useState("");
@@ -14,14 +14,21 @@ const FormRegister = () => {
   const [level, setLevel] = useState("");
   const [confirm, setConfirm] = useState("");
   const [touched, setTouched] = useState(false);
+  const [touchedNum, setTouchedNum] = useState(false);
   const isValid = age >= 18;
+
+  // const num= form.map(({contacts}) => (contacts))
+  // const isValidNum = phone !== num;
+  // console.log(num)
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (
       fio !== "" &&
       level !== "" &&
       phone !== "" &&
-      age !== "" && age >=18 &&
+      age !== "" &&
+      age >= 18 &&
       country !== "" &&
       size !== "" &&
       confirm !== ""
@@ -58,15 +65,15 @@ const FormRegister = () => {
     }
   };
 
-  // console.log(age)
   return (
     <>
       <form
         className={style.onlineRegister}
         onSubmit={handleSubmit}
+        style={{ display: alert === "true" ? "none" : "block" }}
         method="post"
 
-        // style={{ display: alert === "true" ? "none" : "block" }}
+        
       >
         <input
           onChange={(e) => setFio(e.target.value)}
@@ -93,8 +100,6 @@ const FormRegister = () => {
         ) : null}
         {/* Alert uchun */}
 
-    
-
         <Input
           international
           country="UZ"
@@ -104,8 +109,17 @@ const FormRegister = () => {
           value={phone}
           required
           onChange={setPhone}
+          // onBlur={() => setTouchedNum(true)}
         />
-        {/* <input onChange={(e) => setPhone(e.target.value)} placeholder="Telefon raqamingiz" type="phone" re /> */}
+        {/* Alert uchun */}
+        {/* {touchedNum ? (
+          isValidNum ? (
+            <></>
+          ) : (
+            <h6>Ushbu raqam orqali avval ro`yxatdan o'tkansiz</h6>
+          )
+        ) : null} */}
+        {/* Alert uchun */}
 
         <label>Futbolka o'lchami:</label>
         <div className={style.radio_container}>
@@ -170,14 +184,6 @@ const FormRegister = () => {
             <label for="xxl">XXL </label>
           </div>
         </div>
-        {/* <select onChange={(e) => setSize(e.target.value)}>
-                    <option value="xs">XS</option>
-                    <option value="s">S</option>
-                    <option value="m">M</option>
-                    <option value="l">L</option>
-                    <option value="xl">XL</option>
-                    <option value="xxl">XXL</option>
-                </select> */}
         <p>Qaysi viloyatdansiz ?</p>
         <select
           name="region"

@@ -3,7 +3,8 @@ import style from "../styles/Bosqich.module.css";
 import FormRegister from "./OnliOfflineRegisterForm";
 import { useRouter } from "next/router";
 
-const OnlineOfline = ({ data }) => {
+const OnlineOfline = ({ data, form }) => {
+  
   const { locale } = useRouter();
   const dates = data.filter((c) => c.languages_code === locale);
   const liston = dates[0].online_strings;
@@ -49,7 +50,7 @@ const OnlineOfline = ({ data }) => {
                 </a>
               </div>
 
-              {show ? <FormRegister /> : null}
+              {show ? <FormRegister form={form}  /> : null}
             </div>
           </div>
         )
