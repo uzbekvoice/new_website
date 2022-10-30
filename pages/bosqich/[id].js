@@ -28,12 +28,15 @@ export async function getServerSideProps() {
     "https://admin.uzbekvoice.ai/items/contest_gifts_translations"
   );
   const res5 = await fetch("https://admin.uzbekvoice.ai/items/partners");
-  const res6 = await fetch(
-    "https://admin.uzbekvoice.ai/items/faq_translations"
-  );
+
+
+  const res6 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_mentors_translations')
 
   const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations");
   const res8 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
+  const formdata = await fetch(
+    "https://admin.uzbekvoice.ai/items/camp_form"
+  );
 
   const data = await res.json();
   const users = await res2.json();
@@ -43,6 +46,7 @@ export async function getServerSideProps() {
   const faq = await res6.json();
   const camp =await res7.json();
   const photo =await res8.json();
+  const form =await formdata.json();
 
   return {
     props: {
@@ -53,7 +57,8 @@ export async function getServerSideProps() {
       partners,
       faq,
       camp,
-      photo
+      photo,
+      form
     },
   };
 }
@@ -66,7 +71,8 @@ export default function Bosqich({
   partners,
   faq,
   camp,
-  photo
+  photo,
+  form
 }) {
   const { locale, query } = useRouter();
 
@@ -155,7 +161,7 @@ export default function Bosqich({
       {parseInt(query.id) === 2 ? (
         <>
           <Oromgoh data ={camp.data}/>
-          <OnlineOfline data ={camp.data}/>
+          <OnlineOfline form={form.data} data ={camp.data}/>
           <AboutOromgoh data ={camp.data}/>
 
         </>
