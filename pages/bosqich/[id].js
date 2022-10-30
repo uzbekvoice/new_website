@@ -30,7 +30,7 @@ export async function getServerSideProps() {
   const res5 = await fetch("https://admin.uzbekvoice.ai/items/partners");
 
 
-  const res6 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_mentors_translations')
+  const res6 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations')
 
   const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations");
   const res8 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
