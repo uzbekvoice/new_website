@@ -19,7 +19,7 @@
 }
 .texts p {
   font-size: 17px;
-  text-align: left;
+  text-align: left!important;
   width: 55%!important;
   margin: 0;
   line-height: 24px;
