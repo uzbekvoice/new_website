@@ -19,9 +19,9 @@
 }
 .texts p {
   font-size: 17px;
-  text-align: left;
-  width: 50%;
-  margin: 0;
+  text-align: left!important;
+  width: 55%!important;
+  margin: 0!important;
   line-height: 24px;
 }
 
@@ -127,6 +127,8 @@
 
 @media (max-width: 550px) {
 
+
+
     .hammasi{
        padding: 0;
         border: none;
@@ -135,23 +137,23 @@
       width: 52px;
       margin: 6px;
       padding: 5px;
-      font-size: 8px;
+      font-size: 8px!important;
     }
     .texts h3 {
-      font-size: 14px;
+      font-size: 14px!important;
     }
 
     .diagramms {
-        font-size: 12px;
+        font-size: 12px!important;
     }
     .texts p {
-      font-size: 10px;
-      line-height: 17px;
+      font-size: 10px!important;
+      line-height: 17px!important;
       
     }
     .diagramms p {
-      font-size: 9px;
-      line-height: 12px;
+      font-size: 9px!important;
+      line-height: 12px!important;
       font-weight: 700;
     }
   
