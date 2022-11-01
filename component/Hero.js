@@ -29,7 +29,7 @@ export default function Hero(props) {
                       alt="telegramicon"
                       quality={75}
                     />
-                    <a href="https://t.me/joinchat/P84ptL81sN8yNWRi">
+                    <a href="https://t.me/uzbekvoice">
                       {button2}
                     </a>
                   </div>
