@@ -145,7 +145,7 @@ export default function Stat(props) {
                 <p>{description}</p>
                 <div className={styles.status}>
                   <div className={styles.block}>
-                    <span>~270 000 </span> <p> {parag1}</p>
+                    <span>~1 800 000 </span> <p> {parag1}</p>
                   </div>
 
                   <div className={styles.block}>

@@ -57,7 +57,7 @@ export default function Footer() {
                       </Link>
                     </li>
                     <li>
-                      <Link href="https://t.me/joinchat/P84ptL81sN8yNWRi">
+                      <Link href="https://t.me/uzbekvoice">
                         <a target={'_blank'}>
                           <img src="/telegramm.png" />
                           <span>{telegram}</span>
