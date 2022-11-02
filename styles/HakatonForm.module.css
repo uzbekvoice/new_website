@@ -541,6 +541,14 @@
 
   }
 
+  .partners::before {
+
+   
+    width: 200px;
+    height: 200px;
+  
+  }
+
   .partners_right .position label {
     width: 100%;
   }
