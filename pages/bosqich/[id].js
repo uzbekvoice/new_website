@@ -190,14 +190,14 @@ export default function Bosqich({
       <Winners bosqich={true} users={users} userslist={userslist} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
 
-      {/* {
+       {
         (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
                <Prizes
         title={data[0].contest_award_ceremony}
         prize={prize}
         galleryID="my-test-gallery"
       />
-      } */}
+      } 
 
 
 { parseInt(query.id) === 2 ? (
