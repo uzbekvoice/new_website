@@ -100,7 +100,8 @@ export default function Stat(props) {
   ];
 
 
-  const dates = stat.map(({ date, total, valid} )  =>  ({ ["Sana"]:date.slice(0, 10), ["So'zlangan soat"]: Math.floor(total / 3600), ["Tinglangan soat"]: Math.floor(valid / 3600) }));
+  const dates = stat.filter((c) => c.date >= "2022-08")
+  .map(({ date, total, valid} )  =>  ({ ["Sana"]:date.slice(0, 10), ["So'zlangan soat"]: Math.floor(total / 3600), ["Tinglangan soat"]: Math.floor(valid / 3600) }));
 
   console.log(dates)
 
@@ -190,28 +191,12 @@ export default function Stat(props) {
           /> */}
         </div>
 
-        {/* <BarChart
-  width={730}
-  height={350}
-  data={data3}
-  margin={{ top: 15, right: 30, left: 20, bottom: 5 }}
->
-  <CartesianGrid strokeDasharray="3 3" />
-  <XAxis dataKey="name">
-    
-  </XAxis>
-
- 
-  <Bar dataKey="uv" fill="rgba(55, 65, 81, 0.2)">
-    <LabelList dataKey="uv" position="top" />
-  </Bar>
-</BarChart> */}
 
         <div className={styles.img_hour}>
   
         <StatHours />
 
-          <ResponsiveContainer width="100%" height={350}>
+          <ResponsiveContainer width="90%" height={350}>
             <AreaChart
               data={dates}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
