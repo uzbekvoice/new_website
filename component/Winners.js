@@ -26,7 +26,7 @@ export default function Winners({ users, userslist, bosqich }) {
           <h4>
             {
               locale === "uz-UZ" ?
-                <span>Eng faol tinglovchi</span>
+                <span>Eng yaxshi ovoz tekshiruvchi.</span>
                 : locale === "ru-RU" ?
                   <span>Активные участники</span>
                   : <span>The most active listener</span>
@@ -62,7 +62,7 @@ export default function Winners({ users, userslist, bosqich }) {
           <h4>
             {
               locale === "uz-UZ" ?
-                <span>Eng faol so'zlovchi</span>
+                <span>Eng yaxshi ovoz yozuvchi</span>
                 : locale === "ru-RU" ?
                   <span>Самый активный спикер</span>
                   : <span>The most active speaker</span>
@@ -110,7 +110,7 @@ export default function Winners({ users, userslist, bosqich }) {
                       <div className={styles.title}>
                         <h3> {
                           locale === "uz-UZ" ?
-                            <span>Eng faol tinglovchi</span>
+                            <span>Eng yaxshi ovoz tekshiruvchi.</span>
                             : locale === "ru-RU" ?
                               <span>Активные участники</span>
                               : <span>The most active listener</span>
@@ -158,7 +158,7 @@ export default function Winners({ users, userslist, bosqich }) {
                       <div className={styles.title}>
                         <h3>{
                           locale === "uz-UZ" ?
-                            <span>Eng faol so'zlovchi</span>
+                            <span>Eng yaxshi ovoz yozuvchi</span>
                             : locale === "ru-RU" ?
                               <span>Самый активный спикер</span>
                               : <span>The most active speaker</span>

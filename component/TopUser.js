@@ -91,7 +91,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
                               <div className={styles.title}>
                               {
               locale === "uz-UZ" ?
-                <h3>Eng faol tinglovchi</h3>
+                <h3>Eng yaxshi ovoz tekshiruvchi.</h3>
                 : locale === "ru-RU" ?
                   <h3>Активные участники</h3>
                   : <h3>The most active listener</h3>
@@ -147,7 +147,7 @@ export default function TopUser({ users, userslist, HomeContent }) {
         
                                    {
               locale === "uz-UZ" ?
-                <h3>Eng faol so'zlovchi</h3>
+                <h3>Eng yaxshi ovoz yozuvchi</h3>
                 : locale === "ru-RU" ?
                   <h3>Самый активный спикер</h3>
                   : <h3>The most active speaker</h3>
