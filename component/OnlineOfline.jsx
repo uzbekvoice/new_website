@@ -39,7 +39,7 @@ const OnlineOfline = ({ data, form }) => {
                   ))}
                 </ul>
               </div>
-              <div className={style.btn}>
+              {/* <div className={style.btn}>
                 <a
                   style={{
                     marginBottom: "30px",
@@ -50,7 +50,7 @@ const OnlineOfline = ({ data, form }) => {
                 </a>
               </div>
 
-              {show ? <FormRegister form={form}  /> : null}
+              {show ? <FormRegister form={form}  /> : null} */}
             </div>
           </div>
         )
