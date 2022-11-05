@@ -1,18 +1,19 @@
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
-import styles from "../../styles/Bosqich.module.css";
-import Marathon from "../../component/Marathon";
-import Winners from "../../component/Winners";
-import Prizes from "../../component/Prizes";
-import BosqichPrizes from "../../component/BosqichPrizes";
-import Oromgoh from "../../component/Oromgoh";
-import OnlineOfline from "../../component/OnlineOfline";
-import InitiativePartners from "../../component/InitiativePartners";
-import HomeContent from "../homeapi/static.json";
-import Question from "../../component/Question/Question";
-import PhotoAlbom from "../../component/PhotoAlbom";
-import AboutOromgoh from "../../component/AboutOromgoh";
+import styles from    "../../../styles/Bosqich.module.css";
+import Marathon from "../../../component/Marathon";
+import Winners from "../../../component/Winners";
+import Prizes from "../../../component/Prizes";
+import BosqichPrizes from "../../../component/BosqichPrizes";
+import Oromgoh from "../../../component/Oromgoh";
+import OnlineOfline from "../../../component/OnlineOfline";
+import InitiativePartners from "../../../component/InitiativePartners";
+import HomeContent from "../../homeapi/static.json";
+import Question from "../../../component/Question/Question";
+import PhotoAlbom from "../../../component/PhotoAlbom";
+import AboutOromgoh from "../../../component/AboutOromgoh";
+
 
 export async function getServerSideProps() {
   const res2 = await fetch(
