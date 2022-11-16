@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { useRouter } from "next/router";
-import styles from    "../../../styles/Bosqich.module.css";
+import styles from "../../../styles/Bosqich.module.css";
 import Marathon from "../../../component/Marathon";
 import Winners from "../../../component/Winners";
 import Prizes from "../../../component/Prizes";
@@ -13,7 +13,6 @@ import HomeContent from "../../homeapi/static.json";
 import Question from "../../../component/Question/Question";
 import PhotoAlbom from "../../../component/PhotoAlbom";
 import AboutOromgoh from "../../../component/AboutOromgoh";
-
 
 export async function getServerSideProps() {
   const res2 = await fetch(
@@ -30,14 +29,17 @@ export async function getServerSideProps() {
   );
   const res5 = await fetch("https://admin.uzbekvoice.ai/items/partners");
 
-
-  const res6 = await fetch('https://admin.uzbekvoice.ai/items/faq_translations')
-
-  const res7 =await fetch("https://admin.uzbekvoice.ai/items/camp_page_translations");
-  const res8 = await fetch('https://admin.uzbekvoice.ai/items/hackathons_translations_files')
-  const formdata = await fetch(
-    "https://admin.uzbekvoice.ai/items/camp_form"
+  const res6 = await fetch(
+    "https://admin.uzbekvoice.ai/items/faq_translations"
   );
+
+  const res7 = await fetch(
+    "https://admin.uzbekvoice.ai/items/camp_page_translations"
+  );
+  const res8 = await fetch(
+    "https://admin.uzbekvoice.ai/items/hackathons_translations_files"
+  );
+  const formdata = await fetch("https://admin.uzbekvoice.ai/items/camp_form");
 
   const data = await res.json();
   const users = await res2.json();
@@ -45,9 +47,9 @@ export async function getServerSideProps() {
   const resGifts = await res4.json();
   const partners = await res5.json();
   const faq = await res6.json();
-  const camp =await res7.json();
-  const photo =await res8.json();
-  const form =await formdata.json();
+  const camp = await res7.json();
+  const photo = await res8.json();
+  const form = await formdata.json();
 
   return {
     props: {
@@ -59,7 +61,7 @@ export async function getServerSideProps() {
       faq,
       camp,
       photo,
-      form
+      form,
     },
   };
 }
@@ -73,7 +75,7 @@ export default function Bosqich({
   faq,
   camp,
   photo,
-  form
+  form,
 }) {
   const { locale, query } = useRouter();
 
@@ -93,10 +95,9 @@ export default function Bosqich({
 
   return (
     <div className={styles.bosqichPage}>
-       
       {parseInt(query.id) !== 2 ? (
         <>
-         <div
+          <div
             className={
               styles.isContinue + " " + data[0].contest_status + " bosqich"
             }
@@ -154,17 +155,16 @@ export default function Bosqich({
           </div>
         </>
       ) : (
-        <Marathon data = {camp.data}/>
+        <Marathon data={camp.data} />
       )}
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
       {parseInt(query.id) === 2 ? (
         <>
-          <Oromgoh data ={camp.data}/>
-          <OnlineOfline form={form.data} data ={camp.data}/>
-          <AboutOromgoh data ={camp.data}/>
-
+          <Oromgoh data={camp.data} />
+          <OnlineOfline form={form.data} data={camp.data} />
+          <AboutOromgoh data={camp.data} />
         </>
       ) : (
         false
@@ -191,25 +191,20 @@ export default function Bosqich({
       <Winners bosqich={true} users={users} userslist={userslist} />
       <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
 
-       {
-        (data[0].contest_status !== 'faol' && data[0].contest_status !== 'active' && data[0].contest_status !== 'активный') &&
-               <Prizes
+      <Prizes
         title={data[0].contest_award_ceremony}
         prize={prize}
         galleryID="my-test-gallery"
       />
-      } 
 
-
-{ parseInt(query.id) === 2 ? (
-  <div>
-  {/* <PhotoAlbom data={photo.data}/> */}
- <Question data={faq.data} HomeContent={HomeContent} />
- </div>
-) : (
-  false
-)}
-     
+      {parseInt(query.id) === 2 ? (
+        <div>
+          {/* <PhotoAlbom data={photo.data}/> */}
+          <Question data={faq.data} HomeContent={HomeContent} />
+        </div>
+      ) : (
+        false
+      )}
     </div>
   );
 }
