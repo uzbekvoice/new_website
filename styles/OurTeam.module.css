@@ -13,8 +13,8 @@
 }
 
 .ourteam h4 {
-  font-size: 15px;
-  font-weight: 550;
+  font-size: 17px;
+  font-weight: 600;
   letter-spacing: 0.0022em;
   color: #12273c;
   margin-top: 12px;
@@ -22,13 +22,13 @@
 
 .ourteam p{
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 16px;
 
   color: #12273ce3;
 }
 
 .ourteam h5 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.0022em;
   color: rgba(128, 128, 128, 0.692);
