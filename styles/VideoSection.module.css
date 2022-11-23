@@ -1,0 +1,10 @@
+.container{
+    position: relative;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.container video{
+    border-radius: 15px;
+    width: 100%;
+}

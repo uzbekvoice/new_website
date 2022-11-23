@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import styles from "../styles/Marathon.module.css";
 import archer1 from "../public/archer1.png";
-import archer2 from "../public/archer2.png";
+import archer3 from "../public/archer3.png";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -21,8 +21,7 @@ export default function Marathon({ data }) {
             finish,
             title_stage,
             finish_date,
-            goal_title,
-            goal,
+            goal_title
           }) => (
             <div className={parseInt(query.id) === 2 ? styles.goal__box: styles.formobile}>
               <h2 className={styles.box__title}>
@@ -53,10 +52,10 @@ export default function Marathon({ data }) {
                 <span className={styles.archerTarget}>
                   <Image
                     className={styles.archerImage}
-                    src={archer2}
+                    src={archer3}
                     alt="target"
                   />
-                  <p className={styles.timeInfo}>{goal}</p>
+                  <p className={styles.timeInfo}>1000 soat</p>
                 </span>
               </div>
               <div className={styles.status}>

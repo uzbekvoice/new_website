@@ -13,6 +13,8 @@ import HomeContent from "../../homeapi/static.json";
 import Question from "../../../component/Question/Question";
 import PhotoAlbom from "../../../component/PhotoAlbom";
 import AboutOromgoh from "../../../component/AboutOromgoh";
+import InitiativePartnersSteps from "../../../component/InitiativePartnersStep";
+import VideoSection from "../../../component/VideoSection";
 
 export async function getServerSideProps() {
   const res2 = await fetch(
@@ -155,12 +157,14 @@ export default function Bosqich({
           </div>
         </>
       ) : (
-        <Marathon data={camp.data} />
+        <>
+          <Marathon data={camp.data} />
+        </>
       )}
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
-      {parseInt(query.id) === 2 ? (
+      {/* {parseInt(query.id) === 2 ? (
         <>
           <Oromgoh data={camp.data} />
           <OnlineOfline form={form.data} data={camp.data} />
@@ -168,7 +172,9 @@ export default function Bosqich({
         </>
       ) : (
         false
-      )}
+      )} */}
+
+      {parseInt(query.id) === 2 ? <VideoSection /> : false}
 
       <div className={styles.rules}>
         {locale === "uz-UZ" ? (
@@ -189,7 +195,10 @@ export default function Bosqich({
       </div>
 
       <Winners bosqich={true} users={users} userslist={userslist} />
-      <InitiativePartners HomeContent={HomeContent} partners={partners.data} />
+      <InitiativePartnersSteps
+        HomeContent={HomeContent}
+        partners={partners.data}
+      />
 
       <Prizes
         title={data[0].contest_award_ceremony}
