@@ -1,20 +1,22 @@
 import React from "react";
 import styles from "../styles/VideoSection.module.css";
+import Plyr from "plyr-react";
+import "plyr-react/plyr.css";
 
 export default function VideoSection() {
   return (
     <div className={styles.container}>
-  
-        <video
-        //   poster="/oromgoh.jfif"
-          src="/oromgoh.MP4"
-          controls
-          muted
-          loop
-
-          // autoPlay
-        ></video>
-  
+      <Plyr
+        source={{
+          type: "video",
+          sources: [
+            {
+              src: "tRufat-LWpU",
+              provider: "youtube",
+            },
+          ],
+        }}
+      />
     </div>
   );
 }

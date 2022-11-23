@@ -6,6 +6,7 @@
   position: relative;
   padding: 0 108px;
 }
+
 .question h3 {
   font-size: 48px;
   font-weight: 900;
@@ -15,16 +16,20 @@
   margin: 32px 0px;
 }
 
-.faqSides{ /** question and email text sides **/
+.faqSides {
+  /** question and email text sides **/
   display: flex;
   align-items: flex-start;
 }
-.main{ /** accordion_section_main **/
+
+.main {
+  /** accordion_section_main **/
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
 }
 
-.faqButton{ /** faq button **/
+.faqButton {
+  /** faq button **/
   width: 80%;
   background-color: #00C5FF;
   color: #ffffff;
@@ -34,7 +39,9 @@
   font-weight: 700;
   margin-top: 20px;
 }
-.faqButton:hover{ /** faq button hover **/
+
+.faqButton:hover {
+  /** faq button hover **/
   background-color: rgb(128, 128, 128);
   color: #fff;
   cursor: pointer;
@@ -46,7 +53,9 @@
   font-size: 18px;
   font-family: system-ui;
   font-weight: 700;
+  column-gap: 20px;
 }
+
 .accordion_text {
   width: 75%;
   color: #b1b1b1;
@@ -56,8 +65,18 @@
   line-height: 25px;
   font-family: 'Rubik', sans-serif;
 }
-.accordion_readbtn{ /** accordion read element **/
+
+.accordion_readbtn {
+  /** accordion read element **/
   padding-left: 10px;
+}
+
+@media (min-width: 665px) and (max-width: 767) {
+  .main {
+    /** accordion_section_main **/
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  }
 }
 
 @media (max-width: 767px) {
@@ -66,8 +85,9 @@
     margin-bottom: 100px;
     text-align: center;
     position: relative;
-    padding: 0 ;
+    padding: 0;
   }
+
   .question h3 {
     font-size: 28px;
     font-weight: 800;
@@ -76,17 +96,21 @@
     color: #12273c;
     margin: 32px 0px;
   }
-  .accordion_title{
+
+  .accordion_title {
     font-size: 15px;
   }
+
   .accordion_text {
     text-align: left;
     font-size: 12px;
   }
-  .faqSides{
+
+  .faqSides {
     display: inline;
   }
-  .faqButton{
+
+  .faqButton {
     padding: 15px 0;
   }
 }
