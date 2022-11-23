@@ -7,7 +7,7 @@ export default function VideoSection() {
   
         <video
         //   poster="/oromgoh.jfif"
-          src="/oromgoh.mp4"
+          src="/oromgoh.MP4"
           controls
           muted
           loop
