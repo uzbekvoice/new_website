@@ -3,6 +3,8 @@ import styles from "../styles/Topuser.module.css";
 import Image from "next/image";
 import { FiXCircle } from "react-icons/fi";
 import { useRouter } from "next/router";
+import audioListener from '../pages/winnersapi/audio-listener.json'
+import audioChecker from '../pages/winnersapi/audio-checker.json'
 
 export default function Winners({ users, userslist, bosqich }) {
   const [showModal, setShowModal] = React.useState(false);
@@ -15,7 +17,7 @@ export default function Winners({ users, userslist, bosqich }) {
       <h3>
         {
           locale === "uz-UZ" ?
-            <span>Yetakchi a'zolar</span>
+            <span>G'oliblar</span>
             : locale === "ru-RU" ?
               <span>Самый активный слушатель</span>
               : <span>Leading members</span>
@@ -26,21 +28,21 @@ export default function Winners({ users, userslist, bosqich }) {
           <h4>
             {
               locale === "uz-UZ" ?
-                <span>Eng yaxshi ovoz tekshiruvchi.</span>
+                <span>Eng yaxshi ovoz tekshiruvchi</span>
                 : locale === "ru-RU" ?
                   <span>Активные участники</span>
                   : <span>The most active listener</span>
             }
           </h4>
           {
-            users.slice(0, 3).map((dates) =>
-              <div key={dates.clientHash} className={styles.card}>
+            audioListener.map((post) =>
+              <div key={post.id} className={styles.card}>
                 <div className={styles.item}>
                   <div className={styles.block}>
                     <Image src="/leader.png" width={72} height={72} alt="Leader" />
-                    <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
+                    <h5>{post.name}</h5>
                   </div>
-                  <span>{dates.total}</span>
+                  <span>{post.ranking}</span>
                 </div>
               </div>
             )
@@ -69,14 +71,14 @@ export default function Winners({ users, userslist, bosqich }) {
             }
           </h4>
           {
-            userslist.slice(0, 3).map((dates) =>
-              <div key={dates.clientHash} className={styles.card}>
+            audioChecker.map((post) =>
+              <div key={post.id} className={styles.card}>
                 <div className={styles.item}>
                   <div className={styles.block}>
                     <Image src="/leader.png" width={72} height={72} alt="Leader" />
-                    <h5>{dates.username.split(" ", 2) .join(" ")}</h5>
+                    <h5>{post.name}</h5>
                   </div>
-                  <span>{dates.total}</span>
+                  <span>{post.ranking}</span>
                 </div>
               </div>
             )
