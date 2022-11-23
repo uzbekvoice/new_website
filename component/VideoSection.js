@@ -11,7 +11,7 @@ export default function VideoSection() {
           type: "video",
           sources: [
             {
-              src: "tRufat-LWpU",
+              src: "q_5irty88lY",
               provider: "youtube",
             },
           ],
