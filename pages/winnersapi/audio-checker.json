@@ -2,16 +2,81 @@
     {
         "id": 1,
         "name": "Teshaboyev Muxammadiyor",
-        "ranking": "31.550"
-    },
-    {
-        "id": 1,
-        "name": "Teshaboyev Muxammadiyor",
         "ranking": "31.554"
     },
     {
-        "id": 1,
-        "name": "Teshaboyev Muxammadiyor",
-        "ranking": "31.554"
+        "id": 2,
+        "name": " Nizomov Furqat",
+        "ranking": "32.260"
+    },
+    {
+        "id": 3,
+        "name": "Tojiyev Baxtiyor",
+        "ranking": "28.880"
+    },
+    {
+        "id": 4,
+        "name": "Jumaboyeva Iroda",
+        "ranking": "25.955"
+    },
+    {
+        "id": 5,
+        "name": "Qalibekova Dinora",
+        "ranking": "22.513"
+    },
+    {
+        "id": 6,
+        "name": "Akramjonov Muxamadali",
+        "ranking": "22.252"
+    },
+    {
+        "id": 7,
+        "name": "Nigora Usmankulova",
+        "ranking": "19.280"
+    },
+    {
+        "id": 8,
+        "name": "Qodirov Otabek",
+        "ranking": "18.236"
+    },
+    {
+        "id": 9,
+        "name": "Ismatov Javokhir",
+        "ranking": "17.890"
+    },
+    {
+        "id": 10,
+        "name": "Tojiboyev Abbos",
+        "ranking": "15.498"
+    },
+    {
+        "id": 11,
+        "name": "Maxkamova Muslima",
+        "ranking": "14.621"
+    },
+    {
+        "id": 12,
+        "name": "Nazarov Su'rat",
+        "ranking": "12.326"
+    },
+    {
+        "id": 13,
+        "name": "Ibrohimova Mahliyo",
+        "ranking": "11.655"
+    },
+    {
+        "id": 14,
+        "name": "Uzoqova Sitora",
+        "ranking": "11.561"
+    },
+    {
+        "id": 15,
+        "name": "Mirzaulug'ov Shahzod",
+        "ranking": "11.107"
+    },
+    {
+        "id": 16,
+        "name": "Imomova Saida",
+        "ranking": "10.011"
     }
 ]

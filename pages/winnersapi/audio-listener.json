@@ -1,17 +1,82 @@
 [
     {
         "id": 1,
-        "name": "Teshaboyev Muxammadiyor",
-        "ranking": "31.554"
+        "name": "Davronov Sherzod",
+        "ranking": "33.901"
     },
     {
-        "id": 1,
-        "name": "Teshaboyev Muxammadiyor",
-        "ranking": "31.554"
+        "id": 2,
+        "name": "Ismoilov Azizbek",
+        "ranking": "32.938"
     },
     {
-        "id": 1,
-        "name": "Teshaboyev Muxammadiyor",
-        "ranking": "31.554"
+        "id": 3,
+        "name": "Ruziyev Islom",
+        "ranking": "21.146"
+    },
+    {
+        "id": 4,
+        "name": "Akbaralliyeva Navroza",
+        "ranking": "15.201"
+    },
+    {
+        "id": 5,
+        "name": "Ziyodullayev Bekzod",
+        "ranking": "10.041"
+    },
+    {
+        "id": 6,
+        "name": "Abdusalomov Sunnatulla",
+        "ranking": "9.241"
+    },
+    {
+        "id": 7,
+        "name": "Shukurov Lochin",
+        "ranking": "9.009"
+    },
+    {
+        "id": 8,
+        "name": "Ergashev Bobur",
+        "ranking": "7.768"
+    },
+    {
+        "id": 9,
+        "name": "Ergashev Bobur",
+        "ranking": "7.768"
+    },
+    {
+        "id": 10,
+        "name": "Abdulaminova Adolat",
+        "ranking": "7.707"
+    },
+    {
+        "id": 11,
+        "name": "Salimov Doniyor",
+        "ranking": "7.635"
+    },
+    {
+        "id": 12,
+        "name": "Bekchanova Shahlo",
+        "ranking": "7.525"
+    },
+    {
+        "id": 13,
+        "name": "Gulhayo Akbaraliyeva",
+        "ranking": "7.335"
+    },
+    {
+        "id": 14,
+        "name": "Bahromova Go‘zal ",
+        "ranking": "7.303"
+    },
+    {
+        "id": 15,
+        "name": "Rustamov Dilyorbek",
+        "ranking": "6.606"
+    },
+    {
+        "id": 16,
+        "name": "Shaxrillo Nusratov",
+        "ranking": "5.678"
     }
 ]
