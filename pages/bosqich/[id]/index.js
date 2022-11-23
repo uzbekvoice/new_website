@@ -157,7 +157,11 @@ export default function Bosqich({
           </div>
         </>
       ) : (
-        <Marathon data={camp.data} />
+        <>
+          <Marathon data={camp.data} />
+        <VideoSection />
+        </>
+      
       )}
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
@@ -201,7 +205,7 @@ export default function Bosqich({
 
       {parseInt(query.id) === 2 ? (
         <div>
-          <VideoSection />
+         
           {/* <PhotoAlbom data={photo.data}/> */}
           <Question data={faq.data} HomeContent={HomeContent} />
         </div>
