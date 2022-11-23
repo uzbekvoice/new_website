@@ -159,9 +159,7 @@ export default function Bosqich({
       ) : (
         <>
           <Marathon data={camp.data} />
-        <VideoSection />
         </>
-      
       )}
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
@@ -175,6 +173,8 @@ export default function Bosqich({
       ) : (
         false
       )} */}
+
+      {parseInt(query.id) === 2 ? <VideoSection /> : false}
 
       <div className={styles.rules}>
         {locale === "uz-UZ" ? (
@@ -195,7 +195,10 @@ export default function Bosqich({
       </div>
 
       <Winners bosqich={true} users={users} userslist={userslist} />
-      <InitiativePartnersSteps HomeContent={HomeContent} partners={partners.data} />
+      <InitiativePartnersSteps
+        HomeContent={HomeContent}
+        partners={partners.data}
+      />
 
       <Prizes
         title={data[0].contest_award_ceremony}
@@ -205,7 +208,6 @@ export default function Bosqich({
 
       {parseInt(query.id) === 2 ? (
         <div>
-         
           {/* <PhotoAlbom data={photo.data}/> */}
           <Question data={faq.data} HomeContent={HomeContent} />
         </div>
