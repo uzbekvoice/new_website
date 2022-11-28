@@ -8,7 +8,11 @@ export default function HakatonTeams({ resGifts, title }) {
   // console.log(pathname)
 
   return (
-    <div className={styles.hakatonTeams}>
+    <div
+      className={
+        parseInt(query.id) === 1 ? styles.hakatonTeams : styles.formarathon
+      }
+    >
       <h3 className={styles.hakatonTeams_title}>{title}</h3>
 
       <div className={styles.hakatonTeams_wrapper}>
