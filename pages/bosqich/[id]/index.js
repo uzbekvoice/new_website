@@ -99,8 +99,8 @@ export default function Bosqich({
 
   return (
     <div className={styles.bosqichPage}>
-      {parseInt(query.id) !== 2 ? (
-        <>
+     
+     
           <div
             className={
               styles.isContinue + " " + data[0].contest_status + " bosqich"
@@ -157,12 +157,12 @@ export default function Bosqich({
                 </div>
               )}
           </div>
-        </>
-      ) : (
-        <>
-          <Marathon data={camp.data} />
-        </>
-      )}
+ 
+    
+    
+          {/* <Marathon data={camp.data} /> */}
+     
+   
 
       <BosqichPrizes title={data[0].contest_gifts} resGifts={resGifts} />
 
