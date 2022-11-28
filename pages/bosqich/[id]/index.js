@@ -15,13 +15,15 @@ import PhotoAlbom from "../../../component/PhotoAlbom";
 import AboutOromgoh from "../../../component/AboutOromgoh";
 import InitiativePartnersSteps from "../../../component/InitiativePartnersStep";
 import VideoSection from "../../../component/VideoSection";
+import TopUser from "../../../component/TopUser";
+
 
 export async function getServerSideProps() {
   const res2 = await fetch(
-    "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
+    "https://commonvoice.mozilla.org/api/v1/uz/clips/leaderboard"
   );
   const res = await fetch(
-    "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
+    "https://commonvoice.mozilla.org/api/v1/uz/clips/votes/leaderboard"
   );
   const res3 = await fetch(
     "https://admin.uzbekvoice.ai/items/contest_stages_translations"
@@ -194,7 +196,9 @@ export default function Bosqich({
         </div>
       </div>
 
-      <Winners bosqich={true} users={users} userslist={userslist} />
+      {parseInt(query.id) === 2 ?      <Winners bosqich={true} users={users} userslist={userslist} /> : <TopUser users={users} userslist={userslist} HomeContent={HomeContent}/>}
+
+ 
       <InitiativePartnersSteps
         HomeContent={HomeContent}
         partners={partners.data}
