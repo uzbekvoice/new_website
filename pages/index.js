@@ -79,7 +79,7 @@ export default function Home({
   return (
     <div>
       <Hero HomeContent={HomeContent} />
-      <Marathon data={camp.data} />
+      {/* <Marathon data={camp.data} /> */}
       <Slider HomeContent={HomeContent} />
       <Stat stat={statsvotes} HomeContent={HomeContent} />
       <Step steps={steps.data} HomeContent={HomeContent} />
