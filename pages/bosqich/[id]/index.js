@@ -159,8 +159,8 @@ export default function Bosqich({
           </div>
  
     
-    
-          {/* <Marathon data={camp.data} /> */}
+          {parseInt(query.id) === 2 ?   <Marathon data={camp.data} /> : false}
+        
      
    
 
