@@ -29,7 +29,7 @@ export default function Marathon({ data }) {
                 {title_stage}
               </h2>
               <div className={styles.status}>
-                {/* <p>Faol</p> */}
+                <p>Faol</p>
               </div>
 
               <div className={styles.deadline}>
