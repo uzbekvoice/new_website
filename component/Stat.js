@@ -196,7 +196,7 @@ export default function Stat(props) {
   
         <StatHours />
 
-          <ResponsiveContainer width="90%" height={350}>
+          <ResponsiveContainer width="100%" height={350}>
             <AreaChart
               data={dates}
               margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
