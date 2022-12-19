@@ -1,0 +1,79 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "chart_texts_id": 1,
+      "languages_code": "en-US",
+      "chart_texts": [
+        {
+          "text": "Very high quality, generally large vocabulary, continuous speech recognition model"
+        },
+        {
+          "text": "Near-Human General ASR(Automatic Speech Recognition)"
+        },
+        {
+          "text": "Limited vocabulary continuous speech recognition specialized use cases"
+        },
+        {
+          "text": "Example: Technical Speech"
+        },
+        {
+          "text": "Command based model, limited vocabulary"
+        },
+        {
+          "text": "Example: Media and Navigation commands"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "chart_texts_id": 1,
+      "languages_code": "ru-RU",
+      "chart_texts": [
+        {
+          "text": "Очень качественная, как правило, большой словарный запас, модель непрерывного распознавания речи."
+        },
+        {
+          "text": "Почти человеческий общий ASR (автоматическое распознавание речи)"
+        },
+        {
+          "text": "Специализированные варианты использования непрерывного распознавания речи с ограниченным словарным запасом"
+        },
+        {
+          "text": "Пример: Техническая Речь"
+        },
+        {
+          "text": "Модель на основе команд, ограниченный словарный запас"
+        },
+        {
+          "text": "Пример: мультимедийные и навигационные команды"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "chart_texts_id": 1,
+      "languages_code": "uz-UZ",
+      "chart_texts": [
+        {
+          "text": "Juda yuqori sifatli, odatda katta so'z boyligi, doimiy nutqni aniqlash modeli"
+        },
+        {
+          "text": "Insonga yaqin umumiy ASR (nutqni avtomatik aniqlash)"
+        },
+        {
+          "text": "Cheklangan so'z boyligi uzluksiz nutqni aniqlash uchun maxsus foydalanish holatlari"
+        },
+        {
+          "text": "Misol: Texnik Nutq"
+        },
+        {
+          "text": "Buyruqlarga asoslangan model, cheklangan lug'at"
+        },
+        {
+          "text": "Misol: Media va Navigatsiya buyruqlari"
+        }
+      ]
+    }
+  ]
+}

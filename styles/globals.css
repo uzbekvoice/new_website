@@ -19,7 +19,7 @@
 body {
   margin: 0;
   overflow-x: hidden;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Arial Narrow Bold", sans-serif;
 }
 
 a {
@@ -123,7 +123,6 @@ a {
   padding-left: 10px;
   margin: 7px 0 7px;
 }
-
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -445,6 +444,5 @@ table td:nth-child(4) {
     border-bottom: 1px solid var(--insideBorderColor);
   }
 }
-
 
 /************ END Register userlist style*************/
