@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import Chevron from "./Chevron";
-import styles  from '../../styles/Accordion.module.css'
-
+import styles from "../../styles/Accordion.module.css";
 
 function Accordion(props) {
   const [setActive, setActiveState] = useState("");
@@ -24,9 +23,8 @@ function Accordion(props) {
     <div className="accordion__section">
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
         <div className={styles.accordion_title}>
-        <p>{props.title}</p>
+          <p>{props.title}</p>
         </div>
-       
 
         <Chevron className={`${setRotate}`} width={8} fill={"#8D53FD"} />
       </button>
