@@ -4,7 +4,6 @@ import FormRegister from "./OnliOfflineRegisterForm";
 import { useRouter } from "next/router";
 
 const OnlineOfline = ({ data, form }) => {
-  
   const { locale } = useRouter();
   const dates = data.filter((c) => c.languages_code === locale);
   const liston = dates[0].online_strings;
@@ -58,4 +57,5 @@ const OnlineOfline = ({ data, form }) => {
     </>
   );
 };
+
 export default OnlineOfline;

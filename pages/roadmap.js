@@ -3,9 +3,8 @@ import React from "react";
 import styles from "../styles/Roadmap.module.css";
 import { useRouter } from "next/router";
 export async function getServerSideProps() {
-  const res = await fetch(
-    "https://admin.uzbekvoice.ai/items/roadmap_translations"
-  );
+
+  const res = await fetch("https://admin.uzbekvoice.ai/items/roadmap_translations");
   const data = await res.json();
 
   return {
@@ -21,12 +20,12 @@ export default function Roadmap({ roadmaps }) {
   //   const datalist = dates[1].data;
 
   return (
-   <div>
+    <div>
       <div className={styles.roadmaphero}>
         <div className={styles.container_page}>
           {dates.map((data, id) => (
             <div key={id} className={styles.roadmap_heading}>
-                 {<h2 dangerouslySetInnerHTML={{ __html: data.roadmap_title}} /> }
+              {<h2 dangerouslySetInnerHTML={{ __html: data.roadmap_title }} />}
             </div>
           ))}
         </div>
@@ -38,8 +37,8 @@ export default function Roadmap({ roadmaps }) {
             {dates.map(
               ({ id, roadmap_title, roadmap_heading, roadmap_content }) => (
                 <div key={id}>
-                  <h2> {roadmap_heading} </h2><br/>
-                  {<h2 dangerouslySetInnerHTML={{ __html: roadmap_title}} /> }
+                  <h2> {roadmap_heading} </h2><br />
+                  {<h2 dangerouslySetInnerHTML={{ __html: roadmap_title }} />}
 
                   {<p dangerouslySetInnerHTML={{ __html: roadmap_content }} />}
                 </div>
@@ -67,10 +66,10 @@ export default function Roadmap({ roadmaps }) {
               })
             )}
 
-  
+
           </div>
         </div>
       </div>
-      </div>
+    </div>
   );
 }

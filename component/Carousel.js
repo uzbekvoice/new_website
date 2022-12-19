@@ -3,7 +3,14 @@ import styles from "../styles/Home.module.css";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar, Pagination, A11y, Autoplay , Controller} from "swiper";
+import {
+  Navigation,
+  Scrollbar,
+  Pagination,
+  A11y,
+  Autoplay,
+  Controller,
+} from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
@@ -36,11 +43,18 @@ export default function Slider(props) {
 
               <div className={styles.sliders}>
                 <Swiper
-                  modules={[Navigation, Scrollbar, Autoplay, A11y, Pagination, Controller]}
+                  modules={[
+                    Navigation,
+                    Scrollbar,
+                    Autoplay,
+                    A11y,
+                    Pagination,
+                    Controller,
+                  ]}
                   spaceBetween={10}
                   slidesPerView={3}
                   loop={true}
-                  navigation                  
+                  navigation
                   autoplay={true}
                   speed={300}
                   breakpoints={{
@@ -69,7 +83,6 @@ export default function Slider(props) {
                         src="/goals-1.png"
                         width={205}
                         height={205}
-                        
                         alt="goal-1"
                         priority={true}
                       />

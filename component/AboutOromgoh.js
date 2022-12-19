@@ -11,9 +11,10 @@ export default function AboutOromgoh({ data }) {
       {dates.map(({ about_oromgoh, oromgoh_text }) => (
         <div className={styles.container}>
           <h1>{about_oromgoh}</h1>
-      <div className={styles.description} dangerouslySetInnerHTML={{__html : oromgoh_text}}>
-
-      </div>
+          <div
+            className={styles.description}
+            dangerouslySetInnerHTML={{ __html: oromgoh_text }}
+          ></div>
         </div>
       ))}
     </>
