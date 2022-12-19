@@ -14,29 +14,28 @@ function Layout({ children }) {
   const outsiteClickClose = () => {
     setMenuToggle(false);
     setOpenLang(false);
-  }
+  };
 
-  if (router.pathname != "/roadmap" )
-  return (
-    <div onClick={outsiteClickClose}>
-      <div className={styles.containerfluid}>
-        <Header
-          setMenuToggle={setMenuToggle}
-          menuToggle={menuToggle}
-          openLang={openLang}
-          setOpenLang={setOpenLang}
-        />
-        {children}
-      </div>
-
-      <Footer />
-    </div>
-  );
-
-   else {
+  if (router.pathname != "/roadmap")
     return (
       <div onClick={outsiteClickClose}>
-      <Header
+        <div className={styles.containerfluid}>
+          <Header
+            setMenuToggle={setMenuToggle}
+            menuToggle={menuToggle}
+            openLang={openLang}
+            setOpenLang={setOpenLang}
+          />
+          {children}
+        </div>
+
+        <Footer />
+      </div>
+    );
+  else {
+    return (
+      <div onClick={outsiteClickClose}>
+        <Header
           setMenuToggle={setMenuToggle}
           menuToggle={menuToggle}
           openLang={openLang}
