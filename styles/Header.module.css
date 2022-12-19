@@ -25,16 +25,19 @@
   margin: 0 auto;
   padding: 0 86px;
 }
+
 @media (max-width: 1200px) {
   .container {
     padding: 0 30px;
   }
 }
+
 @media (max-width: 767px) {
   .container {
     padding: 0 24px;
   }
 }
+
 @media (max-width: 460px) {
   .container {
     height: 64px;
@@ -144,6 +147,7 @@
   align-items: center;
   font-size: 17px;
 }
+
 /******** new styles */
 
 .hakatonPageStyle {
