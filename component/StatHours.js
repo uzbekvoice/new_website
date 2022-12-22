@@ -81,11 +81,14 @@ export default function StatHours() {
               ? "предложений это"
               : "sentenses is"}
           </p>
-          <div className={styles.background}>1000 {locale === "uz-UZ"
+          <div className={styles.background}>
+            1000{" "}
+            {locale === "uz-UZ"
               ? "soat ovoz"
               : locale === "ru-RU"
               ? "час голосового запися"
-              : "hour voice recording"}</div>
+              : "hour voice recording"}
+          </div>
           x3
         </div>
         <div className={styles.diagramms}>
@@ -97,11 +100,14 @@ export default function StatHours() {
               ? "предложений это"
               : "sentenses is"}
           </p>
-          <div className={styles.background}>2000 {locale === "uz-UZ"
+          <div className={styles.background}>
+            2000{" "}
+            {locale === "uz-UZ"
               ? "soat ovoz"
               : locale === "ru-RU"
               ? "час голосового запися"
-              : "hour voice recording"}</div>
+              : "hour voice recording"}
+          </div>
           x4
         </div>
         <div className={styles.diagramms}>
@@ -114,11 +120,14 @@ export default function StatHours() {
               ? "предложений это"
               : "sentenses is"}
           </p>
-          <div className={styles.background}>10000 {locale === "uz-UZ"
+          <div className={styles.background}>
+            10000{" "}
+            {locale === "uz-UZ"
               ? "soat ovoz"
               : locale === "ru-RU"
               ? "час голосового запися"
-              : "hour voice recording"}</div>
+              : "hour voice recording"}
+          </div>
           x5
         </div>
       </div>

@@ -61,7 +61,7 @@ export async function getServerSideProps() {
       faq,
       steps,
       camp,
-      statsvotes 
+      statsvotes,
     },
   };
 }
@@ -74,7 +74,7 @@ export default function Home({
   faq,
   steps,
   camp,
-  statsvotes
+  statsvotes,
 }) {
   return (
     <div>
