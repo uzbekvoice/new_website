@@ -1,3 +1,5 @@
+
+
 import React from "react";
 import styles from "../styles/Stat.module.css";
 import Image from "next/image";
@@ -99,15 +101,17 @@ export default function Stat(props) {
     },
   ];
 
-  const dates = stat
-    .filter((c) => c.date >= "2022-08")
-    .map(({ date, total, valid }) => ({
-      ["Sana"]: date.slice(0, 10),
-      ["So'zlangan soat"]: Math.floor(total / 3600),
-      ["Tinglangan soat"]: Math.floor(valid / 3600),
-    }));
 
-  console.log(dates);
+
+
+  const dates = stat.filter((c) => c.date >= "2022-08")
+  .map(({ date, total, valid } )  =>  ({ 
+    ["Sana"]:date.slice(0, 10), 
+    ["So'zlangan soat"]: Math.floor(total / 3600), 
+    ["Tinglangan soat"]: Math.floor(valid / 3600), 
+  }));
+
+
 
   // const data3 = [
   //   {
