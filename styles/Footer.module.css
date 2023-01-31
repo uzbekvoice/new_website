@@ -1,6 +1,6 @@
 .footer {
     margin-top: 70px;
-    background: #F5F8FA;
+    background-color: #0C0916;
     position: relative;
 
 }
@@ -72,7 +72,7 @@
     -ms-flex-align: center;
     align-items: center;
     line-height: 150%;
-    color: grey;
+    color: #ffffff;
     -webkit-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s
@@ -95,7 +95,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 24px;
-    color: #919293;
+    color: #ffffff;
 }
 
 .menu_footer a {
@@ -104,7 +104,7 @@
 }
 
 .menu_footer img {
-    width: 24px;
+    width: 25px;
     height: 25px
 }
 
@@ -113,7 +113,7 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 26px;
-    color: #12273C
+    color: #ffffff
 }
 
 .footer .menu_footer-info-first {
@@ -131,7 +131,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    color: #919293;
+    color: #ffffff;
     margin: 0;
 }
 

@@ -19,12 +19,12 @@ export default function Footer() {
           <div className="container__fluid">
             <div className={styles.footer__body}>
               <div className={styles.footer__main}>
-                <img className={styles.footer__logo} src="/newlogo.png" alt='logofooter' />
+                <img className={styles.footer__logo} src="/logo.png" alt='logofooter' />
                 <div className={styles.powered}>
                   <h3>{powered_by}</h3>
                 </div>
 
-                <img className={styles.footer__logo2} src="/footer__logo-img.png" />
+                <img className={styles.footer__logo2} src="/commonwhite.png" />
               </div>
               <div className={styles.footer__menu}>
                 <div className={styles.menu_footer}>

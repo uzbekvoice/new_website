@@ -49,7 +49,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
           <Link href="/">
             <a>
            
-                <img className={styles.header_logo} src="/newlogo.png" alt="logo" />
+                <img className={styles.header_logo} src="/logo.png" alt="logo" />
              
             </a>
           </Link>
@@ -131,7 +131,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 className={"rotate"}
                 width={7}
                 height={11}
-                fill={"#1717179d"}
+                fill={"#ffffff"}
               />
 
               <ul
@@ -161,7 +161,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 className={"rotate"}
                 width={7}
                 height={11}
-                fill={"#1717179d"}
+                fill={"#ffffff"}
               />
 
               <ul
@@ -208,7 +208,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 className={"rotate"}
                 width={7}
                 height={11}
-                fill={"#1717179d"}
+                fill={"#ffffff"}
               />
               <ul
                 className={

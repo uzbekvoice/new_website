@@ -1,0 +1,106 @@
+.container {
+  position: relative;
+  max-width: 1400px;
+  margin: 200px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mic {
+position: relative;
+  width: 672px;
+  height: 662.5px;
+  background: radial-gradient(
+      133.43% 133.43% at 54.99% 18.11%,
+      rgba(23, 252, 224, 0) 41.63%,
+      #00c7ff 100%
+    )
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.block {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  max-width: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.content h5 {
+  color: #7ea0ff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  letter-spacing: 0.05em;
+}
+
+.content h1 {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 73px;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+}
+
+.content p {
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  margin-top: 40px;
+}
+
+.content a {
+  margin-top: 70px;
+  background: linear-gradient(
+    91.97deg,
+    #00c7fe -34.54%,
+    #007bf4 34.16%,
+    #8d53fd 97.37%
+  );
+
+  padding: 15px 30px;
+  color: #fff;
+  display: inline-block;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  overflow: hidden;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding-top: 20px;
+  }
+  .block {
+    flex-direction: column;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 23px;
+  }
+  .content p {
+    font-size: 17px;
+  }
+
+  .block img {
+    width: 100%;
+    height: auto;
+  }
+}
