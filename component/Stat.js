@@ -1,23 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import styles from "../styles/Stat.module.css";
 import Image from "next/image";
@@ -120,6 +102,8 @@ export default function Stat(props) {
   ];
 
 
+
+
   const dates = stat.filter((c) => c.date >= "2022-08")
   .map(({ date, total, valid } )  =>  ({ 
     ["Sana"]:date.slice(0, 10), 
@@ -127,7 +111,7 @@ export default function Stat(props) {
     ["Tinglangan soat"]: Math.floor(valid / 3600), 
   }));
 
-  console.log(dates)
+
 
   // const data3 = [
   //   {
@@ -215,10 +199,8 @@ export default function Stat(props) {
           /> */}
         </div>
 
-
         <div className={styles.img_hour}>
-  
-        <StatHours />
+          <StatHours />
 
           <ResponsiveContainer width="100%" height={350}>
             <AreaChart
