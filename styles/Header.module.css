@@ -28,10 +28,6 @@
   color: #fff;
 }
 
-.header__main_bg .header__menu .item ul {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .header__main_bg .header__menu .item ul a {
   color: #171717;
 }
@@ -311,6 +307,15 @@
     -o-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
   }
+
+  .header__main_bg .header__menu {
+    background-color: hsla(0, 0%, 40%, 0.95);
+  }
+  
+  .header__main_bg .header__menu .item ul a {
+    color: #fff;
+  }
+  
 
   .header__menu a:last-child {
     display: none;

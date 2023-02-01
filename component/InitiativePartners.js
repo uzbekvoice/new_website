@@ -26,7 +26,7 @@ export default function InitiativePartners(props) {
         .map((HomeContent, i) => {
           const { title, desc } = HomeContent;
           return (
-            <div key={i} className={status === "active" && styles.active}>
+            <div key={i} className={status === "active"? styles.active : ''}>
               <div
                 className={
                   pathname === "/hakaton/[id]" && styles.partnersForHak

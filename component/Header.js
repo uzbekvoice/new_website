@@ -43,7 +43,6 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
         qollanma,
         boshqa,
         boshqalar,
-        button,
       }) => (
         <div className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.header__main + ' ' + styles.header__main_bg : styles.header__main} key={id}>
           <div className={styles.container}>
