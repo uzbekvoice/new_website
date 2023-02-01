@@ -32,6 +32,10 @@
   color: #171717;
 }
 
+.header__main_bg .mobileLan span {
+  color: #fff;
+}
+
 .container {
   height: 80px;
   display: flex;
@@ -300,12 +304,17 @@
     background-color: hsla(0, 0%, 100%, 0.95);
     width: 400px;
     padding: 70px 0 30px;
-
     height: 100vh;
     transform: translateX(100%);
     -webkit-transition: all 0.6s ease 0s;
     -o-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
+  }
+
+  .header__menu_mobile.header__menu {
+    transform: translateX(0);
+    position: fixed;
+
   }
 
   .header__main_bg .header__menu {

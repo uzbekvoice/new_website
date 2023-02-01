@@ -75,7 +75,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   {locale.slice(0, 2)}
                 </span>
                 <ul
-                  style={{ display: openLang && "block" }}
+                  style={{ display: openLang? "block" : 'none'}}
                   className={styles.language}
                 >
                   <li>
@@ -112,11 +112,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               onClick={(e) => {
                 e.stopPropagation();
               }}
-              style={{
-                transform: menuToggle && "translateX(0)",
-                position: menuToggle && "fixed",
-              }}
-              className={styles.header__menu}
+              className={menuToggle? styles.header__menu + ' ' + styles.header__menu_mobile : styles.header__menu}
             >
               <div
                 onClick={() => setMenuToggle(false)}
@@ -256,7 +252,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 </span>
 
                 <ul
-                  style={{ display: openLang && "block" }}
+                  style={{ display: openLang? "block" : 'none'}}
                   className={styles.language}
                 >
                   <li>
