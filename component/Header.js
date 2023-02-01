@@ -100,7 +100,11 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 onClick={() => setMenuToggle(true)}
                 className={styles.header_burger_menu}
               >
-                <img src="/burger-menu.svg" alt="burger" />
+                {
+                  (router.pathname === "/" || router.pathname === "/pricing")?
+                  <img src="/menu-white.png" alt="burger" />:
+                  <img src="/burger-menu.svg" alt="burger" />
+                }
               </div>
             </div>
 

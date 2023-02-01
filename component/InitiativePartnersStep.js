@@ -26,10 +26,10 @@ export default function InitiativePartnersSteps(props) {
         .map((HomeContent, i) => {
           const { title, desc } = HomeContent;
           return (
-            <div key={i} className={status === "active" && styles.active}>
+            <div key={i} className={status === "active"? styles.active : ''}>
               <div
                 className={
-                  pathname === "/hakaton/[id]" && styles.partnersForHak
+                  pathname === "/hakaton/[id]"? styles.partnersForHak: ""
                 }
               >
                 <h3>{title}</h3>

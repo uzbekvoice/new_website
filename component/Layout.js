@@ -14,7 +14,7 @@ function Layout({ children }) {
     setOpenLang(false);
   };
 
-  if (router.pathname != "/roadmap")
+  if (router.pathname !== "/roadmap")
     return (
       <div onClick={outsiteClickClose}>
         <div className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.containerfluid + ' ' + styles.containerBgBlack : styles.containerfluid}>

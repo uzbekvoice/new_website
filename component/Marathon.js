@@ -15,6 +15,7 @@ export default function Marathon({ data }) {
         .filter((c) => c.languages_code === locale)
         .map(
           ({
+            id,
             title,
             start_date,
             start,
@@ -23,7 +24,7 @@ export default function Marathon({ data }) {
             finish_date,
             goal_title
           }) => (
-            <div className={parseInt(query.id) === 2 ? styles.goal__box: styles.formobile}>
+            <div key={id} className={parseInt(query.id) === 2 ? styles.goal__box : styles.formobile}>
               <h2 className={styles.box__title}>
                 {title} <br />
                 {title_stage}
@@ -61,13 +62,13 @@ export default function Marathon({ data }) {
               <div className={styles.status}>
                 {parseInt(query.id) !== 2 ? (
                   <Link href="/bosqich/2">
-                     {
-                locale === "uz-UZ" ?
-                    <a>Ishtirok etish</a>
-                    : locale === "ru-RU" ?
-                       <a>Участвоват</a>
-                        : <a>Participate</a>
-            }
+                    {
+                      locale === "uz-UZ" ?
+                        <a>Ishtirok etish</a>
+                        : locale === "ru-RU" ?
+                          <a>Участвоват</a>
+                          : <a>Participate</a>
+                    }
                   </Link>
                 ) : (
                   false

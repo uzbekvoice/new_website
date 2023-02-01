@@ -29,7 +29,7 @@ export default function InitiativePartners(props) {
             <div key={i} className={status === "active"? styles.active : ''}>
               <div
                 className={
-                  pathname === "/hakaton/[id]" && styles.partnersForHak
+                  pathname === "/hakaton/[id]"? styles.partnersForHak : ''
                 }
               >
                 <h3>{title}</h3>
