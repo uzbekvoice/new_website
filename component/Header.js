@@ -44,14 +44,22 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
         boshqa,
         boshqalar,
       }) => (
-        <div className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.header__main + ' ' + styles.header__main_bg : styles.header__main} key={id}>
+        <div className={
+          (router.pathname === "/" || router.pathname === "/pricing") ?
+            (menuToggle ?
+              styles.header__main + ' ' + styles.header__menu_bg_grey + ' ' + styles.header__main_bg :
+              styles.header__main + ' ' + styles.header__main_bg)
+            : styles.header__main
+        }
+          key={id}>
+          <div className={styles.hero_blur}></div>
           <div className={styles.container}>
             <Link href="/">
               <a>
                 {
                   (router.pathname === "/" || router.pathname === "/pricing") ?
-                  <img className={styles.header_logo} src="/logo.png" alt="logo" />:
-                  <img className={styles.header_logo} src="/newlogo.png" alt="logo" /> 
+                    <img className={styles.header_logo} src="/logo.png" alt="logo" /> :
+                    <img className={styles.header_logo} src="/newlogo.png" alt="logo" />
                 }
               </a>
             </Link>
@@ -75,7 +83,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   {locale.slice(0, 2)}
                 </span>
                 <ul
-                  style={{ display: openLang? "block" : 'none'}}
+                  style={{ display: openLang ? "block" : 'none' }}
                   className={styles.language}
                 >
                   <li>
@@ -97,13 +105,32 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               </div>
 
               <div
-                onClick={() => setMenuToggle(true)}
+
                 className={styles.header_burger_menu}
               >
                 {
-                  (router.pathname === "/" || router.pathname === "/pricing")?
-                  <img src="/menu-white.png" alt="burger" />:
-                  <img src="/burger-menu.svg" alt="burger" />
+                  (router.pathname === "/" || router.pathname === "/pricing") ?
+
+                    (menuToggle ?
+                      <div onClick={() => setMenuToggle(false)}>
+                        <img src="/x.png" alt="close icon" />
+                      </div>
+                      :
+
+                      <div className={styles.menu_img} onClick={() => setMenuToggle(true)}>
+                        <img src="/menu-white.png" alt="burger" />
+                      </div>)
+                    :
+                    (
+                      menuToggle ?
+                        <div onClick={() => setMenuToggle(false)}>
+                          <img src="/menu-times.png" alt="close icon" />
+                        </div>
+                        :
+                        <div className={styles.menu_img} onClick={() => setMenuToggle(true)}>
+                          <img src="/burger-menu.svg" alt="burger" />
+                        </div>
+                    )
                 }
               </div>
             </div>
@@ -112,15 +139,8 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               onClick={(e) => {
                 e.stopPropagation();
               }}
-              className={menuToggle? styles.header__menu + ' ' + styles.header__menu_mobile : styles.header__menu}
+              className={menuToggle ? styles.header__menu + ' ' + styles.header__menu_mobile : styles.header__menu}
             >
-              <div
-                onClick={() => setMenuToggle(false)}
-                className={styles.header__menu_close}
-              >
-                <img src="/menu-times.png" alt="close icon" />
-              </div>
-
               <div
                 onClick={() => openDropdown()}
                 onMouseOver={() => setStepDropDown(true)}
@@ -133,7 +153,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   className={"rotate"}
                   width={7}
                   height={11}
-                  fill={(router.pathname === "/" || router.pathname === "/pricing")? "#ffffff": "#1717179d"}
+                  fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
                 />
 
                 <ul
@@ -163,7 +183,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   className={"rotate"}
                   width={7}
                   height={11}
-                  fill={(router.pathname === "/" || router.pathname === "/pricing")? "#ffffff": "#1717179d"}
+                  fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
                 />
 
                 <ul
@@ -218,7 +238,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   className={"rotate"}
                   width={7}
                   height={11}
-                  fill={(router.pathname === "/" || router.pathname === "/pricing")? "#ffffff": "#1717179d"}
+                  fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
                 />
                 <ul
                   className={
@@ -236,6 +256,20 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                   ))}
                 </ul>
               </div>
+
+              <div className={styles.waitlist}>
+                <div>
+                  Bog`lanish
+                  <Chevron
+                    className={styles.chevron + " rotate"}
+                    width={7}
+                    height={11}
+                    fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
+                  />
+                </div>
+                <a>Waitlistga qo'shilish</a>
+              </div>
+
               <div
                 onClick={() => setOpenLang(!openLang)}
                 className={styles.item + " " + styles.lan}
@@ -252,7 +286,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 </span>
 
                 <ul
-                  style={{ display: openLang? "block" : 'none'}}
+                  style={{ display: openLang ? "block" : 'none' }}
                   className={styles.language}
                 >
                   <li>

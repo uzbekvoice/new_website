@@ -1,19 +1,23 @@
 .container {
   position: relative;
   max-width: 1400px;
-  padding: 200px 15px;  
+  padding: 200px 15px;
 }
 
 .mic {
   position: relative;
-  width: 672px;
-  height: 662.5px;
-  background: radial-gradient(133.43% 133.43% at 54.99% 18.11%,
-      rgba(23, 252, 224, 0) 41.63%,
-      #00c7ff 100%)
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
-  ;
+  width: 600px;
+  height: 600px;
+  border-radius: 50% 49% 48% 50%;
+  background: radial-gradient(133.43% 133.43% at 54.99% 18.11%, rgba(23, 252, 224, 0) 41.63%, #00C7FF 100%);
   border: 2px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mic img {
+  cursor: pointer;
 }
 
 .block {
@@ -29,12 +33,31 @@
   text-align: center;
 }
 
-.content h5 {
-  color: #7ea0ff;
+.voiceCollect {
   font-size: 16px;
   font-weight: 400;
   margin-bottom: 10px;
   letter-spacing: 0.05em;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: 0.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 40px;
+  width: fit-content;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.voiceCollect span {
+  color: #1ee0fa;
+  margin-left: 4px;
+}
+
+.chevron {
+  margin-left: 10px;
+  margin-bottom: 2px;
+  transform: rotate(0);
 }
 
 .content h1 {
@@ -56,7 +79,6 @@
 }
 
 .content a {
-  margin-top: 70px;
   background: linear-gradient(91.97deg,
       #00c7fe -34.54%,
       #007bf4 34.16%,
@@ -73,12 +95,33 @@
   position: relative;
   z-index: 1;
   border: 0;
+  cursor: pointer;
   overflow: hidden;
 }
 
-@media (max-width: 500px) {
-  .container {
-    padding-top: 20px;
+.waitlist {
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.waitlist div {
+  margin-left: 40px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media (max-width: 1050px) {
+  .mic {
+    margin: 50px auto 0;
+    width: 500px;
+    height: 500px;
+  }
+
+  .mic img {
+    width: 40%;
   }
 
   .block {
@@ -90,15 +133,80 @@
   }
 
   .content h1 {
-    font-size: 23px;
+    font-size: 45px;
   }
 
   .content p {
     font-size: 17px;
   }
+}
 
-  .block img {
-    width: 100%;
-    height: auto;
+@media (max-width: 1050px) {
+  .mic {
+    width: 400px;
+    height: 400px;
+  }
+
+  .mic img {
+    width: 30%;
+  }
+}
+
+@media (max-width: 767px) {
+  .voiceCollect {
+    font-size: 14px;
+  }
+}
+
+
+
+@media (max-width: 500px) {
+
+  .container {
+    padding-top: 170px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .mic {
+    width: 300px;
+    height: 300px;
+  }
+
+  .voiceCollect {
+    font-size: 11px;
+    padding: 4px 12px;
+    margin: 0 auto;
+    align-items: inherit;
+  }
+
+  .chevron {
+    margin-left: 6px;
+    width: 5px;
+  }
+
+  .content h1 {
+    margin-top: 32px;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 46px;
+    text-align: center;
+    letter-spacing: -0.02em;
+  }
+
+  .content p {
+    font-size: 16px;
+  }
+
+  .waitlist {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 45px;
+  }
+
+  .waitlist div {
+    margin-top: 20px;
   }
 }
