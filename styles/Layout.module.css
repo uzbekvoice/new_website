@@ -1,23 +1,24 @@
-
-  
   .containerfluid {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 0 86px;
-    
+  }
+  
+  .containerBgBlack {
+    background-color: #0C0916;
   }
 
 
 
-  @media  (max-width: 1200px){
+  @media (max-width: 1200px) {
     .containerfluid {
       padding: 0 30px;
     }
   }
-  @media (max-width: 767px){
+
+  @media (max-width: 767px) {
     .containerfluid {
       padding: 0 24px;
     }
   }
-

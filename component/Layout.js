@@ -1,10 +1,8 @@
 import Header from "./Header";
 import Footer from "./Footer";
 import styles from "../styles/Layout.module.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter } from "next/router";
-// import HakatonHero from "./HakatonHero";
-// import ResursHero from "./ResusHero";
 
 function Layout({ children }) {
   const router = useRouter();
@@ -19,7 +17,7 @@ function Layout({ children }) {
   if (router.pathname != "/roadmap")
     return (
       <div onClick={outsiteClickClose}>
-        <div className={styles.containerfluid}>
+        <div className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.containerfluid + ' ' + styles.containerBgBlack : styles.containerfluid}>
           <Header
             setMenuToggle={setMenuToggle}
             menuToggle={menuToggle}

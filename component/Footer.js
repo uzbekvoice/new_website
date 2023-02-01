@@ -15,16 +15,24 @@ export default function Footer() {
       .map(({
         id, powered_by, guide, join_in_project, partners, descr, github, telegram, mozillo
       }) =>
-        <footer className={styles.footer} key={id}>
+        <footer className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.footerBg + ' ' + styles.footer : styles.footer} key={id}>
           <div className="container__fluid">
             <div className={styles.footer__body}>
               <div className={styles.footer__main}>
-                <img className={styles.footer__logo} src="/logo.png" alt='logofooter' />
+                {
+                  (router.pathname === "/" || router.pathname === "/pricing") ?
+                    <img className={styles.footer__logo} src="/logo.png" alt='logofooter' /> :
+                    <img className={styles.footer__logo} src="/newlogo.png" alt='logofooter' />
+                }
                 <div className={styles.powered}>
                   <h3>{powered_by}</h3>
                 </div>
 
-                <img className={styles.footer__logo2} src="/commonwhite.png" />
+                {
+                  (router.pathname === "/" || router.pathname === "/pricing") ?
+                    <img className={styles.footer__logo2} src="/commonwhite.png" /> :
+                    <img className={styles.footer__logo2} src="/footer__logo-img.png" />
+                }
               </div>
               <div className={styles.footer__menu}>
                 <div className={styles.menu_footer}>
@@ -51,7 +59,11 @@ export default function Footer() {
                     <li>
                       <Link href="https://github.com/uzbekvoice">
                         <a target={'_blank'}>
-                          <img src="/github.png" />
+                          {
+                            (router.pathname === "/" || router.pathname === "/pricing") ?
+                              <img className={styles.footer__logo2} src="/github.png" /> :
+                              <img className={styles.footer__logo2} src="/github-white.png" />
+                          }
                           <span>{github}</span>
                         </a>
                       </Link>
@@ -59,7 +71,11 @@ export default function Footer() {
                     <li>
                       <Link href="https://t.me/uzbekvoice">
                         <a target={'_blank'}>
-                          <img src="/telegramm.png" />
+                          {
+                            (router.pathname === "/" || router.pathname === "/pricing") ?
+                              <img className={styles.footer__logo2} src="/telegramm.png" /> :
+                              <img className={styles.footer__logo2} src="/telegramm-white.png" />
+                          }
                           <span>{telegram}</span>
                         </a>
                       </Link>

@@ -1,20 +1,18 @@
 .container {
   position: relative;
   max-width: 1400px;
-  margin: 200px auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding: 200px 15px;  
 }
+
 .mic {
-position: relative;
+  position: relative;
   width: 672px;
   height: 662.5px;
-  background: radial-gradient(
-      133.43% 133.43% at 54.99% 18.11%,
+  background: radial-gradient(133.43% 133.43% at 54.99% 18.11%,
       rgba(23, 252, 224, 0) 41.63%,
-      #00c7ff 100%
-    )
-    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+      #00c7ff 100%)
+    /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+  ;
   border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -59,12 +57,10 @@ position: relative;
 
 .content a {
   margin-top: 70px;
-  background: linear-gradient(
-    91.97deg,
-    #00c7fe -34.54%,
-    #007bf4 34.16%,
-    #8d53fd 97.37%
-  );
+  background: linear-gradient(91.97deg,
+      #00c7fe -34.54%,
+      #007bf4 34.16%,
+      #8d53fd 97.37%);
 
   padding: 15px 30px;
   color: #fff;
@@ -84,6 +80,7 @@ position: relative;
   .container {
     padding-top: 20px;
   }
+
   .block {
     flex-direction: column;
   }
@@ -95,6 +92,7 @@ position: relative;
   .content h1 {
     font-size: 23px;
   }
+
   .content p {
     font-size: 17px;
   }

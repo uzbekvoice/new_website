@@ -3,7 +3,7 @@ import HeroIndex from '../component/Index/HeroIndex'
 
 export default function Index() {
   return (
-    <div >
+    <div>
       <HeroIndex />
     </div>
   )
