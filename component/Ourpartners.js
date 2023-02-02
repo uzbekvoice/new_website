@@ -6,7 +6,6 @@ import Link from "next/link";
 export default function OurPartners({ data }) {
 
   const { locale } = useRouter();
-
   return (
     data.data.filter((p) => p.languages_code === locale)
       .map(value =>
