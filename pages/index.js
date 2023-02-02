@@ -4,10 +4,10 @@ import ConvertingSpeech from '../component/ConvertingSpeech'
 import ConvertingText from '../component/ConvertingText'
 import FrequentlyCases from '../component/FrequentlyCases'
 import HeroIndex from '../component/Index/HeroIndex'
-import OurPartners from '../component/OurPartners'
 import UnderstandMore from '../component/UnderstandMore'
 import InitiativePartners from '../component/InitiativePartners'
 import Question from "../component/Question/Question";
+import Ourpartners from '../component/Ourpartners'
 
 export default function Index({partners, faq, data}) {
   
@@ -19,8 +19,8 @@ export default function Index({partners, faq, data}) {
       <ConvertingText data={data}/>
       <FrequentlyCases data={data}/>
       <UnderstandMore data={data} />
-      <OurPartners data={data}  />
-      <InitiativePartners data={data} partners={partners.data}/>
+      <Ourpartners data={data}  />
+      <InitiativePartners data={data} partners={partners?.data}/>
       <Question data={faq?.data} />
     </div>
   )

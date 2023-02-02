@@ -18,7 +18,6 @@ import "swiper/css/autoplay";
 export default function FrequentlyCases({ data }) {
   const { locale } = useRouter();
 
-  console.log(data);
   const getImage = (title) => {
     switch (title) {
       case 'Audio kitoblar': return <img src='case-1.png' alt='img' />
