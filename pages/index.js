@@ -20,7 +20,7 @@ export default function Index({partners, faq, data}) {
       <FrequentlyCases data={data}/>
       <UnderstandMore data={data} />
       <OurPartners data={data}  />
-      {/* <InitiativePartners data={data} partners={partners.data}/> */}
+      <InitiativePartners data={data} partners={partners.data}/>
       <Question data={faq?.data} />
     </div>
   )
