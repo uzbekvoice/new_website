@@ -1,23 +1,26 @@
+import { useRouter } from 'next/router';
 import React from 'react'
 import styles from '../styles/ConvertingText.module.css'
 
-const ConvertingText = () => {
+const ConvertingText = ({ data }) => {
+    const { locale } = useRouter();
     return (
-        <div className={styles.ConvertingSpeech}>
-            <div className={styles.title}>
-                <h3>Matnni og’zaki
-                    nutqqa o’girish
-                    <span></span>
-                </h3>
-                <p>O'zingiz yoqtirgan har qanday turdagi
-                    audio kontentni yarating</p>
-            </div>
+        data.data.filter((p) => p.languages_code === locale)
+            .map(value =>
+                <div key={value.id} className={styles.ConvertingSpeech}>
+                    <div className={styles.title}>
+                        <h3>{value?.tts_title}
+                            <span></span>
+                        </h3>
+                        <p>{value.tts_text}</p>
+                    </div>
 
-            <div className={styles.speech_box}>
-                <textarea placeholder='Matnni bu yerga yozing'></textarea>
-                <button>Tinglash</button>
-            </div>
-        </div>
+                    <div className={styles.speech_box}>
+                        <textarea placeholder={value?.tts_hint_text}></textarea>
+                        <button type='button'>{value.listen_text}</button>
+                    </div>
+                </div>
+            )
     )
 }
 

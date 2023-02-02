@@ -298,23 +298,34 @@ a {
   right: -5% !important;
 }
 
-.our_goal .swiper-button-prev::after {
+.our_goal .swiper-button-prev::after,
+.initpartners .swiper-button-prev::after
+ {
   position: absolute;
   content: url("../public/arrow-left-white.png") !important;
-  left: 4px;
+  left: 0px;
   top: -7px;
   width: 100%;
   height: 100%;
 }
 
-.our_goal .swiper-button-next::after {
+.our_goal .swiper-button-next::after,
+.initpartners .swiper-button-next::after
+ {
   position: absolute;
   transform: rotate(180deg);
   content: url("../public/arrow-left-white.png") !important;
-  left: -4px;
+  left: 0px;
   top: 7px;
   width: 100%;
   height: 100%;
+}
+
+.our_goal .swiper-button-next::after {
+  left: -4px;
+}
+.our_goal .swiper-button-prev::after {
+  left: 4px;
 }
 
 .swiper-button-prev::after {

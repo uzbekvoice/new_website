@@ -9,18 +9,19 @@ import UnderstandMore from '../component/UnderstandMore'
 import InitiativePartners from '../component/InitiativePartners'
 import Question from "../component/Question/Question";
 
-export default function Index({partners, faq}) {
+export default function Index({partners, faq, data}) {
+  
   return (
     <div>
-      <HeroIndex />
-      <ConvertingSpeech />
-      <Slider />
-      <ConvertingText />
-      <FrequentlyCases />
-      <UnderstandMore />
-      <OurPartners />
-      <InitiativePartners partners={partners.data}/>
-      <Question data={faq.data} />
+      <HeroIndex data={data}/>
+      <ConvertingSpeech data={data} />
+      <Slider data={data} />
+      <ConvertingText data={data}/>
+      <FrequentlyCases data={data}/>
+      <UnderstandMore data={data} />
+      <OurPartners data={data}  />
+      <InitiativePartners data={data} partners={partners.data}/>
+      <Question data={faq?.data} />
     </div>
   )
 }
@@ -32,14 +33,19 @@ export async function getServerSideProps() {
   const res5 = await fetch(
     "https://admin.uzbekvoice.ai/items/faq_translations"
   );
+  const res = await fetch(
+    "https://admin.uzbekvoice.ai/items/landing_page_translations"
+  );
 
   const partners = await res3.json();
   const faq = await res5.json();
+  const data = await res.json();
 
   return {
     props: {
       partners,
       faq,
+      data
     },
   };
 }

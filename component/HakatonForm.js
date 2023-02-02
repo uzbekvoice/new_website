@@ -333,9 +333,8 @@ export default function Partners() {
               <div className={styles.position}>
                 <p>{label_position}</p>
                 {position_role.map(({ id, value }) => (
-                  <label>
-                    <input
-                      key={id}
+                  <label key={id}>
+                    <input                      
                       required
                       className={styles.radioInput}
                       name={position}

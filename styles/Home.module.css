@@ -49,7 +49,7 @@
 .item {
   padding: 40px 20px;
   backdrop-filter: blur(80px);
-  height: 350px;
+  height: 100%;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(10px);

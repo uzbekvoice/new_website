@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import styles from "../styles/InitiativePartners.module.css";
+import styles from "../styles/InitiativePartnersHak.module.css";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -14,36 +13,34 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function InitiativePartners(props) {
-  const [mounted, setMounted] = useState(false); 
+export default function InitiativePartnersHak(props) {  
 
   const { locale } = useRouter();
 
-  const { partners, data } = props;
+  const { partners, status, data } = props;
 
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  console.log(partners);
+
   return (
     <div className={styles.initpartners}>
-      {data.data
-        .filter((p) => p.languages_code === locale)
+      {data?.data
+        ?.filter((p) => p.languages_code === locale)
         .map((value) => {
           return (
-            <div key={value.id}>
+            <div key={value?.id} className={status === "active" ? styles.active : ''}>
               <div
-                className={styles.black_bg}
+                className={styles.partnersForHak}
               >
                 <h3>{value?.partners_title}</h3>
               </div>
 
-              <p className={styles.black_bg_p}>{value?.partners_text}</p>
+              <p>{value?.partners_text}</p>
             </div>
           );
-        })}
+        })
+      }
 
-      <div
-        className={styles.sliders + ' initpartners ' + styles.card_bg}
-      >
+      <div className={styles.sliders}>
         <Swiper
           modules={[
             Navigation,
