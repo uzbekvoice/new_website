@@ -4,6 +4,7 @@ import PricingHero from '../component/PricingHero.jsx'
 import Question from '../component/Question/Question'
 
 const Pricing = ({faq}) => {
+  
     return (
         <div>
             <PricingHero />
