@@ -17,10 +17,22 @@ import "swiper/css/autoplay";
 
 export default function Slider({ data }) {
   const { locale } = useRouter();
+
+  const getImage = (title) => {
+    switch (title) {
+      case 'Audio transkripsiya': return <img src='case-1.png' alt='img' />
+      case 'Diktant': return <img src='case-2.png' alt='img' />
+      case 'Ovozli buyruqlar': return <img src='case-3.png' alt='img' />
+      case 'Ojizlar uchun qulaylik': return <img src='goals-1.png' alt='img' />
+      case 'Onlayn qidiruvlar': return <img src='sun.png' alt='img' />
+      default: return <img src='chat-text.png' alt='img' />
+    }
+  }
+
   return (
     <div className={styles.our_goal + " our_goal"}>
       {
-        data.data.filter((p) => p.languages_code === locale)
+        data?.data.filter((p) => p.languages_code === locale)
           .map(value =>
             <div key={value.id}>
               <h3>{value?.stt_cases_title}</h3>
@@ -64,10 +76,7 @@ export default function Slider({ data }) {
                     value.stt_cases.map((item_value, i) =>
                       <SwiperSlide key={i}>
                         <div className={styles.item}>
-                          <img
-                            src="/goals-1.png"
-                            alt="goal-1"
-                          />
+                          {getImage(item_value.case)}
                           <div className={styles.text}>
                             <h4>{item_value?.case}</h4>
                             <h5>{item_value?.case_text}</h5>
@@ -75,43 +84,7 @@ export default function Slider({ data }) {
                         </div>
                       </SwiperSlide>
                     )
-                  }
-                  {/* <SwiperSlide>
-                    <div className={styles.item}>
-                      <img
-                        src="/goals-1.png"
-                        alt="goal-1"
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title}</h4>
-                        <h5>{card_desc}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <img
-                        src="/goals-2.png"
-                        alt="goal-1"
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title2}</h4>
-                        <h5>{card_desc2}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <img
-                        src="/goals-3.png"
-                        alt="goal-1"
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title3}</h4>
-                        <h5>{card_desc3}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide> */}
+                  }                  
                 </Swiper>
               </div>
             </div>

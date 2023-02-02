@@ -5,6 +5,18 @@ import { useRouter } from 'next/router';
 
 const UnderstandMore = ({ data }) => {
     const { locale } = useRouter();
+
+    const getImage = (title) => {
+        switch(title){
+            case 'Speaker diarization': return <img src='chat.png' alt='img'/>
+            case 'Summarization': return <img src='goals-2.png' alt='img'/>
+            case 'Topic detection': return <img src='copy.png' alt='img'/>
+            case 'Tilni aniqlash': return <img src='goals-1.png' alt='img'/>
+            case 'Obektni aniqlash': return <img src='sun.png' alt='img'/>
+            default: return <img src='chat-text.png' alt='img'/>
+        }
+    }
+
     return (
         data.data.filter((p) => p.languages_code === locale)
             .map(value =>
@@ -26,7 +38,7 @@ const UnderstandMore = ({ data }) => {
 
                                             <p>{item?.soon_text}</p>
 
-                                            <img src={value?.icon} />
+                                            {getImage(item?.soon_title)}
 
                                             <button type='button'>{value?.coming_soon_text}</button>
                                         </div>

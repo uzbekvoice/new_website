@@ -17,6 +17,19 @@ import "swiper/css/autoplay";
 
 export default function FrequentlyCases({ data }) {
   const { locale } = useRouter();
+
+  console.log(data);
+  const getImage = (title) => {
+    switch (title) {
+      case 'Audio kitoblar': return <img src='case-1.png' alt='img' />
+      case 'Marketing nutqlari': return <img src='case-2.png' alt='img' />
+      case 'Digital darsliklar': return <img src='case-3.png' alt='img' />
+      case 'YouTube hikoyalari': return <img src='goals-1.png' alt='img' />
+      case 'Yangiliklar bayoni': return <img src='sun.png' alt='img' />
+      default: return <img src='chat-text.png' alt='img' />
+    }
+  }
+
   return (
     <div className={styles.our_goal + " our_goal"}>
       {
@@ -64,10 +77,7 @@ export default function FrequentlyCases({ data }) {
                     value?.tts_cases.map((item_value, i) =>
                       <SwiperSlide key={i}>
                         <div className={styles.item}>
-                          <img
-                            src="/case-1.png"
-                            alt="case-1"
-                          />
+                          {getImage(item_value.case)}
                           <div className={styles.text}>
                             <h4>{item_value.case}</h4>
                             <h5>{item_value.case_text}</h5>
@@ -75,30 +85,6 @@ export default function FrequentlyCases({ data }) {
                         </div>
                       </SwiperSlide>)
                   }
-                  {/* <SwiperSlide>
-                    <div className={styles.item}>
-                      <img
-                        src="/case-2.png"
-                        alt="case-1"
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title2}</h4>
-                        <h5>{card_desc2}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <img
-                        src="/case-3.png"
-                        alt="case-1"
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title3}</h4>
-                        <h5>{card_desc3}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide> */}
                 </Swiper>
               </div>
             </div>

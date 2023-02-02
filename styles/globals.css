@@ -124,7 +124,7 @@ a {
   border-left: 2px solid gray;
   padding-left: 10px;
   margin: 7px 0 7px;
-  height: auto;
+  height: fit-content;
 }
 
 /* Style the buttons that are used to open and close the accordion panel */
@@ -163,7 +163,7 @@ a {
 .accordion .open h2,
 .accordion .open h1 {
   display: block;
-  width: 14px;
+  width: 15px;
   height: 2px;
   background-color: #fff;
 }
@@ -173,7 +173,7 @@ a {
 }
 
 .accordion .open h2 {
-  transform: rotate(90deg) translateX(-1px);
+  transform: rotate(90deg) translateX(-2px);
 }
 
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
