@@ -13,11 +13,12 @@ import {
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import HomeContent from '../pages/homeapi/static.json'
 
 export default function InitiativePartners(props) {
   const { locale, query, pathname } = useRouter();
 
-  const { HomeContent, partners, status } = props;
+  const { partners, status } = props;
 
   return (
     <div className={styles.initpartners}>
@@ -29,18 +30,23 @@ export default function InitiativePartners(props) {
             <div key={i} className={status === "active"? styles.active : ''}>
               <div
                 className={
-                  pathname === "/hakaton/[id]"? styles.partnersForHak : ''
+                  pathname === "/hakaton/[id]"? styles.partnersForHak : styles.black_bg
                 }
               >
                 <h3>{title}</h3>
               </div>
 
-              <p>{desc}</p>
+              <p className={
+                  pathname === "/hakaton/[id]"? "" : styles.black_bg_p
+                }>{desc}</p>
             </div>
           );
         })}
 
-      <div className={styles.sliders}>
+      <div className={
+        pathname !== "/hakaton/[id]"?
+        styles.sliders + ' our_goal ' + styles.card_bg: styles.sliders
+        }>
         <Swiper
           modules={[
             Navigation,

@@ -1,0 +1,79 @@
+.ConvertingSpeech .title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+
+.title p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    color: #FFFFFF;
+    width: 400px;    
+}
+
+.ConvertingSpeech h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    position: relative;
+    color: #fff;    
+    width: 467px;
+}
+
+.ConvertingSpeech h3 span {
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 10%;
+    top: 0;
+    background: linear-gradient(180deg, #17FEA4 0%, #5D2ABF 100%);
+    filter: blur(100px);
+    transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+.speech_box {
+    border: 1px solid rgba(212, 210, 210, 0.397);
+    border-radius: 30px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.speech_box img {
+    width: 150px;
+}
+
+.speech_box p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 32px;
+    text-align: center;
+    color: #FFFFFF;
+    margin-top: 20px;
+}
+
+@media (max-width: 917px) {
+    .ConvertingSpeech .title p {
+        width: 100%;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .ConvertingSpeech h3 {
+        width: 100%;
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+    }
+
+    .title p {
+        text-align: center;
+    }
+}

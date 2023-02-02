@@ -5,8 +5,8 @@ import Chevron from '../Question/Chevron'
 export default function HeroIndex() {
   return (
     <div className={styles.container}>
-      <div className={styles.block}>s        
-
+      <div className={styles.block}>   
+      <div className={styles.hero_blur}></div>
         <div className={styles.content}>
           <div className={styles.voiceCollect}>
             Ovoz yig'ish <span> 3 bosqich</span>da amalga oshirildi - Tanishish

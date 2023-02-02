@@ -4,18 +4,6 @@
   font-size: 20px;
 }
 
-.hero_blur {
-  position: absolute;
-  left: 30%;
-  top: -130%;
-  width: 400px;
-  height: 400px;
-  z-index: 8;
-  background: linear-gradient(180deg, #8324ff98 0%, #5D2ABF 100%);
-  filter: blur(200px);
-  transform: matrix(0, 1, 1, 0, 0, 0);
-}
-
 .header__main {
   width: 100%;
   position: fixed;
@@ -28,7 +16,7 @@
 }
 
 .header__main_bg {
-  background: rgba(12, 10, 23, 1);
+  background: transparent;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(40px);
 }
@@ -392,8 +380,12 @@
 
   .header__menu_mobile.header__menu {
     transform: translateY(80px);
-    position: fixed;
-    overflow-y: auto;
+    overflow: auto;
+  }
+
+  .header__menu_bg_grey.header__main_bg {
+    background: rgba(31, 29, 41, 1) !important;
+    backdrop-filter: blur(40px);
   }
 
   .header__menu_bg_grey.header__main_bg .header__menu {

@@ -1,5 +1,4 @@
-
-.our_goal{
+.our_goal {
   position: relative;
   margin-top: 160px;
 
@@ -18,16 +17,15 @@
   z-index: -5;
 }
 
-.our_goal h3{
-  font-size: 48px;
-  font-weight: 900;
-  line-height: 53px;
-  letter-spacing: 0.0022em;
+.our_goal h3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  color: #FFFFFF;
   text-align: center;
-  color: #12273C
 }
 
-.our_goal p{
+.our_goal p {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
@@ -36,24 +34,22 @@
   margin: 0 auto;
   margin-top: 16px
 }
-.sliders{
+
+.sliders {
   position: relative;
   width: 90%;
   margin: 0 auto;
 }
 
-.sliders{
-    margin-top: 64px;
-    cursor: pointer;
+.sliders {
+  margin-top: 64px;
+  cursor: pointer;
 }
 
-.item{
-  padding: 20px;
+.item {
+  padding: 40px 20px;
   backdrop-filter: blur(80px);
-  border-radius: 20px;
   height: 350px;
-  border: 2px solid rgba(238, 231, 231, 0.8);
-  background: rgba(255, 255, 255, 0.1);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-backdrop-filter: blur(10px);
@@ -71,102 +67,101 @@
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
   margin-left: 5%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
 }
 
-.text{
+.text {
   text-align: left;
- 
+  margin-top: 30px;
 }
 
-.item h4{
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 22px;
-  margin-bottom: 5px;
-  letter-spacing: 0.0007em;
-  text-align: left;
-  color: #12273C
+.item h4 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.002em;
+  color: #FFFFFF;
 }
 
-.item h5{
-  font-size: 16px;
+.item h5 {
+  margin-top: 10px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 23px;
-  letter-spacing: 0.0043em;
-  text-align: left;
-  color: rgba(0, 0, 0, 0.6);
-  margin: 0;
+  font-size: 16px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
-  .our_goal{
+  .our_goal {
     position: relative;
-    margin-top:70px
+    margin-top: 70px
   }
-  
-  .our_goal h3{
+
+  .our_goal h3 {
     font-size: 28px;
     font-weight: 800;
     line-height: 30px;
 
   }
 
-  .our_goal p{
+  .our_goal p {
     font-size: 16px;
     font-weight: 400;
     line-height: 22px;
     width: 100%;
     margin: 0 auto;
     margin-top: 16px;
-    padding:5px
+    padding: 5px
   }
 
-  .item{
+  .item {
     margin: 0 auto;
   }
 }
+
 @media (max-width: 1292px) {
-  .item{
+  .item {
     height: auto;
   }
-  
-  
-    .item img{
-      width: 164px!important;
-      height: 164px!important;
+
+
+  .item img {
+    width: 164px !important;
+    height: 164px !important;
   }
-  
-  .item h4{
+
+  .item h4 {
     font-size: 15px;
     line-height: 17px;
   }
-  
-  .item h5{
+
+  .item h5 {
     font-size: 12px;
-   line-height: 18px;
+    line-height: 18px;
   }
 }
 
 @media (max-width: 500px) {
-.item{
-  height: auto;
+  .item {
+    height: auto;
+  }
+
+
+  .item img {
+    width: 164px !important;
+    height: 164px !important;
+  }
+
+  .item h4 {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .item h5 {
+    font-size: 12px;
+    line-height: 18px;
+  }
 }
-
-
-  .item img{
-    width: 164px!important;
-    height: 164px!important;
-}
-
-.item h4{
-  font-size: 15px;
-  line-height: 17px;
-}
-
-.item h5{
-  font-size: 12px;
- line-height: 18px;
-}
-}
-
-

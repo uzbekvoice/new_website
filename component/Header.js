@@ -51,8 +51,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               styles.header__main + ' ' + styles.header__main_bg)
             : styles.header__main
         }
-          key={id}>
-          <div className={styles.hero_blur}></div>
+          key={id}>          
           <div className={styles.container}>
             <Link href="/">
               <a>

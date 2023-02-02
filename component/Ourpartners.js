@@ -1,11 +1,12 @@
 import React from "react";
 import styles from "../styles/Ourpartners.module.css";
-import Image from "next/image";
+import HomeContent from '../pages/homeapi/static.json'
 import { useRouter } from "next/router";
 import Link from "next/link";
-export default function Ourpartners(props) {
+export default function Ourpartners() {
+
   const { locale } = useRouter();
-  const { HomeContent } = props;
+
   return (
     <div className={styles.partners}>
       <div className={styles.detail}>
@@ -18,17 +19,17 @@ export default function Ourpartners(props) {
                 <h2>{title}</h2>
                 <p>{desc}</p>
                 <Link href="/hamkorlar">
-                  <a>{button}</a>
+                  <a>{button}
+                    <img src='/arrow-left-white.png' />
+                  </a>
                 </Link>
               </div>
             );
           })}
       </div>
       <div className={styles.imgunit}>
-        <div className={styles.image}>
-        <img src="/robot.png"  alt="robot" />
-        </div>
-    
+        <div className={styles.blur}></div>
+        <img src="/puzzle.png" alt="puzzle" />
       </div>
     </div>
   );

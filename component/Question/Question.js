@@ -3,8 +3,9 @@ import Accordion from "./Accordion";
 import { useRouter } from "next/router";
 import styles from "../../styles/Accordion.module.css";
 import Link from "next/link";
+import HomeContent from '../../pages/homeapi/static.json'
 
-export default function Question({ data, HomeContent }) {
+export default function Question({ data }) {
   const { locale } = useRouter();
 
   return (
@@ -29,9 +30,9 @@ export default function Question({ data, HomeContent }) {
               <Accordion key={id} title={question} content={answer} />
             ))}
         </div>
-        <div className={styles.faqButton}>
+        {/* <div className={styles.faqButton}>
           <Link href="https://t.me/uzbekvoice">Savol qoldirish</Link>
-        </div>
+        </div> */}
       </div>
     </div>
   );

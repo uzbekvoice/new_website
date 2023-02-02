@@ -4,6 +4,19 @@
   padding: 200px 15px;
 }
 
+.hero_blur {
+  position: absolute;
+  left: 30%;
+  top: -30%;
+  width: 400px;
+  height: 400px;
+  z-index: 98;
+  background: linear-gradient(180deg, #8324ff98 0%, #5D2ABF 100%);
+  filter: blur(200px);
+  transform: matrix(0, 1, 1, 0, 0, 0);
+}
+
+
 .mic {
   position: relative;
   width: 600px;
@@ -155,6 +168,10 @@
 @media (max-width: 767px) {
   .voiceCollect {
     font-size: 14px;
+  }
+
+  .hero_blur {
+    display: none;
   }
 }
 

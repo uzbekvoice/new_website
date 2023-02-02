@@ -15,11 +15,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function Slider() {
+export default function FrequentlyCases() {
   const { locale } = useRouter();
   return (
     <div className={styles.our_goal + " our_goal"}>
-      {HomeContent.maqsad
+      {HomeContent.case
         .filter((p) => p.languages_code === locale)
         .map((HomeContent, i) => {
           const {
@@ -73,8 +73,8 @@ export default function Slider() {
                   <SwiperSlide>
                     <div className={styles.item}>
                       <img
-                        src="/goals-1.png"
-                        alt="goal-1"
+                        src="/case-1.png"
+                        alt="case-1"
                       />
                       <div className={styles.text}>
                         <h4>{card_title}</h4>
@@ -85,8 +85,8 @@ export default function Slider() {
                   <SwiperSlide>
                     <div className={styles.item}>
                     <img
-                        src="/goals-2.png"
-                        alt="goal-1"
+                        src="/case-2.png"
+                        alt="case-1"
                       />
                       <div className={styles.text}>
                         <h4>{card_title2}</h4>
@@ -97,8 +97,8 @@ export default function Slider() {
                   <SwiperSlide>
                     <div className={styles.item}>
                     <img
-                        src="/goals-3.png"
-                        alt="goal-1"
+                        src="/case-3.png"
+                        alt="case-1"
                       />
                       <div className={styles.text}>
                         <h4>{card_title3}</h4>
