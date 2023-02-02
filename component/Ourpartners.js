@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../styles/Ourpartners.module.css";
-import HomeContent from '../pages/homeapi/static.json'
 import { useRouter } from "next/router";
 import Link from "next/link";
+
 export default function Ourpartners({ data }) {
 
   const { locale } = useRouter();
@@ -23,7 +23,7 @@ export default function Ourpartners({ data }) {
             </div>
           </div>
           <div className={styles.imgunit}>
-            <div className={styles.blur}></div>
+            <div className={styles.blur_bg}></div>
             <img src="/puzzle.png" alt="puzzle" />
           </div>
         </div>
