@@ -7,7 +7,7 @@ import HeroIndex from '../component/Index/HeroIndex'
 import UnderstandMore from '../component/UnderstandMore'
 import InitiativePartners from '../component/InitiativePartners'
 import Question from "../component/Question/Question";
-import Ourpartners from '../component/Ourpartners'
+import OurPartners from '../component/OurPartners'
 
 export default function Index({partners, faq, data}) {
   
@@ -19,7 +19,7 @@ export default function Index({partners, faq, data}) {
       <ConvertingText data={data}/>
       <FrequentlyCases data={data}/>
       <UnderstandMore data={data} />
-      <Ourpartners data={data}  />
+      <OurPartners data={data} />
       <InitiativePartners data={data} partners={partners?.data}/>
       <Question data={faq?.data} />
     </div>

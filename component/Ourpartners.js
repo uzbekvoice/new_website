@@ -3,7 +3,7 @@ import styles from "../styles/Ourpartners.module.css";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-export default function Ourpartners({ data }) {
+export default function OurPartners({ data }) {
 
   const { locale } = useRouter();
 
