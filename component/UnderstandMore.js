@@ -1,18 +1,17 @@
 import React from 'react'
 import styles from '../styles/UnderstandMore.module.css'
-import HomeApi from '../pages/homeapi/static.json'
 import { useRouter } from 'next/router';
 
 const UnderstandMore = ({ data }) => {
     const { locale } = useRouter();
 
-    const getImage = (title) => {
-        switch(title){
-            case 'Speaker diarization': return <img src='chat.png' alt='img'/>
-            case 'Summarization': return <img src='goals-2.png' alt='img'/>
-            case 'Topic detection': return <img src='copy.png' alt='img'/>
-            case 'Tilni aniqlash': return <img src='goals-1.png' alt='img'/>
-            case 'Obektni aniqlash': return <img src='sun.png' alt='img'/>
+    const getImage = (i) => {
+        switch(i){
+            case 0: return <img src='chat.png' alt='img'/>
+            case 1: return <img src='goals-2.png' alt='img'/>
+            case 2: return <img src='copy.png' alt='img'/>
+            case 3: return <img src='goals-1.png' alt='img'/>
+            case 4: return <img src='sun.png' alt='img'/>
             default: return <img src='chat-text.png' alt='img'/>
         }
     }
@@ -38,7 +37,7 @@ const UnderstandMore = ({ data }) => {
 
                                             <p>{item?.soon_text}</p>
 
-                                            {getImage(item?.soon_title)}
+                                            {getImage(i)}
 
                                             <button type='button'>{value?.coming_soon_text}</button>
                                         </div>

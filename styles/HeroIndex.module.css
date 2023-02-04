@@ -91,7 +91,7 @@
   margin-top: 40px;
 }
 
-.content a {
+.content button {
   background: linear-gradient(91.97deg,
       #00c7fe -34.54%,
       #007bf4 34.16%,
@@ -118,7 +118,7 @@
   margin-top: 70px;
 }
 
-.waitlist div {
+.waitlist a {
   margin-left: 40px;
   color: #fff;
   display: flex;
@@ -223,7 +223,7 @@
     margin-top: 45px;
   }
 
-  .waitlist div {
+  .waitlist a {
     margin-top: 20px;
   }
 }

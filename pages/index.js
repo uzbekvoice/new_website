@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Slider from '../component/Carousel'
 import ConvertingSpeech from '../component/ConvertingSpeech'
 import ConvertingText from '../component/ConvertingText'
@@ -10,7 +10,10 @@ import Question from "../component/Question/Question";
 import OurPartners from '../component/OurPartners'
 
 export default function Index({partners, faq, data}) {
-  
+  const [mounted, setMounted] = useState(false); 
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
   return (
     <div>
       <HeroIndex data={data}/>

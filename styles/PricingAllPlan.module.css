@@ -12,8 +12,9 @@
 }
 
 .wrapper {
-    display: flex;    
-    justify-content: space-between;    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .wrapper h3 {
@@ -43,6 +44,7 @@
 
 .wrapper ul {
     list-style-position: inside;
+    list-style: none;
 }
 
 .wrapper ul li {
@@ -51,4 +53,31 @@
     font-size: 18px;
     line-height: 32px;
     color: #FFFFFF;
+}
+
+@media (max-width: 767px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .left_section,
+    .right_section {
+        width: 100%;
+    }
+
+    .right_section {
+        margin-top: 20px;
+    }
+
+    .PricingAllPlan h2 {
+        font-size: 32px;
+        line-height: 39px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .wrapper ul li {
+        font-size: 16px;
+    }
 }

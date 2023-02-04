@@ -12,8 +12,6 @@ export default function Hakaton({ partners, data, hakatonHero, hakatonFoto, haka
 
   const [mounted, setMounted] = useState(false);
 
-  
-
   const router = useRouter()
   const { query, locale } = router
 

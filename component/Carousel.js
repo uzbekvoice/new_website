@@ -2,7 +2,6 @@ import React from "react";
 import styles from "../styles/Home.module.css";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
-// import HomeContent from '../pages/homeapi/static.json'
 import {
   Navigation,
   Scrollbar,
@@ -18,16 +17,17 @@ import "swiper/css/autoplay";
 export default function Slider({ data }) {
   const { locale } = useRouter();
 
-  const getImage = (title) => {
-    switch (title) {
-      case 'Audio transkripsiya': return <img src='case-1.png' alt='img' />
-      case 'Diktant': return <img src='case-2.png' alt='img' />
-      case 'Ovozli buyruqlar': return <img src='case-3.png' alt='img' />
-      case 'Ojizlar uchun qulaylik': return <img src='goals-1.png' alt='img' />
-      case 'Onlayn qidiruvlar': return <img src='sun.png' alt='img' />
+  const getImage = (i) => {
+    switch (i) {
+      case 0: return <img src='case-1.png' alt='img' />
+      case 1: return <img src='case-2.png' alt='img' />
+      case 2: return <img src='case-3.png' alt='img' />
+      case 3: return <img src='goals-1.png' alt='img' />
+      case 4: return <img src='sun.png' alt='img' />
       default: return <img src='chat-text.png' alt='img' />
     }
   }
+  console.log(locale);
 
   return (
     <div className={styles.our_goal + " our_goal"}>
@@ -50,7 +50,7 @@ export default function Slider({ data }) {
                   slidesPerView={3}
                   loop={true}
                   navigation
-                  autoplay={true}
+                  // autoplay={true}
                   speed={300}
                   breakpoints={{
                     0: {
@@ -76,15 +76,17 @@ export default function Slider({ data }) {
                     value.stt_cases.map((item_value, i) =>
                       <SwiperSlide key={i}>
                         <div className={styles.item}>
-                          {getImage(item_value.case)}
-                          <div className={styles.text}>
+                          {getImage(i)}
+                          <div
+                            className={styles.text}
+                          >
                             <h4>{item_value?.case}</h4>
                             <h5>{item_value?.case_text}</h5>
                           </div>
                         </div>
                       </SwiperSlide>
                     )
-                  }                  
+                  }
                 </Swiper>
               </div>
             </div>

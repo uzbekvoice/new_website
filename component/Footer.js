@@ -21,7 +21,7 @@ export default function Footer() {
               <div className={styles.footer__main}>
                 {
                   (router.pathname === "/" || router.pathname === "/pricing") ?
-                    <img className={styles.footer__logo} src="/logo.png" alt='logofooter' /> :
+                    <img className={styles.footer__logo} src="/logo.svg" alt='logofooter' /> :
                     <img className={styles.footer__logo} src="/newlogo.png" alt='logofooter' />
                 }
                 <div className={styles.powered}>

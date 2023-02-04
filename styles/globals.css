@@ -127,6 +127,29 @@ a {
   height: fit-content;
 }
 
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.dropdown .accordion {
+  padding: 6px 10px;  
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .dropdown .accordion {
+    width: 80%;
+  }
+}
+
+.dropdown .accordion__content {
+  padding: 0px 10px;  
+}
+
+
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
   width: 100%;
@@ -397,6 +420,15 @@ a {
 }
 
 /************STAT styles*************/
+@media (max-width: 1200px) {
+  .swiper-button-prev {
+    left: -2% !important;
+  }
+  
+  .swiper-button-next {
+    right: -2% !important;
+  }
+}
 @media (max-width: 767px) {
   .stat_top_chart .recharts-responsive-container {
     width: 700px !important;

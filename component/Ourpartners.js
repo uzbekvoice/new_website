@@ -7,7 +7,7 @@ export default function OurPartners({ data }) {
 
   const { locale } = useRouter();
   return (
-    data.data.filter((p) => p.languages_code === locale)
+    data?.data.filter((p) => p.languages_code === locale)
       .map(value =>
         <div key={value.id} className={styles.partners}>
           <div className={styles.detail}>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "../styles/InitiativePartners.module.css";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -14,15 +14,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function InitiativePartners(props) {
-  const [mounted, setMounted] = useState(false); 
+export default function InitiativePartners(props) {  
 
   const { locale } = useRouter();
 
-  const { partners, data } = props;
-
-  useEffect(() => setMounted(true), []);
-  if (!mounted) return null;
+  const { partners, data } = props;  
   
   return (
     <div className={styles.initpartners}>

@@ -1,8 +1,7 @@
 import React from "react";
-import styles from "../styles/Home.module.css";
+import styles from "../styles/FrequentlyCases.module.css";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
-import HomeContent from '../pages/homeapi/static.json'
 import {
   Navigation,
   Scrollbar,
@@ -18,13 +17,13 @@ import "swiper/css/autoplay";
 export default function FrequentlyCases({ data }) {
   const { locale } = useRouter();
 
-  const getImage = (title) => {
-    switch (title) {
-      case 'Audio kitoblar': return <img src='case-1.png' alt='img' />
-      case 'Marketing nutqlari': return <img src='case-2.png' alt='img' />
-      case 'Digital darsliklar': return <img src='case-3.png' alt='img' />
-      case 'YouTube hikoyalari': return <img src='goals-1.png' alt='img' />
-      case 'Yangiliklar bayoni': return <img src='sun.png' alt='img' />
+  const getImage = (i) => {
+    switch (i) {
+      case 0: return <img src='case-1.png' alt='img' />
+      case 1: return <img src='case-2.png' alt='img' />
+      case 2: return <img src='case-3.png' alt='img' />
+      case 3: return <img src='goals-1.png' alt='img' />
+      case 4: return <img src='sun.png' alt='img' />
       default: return <img src='chat-text.png' alt='img' />
     }
   }
@@ -76,7 +75,7 @@ export default function FrequentlyCases({ data }) {
                     value?.tts_cases.map((item_value, i) =>
                       <SwiperSlide key={i}>
                         <div className={styles.item}>
-                          {getImage(item_value.case)}
+                          {getImage(i)}
                           <div className={styles.text}>
                             <h4>{item_value.case}</h4>
                             <h5>{item_value.case_text}</h5>

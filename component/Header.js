@@ -1,16 +1,18 @@
 import styles from "../styles/Header.module.css";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Chevron from "./Question/Chevron";
 import NavbarApi from "../pages/navbarapi/static.json";
+import Dropdown from "./Question/DropDown";
 
-function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
+function Header({ menuToggle, setMenuToggle, openLang, setOpenLang, setModal }) {
   const router = useRouter();
   const { asPath, locale } = router;
   const [stepDropDown, setStepDropDown] = useState(false);
   const [hakDropDown, sethakDropDown] = useState(false);
   const [otherDropDown, setOtherDropDown] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   const openDropdown = () => {
     setStepDropDown(!stepDropDown);
@@ -29,11 +31,16 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
     setOtherDropDown(!otherDropDown);
   };
 
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
+
   return NavbarApi.menu
     .filter((p) => p.languages_code === locale)
     .map(
       ({
         id,
+        malumot,
+        malumotlar,
         bosqich,
         bosqichlar,
         hakaton,
@@ -43,6 +50,8 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
         qollanma,
         boshqa,
         boshqalar,
+        waitless,
+        contact
       }) => (
         <div className={
           (router.pathname === "/" || router.pathname === "/pricing") ?
@@ -51,13 +60,14 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               styles.header__main + ' ' + styles.header__main_bg)
             : styles.header__main
         }
-          key={id}>          
+          key={id}          
+          >
           <div className={styles.container}>
             <Link href="/">
               <a>
                 {
                   (router.pathname === "/" || router.pathname === "/pricing") ?
-                    <img className={styles.header_logo} src="/logo.png" alt="logo" /> :
+                    <img className={styles.header_logo} src="/logo.svg" alt="logo" /> :
                     <img className={styles.header_logo} src="/newlogo.png" alt="logo" />
                 }
               </a>
@@ -146,7 +156,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                 onMouseOut={() => setStepDropDown(false)}
                 className={styles.item + " " + styles.noHover}
               >
-                {bosqich}
+                {malumot}
 
                 <Chevron
                   className={"rotate"}
@@ -162,39 +172,11 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                       : styles.left
                   }
                 >
-                  {bosqichlar.map((value, i) => (
+                  <Dropdown fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"} title={hakaton} content={hakatonlar} />
+                  <Dropdown fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"} title={bosqich} content={bosqichlar} />
+                  {malumotlar.map(({ path, value }, i) => (
                     <li key={i}>
-                      <Link href={`/bosqich/${i + 1}`}>
-                        <a onClick={() => setMenuToggle(false)}>{value}</a>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div
-                onClick={() => openHakDropdown()}
-                onMouseOver={() => sethakDropDown(true)}
-                className={styles.item + " " + styles.noHover}
-              >
-                {hakaton}
-
-                <Chevron
-                  className={"rotate"}
-                  width={7}
-                  height={11}
-                  fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
-                />
-
-                <ul
-                  className={
-                    hakDropDown
-                      ? styles.activeDrop + " " + styles.activeLeft
-                      : styles.left
-                  }
-                >
-                  {hakatonlar.map((value, i) => (
-                    <li key={i}>
-                      <Link href={`/hakaton/${i + 1}`}>
+                      <Link href={path}>
                         <a onClick={() => setMenuToggle(false)}>{value}</a>
                       </Link>
                     </li>
@@ -245,7 +227,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
                       ? styles.otherLeft
                       : styles.activeDrop + " " + styles.activeOtherLeft
                   }
-                >
+                >                  
                   {boshqalar.map(({ path, value }, i) => (
                     <li key={i}>
                       <Link href={path}>
@@ -257,17 +239,19 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang }) {
               </div>
 
               <div className={styles.waitlist}>
-                <div>
-                  Bog`lanish
-                  <Chevron
-                    className={styles.chevron + " rotate"}
-                    width={7}
-                    height={11}
-                    fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
-                  />
-                </div>
-                <a>Waitlistga qo'shilish</a>
-              </div>
+                <Link href={'/hamkorlar'}>
+                  <a>
+                    {contact}
+                    <Chevron
+                      className={styles.chevron + " rotate"}
+                      width={7}
+                      height={11}
+                      fill={(router.pathname === "/" || router.pathname === "/pricing") ? "#ffffff" : "#1717179d"}
+                    />
+                  </a>
+                </Link>
+                <button type="button" onClick={() => setModal(true)}>{waitless}</button>
+              </div>              
 
               <div
                 onClick={() => setOpenLang(!openLang)}
