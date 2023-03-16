@@ -20,13 +20,22 @@ function Accordion(props) {
   }
 
   return (
-    <div className="accordion__section">
+    <div className={`accordion__section ${setActive}`}>
       <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
         <div className={styles.accordion_title}>
           <p>{props.title}</p>
         </div>
 
-        <Chevron className={`${setRotate}`} width={8} fill={"#8D53FD"} />
+        <div className='open'>
+          {
+            setActive ? <span></span> :
+              <div>
+                <h1></h1>
+                <h2></h2>
+              </div>
+          }
+        </div>
+        {/* <Chevron className={`${setRotate}`} width={8} fill={"#8D53FD"} /> */}
       </button>
       <div
         ref={content}

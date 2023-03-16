@@ -14,10 +14,26 @@
 }
 
 .partnersForHak {
-  margin-top: 520px ;
+  margin-top: 520px;
 }
 
-.sliders{
+.black_bg h3 {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.black_bg_p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 32px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.sliders {
   position: relative;
   margin-top: 64px;
 }
@@ -32,7 +48,12 @@
   filter: grayscale();
   transition: all 0.5s;
   height: 280px;
-  
+}
+
+.card_bg .item {
+  /* background: rgba(255, 255, 255, 0.08); */
+  /* border: 1px solid rgba(255, 255, 255, 0.08); */
+  border-radius: 20px;
 }
 
 .item span {
@@ -43,10 +64,10 @@
   text-align: center;
 }
 
-.item img{
+.item img {
   width: 100%;
-  
-  
+  border-radius: 20px;
+
 }
 
 .item:hover {
@@ -66,21 +87,21 @@
 
 @media (max-width: 893px) {
   .partnersForHak {
-    margin-top: 540px ;
+    margin-top: 540px;
   }
 
   .active h3 {
     margin-top: 340px !important;
   }
-  
+
 }
 
 @media (max-width:767px) {
-  
+
   .active h3 {
     margin-top: 300px !important;
   }
-  
+
   .partners {
     display: flex;
     flex-direction: column-reverse;
@@ -113,7 +134,7 @@
   }
 
   .partnersForHak {
-    margin-top: 500px ;
+    margin-top: 500px;
   }
 }
 

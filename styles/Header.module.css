@@ -10,9 +10,36 @@
   z-index: 99;
   border-bottom: 0.1em solid #f0f9fa;
   backdrop-filter: blur(15px);
-  background-color: hsla(0, 0%, 100%, 0.65);
+  background-color: hsla(0, 0%, 100%, 1);
   top: 0;
   left: 0;
+}
+
+.header__main_bg {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(40px);
+}
+
+.header__menu_bg_grey {
+  background: rgba(31, 29, 41, 1);
+  backdrop-filter: blur(40px);
+}
+
+.header__main_bg .header__menu a {
+  color: #fff;
+}
+
+.header__main_bg .header__menu .item {
+  color: #fff;
+}
+
+.header__main_bg .header__menu .item ul a {
+  color: #171717;
+}
+
+.header__main_bg .mobileLan span {
+  color: #fff;
 }
 
 .container {
@@ -24,6 +51,8 @@
   align-items: center;
   margin: 0 auto;
   padding: 0 86px;
+  z-index: 9;
+  position: relative;
 }
 
 @media (max-width: 1200px) {
@@ -253,7 +282,7 @@
 
 .header__main_wrapper .mobileLan {
   display: none;
-  margin-right: 20px;
+  margin-right: 14px;
   cursor: pointer;
 }
 
@@ -262,8 +291,13 @@
 }
 
 .header_burger_menu img {
-  width: 32px;
-  height: 32px;
+  width: 18px;
+  height: 18px;
+}
+
+.header_burger_menu .menu_img img {
+  width: 28px;
+  height: 28px;
 }
 
 .header_main_ishtirok {
@@ -274,22 +308,118 @@
   display: none;
 }
 
-@media (max-width: 1050px) {
+.waitlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__menu .waitlist a {
+  color: #171717 !important;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 0 !important;
+}
+
+.header__main_bg .waitlist a {
+  color: #fff !important;
+}
+
+.waitlist .chevron {
+  transform: rotate(0deg);
+  margin-left: 10px;
+}
+
+.header__menu .waitlist button {
+  background: linear-gradient(91.97deg,
+      #00c7fe -34.54%,
+      #007bf4 34.16%,
+      #8d53fd 97.37%);
+
+  padding: 15px 30px;
+  color: #fff;
+  display: inline-block !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 30px;
+  position: relative;
+  z-index: 1;
+  border: 0;
+  cursor: pointer;
+  margin-top: 0 !important;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+@media (max-width: 1400px) {
+  .header__menu a {
+    font-size: 15px;
+  }
+
+  .item {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-width: 1300px) {  
+
+  .waitlist {
+    width: 100%;
+    padding-top: 20px;
+    border-top: 1px solid #d9d9d9;
+    margin-left: 0;
+    margin-top: 30px;    
+  }
+
+  .waitlist a {
+    margin-right: 40px;
+    width: fit-content !important;
+  }
+
   .header__menu {
     position: absolute;
     right: 0;
     top: 0;
     flex-direction: column;
-    background-color: hsla(0, 0%, 100%, 0.95);
-    width: 400px;
-    padding: 70px 0 30px;
-
-    height: 100vh;
-    transform: translateX(100%);
+    background-color: hsla(0, 0%, 100%, 1);
+    width: 100%;
+    padding: 40px 0 30px;
+    height: fit-content;
+    transform: translateY(-100%);
     -webkit-transition: all 0.6s ease 0s;
     -o-transition: all 0.6s ease 0s;
     transition: all 0.6s ease 0s;
   }
+
+  .header__menu_mobile.header__menu {
+    transform: translateY(80px);
+    overflow: auto;
+  }
+
+  .header__menu_bg_grey.header__main_bg {
+    background: rgba(31, 29, 41, 1) !important;
+    backdrop-filter: blur(40px);
+  }
+
+  .header__menu_bg_grey.header__main_bg .header__menu {
+    background: rgba(31, 29, 41, 1);
+    backdrop-filter: blur(40px);
+  }
+
+  .header__main_bg .header__menu {
+    background: rgba(12, 10, 23, 1);
+    backdrop-filter: blur(40px);
+    border-top: 1px solid #b4b3b3;
+  }
+
+  .header__main_bg .header__menu .item ul a {
+    color: #fff;
+  }
+
 
   .header__menu a:last-child {
     display: none;
@@ -300,14 +430,14 @@
     padding: 10px 0;
     margin-left: 0;
     width: 100%;
-    padding-left: 150px;
+    padding-left: 30px;
   }
 
   .item {
     margin-left: 0;
     padding: 10px 0;
     width: 100%;
-    padding-left: 150px;
+    padding-left: 30px;
   }
 
   .header__menu .item .activeDrop {
@@ -399,25 +529,17 @@
 }
 
 @media (max-width: 576px) {
-  .header__menu {
-    width: 300px;
+  .header__menu .waitlist a {
+    padding: 12px 20px;
   }
 
-  .header__menu a {
-    padding-left: 100px;
-  }
-
-  .item {
-    padding-left: 100px;
+  .header__menu_mobile.header__menu {
+    transform: translateY(64px);
   }
 
   .header__menu_close img {
     width: 16px;
     height: 16px;
-  }
-
-  .header_main_ishtirok {
-    display: none;
   }
 
   .header__menu a:last-child {

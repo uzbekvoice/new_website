@@ -14,33 +14,33 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function InitiativePartners(props) {
-  const { locale, query, pathname } = useRouter();
+export default function InitiativePartners(props) {  
 
-  const { HomeContent, partners, status } = props;
+  const { locale } = useRouter();
 
+  const { partners, data } = props;  
+  
   return (
     <div className={styles.initpartners}>
-      {HomeContent.partner
+      {data.data
         .filter((p) => p.languages_code === locale)
-        .map((HomeContent, i) => {
-          const { title, desc } = HomeContent;
+        .map((value) => {
           return (
-            <div key={i} className={status === "active" && styles.active}>
+            <div key={value.id}>
               <div
-                className={
-                  pathname === "/hakaton/[id]" && styles.partnersForHak
-                }
+                className={styles.black_bg}
               >
-                <h3>{title}</h3>
+                <h3>{value?.partners_title}</h3>
               </div>
 
-              <p>{desc}</p>
+              <p className={styles.black_bg_p}>{value?.partners_text}</p>
             </div>
           );
         })}
 
-      <div className={styles.sliders}>
+      <div
+        className={styles.sliders + ' initpartners ' + styles.card_bg}
+      >
         <Swiper
           modules={[
             Navigation,
@@ -80,24 +80,25 @@ export default function InitiativePartners(props) {
           }}
           scrollbar={{ draggable: true }}
         >
-          {partners.map(
-            ({ id, partner_link, partner_image, partner_title }) => (
-              <SwiperSlide key={id}>
-                <div className={styles.item}>
-                  <a
-                    href={partner_link}
-                    target="_blank"
-                    className={styles.item}
-                  >
-                    <img
-                      src={`https://admin.uzbekvoice.ai/assets/${partner_image}`}
-                    />
-                    <span>{partner_title}</span>
-                  </a>
-                </div>
-              </SwiperSlide>
-            )
-          )}
+          {
+            partners?.map(
+              ({ id, partner_link, partner_image, partner_title }) => (
+                <SwiperSlide className={styles.item} key={id}>
+                  <div >
+                    <a
+                      href={partner_link}
+                      target="_blank"
+                      className={styles.item}
+                    >
+                      <img
+                        src={`https://admin.uzbekvoice.ai/assets/${partner_image}`} alt='parners img'
+                      />
+                      <span>{partner_title}</span>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              )
+            )}
         </Swiper>
       </div>
     </div>

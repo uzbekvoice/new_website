@@ -50,22 +50,26 @@ export default function HakatonFoto({ data, galleryID }) {
                     qw
                         .slice(0, more)
                         .map((value, index) => (
-                            value.directus_files_id ?
-                                <a
-                                    data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
-                                    key={galleryID + '-' + index}
-                                    target="_blank"
-                                    rel="noreferrer"
-                                    data-pswp-width="1200"
-                                    data-pswp-height="800"
-                                >
-                                    <img
-                                        src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
-                                        alt={value.directus_files_id}
-                                    />
-                                </a>
-                                :
-                                <span></span>
+                            <div key={index}>
+                                {
+                                    value.directus_files_id ?
+                                        <a
+                                            data-pswp-src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                            key={galleryID + '-' + index}
+                                            target="_blank"
+                                            rel="noreferrer"
+                                            data-pswp-width="1200"
+                                            data-pswp-height="800"
+                                        >
+                                            <img
+                                                src={`https://admin.uzbekvoice.ai/assets/${value.directus_files_id}`}
+                                                alt={value.directus_files_id}
+                                            />
+                                        </a>
+                                        :
+                                        <span></span>
+                                }
+                            </div>
                         ))
                 }
             </div>

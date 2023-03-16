@@ -16,16 +16,16 @@ export async function getServerSideProps() {
 
 export default function Roadmap({ roadmaps }) {
   const { locale, query } = useRouter();
-  const dates = roadmaps.data.filter((p) => p.languages_code === locale);
+  const dates = roadmaps?.data?.filter((p) => p.languages_code === locale);
   //   const datalist = dates[1].data;
 
   return (
     <div>
       <div className={styles.roadmaphero}>
         <div className={styles.container_page}>
-          {dates.map((data, id) => (
+          {dates?.map((data, id) => (
             <div key={id} className={styles.roadmap_heading}>
-              {<h2 dangerouslySetInnerHTML={{ __html: data.roadmap_title }} />}
+              {<h2 dangerouslySetInnerHTML={{ __html: data?.roadmap_title }} />}
             </div>
           ))}
         </div>
@@ -34,7 +34,7 @@ export default function Roadmap({ roadmaps }) {
       <div className={styles.roadmap_page}>
         <div className={styles.container_page}>
           <div className={styles.page_heading}>
-            {dates.map(
+            {dates?.map(
               ({ id, roadmap_title, roadmap_heading, roadmap_content }) => (
                 <div key={id}>
                   <h2> {roadmap_heading} </h2><br />
@@ -47,11 +47,8 @@ export default function Roadmap({ roadmaps }) {
           </div>
 
           <div className={styles.grid}>
-            {dates.map((data) =>
-              data.data.map((item) => {
-                const { id, title, content, i } = item;
-                // console.log(item);
-
+            {dates?.map((data) =>
+              data?.data?.map(({id, title, content, i}) => {
                 return (
                   <div key={id} className={styles.item}>
                     <div className={styles.roadmap_title}>{title}</div>
@@ -65,8 +62,6 @@ export default function Roadmap({ roadmaps }) {
                 );
               })
             )}
-
-
           </div>
         </div>
       </div>

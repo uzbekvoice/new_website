@@ -33,6 +33,8 @@ a {
   padding: 0;
 }
 
+
+
 .item.active {
   color: #8d53fd;
 }
@@ -116,18 +118,42 @@ a {
 }
 
 .accordion__section {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  border-left: 2px solid #00c5ff;
-  border-radius: 6px;
+  border-left: 2px solid gray;
   padding-left: 10px;
   margin: 7px 0 7px;
+  height: fit-content;
 }
+
+.dropdown {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+}
+
+.dropdown .accordion {
+  padding: 6px 10px;  
+  width: 100%;
+}
+
+@media (max-width: 1300px) {
+  .dropdown .accordion {
+    width: 80%;
+  }
+}
+
+.dropdown .accordion__content {
+  padding: 0px 10px;  
+}
+
 
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
-  width: 83%;
-  background-color: #fff;
+  width: 100%;
+  background-color: transparent;
   cursor: pointer;
   padding: 18px 0;
   display: inline-flex;
@@ -144,10 +170,43 @@ a {
   width: fit-content;
 }
 
+.accordion .open {
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  color: #fff;
+}
+
+.accordion .open span,
+.accordion .open h2,
+.accordion .open h1 {
+  display: block;
+  width: 15px;
+  height: 2px;
+  background-color: #fff;
+}
+
+.active.accordion__section .open span {
+  background-color: #00C5FF;
+}
+
+.accordion .open h2 {
+  transform: rotate(90deg) translateX(-2px);
+}
+
 /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.accordion:hover,
+/* .accordion:hover, */
 .active {
   background-color: transparent;
+}
+
+.accordion__section.active {
+  border-left: 2px solid #00C5FF;
 }
 
 /* Style the accordion content title */
@@ -186,7 +245,7 @@ a {
 
 /* Style the accordion content panel. Note: hidden by default */
 .accordion__content {
-  background-color: white;
+  background-color: transparent;
   overflow: hidden;
   transition: max-height 0.6s ease;
   opacity: 1;
@@ -241,15 +300,17 @@ a {
 .swiper-button-prev,
 .swiper-button-next {
   border-radius: 50%;
-  background-color: #fff;
-  width: 32px !important;
-  height: 32px !important;
+  width: 40px !important;
+  height: 40px !important;
   box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
-  backdrop-filter: blur(60px);
   color: #fff !important;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: rgba(255, 255, 255, 0.08);
+  border: 0.5px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0px 4px 12px rgba(141, 83, 253, 0.14);
+  backdrop-filter: blur(30px);
 }
 
 .swiper-button-prev {
@@ -260,11 +321,41 @@ a {
   right: -5% !important;
 }
 
+.our_goal .swiper-button-prev::after,
+.initpartners .swiper-button-prev::after
+ {
+  position: absolute;
+  content: url("../public/arrow-left-white.png") !important;
+  left: 0px;
+  top: -7px;
+  width: 100%;
+  height: 100%;
+}
+
+.our_goal .swiper-button-next::after,
+.initpartners .swiper-button-next::after
+ {
+  position: absolute;
+  transform: rotate(180deg);
+  content: url("../public/arrow-left-white.png") !important;
+  left: 0px;
+  top: 7px;
+  width: 100%;
+  height: 100%;
+}
+
+.our_goal .swiper-button-next::after {
+  left: -4px;
+}
+.our_goal .swiper-button-prev::after {
+  left: 4px;
+}
+
 .swiper-button-prev::after {
   position: absolute;
   content: url("../public/arrow-left.svg") !important;
-  left: 2px;
-  top: -9px;
+  left: 1px;
+  top: -6px;
   width: 100%;
   height: 100%;
 }
@@ -272,11 +363,12 @@ a {
 .swiper-button-next::after {
   position: absolute;
   content: url("../public/arrow-right.svg") !important;
-  left: 4px;
-  top: -9px;
+  left: 1px;
+  top: -6px;
   width: 100%;
   height: 100%;
 }
+
 
 /* nav style owl carousel */
 
@@ -328,6 +420,15 @@ a {
 }
 
 /************STAT styles*************/
+@media (max-width: 1200px) {
+  .swiper-button-prev {
+    left: -2% !important;
+  }
+  
+  .swiper-button-next {
+    right: -2% !important;
+  }
+}
 @media (max-width: 767px) {
   .stat_top_chart .recharts-responsive-container {
     width: 700px !important;

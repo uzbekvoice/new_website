@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "../styles/Home.module.css";
-import Image from "next/image";
 import { useRouter } from "next/router";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
@@ -15,32 +14,28 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
-export default function Slider(props) {
+export default function Slider({ data }) {
   const { locale } = useRouter();
 
-  const { HomeContent } = props;
+  const getImage = (i) => {
+    switch (i) {
+      case 0: return <img src='case-1.png' alt='img' />
+      case 1: return <img src='case-2.png' alt='img' />
+      case 2: return <img src='case-3.png' alt='img' />
+      case 3: return <img src='goals-1.png' alt='img' />
+      case 4: return <img src='sun.png' alt='img' />
+      default: return <img src='chat-text.png' alt='img' />
+    }
+  }
+  console.log(locale);
+
   return (
     <div className={styles.our_goal + " our_goal"}>
-      {HomeContent.maqsad
-        .filter((p) => p.languages_code === locale)
-        .map((HomeContent, i) => {
-          const {
-            title,
-            description,
-            card_title,
-            card_title2,
-            card_title3,
-            card_title4,
-            card_desc,
-            card_desc2,
-            card_desc3,
-            card_desc4,
-          } = HomeContent;
-          return (
-            <div key={i}>
-              <h3>{title}</h3>
-              <p>{description}</p>
-
+      {
+        data?.data.filter((p) => p.languages_code === locale)
+          .map(value =>
+            <div key={value.id}>
+              <h3>{value?.stt_cases_title}</h3>
               <div className={styles.sliders}>
                 <Swiper
                   modules={[
@@ -55,7 +50,7 @@ export default function Slider(props) {
                   slidesPerView={3}
                   loop={true}
                   navigation
-                  autoplay={true}
+                  // autoplay={true}
                   speed={300}
                   breakpoints={{
                     0: {
@@ -77,71 +72,26 @@ export default function Slider(props) {
                   }}
                   scrollbar={{ draggable: true }}
                 >
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <Image
-                        src="/goals-1.png"
-                        width={205}
-                        height={205}
-                        alt="goal-1"
-                        priority={true}
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title}</h4>
-                        <h5>{card_desc}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <Image
-                        src="/goals-2.png"
-                        width={205}
-                        height={205}
-                        alt="goal-1"
-                        priority={true}
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title2}</h4>
-                        <h5>{card_desc2}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <Image
-                        src="/goals-3.png"
-                        width={205}
-                        height={205}
-                        alt="goal-1"
-                        priority={true}
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title3}</h4>
-                        <h5>{card_desc3}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <div className={styles.item}>
-                      <Image
-                        src="/goals-4.png"
-                        width={205}
-                        height={205}
-                        alt="goal-1"
-                        priority={true}
-                      />
-                      <div className={styles.text}>
-                        <h4>{card_title4}</h4>
-                        <h5>{card_desc4}</h5>
-                      </div>
-                    </div>
-                  </SwiperSlide>
+                  {
+                    value.stt_cases.map((item_value, i) =>
+                      <SwiperSlide key={i}>
+                        <div className={styles.item}>
+                          {getImage(i)}
+                          <div
+                            className={styles.text}
+                          >
+                            <h4>{item_value?.case}</h4>
+                            <h5>{item_value?.case_text}</h5>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    )
+                  }
                 </Swiper>
               </div>
             </div>
-          );
-        })}
+          )
+      }
     </div>
   );
 }

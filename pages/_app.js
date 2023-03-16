@@ -26,7 +26,7 @@ function MyApp({ Component, pageProps }) {
           <link rel="icon" href="/faviconnew.svg" />
         </Head>
 
-        {Seocontent.seocontent
+        {Seocontent?.seocontent
           .filter((p) => p.languages_code === locale)
           .map(({ title, desc }, i) => (
             <NextSeo

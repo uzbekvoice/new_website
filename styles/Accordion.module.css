@@ -4,7 +4,7 @@
   margin-top: 132px;
   text-align: center;
   position: relative;
-  padding: 0 108px;
+  padding: 0;
 }
 
 .question h3 {
@@ -12,8 +12,11 @@
   font-weight: 900;
   line-height: 53px;
   letter-spacing: 0.0022em;
-  color: #12273c;
   margin: 32px 0px;
+  text-align: left;
+  font-weight: 700;
+  color: #FFFFFF;
+  width: 300px;
 }
 
 .faqSides {
@@ -25,30 +28,18 @@
 .main {
   /** accordion_section_main **/
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 40px;
 }
 
-.faqButton {
-  /** faq button **/
-  width: 80%;
-  background-color: #00C5FF;
-  color: #ffffff;
-  border-radius: 5px;
-  padding: 20px;
-  font-size: 20px;
-  font-weight: 700;
-  margin-top: 20px;
-}
-
-.faqButton:hover {
-  /** faq button hover **/
-  background-color: rgb(128, 128, 128);
-  color: #fff;
-  cursor: pointer;
+@media (max-width: 600px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .accordion_title {
-  color: #12273c;
+  color: #fff;
   font-weight: 500;
   font-size: 18px;
   font-family: system-ui;
@@ -71,7 +62,7 @@
   padding-left: 10px;
 }
 
-@media (min-width: 665px) and (max-width: 767) {
+@media (min-width: 665px) and (max-width: 767px) {
   .main {
     /** accordion_section_main **/
     display: grid;
@@ -93,7 +84,7 @@
     font-weight: 800;
     line-height: 30px;
     letter-spacing: 0.0022em;
-    color: #12273c;
+    color: #fff;
     margin: 32px 0px;
   }
 
