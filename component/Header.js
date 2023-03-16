@@ -48,6 +48,7 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang, setModal }) 
         roadmap,
         pricing,
         qollanma,
+        dataset,
         boshqa,
         boshqalar,
         waitless,
@@ -206,6 +207,17 @@ function Header({ menuToggle, setMenuToggle, openLang, setOpenLang, setModal }) 
                   className={router.pathname == "/guide" ? "item active" : 'item'}
                 >
                   {qollanma}
+                </a>
+              </Link>
+              <Link href="https://drive.google.com/drive/folders/18N5i7GD0LmUnNQok6BP3EC8PYov7pZDW">
+                <a
+                  onClick={() => setMenuToggle(false)}
+                  target="_blank"
+                  className={
+                    router.pathname == "https://drive.google.com/drive/folders/18N5i7GD0LmUnNQok6BP3EC8PYov7pZDW" ? "item active" : "item"
+                  }
+                >
+                  {dataset}
                 </a>
               </Link>
               <div

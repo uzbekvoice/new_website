@@ -14,6 +14,7 @@
       "roadmap": "Roadmap",
       "pricing": "Narxlar",
       "qollanma": "Qo'llanma",
+      "dataset": "Dataset",
       "boshqa": "Boshqa",
       "boshqalar": [
         { "path": "/yangilik", "value": "Yangiliklar" },
@@ -38,6 +39,7 @@
       "roadmap": "Дорожная карта",
       "pricing": "Цены",
       "qollanma": "Руководство",
+      "dataset": "Набор данных",
       "boshqa": "Другой",
       "boshqalar": [
         { "path": "/yangilik", "value": "Новости" },
@@ -62,6 +64,7 @@
       "roadmap": "Roadmap",
       "pricing": "Pricing",
       "qollanma": "Guide",
+      "dataset": "Dataset",
       "boshqa": "Other",
       "boshqalar": [
         { "path": "/yangilik", "value": "News" },
