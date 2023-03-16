@@ -19,7 +19,6 @@ export default function OurPartners({ data }) {
                   <img src='/arrow-left-white.png' />
                 </a>
               </Link>
-              
             </div>
           </div>
           <div className={styles.imgunit}>
