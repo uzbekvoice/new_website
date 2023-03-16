@@ -9,6 +9,7 @@
       "hakatonlar": ["1-hakaton", "2-hakaton"],
       "roadmap": "Roadmap",
       "qollanma": "Qo'llanma",
+      "dataset": "Dataset",
       "boshqa": "Boshqa",
       "boshqalar": [
         { "path": "/yangilik", "value": "Yangiliklar" },
@@ -26,6 +27,7 @@
       "hakatonlar": ["1-хакатон", "2-хакатон"],
       "roadmap": "Дорожная карта",
       "qollanma": "Руководство",
+      "dataset": "Набор данных",
       "boshqa": "Другой",
       "boshqalar": [
         { "path": "/yangilik", "value": "Новости" },
@@ -43,6 +45,7 @@
       "hakatonlar": ["1st hackathon", "2nd hackathon"],
       "roadmap": "Roadmap",
       "qollanma": "Guide",
+      "dataset": "Dataset",
       "boshqa": "Other",
       "boshqalar": [
         { "path": "/yangilik", "value": "News" },
