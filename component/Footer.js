@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import styles from '../styles/Footer.module.css'
 import FooterApi from '../pages/footerapi/static.json'
@@ -8,6 +8,10 @@ export default function Footer() {
   const router = useRouter()
   const { locale } = router;
 
+  // for automatic update year
+  const today = new Date();
+  const year = today.getFullYear();
+
   return (
 
     FooterApi.footer
@@ -15,24 +19,16 @@ export default function Footer() {
       .map(({
         id, powered_by, guide, join_in_project, partners, descr, github, telegram, mozillo
       }) =>
-        <footer className={(router.pathname === "/" || router.pathname === "/pricing") ? styles.footerBg + ' ' + styles.footer : styles.footer} key={id}>
+        <footer className={styles.footer} key={id}>
           <div className="container__fluid">
             <div className={styles.footer__body}>
               <div className={styles.footer__main}>
-                {
-                  (router.pathname === "/" || router.pathname === "/pricing") ?
-                    <img className={styles.footer__logo} src="/logo.svg" alt='logofooter' /> :
-                    <img className={styles.footer__logo} src="/newlogo.png" alt='logofooter' />
-                }
+                <img className={styles.footer__logo} src="/newlogo.png" alt='logofooter' />
                 <div className={styles.powered}>
                   <h3>{powered_by}</h3>
                 </div>
 
-                {
-                  (router.pathname === "/" || router.pathname === "/pricing") ?
-                    <img className={styles.footer__logo2} src="/commonwhite.png" /> :
-                    <img className={styles.footer__logo2} src="/footer__logo-img.png" />
-                }
+                <img className={styles.footer__logo2} src="/footer__logo-img.png" />
               </div>
               <div className={styles.footer__menu}>
                 <div className={styles.menu_footer}>
@@ -59,11 +55,7 @@ export default function Footer() {
                     <li>
                       <Link href="https://github.com/uzbekvoice">
                         <a target={'_blank'}>
-                          {
-                            (router.pathname === "/" || router.pathname === "/pricing") ?
-                              <img className={styles.footer__logo2} src="/github.png" /> :
-                              <img className={styles.footer__logo2} src="/github-white.png" />
-                          }
+                          <img src="/github.png" />
                           <span>{github}</span>
                         </a>
                       </Link>
@@ -71,11 +63,7 @@ export default function Footer() {
                     <li>
                       <Link href="https://t.me/uzbekvoice">
                         <a target={'_blank'}>
-                          {
-                            (router.pathname === "/" || router.pathname === "/pricing") ?
-                              <img className={styles.footer__logo2} src="/telegramm.png" /> :
-                              <img className={styles.footer__logo2} src="/telegramm-white.png" />
-                          }
+                          <img src="/telegramm.png" />
                           <span>{telegram}</span>
                         </a>
                       </Link>
@@ -95,7 +83,7 @@ export default function Footer() {
                 </div>
               </div>
             </div>
-            <h3>{descr}</h3>
+            <h3>UzbekVoice.ai © {year} Barcha huquqlar himoyalangan.</h3>
           </div>
         </footer>
       )

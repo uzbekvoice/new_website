@@ -38,48 +38,12 @@
       "button": "Apply now"
     }
   ],
-  "waitless": [
-    {
-      "id": 1,
-      "languages_code": "uz-UZ",
-      "title": "Waitlistga qo`shilish",
-      "descr": "Yangiliklarga obuna bo’lish",
-      "label_name": "Ismingiz",
-      "label_comment": "E-mail",
-      "placeholder_name": "Ismingizni kiriting",
-      "placeholder_email": "E-mailingizni kiriting",
-      "button": "Waitlistga qo’shilish"
-    },
-
-    {
-      "id": 2,
-      "languages_code": "ru-RU",
-      "title": "Присоединяйтесь к списку ожидающих",
-      "descr": "Подписаться на новости",
-      "label_name": "Имя",
-      "label_comment": "Электронная почта",
-      "placeholder_name": "Введите свое имя",
-      "placeholder_email": "Введите адрес электронной почты",
-      "button": "Присоединяйтесь к списку ожидающих"
-    },
-    {
-      "id": 3,
-      "languages_code": "en-US",
-      "title": "Join to waitlist",
-      "descr": "Subscribe to news",
-      "label_name": "Name",
-      "label_comment": "E-mail",
-      "placeholder_name": "Enter your name",
-      "placeholder_email": "Enter your E-mail",
-      "button": "Join to waitlist"
-    }
-  ],
 
   "hack_form": [
     {
       "id": 1,
       "languages_code": "uz-UZ",
-      "title": "Voice AI Challenge 2022",
+      "title": "Voice AI Challenge 2023",
       "descr": "Hakatonga ro'yxatdan o'ting",
       "form_title": "Shaxsiy ma'lumot",
       "form_title2": "Aloqa ma'lumotlar",
