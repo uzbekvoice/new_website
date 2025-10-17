@@ -15,14 +15,11 @@ import HomeContent from "./homeapi/static.json";
 // import Marathon from "../component/Marathon";
 
 export default function malumot({
-    users,
-    userslist,
     partners,
     teamMembers,
     faq,
     steps,
     camp,
-    statsvotes,
     data
 }) {
     return (
@@ -30,10 +27,10 @@ export default function malumot({
             <Hero HomeContent={HomeContent} />
             {/* <Marathon data={camp.data} /> */}
             <Slider HomeContent={HomeContent} />
-            <Stat stat={statsvotes} HomeContent={HomeContent} />
+            {/*<Stat stat={statsvotes} HomeContent={HomeContent} />*/}
             <Step steps={steps.data} HomeContent={HomeContent} />
             <Contribution HomeContent={HomeContent} />
-            <TopUser users={users} userslist={userslist} HomeContent={HomeContent} />
+            {/*<TopUser users={users} userslist={userslist} HomeContent={HomeContent} />*/}
             {/* <Ourpartners HomeContent={HomeContent} data={data} /> */}
             <InitiativePartnersHak HomeContent={HomeContent} partners={partners.data} />
             <OurTeam data={teamMembers.data} />
@@ -48,12 +45,12 @@ export async function getServerSideProps() {
     // const response = await directus.items("team_members_translations").readByQuery({
     //   fields: ["*"],
     // })
-    const res2 = await fetch(
-        "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
-    );
-    const res = await fetch(
-        "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
-    );
+    // const res2 = await fetch(
+    //     "https://common.uzbekvoice.ai/api/v1/clips/leaderboard"
+    // );
+    // const res = await fetch(
+    //     "https://common.uzbekvoice.ai/api/v1/clips/votes/leaderboard"
+    // );
     const res3 = await fetch("https://admin.uzbekvoice.ai/items/partners");
     const res4 = await fetch(
         "https://admin.uzbekvoice.ai/items/team_members_translations"
@@ -68,33 +65,32 @@ export async function getServerSideProps() {
     const res7 = await fetch(
         "https://admin.uzbekvoice.ai/items/camp_page_translations"
     );
-    const res8 = await fetch(
-        "https://common.uzbekvoice.ai/api/v1/uz/clips/stats"
-    );
+    // const res8 = await fetch(
+    //     "https://common.uzbekvoice.ai/api/v1/uz/clips/stats"
+    // );
     const res9 = await fetch(
         "https://admin.uzbekvoice.ai/items/landing_page_translations"
     );
 
-    const data2 = await res.json();
-    const users = await res2.json();
+    // const data2 = await res.json();
+    // const users = await res2.json();
     const partners = await res3.json();
     const teamMembers = await res4.json();
     const faq = await res5.json();
     const steps = await res6.json();
     const camp = await res7.json();
-    const statsvotes = await res8.json();
+    // const statsvotes = await res8.json();
     const data = await res9.json();
 
     return {
         props: {
-            users: data2,
-            userslist: users,
+            // users: data2,
+            // userslist: users,
             partners,
             teamMembers,
             faq,
             steps,
             camp,
-            statsvotes,
             data
         },
     };
